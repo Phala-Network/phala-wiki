@@ -63,6 +63,7 @@ optimizations in order to be equal to other Gatekeepers that are running the sta
 
 ### Install Intel SGX driver & platform software
 
+You can find the latest Linux SGX driver from the [official download page](https://01.org/intel-software-guard-extensions/downloads).
 
 ### Instal the `phala-node` Binary
 
