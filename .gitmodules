@@ -1,3 +1,6 @@
 [submodule "themes/learn"]
 	path = themes/learn
 	url = https://github.com/matcornic/hugo-theme-learn.git
+[submodule "public"]
+	path = public
+	url = git@github.com:phala-wiki/phala-wiki.github.io.git

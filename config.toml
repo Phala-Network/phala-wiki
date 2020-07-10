@@ -1,6 +1,4 @@
-baseURL = ""
-relativeURLs = true
-uglyURLs = true
+baseURL = "https://wiki.phala.network"
 languageCode = "en-us"
 title = "Phala Network Wiki"
 theme = "learn"
