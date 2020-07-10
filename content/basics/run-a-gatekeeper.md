@@ -63,9 +63,15 @@ optimizations in order to be equal to other Gatekeepers that are running the sta
 
 ### Install Intel SGX driver & platform software
 
-You can find the latest Linux SGX driver from the [official download page](https://01.org/intel-software-guard-extensions/downloads).
+You can find the latest Linux SGX driver from the [official download page](https://01.org/intel-software-guard-extensions/downloads). Make sure to install:
 
-### Instal the `phala-node` Binary
+- SGX Linux DCAP Driver (Under `/opt`)
+- SGX Linux SDK
+- SGX Platform Swoftware
+
+The [dockerfile](https://github.com/apache/incubator-teaclave-sgx-sdk/blob/253b3ac982b2d09d32f5fa5a2011e3c36bcbed1e/dockerfile/Dockerfile.1804.nightly) offered by Teaclave SGX SDK is a good reference of how to install the SGX driver, SDK and platform software.
+
+### Install the `phala-node` Binary
 
 Download the latest Phala Network binary from the Github [release page](https://github.com/Phala-Network/phala-blockchain/releases).
 
@@ -265,11 +271,11 @@ Submit this extrinsic and you are now ready to start validating.
 
 Gatekeepers utilize TEE to manage the secret keys in Phala Network. Before starting validating, you need to attach the TEE hardware to your Gatekeeper accounts. As long as the Gatekeeper is running and validating the blockchain, the TEE worker is always connected to the blockchain and support the network.
 
-The TEE worker is handled by two components: `pHost` and `pRuntime`. The latest prebuilt binaries can be found from the Github [release page](https://github.com/Phala-Network/phala-blockchain/releases). Instead, you can also compile it on your own.
+The TEE worker is handled by two components: `pHost` and `pRuntime`. The latest prebuilt binaries can be found from the Github [release page](https://github.com/Phala-Network/phala-blockchain/releases) in `tee-release.zip`. Instead, you can also compile it on your own.
 
 Assuming you have extracted the prebuilt binares in a directory and have a running and fully synced `phala-node`, you can take the following steps to attach the TEE components to the blockchain:
 
-1. Start pRuntime: `./pruntime`
+1. Start pRuntime: `./app`
 2. Start pHost with proper flags:
   ```
   ./phost \
@@ -281,6 +287,8 @@ Assuming you have extracted the prebuilt binares in a directory and have a runni
   ```
 
 The mnenomic of your controller account is needed because `phost` will send transactions to register your TEE hardware on behalve of your controller account.
+
+The prebuilt release also includes `bridge.sh`, a convinient script to bring up `phost` in the same way described above. With the script file, you can save the mnemonic permanently, avoding typing it everytime you run it.
 
 > Note: In Phala Network Testnet PoC-2, the TEE worker registration is an one-shot job. `phost` will exit right after a successful registeration. However in future version, since TEE supports the TEE network in the full life-time of a Gatekeeper, it must be always up and running until the Gatekeeper is retired.
 
