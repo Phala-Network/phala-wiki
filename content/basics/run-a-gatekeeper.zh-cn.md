@@ -14,7 +14,7 @@ draft: false
 
 如果您有任何疑问，可扫码添加 Phala 小助手，回复**守门人**，加入守门人答疑群。
 
-![](/static/images/phala-qr.jpg)
+![](/images/phala-qr.jpg)
 
 ### 守门人需要抵押多少 PHA
 
