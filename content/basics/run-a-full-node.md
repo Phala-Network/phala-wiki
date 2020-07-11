@@ -52,7 +52,7 @@ extension, which is a node in its own right, running the runtime in WASM format:
 ### Fast Install Instructions (Linux)
 
 > Not recommended if you're a Gatekeeper. Please see
-> [secure Gatekeeper setup](maintain-guides-secure-Gatekeeper)
+> [secure Gatekeeper setup](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator)
 
 For the most recent binary please see the
 [release page](https://github.com/Phala-Network/phala-blockchain/releases/) on the phala-blockchain repository. The URL
@@ -73,7 +73,7 @@ your system. You will either need to compile the [source code yourself](#clone-a
 ### Fast Install Instructions (Mac)
 
 > Not recommended if you're a Gatekeeper. Please see
-> [secure Gatekeeper setup](maintain-guides-secure-Gatekeeper)
+> [secure Gatekeeper setup](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator)
 
 - Type terminal in the macOS searchbar/searchlight to open the 'terminal' application
 - Install Homebrew within the terminal by running:
