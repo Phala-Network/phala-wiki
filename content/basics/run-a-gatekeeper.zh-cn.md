@@ -159,11 +159,6 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 #### 方法1: PolkadotJS-APPS
 
-RPC 可以生成 session key。如果要使用这种方法，==请确保你的守门人节点和 PolkadotJS-Apps Explorer 相关联。make sure that you have the PolkadotJS-Apps explorer attached to your Gatekeeper node.==
-你可以在“设置”中自定义守门人节点的应用数据仪表盘。但如果你接的是 Parity 或 Web3 基金会搭建的节点，就无法使用此功能。具体原因可查看 Polka Wiki.
-
-连上节点后，设置通信密钥的最简单方法就是调用 `author_rotateKeys RPC` 以在守门人节点的本地密钥库中创建新密钥。选择“Toolbox” > “PRC Calls”，然后选择 “Author” > “ rotateKeys（）”，会返回一个如图所示的字符串。保存好返回的密钥即可。
-
 你可以在 App 的 PRC 模块中生成 [Session 密钥](https://wiki.polkadot.network/en/latest/polkadot/learn/keys/#session-key)。请确保你已经在设置页面中把 PolkadotJS-Apps 指向你的守门人节点。 你可以在“设置”中自定义守门人节点的地址与端口号。但如果你连接的是官方提供的公用节点，就无法使用此功能，因为它会把 RPC 发送到 _公共节点_，而不是 _你的节点_。
 
 连上节点后，设置 Session 密钥的最简单方法就是调用 `author_rotateKeys` RPC，在守门人节点的本地密钥库中创建新密钥。选择“Toolbox” > “PRC Calls”，然后选择 “Author” > “ rotateKeys（）”，会返回一个如图所示的字符串。记下好返回的密钥即可。
