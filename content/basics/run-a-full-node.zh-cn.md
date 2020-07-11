@@ -6,7 +6,7 @@ draft: false
 
 这是一份关于如何在 [Phala PoC-2 测试网](https://app.phala.network/#/staking) 上安装全节点的教程。如果你有任何疑问，可以扫码回复`节点`，进入节点答疑群。
 
-![](https://hackmd.io/_uploads/SJ88NzUJP.jpg)
+![](/images/phala-qr.jpg)
 
 在开始跑节点之前，我们先讲一讲 Phala 上的节点类型。
 
