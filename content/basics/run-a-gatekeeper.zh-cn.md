@@ -4,82 +4,70 @@ date: 2020-07-10T01:16:05+08:00
 draft: false
 ---
 
-This guide will instruct you how to set up a validator node on the Phala Network.
+这份教程将指导您如何安装 Phala 验证人节点。
 
-## Preliminaries
+## 什么是守门人
 
-Running a Gatekeeper on a live network is a lot of responsibility! You will be accountable for not only your own stake, but also the stake of your current nominators. If you make a mistake and get slashed, your money and your reputation will be at risk. However, running a Gatekeeper can also be very rewarding, knowing that you contribute to the security of a decentralized network while growing your stash.
+守门人（Gatekeeper）是对 Phala 网络至关重要的角色。守门人负责区块的打包和密钥管理，是意外情况下保证网络可用性的重要途径。守门人需要使用性能较好的设备、在网络情况良好的环境登录，且必须时刻保持在线。因此，**守门人可以获得可观的收益**，但同时需要对自己和提名人的PHA抵押额负责。如果因为频繁掉线或其他不良行为导致被惩罚，则无论是名誉还是PHA损失都会是巨大的。
 
-Since security is so important to running a successful Gatekeeper, you should take a look at Phala Network's the
-[secure validator](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator) information to make you understand the factors
-to consider when constructing your infrastructure. The Web3 Foundation also maintains a
-[reference implementation for a secure validator set-up](https://github.com/w3f/polkadot-secure-validator)
-that you can use by deploying yourself (video walkthrough is available
-[here](https://www.youtube.com/watch?v=tTn8P6t7JYc)). As you progress in your journey as a
-Gatekeeper, you will likely want to use this repository as a _starting point_ for your own
-modifications and customizations.
+运行守门人节点，安全是第一要素。你可以查看[搭建安全Polkadot验证人节点](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator)查看可能影响守门人安全运行的因素。Web3 基金会也维护了一个你可以自行部署的[验证人节点参考实现](https://github.com/w3f/polkadot-secure-validator)（[此处](https://www.youtube.com/watch?v=tTn8P6t7JYc)有视频教程)。在配置守门人节点的过程中，可以把这个代码库当作 _一个初始模版_ ，在上面自行修改、裁剪。
 
-If you need help, please reach out on the
-[Phala Network Group](https://t.me/phalanetwork)
-on Telegram. The team and other Gatekeepers are there to help answer questions and provide experience.
+如果您有任何疑问，可扫码添加 Phala 小助手，回复**守门人**，加入守门人答疑群。
 
-### How many PHA do I need?
+![](/static/images/phala-qr.jpg)
 
-You can have a rough estimate on that by using the methods listed
-[here](faq#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator). Gatekeepers are
-elected based on [Phragmen's algorithm](https://wiki.polkadot.network/docs/en/learn-phragmen). To be elected into the set, you need a
-minimum stake behind your Gatekeeper. This stake can come from yourself or from
-[nominators](maintain-nominator). This means that as a minimum, you will need enough PHA to set up
-Stash and Controller [accounts](https://wiki.polkadot.network/docs/en/learn-keys) with the existential deposit, plus a little extra for
-transaction fees. The rest can come from nominators.
+### 守门人需要抵押多少 PHA
 
-**Warning:** Any PHA that you stake for your Gatekeeper is liable to be slashed, meaning that an insecure or improper setup may result in loss of PHA tokens! If you are not confident in your ability to run a Gatekeeper node, it is recommended to nominate your PHA to a trusted Gatekeeper node instead.
+您可以在 [这个页面](https://wiki.polkadot.network/docs/en/faq#what-are-the-ways-to-find-out-the-minimum-stake-necessary-for-the-validators) 找到估算所需 PHA 数额的方法。
+守门人将根据 [Phragmen算法](https://wiki.polkadot.network/docs/en/learn-phragmen) 进行选举。要想入选，您和[提名人](https://wiki.polkadot.network/docs/en/maintain-nominator)的保证金之和必须不低于其他守门人。赢得提名人的支持非常重要。此外，也要注意在您的 Stash 账号和 [Controlloer 账号](https://wiki.polkadot.network/docs/en/learn-keys)上都要留有足够的 PHA。
 
-## Initial Set-up
+> 例：
+> - 守门人A抵押了 10 PHA 作为保证金，他的提名人为他抵押了 100 PHA。则守门人A的总保证金为 110 PHA
+> - 守门人B抵押了 100 PHA，但没有提名人为他抵押
+> - 入选的会是A
 
-### Requirements
+**需要注意**，一旦将您的一部分资金设为保证金，</br>
+**它们可能会因为您的不良行为或操作不当而被罚没。**</br>
+**它们可能会因为您的不良行为或操作不当而被罚没。**</br>
+**它们可能会因为您的不良行为或操作不当而被罚没。**</br>
 
-You will likely run your Gatekeeper on a server with TEE hardware running Linux. For this guide we will be using Ubuntu 18.04, but the instructions should be similar for other platforms.
+因此再次建议您仔细阅读此篇教程的操作。
 
-The transactions weights in Phala Network were benchmarked on standard hardware. It is recommended that
-Gatekeepers run at least the standard hardware in order to ensure they are able to process all blocks
-in time. The following are not _minimum requirements_ but if you decide to run with less than this
-beware that you might have performance issue.
+## 运行守门人节点之前
 
-#### Standard Hardware
+### 配置要求
 
-For the full details of the standard hardware please see
-[here](https://github.com/paritytech/substrate/pull/5848).
+以下所有教程均基于 Ubuntu 18.04，但理论上其他操作系统也遵循类似的要求与操作规范。
 
-- **CPU** - 2 cores, with Intel SGX capability.
-- **Storage** - A NVMe solid state drive. Should be reasonably sized to deal with blockchain growth.
-  Starting around 80GB - 160GB will be okay for the first six months of Phala Network, but will need to
-  be re-evaluated every six months.
-- **Memory** - 2GB - 8GB. 2GB is really the minimum memory you should operate your Gatekeeper with, anything less than this make build times too inconvenient. For better performance you can bump it up to 4GB or 8GB, but anything more than that is probably over-kill. In order to compile the binary yourself you will likely need ~8GB.
+交易的权重取决于 Phala Network 在标准硬件上的性能基准测试得来。因此我们推荐在标准硬件或更好配置的机器上运行守门人节点，以满足性能要求。下面描述的并不是运行节点的 _最低需求_，但更低的配置不能保证稳定的运行。
 
-The specs posted above are by no means the minimum specs that you could use when running a
-Gatekeeper, however you should be aware that if you are using less you may need to toggle some extra
-optimizations in order to be equal to other Gatekeepers that are running the standard.
+#### 标准硬件
 
-### Install Intel SGX driver & platform software
+完整的细节可以参考[这里](https://github.com/paritytech/substrate/pull/5848)。
 
-You can find the latest Linux SGX driver from the [official download page](https://01.org/intel-software-guard-extensions/downloads). Make sure to install:
+- **CPU**：英特尔6代或更新的CPU，需支持SGX，至少双核心
+- **内存**：8GB（最低 2 G）
+- **磁盘空间**：40-80 GB（越大越好，建议采用 NVMe 固态硬盘，每六个月需要重新评估节点磁盘占用大小）
 
-- SGX Linux DCAP Driver (Under `/opt`)
+此外，**网络条件**非常重要，其他参数次之。我们强烈建议您在网络良好的地方运行守门人节点。关于如何确定自己的电脑是否支持 SGX ，Phala 为您准备了详细的[SGX测试教程](https://shimo.im/docs/GVc6vTykhrVcYD9P/)，可点击链接观看。
+
+### 安装 Intel SGX 驱动与平台软件
+
+可以从 [官方下载页面](https://01.org/intel-software-guard-extensions/downloads) 找到最新的 Linux SGX 相关软件下载。确保系统中安装了如下软件：
+
+- SGX Linux DCAP 驱动 (安装至 `/opt` 目录)
 - SGX Linux SDK
-- SGX Platform Swoftware
+- SGX PSW (平台软件)
 
-The [dockerfile](https://github.com/apache/incubator-teaclave-sgx-sdk/blob/253b3ac982b2d09d32f5fa5a2011e3c36bcbed1e/dockerfile/Dockerfile.1804.nightly) offered by Teaclave SGX SDK is a good reference of how to install the SGX driver, SDK and platform software.
+具体安装方法请参见 Intel 官方指南。也可以参考 Teaclave SGX SDK 提供的 [Dockerfile](https://github.com/apache/incubator-teaclave-sgx-sdk/blob/253b3ac982b2d09d32f5fa5a2011e3c36bcbed1e/dockerfile/Dockerfile.1804.nightly) 来安装驱动套件。
 
-### Install the `phala-node` Binary
+### 安装 `phala-node` 可执行程序
 
-Download the latest Phala Network binary from the Github [release page](https://github.com/Phala-Network/phala-blockchain/releases).
+你可以直接从 Phala Network 的 [Github 发布页面](https://github.com/Phala-Network/phala-blockchain/releases) 下载 `phala-node` 可执行程序。
 
-You can also build the `phala-node` binary from the
-[Phala-Network/phala-blockchain](https://github.com/Phala-Network/phala-blockchain) repository on GitHub using the source
-code available in the **master** branch. You will need to prepare the rust build environment described in the [Run a Full Node](run-a-full-node) tutorial.
+也可以直接从 [Phala-Network/phala-blockchain](https://github.com/Phala-Network/phala-blockchain) 代码库的 **master分之** 上直接编译 `phala-node`。你可以参照 [运行全节点](run-a-full-node) 教程中的步骤编译节点：
 
-> Note: If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with
+> 注意：如果你倾向于用SSH链接Github，也可以把以下第一条命令替换为
 > `git clone git@github.com/Phala-Network/phala-blockchain.git`.
 
 ```sh
@@ -89,10 +77,9 @@ code available in the **master** branch. You will need to prepare the rust build
   cargo build –-release
 ```
 
-This step will take a while (generally 10 - 40 minutes, depending on your hardware).
+这一步会比较消耗时间（大约 10 - 40 分钟，取决于硬件配置）。
 
-> Note if you run into compile errors, you may have to switch to a less recent nightly. This can be
-> done by running:
+> 如果你在编译的时候遇到编译错误，就可能需要切换到一个稍旧一点的 Nightly Rust 版本，可以通过以下命令实现：
 >
 > ```sh
 > rustup install nightly-2020-05-15
@@ -100,246 +87,178 @@ This step will take a while (generally 10 - 40 minutes, depending on your hardwa
 > rustup target add wasm32-unknown-unknown --toolchain nightly-2020-05-15
 > ```
 
-If you are interested in generating keys locally, you can also install `subkey` from the same
-directory. You may then take the generated `subkey` executable and transfer it to an air-gapped
-machine for extra security.
+如果你希望在本地生成密钥，也可以在同一目录下安装 `subkey`。如果想进一步提高安全性，则可以把编译好的 `subkey` 程序发送到一台全新且断网的电脑上进行操作。
 
 ```sh
 cargo install --force --git https://github.com/paritytech/substrate subkey
 ```
 
-### Synchronize Chain Data
+### 同步链上数据
 
-> **Note:** By default, Gatekeeper nodes are in archive mode. If you've already synced the chain not
-> in archive mode, you must first remove the database with `phala-node purge-chain` and then ensure
-> that you run Phala Network with the `--pruning=archive` option.
+> **注意**：默认情况下，Gatekeeper节点处于归档模式(Archive)。 如果您以非归档模式同步了链上数据，需要先使用 `phala-node purge-chain` 删除数据库，然后启用 `--pruning=archive` 命令行选项。
 >
-> You may run a Gatekeeper node in non-archive mode by adding the following flags:
-> `-unsafe-pruning --pruning OF BLOCKS>`, but note that an archive node and non-archive node's
-> databases are not compatible with each other, and to switch you will need to purge the chain data.
+> 您可以使用以下指令在非归档模式下运行 Gatekeeper 节点：`-unsafe-pruning --pruning <块数>`。但是请注意，归档节点和非归档节点的数据库彼此不兼容。要进行切换，需要清除链上数据。
 
-You can begin syncing your node by running the following command:
+如果你不想立即以守门人模式启动节点，可以运行以下指令同步节点：
 
 ```sh
 ./phala-node --pruning=archive
 ```
 
-if you do not want to start in Gatekeeper mode right away.
+`--validator` 和 `--sentry` 选项中已经包含了 `--pruning=archive` 选项。所以，只有在没有启用上述选项的情况下，才需要特殊指定该选项。如果你没有运行存档节点，或未以守门人、哨兵身份运行节点，当你切换的时候，需要重新同步数据库。
 
-The `--pruning=archive` flag is implied by the `--validator` and `--sentry` flags, so it is only
-required explicitly if you start your node without one of these two options. If you do not set your
-pruning to archive node, even when not running in Gatekeeper and sentry mode, you will need to
-re-sync your database when you switch.
+> **注意**：守门人需要用 RocksDb 后端进行同步。RocksDb 是一个默认设置，但可以用 `--database RocksDb` 选项来明确声明。将来，我们建议使用更快和更高效的 ParityDb。在不同数据库后端之间切换，同样也需要重新同步。
+> 
+> 如果你现在就想测试 ParityDB，可以开启 `---database paritydb` 参数。
 
-> **Note:** Gatekeepers should sync using the RocksDb backend. This is implicit by default, but can
-> be explicit by passing the `--database RocksDb` flag. In the future, it is recommended to switch
-> to using the faster and more efficient ParityDb option. Switching between database backends will
-> require a resync.
->
-> If you want to test out ParityDB you can add the flag `---database paritydb`.
+同步时间跟区块链的大小有关，可能需要几分钟到几小时不等。
 
-Depending on the size of the chain when you do this, this step may take anywhere from a few minutes
-to a few hours.
+如果你想知道同步具体需要多少时间，可以查看服务器日志，上面记录了最新被打包和验证的区块编号。将其与 [Telemetry](https://telemetry.polkadot.io/#list/Phala%20PoC-2) 和 [Phala Web App](https://app.phala.network/#/explorer) 上的最新区块高度做一个对比即可推算出大致需要的同步时间。
 
-If you are interested in determining how much longer you have to go, your server logs (printed to
-STDOUT from the `phala-node` process) will tell you the latest block your node has processed and
-verified. You can then compare that to the current highest block via
-[Telemetry](https://telemetry.polkadot.io/#list/Phala%20PoC-2) or the
-[Phala Web App](https://app.phala.network/#/explorer).
+> **注意：** 在主网“软启动”的过程中（测试网络不受此影响），如果你没有 PHA 代币，基本上就只能跟着教程做到这一步了。你可以运行一个节点，但接下来的操作必须有一定的 PHA 才可以继续。由于在“软启动”过程中，PHA 的转账还是禁用状态，你无法接受别人的转账从而得到 PHA 代币。此时，即使拥有 PHA 且参与守门人抵押，也只是表明了自己成为守门人的 _意愿_，知道 NPoS 阶段启用才会真正开始选举。
 
-> **Note:** If you do not already have PHA, this is as far as you will be able to go until the end
-> of the soft launch period. You can still run a node, but you will need to have a minimal amount of
-> PHA to continue, as balance transfers are disabled during the soft launch. Please keep in mind
-> that even for those with PHA, they will only be indicating their _intent_ to validate; they will
-> also not be able to run a Gatekeeper until the NPoS phase starts.
+## 抵押 PHA
 
-## Bond PHA
+我们强烈建议将 Controllor 账号和 Stash 账号设置成两个账号。所以，请创建**两个**账号，并在两个账号上都留有一定资金用以支付交易手续费。而后将大部分资金存入 Stash 账号。
 
-It is highly recommended that you make your controller and stash accounts be two separate accounts.
-For this, you will create two accounts and make sure each of them have at least enough funds to pay
-the fees for making transactions. Keep most of your funds in the stash account since it is meant to
-be the custodian of your staking funds.
+请务必注意留一点资金用作交易手续费，不要绑定所有的资金。
 
-Make sure not to bond all your PHA balance since you will be unable to pay transaction fees from
-your bonded balance.
+现在可以开始设置守门人。进行如下操作：
 
-It is now time to set up our Gatekeeper. We will do the following:
+- 绑定 Stash 账号的 PHA 。**这个账号将负责保管你的保证金。**
+- 选择 Controllor 账号。**这个账号将用于开启或暂停守门人的验证行为。**
 
-- Bond the PHA of the Stash account. These PHA will be put at stake for the security of the
-  network and can be slashed.
-- Select the Controller. This is the account that will decide when to start or stop validating.
-
-First, go to the [Staking](https://app.phala.network/#/staking/actions) section. Click on
-"Account Actions", and then the "New stake" button.
+首先，点击 `质押` > `Account Actions` > `New Stake` （按照截图进行操作）。
 
 ![dashboard bonding](https://wiki.polkadot.network/docs/assets/guides/how-to-validate/polkadot-dashboard-bonding.jpg)
 
-- **Stash account** - Select your Stash account. In this example, we will bond 100 milliPHA - make
-  sure that your Stash account contains _at least_ this much. You can, of course, stake more than
-  this.
-- **Controller account** - Select the Controller account created earlier. This account will also
-  need a small amount of PHA in order to start and stop validating.
-- **Value bonded** - How much PHA from the Stash account you want to bond/stake. Note that you do
-  not need to bond all of the PHA in that account. Also note that you can always bond _more_ PHA
-  later. However, _withdrawing_ any bonded amount requires the duration of the unbonding period. On
-  Phala Network, the unbonding period is 7 days.
-- **Payment destination** - The account where the rewards from validating are sent. More info
-  [here](https://wiki.polkadot.network/en/latest/polkadot/learn/staking/#reward-distribution).
+- **Stash account**：选择你的 Stash 账号。这个账号上需要至少留有 100 milli PHA。当然，你也可以多留一些。
+- **Controller account**：选择之前创建的 Controller 账号，这个账号上也需要保留一点 PHA 用于后续支付手续费。
+- **Value bonded**：在这里输入你想抵押的金额。再次提醒，**请不要绑定你所有的PHA**。之后，你随时可以追加押金，但取回押金有一定冷冻期。冷冻期在 Phala Network 上是 7 天。
+- **Payment destination**: 选择你打算用来收取收益的账号。详情可 [点此](https://wiki.polkadot.network/en/latest/polkadot/learn/staking/#reward-distribution) 了解更多。
 
-Once everything is filled in properly, click `Bond` and sign the transaction with your Stash
-account.
+然后点击 `Bond`，使用你的 Stash 账号签名并广播交易。
 
-After a few seconds, you should see an "ExtrinsicSuccess" message. You should now see a new card
-with all your accounts (note: you may need to refresh the screen). The bonded amount on the right
-corresponds to the funds bonded by the Stash account.
+稍候片刻，页面中就会跳出 `ExtrinsicSuccess` 的通知。刷新后，页面上会出现一个新卡片，在这里你可以看见自己抵押的 PHA 数量。
 
-## Set Session Keys
+## 设置 Session 密钥
 
-> **Note:** The session keys are consensus critical, so if you are not sure if your node has the
-> current session keys that you made the `setKeys` transaction then you can use one of the two
-> available RPC methods to query your node:
-> [hasKey](https://polkadot.js.org/api/substrate/rpc.html#haskey-publickey-bytes-keytype-text-bool)
-> to check for a specific key or
-> [hasSessionKeys](https://polkadot.js.org/api/substrate/rpc.html#hassessionkeys-sessionkeys-bytes-bool)
-> to check the full session key public key string.
+> 注意：Session 密钥对于共识至关重要。如果不确定节点是否有密钥的话，可以使用两种方法来检查：
+> - [hasKey](https://polkadot.js.org/api/substrate/rpc.html#haskey-publickey-bytes-keytype-text-bool) 来检查是否有某一个 Session 密钥，或者
+> - [hasSessionKeys](https://polkadot.js.org/api/substrate/rpc.html#hassessionkeys-sessionkeys-bytes-bool) 来查看所有的 Session 公钥
 
-Once your node is fully synced, stop the process by pressing Ctrl-C. At your terminal prompt, you
-will now start running the node in validator mode with a flag allowing unsafe RPC calls, needed for
-some advanced operations.
+待节点完全同步后，按Ctrl+C停止同步。现在，你可以开始以守门人身份运行节点。你的节点将使用命令行选项启用 Unsafe RPC 来进行一些高级操作。
 
 ```sh
-./phala-node --validator --name "name on telemetry"
+./phala-node --validator --name "你的节点名"
 ```
 
-You can give your Gatekeeper any name that you like, but note that others will be able to see it, and
-it will be included in the list of all servers using the same telemetry server. Since numerous
-people are using telemetry, it is recommended that you choose something likely to be unique.
+你可以给自己的守门人节点起一个独特又有个性的名字，这个名字将展示在 Telemetry 上。由于可能参与者比较多，因此可以选择一个独特的名字以避免重复。
 
-### Generating the Session Keys
+### 生成 Session 密钥
 
-You need to tell the chain your Session keys by signing and submitting an extrinsic. This is what
-associates your Gatekeeper node with your Controller account on Phala Network.
+#### 方法1: PolkadotJS-APPS
 
-#### Option 1: PolkadotJS-APPS
+RPC 可以生成 session key。如果要使用这种方法，==请确保你的守门人节点和 PolkadotJS-Apps Explorer 相关联。make sure that you have the PolkadotJS-Apps explorer attached to your Gatekeeper node.==
+你可以在“设置”中自定义守门人节点的应用数据仪表盘。但如果你接的是 Parity 或 Web3 基金会搭建的节点，就无法使用此功能。具体原因可查看 Polka Wiki.
 
-You can generate your
-[Session keys](https://wiki.polkadot.network/en/latest/polkadot/learn/keys/#session-key) in the
-client via the apps RPC. If you are doing this, make sure that you have the PolkadotJS-Apps explorer
-attached to your Gatekeeper node. You can configure the apps dashboard to connect to the endpoint of
-your Gatekeeper in the Settings tab. If you are connected to a default endpoint hosted by Parity of
-Web3 Foundation, you will not be able to use this method since making RPC requests to this node
-would effect the local keystore hosted on a _public node_ and you want to make sure you are
-interacting with the keystore for _your node_.
+连上节点后，设置通信密钥的最简单方法就是调用 `author_rotateKeys RPC` 以在守门人节点的本地密钥库中创建新密钥。选择“Toolbox” > “PRC Calls”，然后选择 “Author” > “ rotateKeys（）”，会返回一个如图所示的字符串。保存好返回的密钥即可。
 
-Once ensuring that you have connected to your node, the easiest way to set session keys for your
-node is by calling the `author_rotateKeys` RPC request to create new keys in your Gatekeeper's
-keystore. Navigate to Toolbox tab and select RPC Calls then select the author > rotateKeys() option
-and remember to save the output that you get back for a later step.
+你可以在 App 的 PRC 模块中生成 [Session 密钥](https://wiki.polkadot.network/en/latest/polkadot/learn/keys/#session-key)。请确保你已经在设置页面中把 PolkadotJS-Apps 指向你的守门人节点。 你可以在“设置”中自定义守门人节点的地址与端口号。但如果你连接的是官方提供的公用节点，就无法使用此功能，因为它会把 RPC 发送到 _公共节点_，而不是 _你的节点_。
+
+连上节点后，设置 Session 密钥的最简单方法就是调用 `author_rotateKeys` RPC，在守门人节点的本地密钥库中创建新密钥。选择“Toolbox” > “PRC Calls”，然后选择 “Author” > “ rotateKeys（）”，会返回一个如图所示的字符串。记下好返回的密钥即可。
 
 ![Explorer RPC call](https://wiki.polkadot.network/docs/assets/guides/how-to-validate/polkadot-explorer-rotatekeys-rpc.jpg)
 
-#### Option 2: CLI
+#### 方法2: CLI
 
-If you are on a remote server, it is easier to run this command on the same machine (while the node
-is running with the default HTTP RPC port configured):
+如果你在远端服务器上运行守门人节点，可能运行这个指令会更简单（假设你没有修改默认 HTTP PRC 端口号）：
 
 ```sh
 curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933
 ```
 
-The output will have a hex-encoded "result" field. The result is the concatenation of the four
-public keys. Save this result for a later step.
+它会返回一个十六进制编码的 “result” 字段，由4个公钥串联而成。记下即可。
 
-You can restart your node at this point, omitting the `--unsafe-rpc-expose` flag as it is no longer
-needed.
+现在，你可以重启节点并且去掉 `--unsafe-rpc-expose` 选项，此后就不再需要这个选项。
 
-### Submitting the `setKeys` Transaction
+### 提交 `setKeys` 交易
 
-You need to tell the chain your Session keys by signing and submitting an extrinsic. This is what
-associates your validator with your Controller account.
+你需要提交一个交易并签名，来向区块链提交你的 Session 密钥（公钥），他实现了守门人节点和你的 Controller 账号的关联。
 
-Go to [Staking > Account Actions](https://app.phala.network/#/staking/actions), and click "Set
-Session Key" on the bonding account you generated earlier. Enter the output from `author_rotateKeys`
-in the field and click "Set Session Key".
+- 点击 [质押 > Account Actions](https://app.phala.network/#/staking/actions)
+- 然后在之前生成的绑定帐户上单击 `Set Session Key`
+- 输入 `author_rotateKeys` 返回的结果
+- 点击 `Set Session Key` 。
 
 ![staking-change-session](https://wiki.polkadot.network/docs/assets/guides/how-to-validate/set-session-key-1.jpg)
 ![staking-session-result](https://wiki.polkadot.network/docs/assets/guides/how-to-validate/set-session-key-2.jpg)
 
-Submit this extrinsic and you are now ready to start validating.
+现在，你可以开始运行守门人身份了。
 
-## Register TEE worker
+## 注册 TEE 设备
 
-Gatekeepers utilize TEE to manage the secret keys in Phala Network. Before starting validating, you need to attach the TEE hardware to your Gatekeeper accounts. As long as the Gatekeeper is running and validating the blockchain, the TEE worker is always connected to the blockchain and support the network.
+守门人利用 TEE 管理 Phala Network 中的密钥。在开始启用验证前，你需要在为守门人账号注册 TEE 硬件。在守门人运行的整个生命周期之中，TEE 设备都需要时刻保持与区块链相连，来支持网络上的各种活动。
 
-The TEE worker is handled by two components: `pHost` and `pRuntime`. The latest prebuilt binaries can be found from the Github [release page](https://github.com/Phala-Network/phala-blockchain/releases) in `tee-release.zip`. Instead, you can also compile it on your own.
+TEE 模块由 `pHost` 与 `pRuntime` 构成。可以在我们的 Github [发布页](https://github.com/Phala-Network/phala-blockchain/releases) 中的 `tee-release.zip` 文件中找到最新的预编译程序。当然，也可以自行编译。
 
-Assuming you have extracted the prebuilt binares in a directory and have a running and fully synced `phala-node`, you can take the following steps to attach the TEE components to the blockchain:
+假设你已经解压了预编译的程序，并且已经运行了一个同步好的 `phala-node`，就可以采用以下步骤在链上注册你的 TEE 设备：
 
-1. Start pRuntime: `./app`
-2. Start pHost with proper flags:
+1. 启动 pRuntime: `./app`
+2. 设好命令行参数并启动 pHost:
   ```
   ./phost \
-        --mnemonic '<the-mnenomic-of-your-controller-account>' \
+        --mnemonic '<你的 Controller 账号私钥助记词>' \
         --no-sync \
         --no-write-back \
         --remote-attestation \
         --substrate-ws-endpoint 'ws://localhost:9944'
   ```
 
-The mnenomic of your controller account is needed because `phost` will send transactions to register your TEE hardware on behalve of your controller account.
+这一步需要指定 Controller 的私钥助记词，因为 `phost` 会以 Controller 的身份发送一笔交易到链上，来注册 TEE 设备。
 
-The prebuilt release also includes `bridge.sh`, a convinient script to bring up `phost` in the same way described above. With the script file, you can save the mnemonic permanently, avoding typing it everytime you run it.
+预编译的发布包中也包含了一个脚本文件 `bridge.sh`，作为以上方法的替代，可以较为方便的启动 `phost`。你可以在脚本中设置私钥，就不用每次启动都输入一次。
 
-> Note: In Phala Network Testnet PoC-2, the TEE worker registration is an one-shot job. `phost` will exit right after a successful registeration. However in future version, since TEE supports the TEE network in the full life-time of a Gatekeeper, it must be always up and running until the Gatekeeper is retired.
+> 注意：在 Phala Network Testnet PoC-2 中，TEE 只需要进行一次注册即可。`phost` 会在成功注册后自动退出。但是在未来的正式主网上线后，只要节点还在以守门人身份运行， TEE 组件就需要时刻保证在线，因为在完整的生命周期中 TEE 都需要对网络提供不间断的支持。
 
-## Validate
+## 开启验证
 
-To verify that your node is live and synchronized, head to
-[Telemetry](https://telemetry.polkadot.io/#list/Phala%20PoC-2) and find your node. Note that this
-will show all nodes on the Phala Network, which is why it is important to select a unique name!
+可以通过 [Telemetry](https://telemetry.polkadot.io/#list/Phala%20PoC-2) 查看自己的节点是否在线且完成同步。Telemetry 将显示所有在线的节点，因此，有一个个性的名字会帮助您更快找到您的节点 :)
 
-If everything looks good, go ahead and click on "Validate" in Phala Network UI.
+如果一切正常，请在 Phala Network UI 中点击 `Validate` 。
 
 ![dashboard validate](https://wiki.polkadot.network/docs/assets/guides/how-to-validate/polkadot-dashboard-validate.jpg)
 ![dashboard validate](https://wiki.polkadot.network/docs/assets/guides/how-to-validate/polkadot-dashboard-validate-modal.jpg)
 
-- **Payment preferences** - You can specify the percentage of the rewards that will get paid to you.
-  The remaining will be split among your nominators.
+- 收款偏好设置：在此设置你想保留的奖励百分比作为手续费，而剩余的部分将由您和提名人共享。
 
-Click "Validate".
+点击 `Validate` 。
 
-> Note: This step will fail if you haven't successfully registered a TEE worker on your controller account. Please double check [Register TEE worker](#register-tee-worker) to make sure your TEE hardware is registered.
+> 注意: 如果你没有遵循上面的步骤注册 TEE 设备，或者注册没有成功，这一步就会执行失败。请仔细阅读 [注册 TEE 设备](#注册-tee-设备) 一节，确保 Controller 账号已经与 TEE 成功关联。
 
-If you go to the "Staking" tab, you will see a list of active Gatekeepers currently running on the
-network. At the top of the page, it shows the number of Gatekeeper slots that are available as well
-as the number of nodes that have signaled their intention to be a Gatekeeper. You can go to the
-"Waiting" tab to double check to see whether your node is listed there.
+进入 `质押` 页面就可以看到所有正在运行的守门人。同时也可以在页面的顶端看到，目前守门人席位还有多少，以及多少节点正在申请成为守门人。点击 `Waiting` 可以查看您的节点是否仍在候选列表之中。
 
 ![staking queue](https://wiki.polkadot.network/docs/assets/guides/how-to-validate/polkadot-dashboard-staking.jpg)
 
-The Gatekeeper set is refreshed every era. In the next era, if there is a slot available and your
-node is selected to join the Gatekeeper set, your node will become an active Gatekeeper. Until then,
-it will remain in the _waiting_ queue. If your Gatekeeper is not selected to become part of the
-Gatekeeper set, it will remain in the _waiting_ queue until it is. There is no need to re-start if
-you are not selected for the Gatekeeper set in a particular era. However, it may be necessary to
-increase the number of PHA staked or seek out nominators for your Gatekeeper in order to join the
-Gatekeeper set.
+被选中的守门人不是一成不变的。每一个区块 Era 都会刷新。如果你已经通过投票算法入选守门人，但目前没有空位但，而下个 Era 有了空位，你将在下个 Era 自动成为守门人。在那之前，你将处于 _候选状态_。如果这一轮没有入选，则你将处于 _候选状态_。可以试试抵押更多 PHA 或招募更多提名人以提高排名。
 
-**Congratulations!** If you have followed all of these steps, and been selected to be a part of the
-Gatekeeper set, you are now running a Phala Network Gatekeeper! If you need help, reach out on the
-[Phala Network Telegram group](https://t.me/phalanetwork).
+**恭喜!** 如果你已经按照以上步骤操作并入选，你就成功成为了一个 Phala Network 守门人! 如果需要任何帮助，可以加入我们的
+[Phala Network Telegram 群组](https://t.me/phalanetwork).
 
 ## FAQ
 
-### Why am I unable to synchronize the chain with 0 peers?
+### 为什么我同步的时候一直显示 0 peers？
 
 ![zero-peer](https://wiki.polkadot.network/docs/assets/guides/how-to-validate/polkadot-zero-peer.jpg)
 
-Make sure to enable `30333` libp2p port. Eventually, it will take a little bit of time to discover
-other peers over the network.
+请您检查是否启用 `30333` libp2p 端口。启用后，需要再等待一段时间来发现新的节点。
 
-### How do I clear all my chain data?
+### 怎么清除链上数据？
 
 ```sh
 ./phala-node purge-chain
 ```
+
+### 有没有 Docker 部署教程
+
+正在准备中。
