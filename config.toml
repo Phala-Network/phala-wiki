@@ -13,6 +13,7 @@ home = [ "HTML", "RSS", "JSON"]
 [params]
 # Change default color scheme with a variant one. Can be "red", "blue", "green".
 themeVariant = "phala"
+editUrl = "https://github.com/Phala-Network/phala-wiki/edit/master/content/"
 
 [Languages]
 [Languages.en-us]
