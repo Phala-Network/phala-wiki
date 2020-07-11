@@ -77,7 +77,7 @@ Download the latest Phala Network binary from the Github [release page](https://
 
 You can also build the `phala-node` binary from the
 [Phala-Network/phala-blockchain](https://github.com/Phala-Network/phala-blockchain) repository on GitHub using the source
-code available in the **master** branch. You will need to prepare the rust build environment described in the [Run a Full Node](run-a-full-node) tutorial.
+code available in the **master** branch. You will need to prepare the rust build environment described in the [Run a Full Node]({{< relref "basics/run-a-full-node" >}}) tutorial.
 
 > Note: If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with
 > `git clone git@github.com/Phala-Network/phala-blockchain.git`.
