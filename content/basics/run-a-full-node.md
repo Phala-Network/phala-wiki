@@ -113,6 +113,7 @@ latest Phala Network code.
 git clone https://github.com/Phala-Network/phala-blockchain
 cd phala-blockchain
 ./scripts/init.sh
+git submodule update --init
 cargo build --release
 ```
 

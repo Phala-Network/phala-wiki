@@ -78,6 +78,7 @@ cargo 1.41.0 (626f0f40e 2019-12-03)
 git clone https://github.com/Phala-Network/phala-blockchain
 cd phala-blockchain
 ./scripts/init.sh
+git submodule update --init
 cargo build --release
 ```
 
