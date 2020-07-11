@@ -3,10 +3,24 @@ languageCode = "en-us"
 title = "Phala Network Wiki"
 theme = "learn"
 
+defaultContentLanguage = "en-us"
+defaultContentLanguageInSubdir= true
+
 # For search functionality
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
 [params]
-  # Change default color scheme with a variant one. Can be "red", "blue", "green".
-  themeVariant = "phala"
+# Change default color scheme with a variant one. Can be "red", "blue", "green".
+themeVariant = "phala"
+
+[Languages]
+[Languages.en-us]
+title = "Phala Network Wiki"
+weight = 1
+languageName = "English"
+
+[Languages.zh-cn]
+title = "Phala Network 百科"
+weight = 2
+languageName = "简体中文"
