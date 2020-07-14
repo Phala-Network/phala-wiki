@@ -109,7 +109,7 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 
 > **注意**：守门人需要用 RocksDb 后端进行同步。RocksDb 是一个默认设置，但可以用 `--database RocksDb` 选项来明确声明。将来，我们建议使用更快和更高效的 ParityDb。在不同数据库后端之间切换，同样也需要重新同步。
 > 
-> 如果你现在就想测试 ParityDB，可以开启 `---database paritydb` 参数。
+> 如果你现在就想测试 ParityDB，可以开启 `--database paritydb` 参数。
 
 同步时间跟区块链的大小有关，可能需要几分钟到几小时不等。
 
