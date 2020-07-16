@@ -86,6 +86,7 @@ code available in the **master** branch. You will need to prepare the rust build
   git clone https://github.com/Phala-Network/phala-blockchain
   cd phala-blockchain
   ./scripts/init.sh
+  git submodule update --init
   cargo build –-release
 ```
 

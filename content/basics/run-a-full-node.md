@@ -86,6 +86,7 @@ your system. You will either need to compile the [source code yourself](#clone-a
   git clone https://github.com/Phala-Network/phala-blockchain
   cd phala-blockchain
   ./scripts/init.sh
+  git submodule update --init
   cargo build –-release
   ```
 - Run the following command to start your node: `./target/release/phala-node --chain poc2 --name "My node's name"`
