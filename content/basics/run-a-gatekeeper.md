@@ -329,6 +329,16 @@ Gatekeeper set.
 Gatekeeper set, you are now running a Phala Network Gatekeeper! If you need help, reach out on the
 [Phala Network Telegram group](https://t.me/phalanetwork).
 
+## Participate Testnet PoC-2 promotion events
+
+To participate the PoC-2 events, it's required to set your node name in the format below:
+
+```bash
+./phala-node --name "Name | Controller account address" <...other arguments>
+```
+
+Please see the chapter with the same name in [Run a Full Node]({{< relref "basics/run-a-full-node" >}}) for more details.
+
 ## FAQ
 
 ### Why am I unable to synchronize the chain with 0 peers?

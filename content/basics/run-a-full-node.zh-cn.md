@@ -110,3 +110,19 @@ cargo build --release
 用 Docker 运行节点是可行的，但可能涉及到一些高级的操作。我们建议已经对 Docker 比较熟悉或已经部署过 Docker 的人继续这一步。
 
 你可以在 [这里](https://github.com/Phala-Network/phala-blockchain/blob/master/Dockerfile) 找到 Docker 相关的材料。Docker 默认只产生两个本地测试网节点，更适用于开发。你也可以编写自己的 Docker 文件并连接到 Phala PoC-2 测试网。
+
+## 参与测试网络 PoC-2 活动
+
+为了参加测试网络 PoC-2 的活动，我们要求运行节点的时候按照以下格式设置自己的名字：
+
+```bash
+./phala-node --name "名字 | Controller地址" <...其他参数>
+```
+
+其中 Controller 地址是创建抵押或者 Gatekeeper 账户时所设置的 Controller 地址（注意不是 Stash 账户）。请注意，名字与地址之间间隔的是“空格、半角竖线、空格”。如果没有按照此格式设置，可能会导致参与活动无法被统计。
+
+> 例如：以下命令会运行一个归档节点，并设置自己的名字为 PhalaMiner
+>
+> ```bash
+> ./phala-node --name "PhalaMiner | 5Ea32SkcVaEmBVFNeMycjuAQKNzHzwosFrhEhwUFmawsEtkt" --pruning archive
+> ```

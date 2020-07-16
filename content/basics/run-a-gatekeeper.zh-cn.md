@@ -247,6 +247,16 @@ TEE 模块由 `pHost` 与 `pRuntime` 构成。可以在我们的 Github [发布�
 **恭喜!** 如果你已经按照以上步骤操作并入选，你就成功成为了一个 Phala Network 守门人! 如果需要任何帮助，可以加入我们的
 [Phala Network Telegram 群组](https://t.me/phalanetwork).
 
+## 参与测试网络 PoC-2 活动
+
+为了参加测试网络 PoC-2 的活动，我们要求运行节点的时候按照以下格式设置自己的名字：
+
+```bash
+./phala-node --name "名字 | Controller地址" <...其他参数>
+```
+
+详情请见[运行全节点]({{< relref "basics/run-a-full-node" >}}) 教程中的同名章节。
+
 ## FAQ
 
 ### 为什么我同步的时候一直显示 0 peers？

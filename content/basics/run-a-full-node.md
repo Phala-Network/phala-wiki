@@ -159,3 +159,19 @@ The reference docker file is located [here](https://github.com/Phala-Network/pha
 Please note that by default the docker file only spawn a two nodes local testnet node, not a single
 node connecting to the public blockchain. This is mainly used for development. You can create your
 own docker file for connecting to Phala Network PoC2.
+
+## Participate Testnet PoC-2 promotion events
+
+To participate the PoC-2 events, it's required to set your node name in the format below:
+
+```bash
+./phala-node --name "Name | Controller account address" <...other arguments>
+```
+
+where "Controller account address" is the address of your Controller account for staking (not Stash account). Please make sure there are two spaces close to the vertical bar symbol.
+
+> Example: the command below brings up an archive node with the name "PhalaMiner" and its controller account
+>
+> ```bash
+> ./phala-node --name "PhalaMiner | 5Ea32SkcVaEmBVFNeMycjuAQKNzHzwosFrhEhwUFmawsEtkt" --pruning archive
+> ```
