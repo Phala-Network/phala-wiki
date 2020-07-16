@@ -171,7 +171,7 @@ It is now time to set up our Gatekeeper. We will do the following:
 - Select the Controller. This is the account that will decide when to start or stop validating.
 
 First, go to the [Staking](https://app.phala.network/#/staking/actions) section. Click on
-"Account Actions", and then the "New stake" button.
+"Account Actions", and then the "Stash" button.
 
 ![dashboard bonding](https://wiki.polkadot.network/docs/assets/guides/how-to-validate/polkadot-dashboard-bonding.jpg)
 
