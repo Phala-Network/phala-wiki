@@ -36,7 +36,7 @@ Phala上的守门人节点（Gatekeeper）封装区块1时，会获取区块0的
 
 此外，预编译的程序可能无法在老版本的 Linux 或特殊架构上运行。如果出现类似  `cannot execute binary file: Exec format error` 的错误，可能是由可执行程序版本和系统不兼容导致的。你可能需要[重新编译一遍](#克隆代码编译)，或使用 [Docker](#使用-docker-运行节点)。
 
-- 运行 `curl -sL https://github.com/Phala-Network/phala-blockchain/releases/download/poc2-2.0/phala-node -o phala-node` 来下载可执行程序
+- 运行 `curl -sL https://github.com/Phala-Network/phala-blockchain/releases/download/poc2-3.0-alpha1/phala-node -o phala-node` 来下载可执行程序
 - 运行 `sudo chmod +x phala-node`
 - 运行 `./phala-node --chain poc2 --name "你的节点名"`
 - 现在，你就可以在 [Polkadot Telemetry](https://telemetry.polkadot.io/#list/Phala%20PoC-2) 上看见自己的节点了。

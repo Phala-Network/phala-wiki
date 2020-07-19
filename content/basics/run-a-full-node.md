@@ -65,7 +65,7 @@ your system. You will either need to compile the [source code yourself](#clone-a
 [docker](#using-docker).
 
 - Download Phala Network binary by running:
-  `curl -sL https://github.com/Phala-Network/phala-blockchain/releases/download/poc2-2.0/phala-node -o phala-node`
+  `curl -sL https://github.com/Phala-Network/phala-blockchain/releases/download/poc2-3.0-alpha1/phala-node -o phala-node`
 - Run the following: `sudo chmod +x phala-node`
 - Run the following: `./phala-node --chain poc2 --name "Your Node Name Here"`
 - Find your node at <https://telemetry.polkadot.io/#list/Phala%20PoC-2>
