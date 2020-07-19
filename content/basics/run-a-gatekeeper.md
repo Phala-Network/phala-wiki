@@ -87,7 +87,7 @@ code available in the **master** branch. You will need to prepare the rust build
   cd phala-blockchain
   ./scripts/init.sh
   git submodule update --init
-  cargo build –-release
+  cargo build --release
 ```
 
 This step will take a while (generally 10 - 40 minutes, depending on your hardware).

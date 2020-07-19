@@ -55,7 +55,7 @@ Phala上的守门人节点（Gatekeeper）封装区块1时，会获取区块0的
   cd phala-blockchain
   ./scripts/init.sh
   git submodule update --init
-  cargo build –-release
+  cargo build --release
   ```
 - 运行 `./target/release/phala-node --chain poc2 --name "你的节点名"` 以启动节点
 - 现在，你就可以在 [Polkadot Telemetry](https://telemetry.polkadot.io/#list/Phala%20PoC-2) 上看见自己的节点了。

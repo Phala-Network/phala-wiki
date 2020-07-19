@@ -87,7 +87,7 @@ your system. You will either need to compile the [source code yourself](#clone-a
   cd phala-blockchain
   ./scripts/init.sh
   git submodule update --init
-  cargo build –-release
+  cargo build --release
   ```
 - Run the following command to start your node: `./target/release/phala-node --chain poc2 --name "My node's name"`
 - Find your node at <https://telemetry.polkadot.io/#list/Phala%20PoC-2>

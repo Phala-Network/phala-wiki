@@ -86,7 +86,7 @@ draft: false
   cd phala-blockchain
   ./scripts/init.sh
   git submodule update --init
-  cargo build –-release
+  cargo build --release
 ```
 
 这一步会比较消耗时间（大约 10 - 40 分钟，取决于硬件配置）。
