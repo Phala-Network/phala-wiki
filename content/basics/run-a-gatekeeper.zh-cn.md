@@ -76,7 +76,7 @@ draft: false
 
 你可以直接从 Phala Network 的 [Github 发布页面](https://github.com/Phala-Network/phala-blockchain/releases) 下载 `phala-node` 可执行程序。
 
-也可以直接从 [Phala-Network/phala-blockchain](https://github.com/Phala-Network/phala-blockchain) 代码库的 **master分之** 上直接编译 `phala-node`。你可以参照 [运行全节点]({{< relref "basics/run-a-full-node" >}}) 教程中的步骤编译节点：
+也可以直接从 [Phala-Network/phala-blockchain](https://github.com/Phala-Network/phala-blockchain) 代码库的 **master分支** 上直接编译 `phala-node`。你可以参照 [运行全节点]({{< relref "basics/run-a-full-node" >}}) 教程中的步骤编译节点：
 
 > 注意：如果你倾向于用SSH链接Github，也可以把以下第一条命令替换为
 > `git clone git@github.com/Phala-Network/phala-blockchain.git`.
