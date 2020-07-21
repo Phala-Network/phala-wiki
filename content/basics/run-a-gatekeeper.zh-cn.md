@@ -66,11 +66,11 @@ draft: false
 
 可以从 [官方下载页面](https://01.org/intel-software-guard-extensions/downloads) 找到最新的 Linux SGX 相关软件下载。确保系统中安装了如下软件：
 
-- SGX Linux DCAP 驱动 (安装至 `/opt` 目录)
-- SGX Linux SDK
+- SGX Linux DCAP 驱动
+- SGX Linux SDK (安装至 `/opt` 目录)
 - SGX PSW (平台软件)
 
-具体安装方法请参见 Intel 官方指南。也可以参考 Teaclave SGX SDK 提供的 [Dockerfile](https://github.com/apache/incubator-teaclave-sgx-sdk/blob/253b3ac982b2d09d32f5fa5a2011e3c36bcbed1e/dockerfile/Dockerfile.1804.nightly) 来安装驱动套件。
+具体安装方法请参见 Intel 官方指南。也可以参考 Teaclave SGX SDK 提供的 [Dockerfile](https://github.com/apache/incubator-teaclave-sgx-sdk/blob/253b3ac982b2d09d32f5fa5a2011e3c36bcbed1e/dockerfile/Dockerfile.1804.nightly) 来安装 SDK 和 PSW 套件。虽然在 Docker 内运行 SGX 应用是的确可行的，但我们暂时还没有提供任何指南可供参考。此外，驱动必须直接原生地安装在宿主机上。
 
 ### 安装 `phala-node` 可执行程序
 

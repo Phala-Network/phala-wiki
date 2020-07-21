@@ -65,11 +65,11 @@ optimizations in order to be equal to other Gatekeepers that are running the sta
 
 You can find the latest Linux SGX driver from the [official download page](https://01.org/intel-software-guard-extensions/downloads). Make sure to install:
 
-- SGX Linux DCAP Driver (Under `/opt`)
-- SGX Linux SDK
+- SGX Linux DCAP Driver
+- SGX Linux SDK (Under `/opt`)
 - SGX Platform Swoftware
 
-The [dockerfile](https://github.com/apache/incubator-teaclave-sgx-sdk/blob/253b3ac982b2d09d32f5fa5a2011e3c36bcbed1e/dockerfile/Dockerfile.1804.nightly) offered by Teaclave SGX SDK is a good reference of how to install the SGX driver, SDK and platform software.
+The [dockerfile](https://github.com/apache/incubator-teaclave-sgx-sdk/blob/253b3ac982b2d09d32f5fa5a2011e3c36bcbed1e/dockerfile/Dockerfile.1804.nightly) offered by Teaclave SGX SDK is a good reference of how to install the SGX SDK and platform software. Though it's possible to run SGX apps inside Docker, we don't have a guide for it so far. The driver must be installed on host machine natively.
 
 ### Install the `phala-node` Binary
 
