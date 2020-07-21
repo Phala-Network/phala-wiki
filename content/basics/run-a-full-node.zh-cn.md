@@ -38,7 +38,7 @@ Phala上的守门人节点（Gatekeeper）封装区块1时，会获取区块0的
 
 - 运行 `curl -sL https://github.com/Phala-Network/phala-blockchain/releases/download/poc2-3.0-alpha1/phala-node -o phala-node` 来下载可执行程序
 - 运行 `sudo chmod +x phala-node`
-- 运行 `./phala-node --chain poc2 --name "你的节点名"`
+- 运行 `./phala-node --chain poc2 --name "你的节点名"` (如果你在参与[PoC-2活动](#参与测试网络-poc-2-活动)，请按标准格式设置名字)
 - 现在，你就可以在 [Polkadot Telemetry](https://telemetry.polkadot.io/#list/Phala%20PoC-2) 上看见自己的节点了。
 
 ### 快速安装指南  (Mac)
@@ -57,8 +57,24 @@ Phala上的守门人节点（Gatekeeper）封装区块1时，会获取区块0的
   git submodule update --init
   cargo build --release
   ```
-- 运行 `./target/release/phala-node --chain poc2 --name "你的节点名"` 以启动节点
+- 运行 `./target/release/phala-node --chain poc2 --name "你的节点名"` 以启动节点 (如果你在参与[PoC-2活动](#参与测试网络-poc-2-活动)，请按标准格式设置名字)
 - 现在，你就可以在 [Polkadot Telemetry](https://telemetry.polkadot.io/#list/Phala%20PoC-2) 上看见自己的节点了。
+
+## 参与测试网络 PoC-2 活动
+
+为了参加测试网络 PoC-2 的活动，我们要求运行节点的时候按照以下格式设置自己的名字：
+
+```bash
+./phala-node --name "名字 | Controller地址" <...其他参数>
+```
+
+其中 Controller 地址是创建抵押或者 Gatekeeper 账户时所设置的 Controller 地址（注意不是 Stash 账户）。请注意，名字与地址之间间隔的是“空格、半角竖线、空格”。如果没有按照此格式设置，可能会导致参与活动无法被统计。
+
+> 例如：以下命令会运行一个归档节点，并设置自己的名字为 PhalaMiner
+>
+> ```bash
+> ./phala-node --name "PhalaMiner | 5Ea32SkcVaEmBVFNeMycjuAQKNzHzwosFrhEhwUFmawsEtkt" --pruning archive
+> ```
 
 ## 获取 Substrate
 
@@ -111,19 +127,3 @@ cargo build --release
 用 Docker 运行节点是可行的，但可能涉及到一些高级的操作。我们建议已经对 Docker 比较熟悉或已经部署过 Docker 的人继续这一步。
 
 你可以在 [这里](https://github.com/Phala-Network/phala-blockchain/blob/master/Dockerfile) 找到 Docker 相关的材料。Docker 默认只产生两个本地测试网节点，更适用于开发。你也可以编写自己的 Docker 文件并连接到 Phala PoC-2 测试网。
-
-## 参与测试网络 PoC-2 活动
-
-为了参加测试网络 PoC-2 的活动，我们要求运行节点的时候按照以下格式设置自己的名字：
-
-```bash
-./phala-node --name "名字 | Controller地址" <...其他参数>
-```
-
-其中 Controller 地址是创建抵押或者 Gatekeeper 账户时所设置的 Controller 地址（注意不是 Stash 账户）。请注意，名字与地址之间间隔的是“空格、半角竖线、空格”。如果没有按照此格式设置，可能会导致参与活动无法被统计。
-
-> 例如：以下命令会运行一个归档节点，并设置自己的名字为 PhalaMiner
->
-> ```bash
-> ./phala-node --name "PhalaMiner | 5Ea32SkcVaEmBVFNeMycjuAQKNzHzwosFrhEhwUFmawsEtkt" --pruning archive
-> ```

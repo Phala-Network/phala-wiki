@@ -67,7 +67,7 @@ your system. You will either need to compile the [source code yourself](#clone-a
 - Download Phala Network binary by running:
   `curl -sL https://github.com/Phala-Network/phala-blockchain/releases/download/poc2-3.0-alpha1/phala-node -o phala-node`
 - Run the following: `sudo chmod +x phala-node`
-- Run the following: `./phala-node --chain poc2 --name "Your Node Name Here"`
+- Run the following: `./phala-node --chain poc2 --name "Your Node Name Here"` (check [participating PoC-2 events](#participate-testnet-poc-2-promotion-events) for naming convention if you are)
 - Find your node at <https://telemetry.polkadot.io/#list/Phala%20PoC-2>
 
 ### Fast Install Instructions (Mac)
@@ -89,8 +89,24 @@ your system. You will either need to compile the [source code yourself](#clone-a
   git submodule update --init
   cargo build --release
   ```
-- Run the following command to start your node: `./target/release/phala-node --chain poc2 --name "My node's name"`
+- Run the following command to start your node: `./target/release/phala-node --chain poc2 --name "My node's name"` (check [participating PoC-2 events](#participate-testnet-poc-2-promotion-events) for naming convention if you are)
 - Find your node at <https://telemetry.polkadot.io/#list/Phala%20PoC-2>
+
+## Participate Testnet PoC-2 promotion events
+
+To participate the PoC-2 events, it's required to set your node name in the format below:
+
+```bash
+./phala-node --name "Name | Controller account address" <...other arguments>
+```
+
+where "Controller account address" is the address of your Controller account for staking (not Stash account). Please make sure there are two spaces close to the vertical bar symbol.
+
+> Example: the command below brings up an archive node with the name "PhalaMiner" and its controller account
+>
+> ```bash
+> ./phala-node --name "PhalaMiner | 5Ea32SkcVaEmBVFNeMycjuAQKNzHzwosFrhEhwUFmawsEtkt" --pruning archive
+> ```
 
 ## Get Substrate
 
@@ -126,6 +142,8 @@ The built binary will be in the `target/release` folder, called `phala-node`.
 ./target/release/phala-node --chain poc2 --name "My node's name"
 ```
 
+> Check [participating PoC-2 events](#participate-testnet-poc-2-promotion-events) for naming convention if you are.
+
 Use the `--help` flag to find out which flags you can use when running the node. For example, if
 [connecting to your node remotely](https://wiki.polkadot.network/docs/en/maintain-wss), you'll probably want to use `--ws-external` and
 `--rpc-cors all`.
@@ -160,19 +178,3 @@ The reference docker file is located [here](https://github.com/Phala-Network/pha
 Please note that by default the docker file only spawn a two nodes local testnet node, not a single
 node connecting to the public blockchain. This is mainly used for development. You can create your
 own docker file for connecting to Phala Network PoC2.
-
-## Participate Testnet PoC-2 promotion events
-
-To participate the PoC-2 events, it's required to set your node name in the format below:
-
-```bash
-./phala-node --name "Name | Controller account address" <...other arguments>
-```
-
-where "Controller account address" is the address of your Controller account for staking (not Stash account). Please make sure there are two spaces close to the vertical bar symbol.
-
-> Example: the command below brings up an archive node with the name "PhalaMiner" and its controller account
->
-> ```bash
-> ./phala-node --name "PhalaMiner | 5Ea32SkcVaEmBVFNeMycjuAQKNzHzwosFrhEhwUFmawsEtkt" --pruning archive
-> ```
