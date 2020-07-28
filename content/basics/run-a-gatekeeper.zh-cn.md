@@ -12,9 +12,7 @@ draft: false
 
 运行守门人节点，安全是第一要素。你可以查看[搭建安全Polkadot验证人节点](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator)查看可能影响守门人安全运行的因素。Web3 基金会也维护了一个你可以自行部署的[验证人节点参考实现](https://github.com/w3f/polkadot-secure-validator)（[此处](https://www.youtube.com/watch?v=tTn8P6t7JYc)有视频教程)。在配置守门人节点的过程中，可以把这个代码库当作 _一个初始模版_ ，在上面自行修改、裁剪。
 
-如果您有任何疑问，可扫码添加 Phala 小助手，回复**守门人**，加入守门人答疑群。
-
-![](/images/phala-qr.jpg)
+如果您有任何疑问，可前往 [Phala论坛中文区](https://forum.phala.network/c/9-category/9) ，按照此 [模板](https://forum.phala.network/t/topic/461/2) 进行提问，我们将在看到后第一时间回复您。
 
 ### 守门人需要抵押多少 PHA
 
