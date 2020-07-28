@@ -4,11 +4,13 @@ date: 2020-07-06T22:30:41+08:00
 draft: false
 ---
 
-这是一份关于如何在 [Phala PoC-2 测试网](https://app.phala.network/#/staking) 上安装全节点的教程。如果你有任何疑问，可以扫码回复`节点`，进入节点答疑群。
+这是一份关于如何在 [Phala PoC-2 测试网](https://app.phala.network/#/staking) 上安装全节点的教程。
 
-![](/images/phala-qr.jpg)
+如果你有节点相关疑问，请 [点此前往](https://forum.phala.network/c/9-category/9) Phala论坛中文区，参照此 [模板](https://forum.phala.network/t/topic/461/3) 进行提问。后等待Phala开发人员解答即可。
 
-在开始跑节点之前，我们先讲一讲 Phala 上的节点类型。
+
+
+在开始跑节点之前，您可以先了解一下 Phala 网络上的节点类型。
 
 ### 节点类型
 
