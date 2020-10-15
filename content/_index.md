@@ -1,16 +1,23 @@
 ---
 title: "Phala Network Wiki"
-date: 2020-07-10T02:27:43+08:00
 draft: false
 ---
 
-<!-- ![banner](images/logo-phala-long-light@xxl.png) -->
+{{< block "grid-2 mt-2" >}}
+{{< column "mt-2">}}
 
 # Phala Network
 
-Phala Network guarantees the reliable execution of smart contracts while keeping the data secretly. Confidential contracts run in miner nodes with Trusted Computing capable hardwares, which guarantees the secrecy of the contract data.
+Phala Network guarantees the reliable execution of smart contracts while keeping the data secretly. Confidential contracts run in TEE worker nodes with Trusted Computing capable hardwares, which guarantees the secrecy of the contract data.
 
-## Featured Tutorials
+{{< button "docs/" "Docs" >}} {{< button "https://phala.network" "Homepage" >}} {{< button "https://gitcoin.co/hackathon/polkadot/onboard" "Polkadot Hackathon" >}}
 
-- [Run a full node]({{< relref "basics/run-a-full-node" >}})
-- [Run a Gatekeeper]({{< relref "basics/run-a-gatekeeper" >}})
+{{< /column >}}
+{{< column >}}
+
+<div style="text-align: center">
+    <img src="/images/logo-phala-grn.png" style="max-height: 300px">
+</div>
+
+{{< /column >}}
+{{< /block >}}

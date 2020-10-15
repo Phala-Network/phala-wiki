@@ -23,9 +23,5 @@ hugo server
 ## Build & release
 
 ```bash
-hugo
-
-cd public
-git commit -a
-git push
+./scripts/publish.sh
 ```
