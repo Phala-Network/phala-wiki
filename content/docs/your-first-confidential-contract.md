@@ -60,7 +60,8 @@ Interact with the contract: how to send command and queries.
 This tutorial is a part of [Polkadot "Hello World" virtual hackathon challenge](https://gitcoin.co/hackathon/polkadot/onboard) at gitcoin.co. In order to win the task, please do the followings:
 
 1. Fork [the core blockchain](https://github.com/Phala-Network/phala-blockchain/tree/helloworld) and [the Web UI](https://github.com/Phala-Network/apps-ng/tree/helloworld) repo (helloworld branch) into your own GitHub account
-2. Develop your own contract on the “helloworld” branch templates
+2. Develop your own contract on the templates at “helloworld” branch
 3. Launch your full development stack and take screenshots of your dapps
-4. Make a tweet with the screenshots, describe what you are building and share your feeling on Twitter
-5. Join our [Discord server](https://discord.gg/zQKNGv4) and submit the the link to your tweet
+4. Push your work to your forked repos. They must be open source
+5. Make a tweet with the link to your repos, the screenshots, and describe what you are building on Twitter
+6. Join our [Discord server](https://discord.gg/zQKNGv4) and submit the the link to your tweet
