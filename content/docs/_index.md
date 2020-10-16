@@ -63,3 +63,11 @@ In fact, in addition to the contract states, the inputs and outputs of the contr
 Phala provides confidentiality guarantee based on trusted hardwares, or *Trusted Execution Environment*, which means your code and data are safe even if your operating system is compromised. A contract executing in the TEE is just like the priest in the confessional room: You know who he is, you can tell he what you want and he will reply, but only God knows what's going on there. The most important thing is: All your secrets are safe.
 
 Phala adopts one of the most popular implementations of TEE, i.e., Intel SGX. Intel SGX introduces a small set of instructions to encrypt the data in memory, and attackers cannot decrypt it without cracking the CPU and extracting the secret key in it. Unlike existing blockchains in which all contract states are public on chain, the states of confidential contracts are encrypted and sealed in SGX.
+
+## Phala Network in Detail
+
+Phala Network is consisted of three components: phala-nodes which make up of Phala blockchain, pRuntime and phost. Among them, only pRuntime lives in TEE. Although attackers cannot peek into TEE, they can trick the contracts in TEE by forging transactions or replaying/reordering valid transactions. It it important to ensure that confidential contracts only accept valid transactions and process transactions in an expected order. That's why we introduce Phala blockchain and phost.
+
+Phala blockchain serves as a canonical source of valid transactions. Only submitted transactions can be accepted by pRuntime, and they will be processed in the same order as on blockchain. We implement the Simplified Payment Verification protocal in pRuntime so it is able to determine whether valid transactions are accepted in expected order. Also a key rotation mechanism will be introduced to prevent the replay of historical transactions. The great thing is that pRunime hides all these complicated implementation details from you so you can just implement confidential contracts like developing ordinary programs.
+
+phost works as the bridge between Phala blockchain and pRuntime. It ensures that all the transactions on blockchain are faithfully forwarded to pRuntime and all the TEE instances are running unmodified version of pRuntime.
