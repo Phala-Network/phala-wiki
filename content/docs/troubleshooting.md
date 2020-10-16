@@ -3,9 +3,40 @@ title: Troubleshooting
 weight: 4
 ---
 
-## The "duplicate lang item" problem
+## `phala-blockchain`
 
+### Probelm: "consider giving `accuracy` a type" when building substrate
+
+```log
+  error[E0282]: type annotations needed
+      --> .../substrate/primitives/arithmetic/src/fixed_point.rs:541:9
+       |
+  541  |                   let accuracy = P::ACCURACY.saturated_into();
+       |                       ^^^^^^^^ consider giving `accuracy` a type
+  ...
+  1604 | / implement_fixed!(
+  1605 | |     FixedI128,
+  1606 | |     test_fixed_i128,
+  1607 | |     i128,
+  ...    |
+  1611 | |         [-170141183460469231731.687303715884105728, 170141183460469231731.687303715884105727]_",
+  1612 | | );
+       | |__- in this macro invocation
+       |
+       = note: this error originates in a macro (in Nightly builds, run with -Z macro-backtrace for more info)
 ```
+
+This is a [known issue](https://github.com/paritytech/substrate/issues/7287) caused by rust nightly regression. To walkaround it, switch to an older nightly toolchain. We recommend `nightly-2020-09-27`. It can be done like below:
+
+```bash
+rustup toolchain install nightly-2020-09-27
+rustup default nightly-2020-09-27
+rustup target add wasm32-unknown-unknown --toolchain nightly-2020-09-27
+```
+
+### Probelm: "duplicate lang item"
+
+```log
 error: duplicate lang item in crate `std`: `f32_runtime`.
   |
   = note: the lang item is first defined in crate `sgx_tstd` (which `enclaveapp` depends on)
@@ -34,3 +65,14 @@ This is due to accidentally introduced "std" dependencies. Usually there are two
 Most likely the code has some syntax errors and cannot build. Sometimes these errors can confuse the rust compiler in "no_std" mode and the compiler may accidentally introduce some random dependencies, which breaks our SDK. If this is the case, scroll up and fix the other compiling errors, and then this error should disappear.
 
 If fixing the other errors doesn't help, you should check if you accidentally introduce the "std" dependency to the runtime code. The hardware enclave sdk Phala is using doesn't allow direct or indirect "std" dependencies. You may consider to switch to a package that supports "no_std" and disable its std feature in `Cargo.toml`, or manually port the dependency package to use `teaclave-sgx-sdk`'s `tstd` instead. `tstd` is a subset of `std` but it's enough in the most cases.
+
+## `apps-ng` related
+
+### Probelm: '@polkadot/dev/config/tsconfig' not found
+
+```log
+ready - started server on http://localhost:3000
+error TS6053: File '@polkadot/dev/config/tsconfig' not found.
+```
+
+You forgot to init the git submodule. Please run `git submodule update --init`.
