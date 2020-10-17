@@ -3,7 +3,7 @@ title: "Hello World: your first confidential contract"
 weight: 3
 ---
 
-> Basic understanding of Rust lanugage programming and smart contract development knowledge is necessary to follow this tutorial.
+> Basic understanding of Rust language programming and smart contract development knowledge is necessary to follow this tutorial.
 
 ## Overview
 
@@ -11,7 +11,7 @@ In this tutorial, we are going to continue on the development environment we hav
 
 - Learn how to develop a confidential contract
 - Interact with the contract from the Web UI
-- Build your own confidental contract
+- Build your own confidential contract
 
 For a high-level overview of Phala Network, please check the previous chapters.
 
@@ -49,7 +49,7 @@ Interact with the contract: how to send command and queries.
 
 1. Set note UI
 2. Query UI
-3. Hanlde error
+3. Handle error
 
 ## Put everything together
 

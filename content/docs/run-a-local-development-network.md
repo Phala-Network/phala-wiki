@@ -7,7 +7,7 @@ weight: 2
 
 ## Overview
 
-In this tutorial, we are going to set up a "Hello World" development environment. We are gonig to deploy a full stack of the core blockchain and connect the Web UI to the blockchain. By the end of the tutorial, you will be able to:
+In this tutorial, we are going to set up a "Hello World" development environment. We are going to deploy a full stack of the core blockchain and connect the Web UI to the blockchain. By the end of the tutorial, you will be able to:
 
 - Send confidential transactions
 - Get a ready-to-hack version of Phala Network for building your own confidential Dapps
@@ -34,7 +34,7 @@ Follow the commands below to prepare the environment. Some can be skipped if alr
 
     ```bash
     sudo apt update
-    sudo apt install -y build-essential ocaml ocamlbuild automake autoconf libtool wget python libssl-dev git cmake perl cmake pkg-config curl llvm-10 clang-10 libclang-10-dev
+    sudo apt install -y build-essential ocaml ocamlbuild automake autoconf libtool wget python libssl-dev git cmake perl pkg-config curl llvm-10 clang-10 libclang-10-dev
     ```
 
     > Notes on LLVM: We require at least LLVM-9, but higher versions are also supported. Older version like LLVM 6.0 breaks the core blockchain compilation.
@@ -89,7 +89,7 @@ yarn --version
 # 2.1.1
 ```
 
-Finally let's clone the code and run the initilization script to update the rust toolchain. Please note that the entire tutorial is on the **`helloworld` branch** for both the blockchain and the Web UI repo.
+Finally let's clone the code and run the initialization script to update the rust toolchain. Please note that the entire tutorial is on the **`helloworld` branch** for both the blockchain and the Web UI repo.
 
 ```bash
 # Clone the core blockchain repo
@@ -117,7 +117,7 @@ Now we already have the both repos `phala-blockchain` and `apps-ng` in the worki
 cd phala-blockchain/
 cargo build --release
 
-# Build pRuntime (TEE Encalve)
+# Build pRuntime (TEE Enclave)
 cd ./pruntime/
 SGX_MODE=SW make
 ```
@@ -130,7 +130,7 @@ The compilation takes from 20 mins to 60 mins depending on your internet connect
 
 > **Notes on `SGX_MODE`**
 >
-> The SGX SDK supports software simulation mode and hardware mode. `SGX_MODE=SW` enables the simulation mode. The software mode is for easy development, where the hardware encalve is not required. You can even run it on a virtual machine or a computer with an AMD cpu. However, only the hardware mode can guarantee the security and the confidentiality of the trusted execution. To enable the hardware mode, you have to install [Intel SGX DCAP Driver](https://download.01.org/intel-sgx/sgx-dcap/1.8/linux/distro/ubuntu18.04-server/) and the platform software shipped with the driver, and pass `SGX_MODE=HW` to the toolchain.
+> The SGX SDK supports software simulation mode and hardware mode. `SGX_MODE=SW` enables the simulation mode. The software mode is for easy development, where the hardware enclave is not required. You can even run it on a virtual machine or a computer with an AMD cpu. However, only the hardware mode can guarantee the security and the confidentiality of the trusted execution. To enable the hardware mode, you have to install [Intel SGX DCAP Driver](https://download.01.org/intel-sgx/sgx-dcap/1.8/linux/distro/ubuntu18.04-server/) and the platform software shipped with the driver, and pass `SGX_MODE=HW` to the toolchain.
 
 The three core blockchain components work together to bring the full functionalities. Among them, `phala-node` and `pruntime` should be launched first, and `phost` follows:
 
@@ -204,7 +204,7 @@ Let's select Alice and unlock the wallet. Alice is a built-in test account with 
 ![](/images/docs/apps-ng-init-wallet.png)
 (Secret wallet dapp)
 
-However, the "secret assets" wallet below is very different. Secret assets are stored in confidential contracts inside TEE encalves. Like what the name says, the secret assets are private and invisible on the blockchain.
+However, the "secret assets" wallet below is very different. Secret assets are stored in confidential contracts inside TEE enclaves. Like what the name says, the secret assets are private and invisible on the blockchain.
 
 Click "Convert to Secret PHA" button to transfer **PHA** to **Secret PHA**. You will see your PHA balance reduced first, and after around ten seconds, the Secret PHA balance will increase by the same amount, except some transaction fee.
 
@@ -214,7 +214,7 @@ Click "Convert to Secret PHA" button to transfer **PHA** to **Secret PHA**. You 
 >
 > It takes ~6s to include a Substrate transaction in the blockchain, and then another 6s to finalize the block. Once the transaction is finalized, it triggers a "TransferToTee" event, relayed to `pruntime` via the relayer, and the confidential contract increases the balance. Finally the Web UI queries the confidential contract to get the updated balance.
 
-There are plenty of things you can play with the scret wallet: 
+There are plenty of things you can play with the secret wallet:
 
 - convert the secret assets back to on-chain assets;
 - transfer secret assets just like ordinary assets on every Substrate blockchain;
@@ -230,7 +230,7 @@ All the above functions are made by confidential transaction. Nobody can see the
 
 Congratulations! Finally, you have followed the tutorial to:
 
-- Preapre a ready-to-hack development environment
+- Prepare a ready-to-hack development environment
 - Download, build, and started a full stack development mode Phala Network
 - Connect to the network via the Web UI and try the secret wallet dapp
 
