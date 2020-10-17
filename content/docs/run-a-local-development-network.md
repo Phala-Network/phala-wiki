@@ -195,6 +195,19 @@ event - compiled successfully
 
 The Web UI connects to both `phala-node` and `pruntime` by their default RPC endpoints. If everything is configured correctly, you will see the wallet unlock screen in the landing page as shown above. You should be able to select the well-known development accounts (Alice, Bob, etc) in the drop box.
 
+> **Notes for Remote Access**
+>
+> In a case where you run your blockchain and WEB UI on your REMOTE_SERVER and try to access them elsewhere, you can forward the ports with `ssh` command. For example,
+> ```bash
+> ssh -N -f USER@REMOTE_SERVER -L 3000:localhost:3000 9944:localhost:9944 8000:localhost:8000
+> ```
+> This forwards all the necessary ports:
+> - 3000: HTTP port of Web UI
+> - 9944: Substrate WebSocket RPC port of `phala-node`
+> - 8000: HTTP Restful RPC port of `pruntime`
+>
+> so you can visit the Web UI at <http://localhost:3000>.
+
 ## Send some secret tokens
 
 In the last two sections, we have built and launched `phala-node`, `pruntime`, and `phost` in development mode, and connect the Web UI to the development network. Now we are ready to try the secret wallet feature in Phala Network!
@@ -220,7 +233,7 @@ There are plenty of things you can play with the secret wallet:
 - transfer secret assets just like ordinary assets on every Substrate blockchain;
 - and even issue or destroy your own secret tokens
 
-All the above functions are made by confidential transaction. Nobody can see the content of the transaction because the body is encrypted. By clicking "Polkadot UI" button in the navigation bar, it will bring you to the polkadot.js apps you are familiar with. You can find the encrypted transaction wrapped by `phalaModel.pushCommand` extrinsic from the block explorer as shown below.
+All the above functions are made by confidential transaction. Nobody can see the content of the transaction because the body is encrypted. By clicking "Polkadot UI" button in the navigation bar, it will bring you to the polkadot.js apps you are familiar with. After sending an encrypted transaction by clicking the "Secret Transfer" button, you can find the encrypted transaction wrapped by `phalaModel.pushCommand` extrinsic from the block explorer as shown below.
 
 <img src="/images/docs/polkadotjs-pushCommand.png" style="max-height: 200px;">
 
