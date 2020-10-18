@@ -199,14 +199,14 @@ The Web UI connects to both `phala-node` and `pruntime` by their default RPC end
 >
 > In a case where you run your blockchain and WEB UI on your REMOTE_SERVER and try to access them elsewhere, you can forward the ports with `ssh` command. For example,
 > ```bash
-> ssh -N -f USER@REMOTE_SERVER -L 3000:localhost:3000 9944:localhost:9944 8000:localhost:8000
+> ssh -N -f USER@REMOTE_SERVER -L 3000:localhost:3000 -L 9944:localhost:9944 -L 8000:localhost:8000
 > ```
 > This forwards all the necessary ports:
 > - 3000: HTTP port of Web UI
 > - 9944: Substrate WebSocket RPC port of `phala-node`
 > - 8000: HTTP Restful RPC port of `pruntime`
 >
-> so you can visit the Web UI at <http://localhost:3000>.
+> and you can visit the Web UI at <http://localhost:3000>.
 
 ## Send some secret tokens
 
