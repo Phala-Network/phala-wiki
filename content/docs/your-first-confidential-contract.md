@@ -25,7 +25,9 @@ Please set up a development environment by following the previous chapter [Run a
 
 ### Contract
 
-The HelloWorld contract commit is available at <https://github.com/Phala-Network/phala-blockchain/commit/b9c576702ec1b9f0ee4a274b5d7aecc30e40fcb4>. HelloWorld contract stores a counter which can be incremented by anyone, but only authorized user can read it. The typical model of the confidential contracts in Phala Network is consisted of the following three components which we will discuss in detail.
+The HelloWorld contract commit is available at <https://github.com/Phala-Network/phala-blockchain/commit/b9c576702ec1b9f0ee4a274b5d7aecc30e40fcb4>.
+
+HelloWorld contract stores a counter which can be incremented by anyone, but only authorized user can read it. The typical model of the confidential contracts in Phala Network is consisted of the following three components which we will discuss in detail.
 
 - States
 - Commands
@@ -133,9 +135,107 @@ Interact with the contract: how to send command and queries.
 
 ### Contract
 
+The SecretNote contract commit is available at <https://github.com/Phala-Network/phala-blockchain/commit/d91f94c9ed21290b7353991899f7a6da18cfab61> **(CHANGE THIS)**. We thank [Laurent](https://github.com/laurent) for his implementation of this contract.
+
+After a general understanding of the model of confidential contracts, let's make something practical and implement a contract which can store the secret note of each visitor. In this contract, we allow any user to store one note, and only the user himself is allowed to read
+his note. So we use a map to store the users with their notes, and provide two interface `SetNote` and `GetNote` for them to operate their notes.
+
 1. Add an item to contract state: `map<account, string>`
 2. Command: `SetNote`
 3. Query: `GetNote` with `Error::NotAuthorized`
+
+In Rust's standard collection library, there are two kinds of map implementations: `HashMap` and `BTreeMap`. Since our `AccountIdWrapper` does not derive `Hash` needed by `HashMap`, we use `BTreeMap` to store the mapping between user accounts and their notes.
+
+```rust
+pub struct SecretNote {
+    notes: BTreeMap<AccountIdWrapper, String>,
+}
+```
+
+Here we recall the difference between commands and queries. In SecretNote, `SetNote` changes the states, so it is a command, and `GetNote` is a query. For each user, we only keep the latest note, so we call the `insert` to add a note if no previous one exists or directly overwrite the existing one.
+
+```rust
+pub enum Command {
+    /// Set the note for current user
+    SetNote {
+        note: String,
+    },
+}
+
+impl contracts::Contract<Command, Request, Response> for SecretNote {
+    fn handle_command(&mut self, _origin: &chain::AccountId, _txref: &TxRef, cmd: Command) -> TransactionStatus {
+        match cmd {
+            // Handle the `SetNote` command with one parameter
+            Command::SetNote { note } => {
+                // Simply increment the counter by some value
+                let current_user = AccountIdWrapper(_origin.clone());
+                // Insert the note, we only keep the latest note
+                self.notes.insert(current_user, note);
+                // Returns TransactionStatus::Ok to indicate a successful transaction
+                TransactionStatus::Ok
+            },
+        }
+    }
+}
+```
+
+The `GetNote` handler is a little tricky. We first need to ensure that the user account is provided in the query (if you do not understand
+```rust
+if let Some(account) = _origin {
+    ...
+}
+```
+refer to the Rust's documents), then we respond with his note.
+
+```rust
+/// Queries are not supposed to write to the contract states.
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub enum Request {
+    /// Read the note for current user
+    GetNote,
+}
+
+/// Query responses.
+#[derive(Serialize, Deserialize, Debug)]
+pub enum Response {
+    /// Return the note for current user
+    GetNote {
+        note: String,
+    },
+    /// Something wrong happened
+    Error(Error)
+}
+
+
+impl contracts::Contract<Command, Request, Response> for SecretNote {
+
+    fn handle_query(&mut self, _origin: Option<&chain::AccountId>, req: Request) -> Response {
+        let inner = || -> Result<Response, Error> {
+            match req {
+                // Handle the `GetNote` request
+                Request::GetNote => {
+                    // Unwrap the current user account
+                    if let Some(account) = _origin {
+                        let current_user = AccountIdWrapper(account.clone());
+                        if self.notes.contains_key(&current_user) {
+                            // Respond with the note in the notes
+                            let note = self.notes.get(&current_user);
+                            return Ok(Response::GetNote { note: note.unwrap().clone() })
+                        }
+                    }
+
+                    // Respond NotAuthorized when no account is specified
+                    Err(Error::NotAuthorized)
+                },
+            }
+        };
+        match inner() {
+            Err(error) => Response::Error(error),
+            Ok(resp) => resp
+        }
+    }
+}
+```
 
 ### Frontend
 
@@ -144,6 +244,114 @@ Interact with the contract: how to send command and queries.
 3. Handle error
 
 ## Put everything together
+
+```rust
+use serde::{Serialize, Deserialize};
+
+use crate::contracts;
+use crate::types::TxRef;
+use crate::TransactionStatus;
+use crate::contracts::AccountIdWrapper;
+
+use crate::std::collections::BTreeMap;
+use crate::std::string::String;
+
+/// SecretNote contract states.
+#[derive(Serialize, Deserialize, Debug, Default)]
+pub struct SecretNote {
+    notes: BTreeMap<AccountIdWrapper, String>,
+}
+
+/// The commands that the contract accepts from the blockchain. Also called transactions.
+/// Commands are supposed to update the states of the contract.
+#[derive(Serialize, Deserialize, Debug)]
+pub enum Command {
+    /// Set the note for current user
+    SetNote {
+        note: String,
+    },
+}
+
+/// The errors that the contract could throw for some queries
+#[derive(Serialize, Deserialize, Debug)]
+pub enum Error {
+    NotAuthorized,
+}
+
+/// Query requests. The end users can only query the contract states by sending requests.
+/// Queries are not supposed to write to the contract states.
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub enum Request {
+    /// Read the note for current user
+    GetNote,
+}
+
+/// Query responses.
+#[derive(Serialize, Deserialize, Debug)]
+pub enum Response {
+    /// Return the note for current user
+    GetNote {
+        note: String,
+    },
+    /// Something wrong happened
+    Error(Error)
+}
+
+
+impl SecretNote {
+    /// Initializes the contract
+    pub fn new() -> Self {
+        Default::default()
+    }
+}
+
+impl contracts::Contract<Command, Request, Response> for SecretNote {
+    // Returns the contract id
+    fn id(&self) -> contracts::ContractId { contracts::SECRET_NOTE }
+
+    // Handles the commands from transactions on the blockchain. This method doesn't respond.
+    fn handle_command(&mut self, _origin: &chain::AccountId, _txref: &TxRef, cmd: Command) -> TransactionStatus {
+        match cmd {
+            // Handle the `SetNote` command with one parameter
+            Command::SetNote { note } => {
+                // Simply increment the counter by some value
+                let current_user = AccountIdWrapper(_origin.clone());
+                // Insert the note, we only keep the latest note
+                self.notes.insert(current_user, note);
+                // Returns TransactionStatus::Ok to indicate a successful transaction
+                TransactionStatus::Ok
+            },
+        }
+    }
+
+    // Handles a direct query and responds to the query. It shouldn't modify the contract states.
+    fn handle_query(&mut self, _origin: Option<&chain::AccountId>, req: Request) -> Response {
+        let inner = || -> Result<Response, Error> {
+            match req {
+                // Handle the `GetNote` request
+                Request::GetNote => {
+                    // Unwrap the current user account
+                    if let Some(account) = _origin {
+                        let current_user = AccountIdWrapper(account.clone());
+                        if self.notes.contains_key(&current_user) {
+                            // Respond with the note in the notes
+                            let note = self.notes.get(&current_user);
+                            return Ok(Response::GetNote { note: note.unwrap().clone() })
+                        }
+                    }
+
+                    // Respond NotAuthorized when no account is specified
+                    Err(Error::NotAuthorized)
+                },
+            }
+        };
+        match inner() {
+            Err(error) => Response::Error(error),
+            Ok(resp) => resp
+        }
+    }
+}
+```
 
 ## Summary
 
