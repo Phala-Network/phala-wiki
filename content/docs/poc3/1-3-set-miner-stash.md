@@ -22,7 +22,7 @@ You may refer to [this tutorial](https://forum.phala.network/t/how-to-obtain-tph
 
 ### Setting Miner Stash
 
-1. Go to `Developer` → `Extrinsics` (or click [here](https://polkadot.js.org/apps/#/extrinsics))
+1. Go to `Developer` → `Extrinsics` (or click [here](https://poc3.phala.network/#/extrinsics))
 2. Choose `phalaModule`  →  `SetStash(controller)`
 3. Select your STASH account in the first line, and your CONTROLLER account in the third line. 
 4. `Submit Transaction`, sign it and wait for the broadcast.
