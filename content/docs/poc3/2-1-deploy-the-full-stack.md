@@ -34,7 +34,7 @@ Open the Terminal, and use the commands as follow. Your node name will be set by
 
 ![](/images/docs/poc3/2.1-3.png)
 
-> If there is no output, please refer to [the FAQ](https://hackmd.io/@phala/ryUTdShtP).
+> If there is no output, please refer to [the FAQ]({{< relref "docs/poc3/4-faq" >}}).
 >
 > `$HOME/phala-pruntime-data` is the default path to the data of pRuntime. It's set in the `phala-pruntime-data` folder by default, which can be changed to another folder that the system admin has full access to. To run multiple pRuntime containers on one device (which is unecessary and not suggested), please set different path for each container.
 >

@@ -6,8 +6,9 @@ title: "3.5 Upgrade Miner"
 
 > If your miner is not mining, please go to step 2.
 
-1. Refer to [this link](https://hackmd.io/@phala/B1jP8rhtP) to stop mining.
-2. Run the following commands:
+1. Refer to [this link]({{< relref "docs/poc3/3-3-stop-mining" >}}) to stop mining.
+2. Wait until the end of the current mining period (1 hour per mining period). If you stop the miner too early, you may get slashed.
+3. Run the following commands:
 
     ```bash
     docker kill phala-phost

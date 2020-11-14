@@ -8,7 +8,7 @@ How to check whether your device is SGX-supported:
 
 - [Whether your hardware CPU is SGX-supported](https://forum.phala.network/t/how-to-check-whether-your-cpu-is-sgx-supported/1252)
 - Refer to [the SGX Hardware List](https://github.com/Phala-Network/phala-docs/wiki/SGX-Hardware-List)
-- Take [the SGX Test](https://forum.phala.network/t/30-pha-for-each-passed-device-motherboard-sgx-testing-hardware/1024/3)
+- Take [the SGX Test](https://forum.phala.network/t/30-pha-for-each-passed-device-motherboard-sgx-testing-hardware/1024)
 
 ## BIOS Settings
 
