@@ -29,3 +29,8 @@ Vendetta is the thrid Phala Network Testnet featuring decentralized TEE mining.
 ### IV. FAQ
 
 - [Frequently Asked Questions]({{< relref "docs/poc3/4-faq" >}})
+
+### Get connected
+
+- Discord #miner channel: <https://discord.gg/zjdJ7d844d>
+- Telegram miner group: <https://t.me/phalaminer>
