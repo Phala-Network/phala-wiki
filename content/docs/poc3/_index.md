@@ -4,7 +4,7 @@ weight: 100
 draft: false
 ---
 
-Vendetta is the thrid Phala Network Testnet featuring decentralized TEE mining.
+Vendetta is the third Phala Network Testnet featuring decentralized TEE mining.
 
 ### I. Get Started
 
@@ -16,7 +16,7 @@ Vendetta is the thrid Phala Network Testnet featuring decentralized TEE mining.
 
 - [2.1 Deploy the Full Stack]({{< relref "docs/poc3/2-1-deploy-the-full-stack" >}})
 - [2.2 Set Commission]({{< relref "docs/poc3/2-2-set-commission" >}})
-- [2.3 Verify the Miner States]({{< relref "docs/poc3/2-3-veirfy-the-miner-state" >}})
+- [2.3 Verify the Miner States]({{< relref "docs/poc3/2-3-verify-the-miner-state" >}})
 
 ### III. Miner Operation
 
