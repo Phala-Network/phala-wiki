@@ -2,7 +2,7 @@
 title: "2.1 Deploy the Full Stack"
 ---
 
-> **WARNING**: Operations at this step may reset your previous Phala blockchain data and you will need to re-deploy the docker containers. For more detail, refer to our [Dockerfile Github repo](https://github.com/Phala-Network/phala-docker#usage). You can find the latest Phala Network docker images from [the official repo](https://hub.docker.com/orgs/phalanetwork/repositories).
+> **WARNING**: Operations at this step may reset your previous Phala blockchain data and you will need to re-deploy the docker containers. For more detail, refer to our [Dockerfile Github repo](https://github.com/Phala-Network/phala-docker#usage). You can find the latest Phala Network docker images from [the official repo](https://hub.docker.com/u/phalanetwork).
 >
 > PLEASE follow the order of deploying the three docker containers below.
 
