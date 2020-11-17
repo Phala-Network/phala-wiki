@@ -2,9 +2,9 @@
 title: "2.1 Deploy the Full Stack"
 ---
 
-> **ALERT**: Operations at this step may reset your previous Phala blockchain data and you will need to re-deploy the mirror files. For more detail, refer to: <https://github.com/Phala-Network/phala-docker#usage>
+> **WARNING**: Operations at this step may reset your previous Phala blockchain data and you will need to re-deploy the docker containers. For more detail, refer to our [Dockerfile Github repo](https://github.com/Phala-Network/phala-docker#usage). You can find the latest Phala Network docker images from [the official repo](https://hub.docker.com/orgs/phalanetwork/repositories).
 >
-> PLEASE DO NOT change the order when deploying the three docker containers below.
+> PLEASE follow the order of deploying the three docker containers below.
 
 ## Deploying Phala full-node
 
@@ -14,8 +14,8 @@ A Phala full-node helps maintain the backbone of the network. We suggest you to 
 
 Open the Terminal, and use the commands as follow. Your node name will be set by the second line.
 
-1. `sudo docker pull jasl123/phala-poc3-node` (to pull a docker file)
-2. `sudo docker run -ti --rm --name phala-node -d -e NODE_NAME="YOUR_NODE_NAME" -p 9933:9933 -p 9944:9944 -p 30333:30333 -v $HOME/phala-node-data:/root/data jasl123/phala-poc3-node` (to run the docker file; please repalce `YOUR_NODE_NAME` with your own name, only alhpabets, digits and whitespace are supported)
+1. `sudo docker pull phalanetwork/phala-poc3-node` (to pull a docker file)
+2. `sudo docker run -ti --rm --name phala-node -d -e NODE_NAME="YOUR_NODE_NAME" -p 9933:9933 -p 9944:9944 -p 30333:30333 -v $HOME/phala-node-data:/root/data phalanetwork/phala-poc3-node` (to run the docker file; please repalce `YOUR_NODE_NAME` with your own name, only alhpabets, digits and whitespace are supported)
 
 ![](/images/docs/poc3/2.1-1.png)
 
@@ -29,8 +29,8 @@ Open the Terminal, and use the commands as follow. Your node name will be set by
 
 ## Deploying pRuntime
 
-1. `sudo docker pull jasl123/phala-poc3-pruntime`
-2. `sudo docker run -d -ti --rm --name phala-pruntime -p 8000:8000 -v $HOME/phala-pruntime-data:/root/data --device /dev/isgx jasl123/phala-poc3-pruntime`
+1. `sudo docker pull phalanetwork/phala-poc3-pruntime`
+2. `sudo docker run -d -ti --rm --name phala-pruntime -p 8000:8000 -v $HOME/phala-pruntime-data:/root/data --device /dev/isgx phalanetwork/phala-poc3-pruntime`
 
 ![](/images/docs/poc3/2.1-3.png)
 
@@ -46,8 +46,8 @@ Please replace the `YOUR-CONTROLLER-MNEMONIC` in the second command with the mne
 
 It costs a tiny amount of tPHA as well. Before deploying pHost, please make sure there are a certain amount of tPHA in your Stash account and controller account. [Click here to learn how to obtain tPHA.](https://forum.phala.network/t/how-to-obtain-tpha-on-testnet-vendetta/1254)
 
-1. `sudo docker pull jasl123/phala-poc3-phost`
-2. `sudo docker run -d -ti --rm --name phala-phost -e PRUNTIME_ENDPOINT="http://IP-ADDRESS:8000" -e PHALA_NODE_WS_ENDPOINT="ws://IP-ADDRESS:9944" -e MNEMONIC="YOUR-CONTROLLER-MNEMONIC" -e EXTRA_OPTS="-r" jasl123/phala-poc3-phost`
+1. `sudo docker pull phalanetwork/phala-poc3-phost`
+2. `sudo docker run -d -ti --rm --name phala-phost -e PRUNTIME_ENDPOINT="http://IP-ADDRESS:8000" -e PHALA_NODE_WS_ENDPOINT="ws://IP-ADDRESS:9944" -e MNEMONIC="YOUR-CONTROLLER-MNEMONIC" -e EXTRA_OPTS="-r" phalanetwork/phala-poc3-phost`
 
 ![](/images/docs/poc3/2.1-4.png)
 
