@@ -29,7 +29,7 @@ Open the Terminal, and use the commands as follow. Your node name will be set by
 
 ## Deploying pRuntime
 
-1. `sudo docker pull jasl123/phala-poc3-pruntime`
+1. `sudo docker pull phalanetwork/phala-poc3-pruntime`
 2. `sudo docker run -d -ti --rm --name phala-pruntime -p 8000:8000 -v $HOME/phala-pruntime-data:/root/data --device /dev/isgx jasl123/phala-poc3-pruntime`
 
 ![](/images/docs/poc3/2.1-3.png)
