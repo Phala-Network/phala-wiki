@@ -44,11 +44,11 @@ If the pRuntime docker were not successfully enabled, please self-examine its in
 
 1. Please ensure there's no typo in your commands;
 2. Please ensure your drivers are stalled correctly and successfully;
-3. Type in the command below to check whether your port is occupied:
+3. Type in the command below to check whether your port is accessible:
     ```
     url http://127.0.0.1:8000
     ```
-4. Type in the command below to check whether the docker is running:
+4. Type in the command below to check whether the docker container is running:
     ```
     docker attach --sig-proxy=false --detach-keys=ctrl-c phala-pruntime
     ```
