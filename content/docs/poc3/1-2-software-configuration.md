@@ -1,5 +1,5 @@
 ---
-title: "1.2 Software Configuration"
+title: "1.2 Install Docker-CE"
 ---
 
 ### Ubuntu 18.04
@@ -9,15 +9,6 @@ title: "1.2 Software Configuration"
 - Make all your packages up-to-date: type `sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y` in the terminal.
 
 > How to open your Terminal: right click on your desktop → `Open in Terminal`
-
-### Install the SGX driver
-
-If you have already installed the SGX driver, you can verify by:
-
-1. Type  `ls /dev | grep sgx` in the terminal
-2. If there's any output, your SGX driver is ready.
-
-If there's no output, you have to [**download and install it**](https://01.org/intel-software-guard-extensions/downloads). And verify it again. For FLC ready CPUs and motherboards, the DCAP driver is preferred. Othrewise insall the SGX driver.
 
 ### Install Docker-CE
 
