@@ -21,45 +21,63 @@ How to check whether your device is SGX-supported:
 
 <br>
 
-## SGX Driver Testification
+## SGX Driver Verification
 
-Firstly, Identify your drive type: 
-- Type in the command `ls /dev | grep isgx` and there comes a feedback: your computer is SGX-driver-driven and it works.
-- Type in the command `ls /dev | grep sgx` and there comes a feedback: your computer is DCAP-driver-driven and it works.
+First, identify your driver type:
+- Type in command `ls /dev | grep isgx` and if there comes a feedback, your computer is SGX-driver-driven and it works.
+- Type in command `ls /dev | grep sgx` and if there comes a feedback, your computer is DCAP-driver-driven and it works.
 
-As long as one type of driver works, your computer will be ready to mine PHA.
+As long as either type of driver works, your computer will be ready to mine PHA.
 
-If neither of the types works, Please type in the commands below to install DCAP driver (the newer version of SGX driver):
+If neither of the types works, please type in the commands below to install DCAP driver:
 
-```
+```bash
 sudo apt-get install dkms
+
 wget https://download.01.org/intel-sgx/sgx-dcap/1.9/linux/distro/ubuntu18.04-server/sgx_linux_x64_driver_1.36.2.bin
-sudo chmod +x sgx_linux_x64_driver_1.36.2.bin
+
+chmod +x sgx_linux_x64_driver_1.36.2.bin
+
 sudo ./sgx_linux_x64_driver_1.36.2.bin
 ```
 
-If the DCAP driver were not to be enabled with the commands, please try [this link](https://download.01.org/intel-sgx/sgx-linux/2.11/distro/ubuntu18.04-server/sgx_linux_x64_driver_2.6.0_b0a445b.bin) to download SGX driver.
+After installation, retype `ls /dev | grep sgx` to check whether the installation succeeds. If the DCAP driver is not enabled, please try following commands to install SGX driver.
+
+```bash
+wget https://download.01.org/intel-sgx/sgx-linux/2.11/distro/ubuntu18.04-server/sgx_linux_x64_driver_2.6.0_b0a445b.bin
+
+chmod +x sgx_linux_x64_driver_2.6.0_b0a445b.bin
+
+sudo ./sgx_linux_x64_driver_2.6.0_b0a445b.bin
+```
+Use `ls /dev | grep isgx` again to ensure that SGX driver works.
 
 <br>
 
-## Mainboard Testification
+## Mainboard Verification
 
-After the installation of your driver, there are two more items to be testified on your mainboard:
+After the installation of your driver, there are two more items to be verified on your mainboard:
 
 1. the **Production Mode**
 2. the **FLC (Flexible Launch Control)**
 
 Among them, **the former is a must to enble Phala pRuntime docker**. If it's not supported (tagged as ✘ in the report example below), we are afraid you can't mine PHA with this mainboard.
 
-The latter is not a must though, it is suggested to be checked as it would be essential to install the DCAP driver if DCAP driver were to be a threshold requirement of mining PHA. 
+The latter is not a must though, it is suggested to be checked as it would be essential to install the DCAP driver. And DCAP driver can be a necessary requirement to mine PHA in the future.
 
-If you can't run Phala pRuntime docker with both of them tagged with ✔, you may have to check whether your BIOS is the latest version with latest security patches. 
+If you can't run Phala pRuntime docker with both of them tagged as ✔, you may have to check whether your BIOS is the latest version with latest security patches.
 If you still can't run Phala pRuntime docker with the latest BIOS of your mainboard manufacturer, we are afraid you can't mine PHA with this mainboard.
 
-To testify your mainboard, please type in:
+To testify your mainboard, please type in the following command for DCAP driver:
 
-```
+```bash
 docker run -ti --rm --name phala-sgx_detect --device /dev/sgx/enclave --device /dev/sgx/provision phalanetwork/phala-sgx_detect
+```
+
+or the following one for SGX driver:
+
+```bash
+docker run -ti --rm --name phala-sgx_detect --device /dev/isgx phalanetwork/phala-sgx_detect
 ```
 
 The report below would be a positive result:
@@ -90,7 +108,7 @@ Detecting SGX, this may take a minute...
 You're all set to start running SGX programs!
 ```
 
-If your got a report as below, please screenshort it, and [send it to Phala developers](https://discord.gg/zjdJ7d844d):
+If your got a report as below, please screenshort it, and send it to [Phala developers](https://discord.gg/zjdJ7d844d) for help:
 
 ```
 Detecting SGX, this may take a minute...

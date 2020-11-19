@@ -16,7 +16,7 @@ title: "1.2 Install Docker-CE"
     - `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
     - `sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"`
     - `sudo apt-get install -y docker-ce docker-ce-cli containerd.io`
-    - `sudo usermod -aG docker [YOUR_UBUNTU_USERNAME]` (Replace "[YOUR_UBUNTU_USERNAME]" with the user name you are using, without the brackets)
+    - `sudo usermod -aG docker YOUR_UBUNTU_USERNAME` (Replace `YOUR_UBUNTU_USERNAME` with the username you are using)
 
 This is how it looks like after successfully deployed👇.
 

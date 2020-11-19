@@ -40,16 +40,16 @@ Open the Terminal, and use the commands as follow. Your node name will be set by
 >
 > If the data was deleted, please re-register the miner from the beginning.
 
-If the pRuntime docker were not successfully enabled, please self-examine its installation according to the suggestions below:
+If the pRuntime docker fails to run, please recheck its installation according to the suggestions below:
 
 1. Please ensure there's no typo in your commands;
-2. Please ensure your drivers are stalled correctly and successfully;
+2. Please ensure your drivers are installed correctly and successfully;
 3. Type in the command below to check whether your port is accessible:
-    ```
-    url http://127.0.0.1:8000
+    ```bash
+    curl http://127.0.0.1:8000
     ```
 4. Type in the command below to check whether the docker container is running:
-    ```
+    ```bash
     docker attach --sig-proxy=false --detach-keys=ctrl-c phala-pruntime
     ```
 5. [Check whether your mainboard is able to mine PHA](https://wiki.phala.network/en-us/docs/poc3/1-1-hardware-configuration/)
