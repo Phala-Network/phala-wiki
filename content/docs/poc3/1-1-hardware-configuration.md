@@ -13,20 +13,22 @@ How to check whether your device supports SGX:
 1. Google how to enter your BIOS Settings.
 2. Enter BIOS after reboot.
 3. Go to `Security` -> `Secure Boot`, set it to `Disabled`.
-4. Go to `Security` -> `SGX`, set it to `Enabled` or `Software Control` (the name of the option may vary according to the different manufacturers)
-5. Go to `Boot` -> `Boot Mode`, and make sure its set to `UEFI`. (You also need to make sure the Linux is installed in UEFI mode)
+4. Go to `Security` -> `SGX`, set it to `Enabled` or `Software Control` (The name of the option may vary according to the different manufacturers)
+5. Go to `Boot` -> `Boot Mode`, and make sure it was set to `UEFI`.
 6. Save and reboot.
 
-## SGX Driver Verification
+If you only found `SGX: Software Control` in your BIOS settings, you may need to run [sgx-software-enable](https://github.com/intel/sgx-software-enable), the tool provided by Intel with only its source code available. If you don't want to build it from the source code, we also provide a prebuilt file for Ubuntu 18.04 / 20.04 that can be found [here](https://github.com/Phala-Network/sgx-tools/releases/tag/0.1).
+
+You also need to make sure the Linux is installed in UEFI mode. SGX is not guaranteed to work properly on the OS installed in legacy mode. In such case you may want to reinstall the Linux in UEFI mode.
+
+## SGX Driver
 
 First, check if you already have some type of the driver installed:
 
-- Type in command `ls /dev/isgx` and if the file exists: you have SGX driver installed
-- Type in command `ls /dev/sgx` and if the directory exists: you have DCAP driver installed
+- Type in command `ls /dev/isgx` and if the file exists: you have the SGX driver installed
+- Type in command `ls /dev/sgx` and if the directory exists: you have the DCAP driver installed
 
-As long as either type of driver works, your computer will be ready to mine PHA.
-
-If neither of the types works, please try to install the DCAP driver first. Type in the commands below to install DCAP driver:
+As long as either type of driver works, your computer will be ready to mine PHA. If neither of the types works, please try to install the DCAP driver first. Type in the commands below to install DCAP driver:
 
 ```bash
 sudo apt-get install dkms

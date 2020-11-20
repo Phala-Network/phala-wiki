@@ -54,8 +54,8 @@ defaultContentLanguageInSubdir= true
   editUrl = "https://github.com/Phala-Network/phala-wiki/edit/master/content/"
 
   google_fonts = [
-    ["Recursive", "300, 400, 500"],
-    ["Lato", "300, 400, 500"],
+    ["Recursive", "300, 400, 500, 600"],
+    ["Lato", "300, 400, 500, 600"],
   ]
 
   [params.logo]
