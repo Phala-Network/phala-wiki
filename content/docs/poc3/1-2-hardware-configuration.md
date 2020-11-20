@@ -1,8 +1,8 @@
 ---
-title: "1.1 Hardware Configuration"
+title: "1.2 Hardware Configuration"
 ---
 
-![](/images/docs/poc3/1.1.png)
+![](/images/docs/poc3/1.2.png)
 
 How to check whether your device supports SGX:
 
