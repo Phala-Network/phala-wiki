@@ -4,6 +4,10 @@ weight: 100
 draft: false
 ---
 
+[![](https://img.shields.io/discord/697726436211163147?label=Phala%20Discord)](https://discord.gg/zzhfUjU) [![](https://img.shields.io/badge/Join-Telegram-blue)](https://t.me/phalaminer)
+
+![](/images/docs/poc3/walkthrough.png)
+
 Vendetta is the third Phala Network Testnet featuring decentralized TEE mining.
 
 ### I. Get Started
@@ -29,8 +33,3 @@ Vendetta is the third Phala Network Testnet featuring decentralized TEE mining.
 ### IV. FAQ
 
 - [Frequently Asked Questions]({{< relref "docs/poc3/4-faq" >}})
-
-### Get connected
-
-- Discord #miner channel: <https://discord.gg/zjdJ7d844d>
-- Telegram miner group: <https://t.me/phalaminer>
