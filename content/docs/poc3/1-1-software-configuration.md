@@ -1,5 +1,5 @@
 ---
-title: "1.1 Install Docker-CE"
+title: "1.1 Software Configuration"
 ---
 
 ### Ubuntu 18.04
