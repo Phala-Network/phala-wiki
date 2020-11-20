@@ -8,9 +8,10 @@ Vendetta is the third Phala Network Testnet featuring decentralized TEE mining.
 
 ### I. Get Started
 
-- [1.1 Hardware Configuration]({{< relref "docs/poc3/1-1-hardware-configuration" >}})
-- [1.2 Software Configuration]({{< relref "docs/poc3/1-2-software-configuration" >}})
-- [1.3 Set Miner Stash]({{< relref "docs/poc3/1-3-set-miner-stash" >}})
+- [1.1 Create Accounts and Set Miner Stash]({{< relref "docs/poc3/1-1-set-miner-stash" >}})
+- [1.2 Hardware, BIOS and System]({{< relref "docs/poc3/1-2-hardware-configuration" >}})
+- [1.3 Install Docker-CE]({{< relref "docs/poc3/1-2-software-configuration" >}})
+- [1.4 Enable SGX Driver]({{< relref "docs/poc3/1-4-enable-sgx-driver" >}})
 
 ### II. Deploying Phala Docker
 
@@ -29,6 +30,7 @@ Vendetta is the third Phala Network Testnet featuring decentralized TEE mining.
 ### IV. FAQ
 
 - [Frequently Asked Questions]({{< relref "docs/poc3/4-faq" >}})
+- [Self-examination]({{< relref "docs/poc3/self-examination" >}})
 
 ### Get connected
 
