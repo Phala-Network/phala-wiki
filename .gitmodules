@@ -6,4 +6,4 @@
 	url = git@github.com:phala-wiki/phala-wiki.github.io.git
 [submodule "themes/compose"]
 	path = themes/compose
-	url = https://github.com/onweru/compose/
+	url = git@github.com:Phala-Network/wiki-theme-compose.git
