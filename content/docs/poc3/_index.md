@@ -6,14 +6,14 @@ draft: false
 
 [![](https://img.shields.io/discord/697726436211163147?label=Phala%20Discord)](https://discord.gg/zzhfUjU) [![](https://img.shields.io/badge/Join-Telegram-blue)](https://t.me/phalaminer)
 
-![](/images/docs/poc3/walkthrough.png)
+Vendetta is the third Phala Network Testnet featuring decentralized TEE mining. We provide an overview to setup the mining environment, followed by a detailed explanation of each step.
 
-Vendetta is the third Phala Network Testnet featuring decentralized TEE mining.
+![](/images/docs/poc3/walkthrough.png)
 
 ### I. Get Started
 
-- [1.1 Software Configuration]({{< relref "docs/poc3/1-1-software-configuration" >}})
-- [1.2 Hardware Configuration]({{< relref "docs/poc3/1-2-hardware-configuration" >}})
+- [1.1 Hardware Requirement and Configuration]({{< relref "docs/poc3/1-1-hardware-configuration" >}})
+- [1.2 Software Configuration]({{< relref "docs/poc3/1-2-software-configuration" >}})
 - [1.3 Set Miner Stash]({{< relref "docs/poc3/1-3-set-miner-stash" >}})
 
 ### II. Deploying Phala Docker

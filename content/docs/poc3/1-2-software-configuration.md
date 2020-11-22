@@ -1,12 +1,12 @@
 ---
-title: "1.1 Software Configuration"
+title: "1.2 Software Configuration"
 ---
 
 ### Ubuntu 18.04
 
 - Versions other than 18.04 are not covered in this tutorial, though other Linux distributions may work as well.
 - [How to install Ubuntu 18.04](https://phoenixnap.com/kb/how-to-install-ubuntu-18-04)
-- Make all your packages up-to-date: 
+- Make all your packages up-to-date:
 
 ```bash
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y

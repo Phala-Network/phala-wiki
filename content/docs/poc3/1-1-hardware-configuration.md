@@ -1,5 +1,5 @@
 ---
-title: "1.2 Hardware Configuration"
+title: "1.1 Hardware Requirement and Configuration"
 ---
 
 ![](/images/docs/poc3/1.2.png)
