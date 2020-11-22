@@ -1,6 +1,5 @@
 ---
-title: Run a Local Development Network
-weight: 2
+title: "1.1 Run a Local Development Network"
 ---
 
 > Basic understanding of Linux shell and compiling is necessary to follow this tutorial.

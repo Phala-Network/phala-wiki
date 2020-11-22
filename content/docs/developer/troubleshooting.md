@@ -1,6 +1,5 @@
 ---
-title: Troubleshooting
-weight: 4
+title: "1.3 Troubleshooting"
 ---
 
 ## `phala-blockchain`
