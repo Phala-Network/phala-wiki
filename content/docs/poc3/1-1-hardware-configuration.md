@@ -2,31 +2,44 @@
 title: "1.1 Hardware Requirement and Configuration"
 ---
 
+Phala Network operates on trusted hardwares, in this case, Intel CPUs which support SGX feature. SGX was first introduced in 2015 with the sixth generation Intel Core microprocessors based on the Skylake microarchitecture. In practice, the support of SGX feature also relies on your motherboard and BIOS configurations.
+In this section, we will first ensure that necessary hardware requirements are satisfied and all your hardwares are correcly configured.
+
+## General Hardware Requirements
 ![](/images/docs/poc3/1.2.png)
 
-How to check whether your device supports SGX:
+### CPU Requirement
 
-- [Whether your hardware CPU is SGX-supported](https://forum.phala.network/t/how-to-check-whether-your-cpu-is-sgx-supported/1252)
+You can refer to the following tutorial to ensure that your CPU is SGX-supported.
 
-## BIOS Settings
+- [Whether your CPU is SGX-supported](https://forum.phala.network/t/how-to-check-whether-your-cpu-is-sgx-supported/1252)
 
-1. Google how to enter your BIOS Settings.
-2. Enter BIOS after reboot.
-3. Go to `Security` -> `Secure Boot`, set it to `Disabled`.
-4. Go to `Security` -> `SGX`, set it to `Enabled` or `Software Control` (The name of the option may vary according to the different manufacturers)
-5. Go to `Boot` -> `Boot Mode`, and make sure it was set to `UEFI`.
+### BIOS Settings
+
+First of all, we recommand to update your BIOS to the latest version.
+
+1. **Enter BIOS**. The method varies for different motherboards, and Google is always at your service about this.
+3. **Disable Secure Boot**. Go to `Security` -> `Secure Boot`, set it to `Disabled`.
+4. **Enable SGX Extension**. Go to `Security` -> `SGX` (This name  may vary according to the different manufacturers), set it to `Enabled`.
+>If you can only find `SGX: Software Controlled` option, you will have to run [sgx-software-enable](https://github.com/intel/sgx-software-enable) in Ubuntu. You can follow the Intel's instructions, build it from source and execute it. Also, we provide a prebuilt file for Ubuntu 18.04 / 20.04 that can be found [here](https://github.com/Phala-Network/sgx-tools/releases/tag/0.1). You can download and execute it with the following commands:
+> ```bash
+> wget https://github.com/Phala-Network/sgx-tools/releases/download/0.1/sgx_enable
+> chmod +x sgx_enable
+> sudo ./sgx_enable
+> ```
+5. **Use UEFI Boot**. Go to `Boot` -> `Boot Mode`, and make sure it was set to `UEFI`.
 6. Save and reboot.
 
-If you only found `SGX: Software Control` in your BIOS settings, you may need to run [sgx-software-enable](https://github.com/intel/sgx-software-enable), the tool provided by Intel with only its source code available. If you don't want to build it from the source code, we also provide a prebuilt file for Ubuntu 18.04 / 20.04 that can be found [here](https://github.com/Phala-Network/sgx-tools/releases/tag/0.1).
+You also need to make sure that Ubuntu is installed in UEFI mode. SGX is not guaranteed to work properly on the OS installed in legacy mode. In such case you may want to reinstall the system.
 
-You also need to make sure the Linux is installed in UEFI mode. SGX is not guaranteed to work properly on the OS installed in legacy mode. In such case you may want to reinstall the Linux in UEFI mode.
+## SGX Driver Installation
 
-## SGX Driver
+Intel provides two kinds of SGX drivers: SGX driver and DCAP driver. The latter one is preferred since it provides more security-related features which can be utilized by Phala in the future, while the former one provides better compatibility and supports old CPUs without FLC support. For now, both drivers work for Phala.
 
-First, check if you already have some type of the driver installed:
+First, check if you already have either of the drivers installed:
 
-- Type in command `ls /dev/isgx` and if the file exists: you have the SGX driver installed
-- Type in command `ls /dev/sgx` and if the directory exists: you have the DCAP driver installed
+- Type in command `ls /dev/isgx`. If the file exists, you have the SGX driver installed
+- Type in command `ls /dev/sgx`. If the directory exists, you have the DCAP driver installed
 
 As long as either type of driver works, your computer will be ready to mine PHA. If neither of the types works, please try to install the DCAP driver first. Type in the commands below to install DCAP driver:
 
@@ -37,7 +50,7 @@ chmod +x sgx_linux_x64_driver_1.36.2.bin
 sudo ./sgx_linux_x64_driver_1.36.2.bin
 ```
 
-After installation, retry `ls /dev/sgx` to check whether the installation succeeds. If the DCAP driver doesn't work, please **uninstall the DCAP driver** and then switch to the SGX driver. To uninstall the DCAP driver, run:
+After installation, retry `ls /dev/sgx` to check whether the installation succeeds. If the DCAP driver doesn't work, please **FIRST UNINSTALL DCAP DRIVER** and then switch to the SGX driver. To uninstall the DCAP driver, run:
 
 ```bash
 sudo /opt/intel/sgxdriver/uninstall.sh
@@ -55,7 +68,7 @@ Run `ls /dev/isgx` again to check if the SGX driver works.
 
 ## Double check the SGX capability
 
-After the installation of your driver, please use the following utility to double check if everything goes well. Docker is required.
+After the installation of your driver, please use the following utility to double check if everything goes well. Docker is required for this step, and you can peek at how to install it in the [next secton]({{< relref "docs/poc3/1-2-software-configuration" >}}).
 
 - If you are using the DCAP driver:
 
@@ -82,7 +95,7 @@ Please pay attention to the following checks:
 
 Among them, **the former one is a must to run Phala Network pRuntime**. If it's not supported (tagged as ✘ in the report example below), we are afraid you can't mine PHA with this setup. You may want to replace the motherboard and/or the CPU.
 
-The latter is not a must though, it is suggested to be checked as it would be essential to install the DCAP driver. The DCAP driver is future-proof and thus more recommended.
+The latter is not a must though, it is suggested to be checked as it would be essential to install the DCAP driver.
 
 The report below would be a positive result:
 
@@ -152,7 +165,7 @@ debug: cause: The EINITTOKEN provider didn't provide a token
 debug: cause: aesm error code GetLicensetokenError_6
 ```
 
-If you can't run Phala pRuntime with both of them tagged as ✔, you may have to check whether your BIOS is the latest version with latest security patches. If you still can't run Phala pRuntime docker with the latest BIOS of your motherboard manufacturer, we are afraid you can't mine PHA with this motherboard.
+If you can't run Phala pRuntime with both of them tagged as ✔, you may have to check whether your BIOS is the latest version with latest security patches. If you still can't run Phala pRuntime docker with the latest BIOS of your motherboard manufacturer, we are afraid you can't mine PHA for now with this motherboard.
 
 ---
 
