@@ -92,9 +92,9 @@ draft: false
 > 如果你在编译的时候遇到编译错误，就可能需要切换到一个稍旧一点的 Nightly Rust 版本，可以通过以下命令实现：
 >
 > ```sh
-> rustup install nightly-2020-05-15
-> rustup override set nightly-2020-05-15
-> rustup target add wasm32-unknown-unknown --toolchain nightly-2020-05-15
+> rustup install nightly-2020-11-10
+> rustup override set nightly-2020-11-10
+> rustup target add wasm32-unknown-unknown --toolchain nightly-2020-11-10
 > ```
 
 如果你希望在本地生成密钥，也可以在同一目录下安装 `subkey`。如果想进一步提高安全性，则可以把编译好的 `subkey` 程序发送到一台全新且断网的电脑上进行操作。
@@ -118,7 +118,7 @@ cargo install --force --git https://github.com/paritytech/substrate subkey
 `--validator` 和 `--sentry` 选项中已经包含了 `--pruning=archive` 选项。所以，只有在没有启用上述选项的情况下，才需要特殊指定该选项。如果你没有运行存档节点，或未以守门人、哨兵身份运行节点，当你切换的时候，需要重新同步数据库。
 
 > **注意**：守门人需要用 RocksDb 后端进行同步。RocksDb 是一个默认设置，但可以用 `--database RocksDb` 选项来明确声明。将来，我们建议使用更快和更高效的 ParityDb。在不同数据库后端之间切换，同样也需要重新同步。
-> 
+>
 > 如果你现在就想测试 ParityDB，可以开启 `--database paritydb` 参数。
 
 同步时间跟区块链的大小有关，可能需要几分钟到几小时不等。

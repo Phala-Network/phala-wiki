@@ -4,24 +4,39 @@ date: 2020-07-10T01:16:05+08:00
 draft: false
 ---
 
-This guide will instruct you how to set up a validator node on the Phala Network.
+### Before Starting
 
-## Preliminaries
+Running a Gatekeeper (GK) in Phala Network means a lot of responsibility. You will be accountable for not only your own stake but also the stake of your current nominators. Numbers of Gatekeepers can vary in different phases; and when Phala launches its mainnet, there will be 100 Gatekeepers and they share the inflation return of Phala economic system.
 
-Running a Gatekeeper on a live network is a lot of responsibility! You will be accountable for not only your own stake, but also the stake of your current nominators. If you make a mistake and get slashed, your money and your reputation will be at risk. However, running a Gatekeeper can also be very rewarding, knowing that you contribute to the security of a decentralized network while growing your stash.
+Once you've raised enough stakes (nominations) in current [Era](https://wiki.polkadot.network/docs/en/glossary#era), you will automatically be enrolled as a Gatekeeper when the next Era starts. Otherwise, you will stay in the [waiting list](https://poc3.phala.network/#/staking/waiting). You may try to stake more PHA or call for more nominator stakings.
 
-Since security is so important to running a successful Gatekeeper, you should take a look at Phala Network's the
-[secure validator](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator) information to make you understand the factors
-to consider when constructing your infrastructure. The Web3 Foundation also maintains a
-[reference implementation for a secure validator set-up](https://github.com/w3f/polkadot-secure-validator)
-that you can use by deploying yourself (video walkthrough is available
-[here](https://www.youtube.com/watch?v=tTn8P6t7JYc)). As you progress in your journey as a
-Gatekeeper, you will likely want to use this repository as a _starting point_ for your own
-modifications and customizations.
+> In testnet Vendetta, you would need stakings from Phala team to be elected as a Gatekeeper. You may consult @ylyantonia on Telegram or Antoniaiaiaiaiaia#2727 on Discord for more detail.
 
-If you need help, please reach out on the
-[Phala Network Group](https://t.me/phalanetwork)
-on Telegram. The team and other Gatekeepers are there to help answer questions and provide experience.
+Nominators would share the 5% inflation return with the commission deducted by according Gatekeeper. The higher the commission rate is, the less the nominators can share.
+
+The table below may clarify the rewards mechanism. For more details, please refer to [https://wiki.polkadot.network/docs/en/learn-staking](https://wiki.polkadot.network/docs/en/learn-staking).
+
+|               | **A - Validator Pool** |                             |         |
+| :-----------: | :--------------------: | :-------------------------: | :-----: |
+| Nominator (4) |      Stake (600)       | Fraction of the Total Stake | Rewards |
+|      Jin      |          100           |            0.167            |  16.7   |
+|    **Sam**    |           50           |            0.083            |   8.3   |
+|     Anson     |          250           |            0.417            |  41.7   |
+|     Bobby     |          200           |            0.333            |  33.3   |
+
+<br>
+
+|               | **B - Validator Pool** |                             |         |
+| :-----------: | :--------------------: | :-------------------------: | :-----: |
+| Nominator (4) |      Stake (400)       | Fraction of the Total Stake | Rewards |
+|     Alice     |          100           |            0.25             |   25    |
+|     Peter     |          100           |            0.25             |   25    |
+|     John      |          150           |            0.375            |  37.5   |
+|   **Kitty**   |           50           |            0.125            |  12.5   |
+
+Please do be aware that if you are not a productive Gatekeeper (e.g., constantly being offline), you might get slashed and lose a certain amount of your staked PHA as well as your nominators'. It would leave [a permanent record](https://poc3.phala.network/#/staking/query) on the blockchain which might affect your reputation as a Gatekeeper.
+
+<br>
 
 ### How many PHA do I need?
 
@@ -41,10 +56,7 @@ transaction fees. The rest can come from nominators.
 
 You will likely run your Gatekeeper on a server with TEE hardware running Linux. For this guide we will be using Ubuntu 18.04, but the instructions should be similar for other platforms.
 
-The transactions weights in Phala Network were benchmarked on standard hardware. It is recommended that
-Gatekeepers run at least the standard hardware in order to ensure they are able to process all blocks
-in time. The following are not _minimum requirements_ but if you decide to run with less than this
-beware that you might have performance issue.
+The transaction weights in Phala Network were benchmarked on standard hardware. It is recommended that Gatekeepers run at least the standard hardware in order to ensure they are able to process all blocks in time. The following requirements are not necessarily _minimum requirements_. But if you try to run with less than this, beware that you might have performance issue.
 
 #### Standard Hardware
 
@@ -96,9 +108,9 @@ This step will take a while (generally 10 - 40 minutes, depending on your hardwa
 > done by running:
 >
 > ```sh
-> rustup install nightly-2020-05-15
-> rustup override set nightly-2020-05-15
-> rustup target add wasm32-unknown-unknown --toolchain nightly-2020-05-15
+> rustup install nightly-2020-11-10
+> rustup override set nightly-2020-11-10
+> rustup target add wasm32-unknown-unknown --toolchain nightly-2020-11-10
 > ```
 
 If you are interested in generating keys locally, you can also install `subkey` from the same
@@ -330,15 +342,6 @@ Gatekeeper set.
 Gatekeeper set, you are now running a Phala Network Gatekeeper! If you need help, reach out on the
 [Phala Network Telegram group](https://t.me/phalanetwork).
 
-## Participate Testnet PoC-2 promotion events
-
-To participate the PoC-2 events, it's required to set your node name in the format below:
-
-```bash
-./phala-node --name "Name | Controller account address" <...other arguments>
-```
-
-Please see the chapter with the same name in [Run a Full Node]({{< relref "docs/poc2/run-a-full-node" >}}) for more details.
 
 ## FAQ
 
@@ -354,3 +357,8 @@ other peers over the network.
 ```sh
 ./phala-node purge-chain
 ```
+
+<br>
+
+### Tech Support
+[![](https://img.shields.io/discord/697726436211163147?label=Phala%20Discord)](https://discord.gg/FUtZzYH) [![](https://img.shields.io/badge/Join-Telegram-blue)](https://t.me/joinchat/PDXFHFI9RXcOKMaumhTTvw)
