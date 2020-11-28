@@ -6,13 +6,13 @@ draft: false
 
 ## Before Starting
 
-Running a Gatekeeper (GK) in Phala Network means a lot of responsibility. You will be accountable for not only your own stake but also the stake of your current nominators. Numbers of Gatekeepers can vary in different phases; and when Phala launches its mainnet, there will be 100 Gatekeepers and they share the inflation return of Phala economic system.
+Running a Gatekeeper (GK) in Phala Network means a lot of responsibility. You will be accountable for not only your own stake but also the stakes of your nominators. Numbers of Gatekeepers can vary in different phases; and when Phala launches its mainnet, there is expected to be 100 Gatekeepers and they will share the inflation return of Phala economic system.
 
 Once you've raised enough stakes (nominations) in current [Era](https://wiki.polkadot.network/docs/en/glossary#era), you will automatically be enrolled as a Gatekeeper when the next Era starts. Otherwise, you will stay in the [waiting list](https://poc3.phala.network/#/staking/waiting). You may try to stake more PHA or call for more nominator stakings.
 
 > In testnet Vendetta, you would need stakings from Phala team to be elected as a Gatekeeper. You may consult @ylyantonia on Telegram or Antoniaiaiaiaiaia#2727 on Discord for more detail.
 
-Nominators would share the 5% inflation return with the commission deducted by according Gatekeeper. The higher the commission rate is, the less the nominators can share.
+Nominators will share the 5% inflation return with the commission deducted by according Gatekeeper. The higher the commission rate is, the less the nominators can share.
 
 The table below may clarify the rewards mechanism. For more details, please refer to [https://wiki.polkadot.network/docs/en/learn-staking](https://wiki.polkadot.network/docs/en/learn-staking).
 
@@ -49,3 +49,8 @@ Stash and Controller [accounts](https://wiki.polkadot.network/docs/en/learn-keys
 transaction fees. The rest can come from nominators.
 
 **Warning:** Any PHA that you stake for your Gatekeeper is liable to be slashed, meaning that an insecure or improper setup may result in loss of PHA tokens! If you are not confident in your ability to run a Gatekeeper node, it is recommended to nominate your PHA to a trusted Gatekeeper node instead.
+
+<br>
+
+### Tech Support
+[![](https://img.shields.io/discord/697726436211163147?label=Phala%20Discord)](https://discord.gg/FUtZzYH) [![](https://img.shields.io/badge/Join-Telegram-blue)](https://t.me/joinchat/PDXFHFI9RXcOKMaumhTTvw)

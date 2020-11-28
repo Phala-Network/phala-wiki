@@ -88,7 +88,7 @@ yarn --version
 # 2.1.1
 ```
 
-Finally let's clone the code and run the initialization script to update the rust toolchain. Please note that the entire tutorial is on the **`helloworld` branch** for both the blockchain and the Web UI repo.
+Finally let's clone the code and run the initialization script to update the Rust toolchain. Please note that the entire tutorial is on the **`helloworld` branch** for both the blockchain and the Web UI repo.
 
 ```bash
 # Clone the core blockchain repo
@@ -96,7 +96,7 @@ git clone --branch helloworld https://github.com/Phala-Network/phala-blockchain.
 # Clone the Web UI repo
 git clone --branch helloworld https://github.com/Phala-Network/apps-ng.git
 
-# Run the init script to update rust toolchain and git submodule
+# Run the init script to update Rust toolchain and git submodule
 cd phala-blockchain/
 git submodule update --init
 ./scripts/init.sh

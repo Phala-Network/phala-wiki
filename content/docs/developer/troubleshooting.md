@@ -25,7 +25,7 @@ title: "1.3 Troubleshooting"
        = note: this error originates in a macro (in Nightly builds, run with -Z macro-backtrace for more info)
 ```
 
-This is a [known issue](https://github.com/paritytech/substrate/issues/7287) caused by rust nightly regression. To walkaround it, switch to an older nightly toolchain. We recommend `nightly-2020-09-27`. It can be done like below:
+This is a [known issue](https://github.com/paritytech/substrate/issues/7287) caused by Rust nightly regression. To walkaround it, switch to an older nightly toolchain. We recommend `nightly-2020-09-27`. It can be done like below:
 
 ```bash
 rustup toolchain install nightly-2020-09-27
@@ -61,7 +61,7 @@ error: aborting due to 6 previous errors
 
 This is due to accidentally introduced "std" dependencies. Usually there are two common causes of this error.
 
-Most likely the code has some syntax errors and cannot build. Sometimes these errors can confuse the rust compiler in "no_std" mode and the compiler may accidentally introduce some random dependencies, which breaks our SDK. If this is the case, scroll up and fix the other compiling errors, and then this error should disappear.
+Most likely the code has some syntax errors and cannot build. Sometimes these errors can confuse the Rust compiler in "no_std" mode and the compiler may accidentally introduce some random dependencies, which breaks our SDK. If this is the case, scroll up and fix the other compiling errors, and then this error should disappear.
 
 If fixing the other errors doesn't help, you should check if you accidentally introduce the "std" dependency to the runtime code. The hardware enclave sdk Phala is using doesn't allow direct or indirect "std" dependencies. You may consider to switch to a package that supports "no_std" and disable its std feature in `Cargo.toml`, or manually port the dependency package to use `teaclave-sgx-sdk`'s `tstd` instead. `tstd` is a subset of `std` but it's enough in the most cases.
 
