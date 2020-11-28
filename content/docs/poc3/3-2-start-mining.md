@@ -7,13 +7,13 @@ title: "3.2 Start Mining"
 
 Then you will wait for the next mining period (every 1 hour) to get started.
 
-![](/images/docs/poc3/3.2-1.png)
+![](https://imgur.com/f0mahMF.png)
 
 
 ## Mining States Verification
 
-1. Go to `Developer` → `Chain State` 
-2. Click `phalaModule` → `miningState`
-3. Choose your stash account
+1. Go to `Developer` → `Chain State`
+2. Choose `phalaModule` → `workerState`, and choose your stash account
+3. If there's a `Mining` with block height after `state`, congratulations, your miner is working. If there's a `Miningpending`, it means your miner will start mining from the next round (600 blocks later). 
 
-![](/images/docs/poc3/3.2-2.png)
+![](https://imgur.com/N8V73i6.png)
