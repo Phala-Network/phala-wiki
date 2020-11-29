@@ -7,6 +7,7 @@ printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
 
 # Update the published site
 cd public
+git checkout master
 git pull
 cd ..
 
