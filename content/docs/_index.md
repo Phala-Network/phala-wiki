@@ -29,7 +29,7 @@ fn handle_command(&mut self, origin: &chain::AccountId, txref: &TxRef, cmd: Comm
 
 > **Note**: Some boilerplate code was removed for simplicity
 
-A confidential contract is nothing more than an ordinary smart contract, but with confidentiality. The above code is a snippet of a sample contract where it stores a counter and anyone can increment it but only authorized user can read it.
+A confidential contract is nothing more than an ordinary smart contract, but with confidentiality. This example shows a simple contract where it stores a counter and anyone can increment it, but only the authorized user can read it. The above snippet defines the contract storage and the `Increment` command. 
 
 The Phala contracts are written in Rust, a programming language that can do anything on the blockchain. You can make full use of your favorite package manager Cargo and libraries at [crates.io](https://crates.io).
 
@@ -48,15 +48,14 @@ fn handle_query(&mut self, origin: Option<&chain::AccountId>, req: Request) -> R
 }
 ```
 
-Unlike traditional smart contracts, the states in a confidential contract is not accessible outside the contract in any way, unless via "queries", by which you can define who has the permission to access which part of the data. In this example, we only allow a special account `ROOT_ACCOUNT` to read the counter, otherwise the requester will get a `NotAuthorized` error.
+Unlike traditional smart contracts, the states in a confidential contract is not accessible outside the contract directly because they are encrypted on the blockchain. However Phala contracts have "queries", which are some functions running inside the TEE to accept the request, read the raw state and respond. In a query, you can define who has the permission to access which part of the data. In this example, we only allow a special account `ROOT_ACCOUNT` to read the counter, otherwise the requester will get a `NotAuthorized` error.
 
-In fact, in addition to the contract states, the inputs and outputs of the contract are also end-to-end encrypted. The contract developer can design how the data can be accessed in a fully flexible way.
+In fact, besides the contract states, the inputs and outputs of the contract are also signed and end-to-end encrypted. Since queries are signed, the contract can know who is the sender of a query, so that contract developers can design arbitrary access control in the query handlers just like programming a ordinary backend service. This was not possible in any traditional smart contract before.
 
-> **Side notes: Private variable are not private on Ethereum. **
+> **Side notes: Private variable are not private on Ethereum.**
 >
 > Though you can define variables with "private" attribute, the data is still public on the blockchain. According to [the solidity doc](https://solidity.readthedocs.io/en/v0.7.3/contracts.html):
 > > Everything that is inside a contract is visible to all observers external to the blockchain. Making something private only prevents other contracts from reading or modifying the information, but it will still be visible to the whole world outside of the blockchain.
-
 
 ## The Root of Trust: TEE
 
