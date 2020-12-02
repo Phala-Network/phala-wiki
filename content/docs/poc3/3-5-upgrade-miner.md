@@ -38,5 +38,5 @@ sudo docker pull phalanetwork/phala-poc3-phost
 
 Please re-do [2-1 Deploy the Full Stack]({{< relref "docs/poc3/2-1-deploy-the-full-stack" >}})
 
-### Tech Support
+### Miner Community
 [![](https://img.shields.io/discord/697726436211163147?label=Phala%20Discord)](https://discord.gg/zjdJ7d844d) [![](https://img.shields.io/badge/Join-Telegram-blue)](https://t.me/phalaminer)

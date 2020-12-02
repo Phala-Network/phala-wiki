@@ -2,7 +2,7 @@
 title: "4 Frequently Asked Questions"
 ---
 
-### Tech Support
+### Miner Community
 
 Please don't hesitate to ask us if you have any questions. You can find us at:
 

@@ -174,6 +174,6 @@ If you can't run Phala pRuntime with both of them tagged as ✔, you may have to
 1. [What is Trusted Execution Environment](https://www.trustonic.com/technical-articles/what-is-a-trusted-execution-environment-tee/)
 2. [What is SGX](https://software.intel.com/content/www/us/en/develop/topics/software-guard-extensions.html)
 
-#### Tech Support
+#### Miner Community
 
 [![](https://img.shields.io/discord/697726436211163147?label=Phala%20Discord)](https://discord.gg/zzhfUjU) [![](https://img.shields.io/badge/Join-Telegram-blue)](https://t.me/phalaminer)

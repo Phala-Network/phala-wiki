@@ -52,5 +52,5 @@ transaction fees. The rest can come from nominators.
 
 <br>
 
-### Tech Support
+### Miner Community
 [![](https://img.shields.io/discord/697726436211163147?label=Phala%20Discord)](https://discord.gg/FUtZzYH) [![](https://img.shields.io/badge/Join-Telegram-blue)](https://t.me/joinchat/PDXFHFI9RXcOKMaumhTTvw)
