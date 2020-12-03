@@ -21,7 +21,7 @@ draft: false
 
 ##  同步链上数据
 
-1. 下载 Phala Gatekeeper [资源包](https://drive.google.com/file/d/1lIuB_PI-GTRrPISIyS8mPkjCQle213GR/view?usp=sharing)。
+1. 下载 Phala Gatekeeper [资源包](https://www.yuque.com/fagephalanetwork/vendettatutorial/bt1f8q)。
 2. 将该文件放到 /home（家） 文件夹内。
 3. 输入以下指令。vim 指令过后，会进入Vim，在其中将 YOUR NAME 替换成节点名字（确认当前输入法为英文输入法，按下 `a` ，进入可编辑的状态）。
 
