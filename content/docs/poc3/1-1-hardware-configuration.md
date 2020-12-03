@@ -59,9 +59,9 @@ sudo /opt/intel/sgxdriver/uninstall.sh
 Then try following commands to install the SGX driver:
 
 ```bash
-wget https://download.01.org/intel-sgx/sgx-linux/2.11/distro/ubuntu18.04-server/sgx_linux_x64_driver_2.6.0_b0a445b.bin
-chmod +x sgx_linux_x64_driver_2.6.0_b0a445b.bin
-sudo ./sgx_linux_x64_driver_2.6.0_b0a445b.bin
+wget https://download.01.org/intel-sgx/sgx-linux/2.12/distro/ubuntu18.04-server/sgx_linux_x64_driver_2.11.0_4505f07.bin
+chmod +x sgx_linux_x64_driver_2.11.0_4505f07.bin
+sudo ./sgx_linux_x64_driver_2.11.0_4505f07.bin
 ```
 
 Run `ls /dev/isgx` again to check if the SGX driver works.
