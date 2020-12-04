@@ -62,6 +62,7 @@ Follow the commands below to prepare the environment. Some can be skipped if alr
     curl -sL https://deb.nodesource.com/setup_current.x | sudo -E bash -
     sudo apt-get install -y nodejs
     sudo npm install -g yarn
+    yarn set version berry
     ```
 
 You can test the installation by running the following commands. The output should match the sample outputs, or with a slightly higher version.
@@ -105,6 +106,7 @@ cd ..
 # Update the git submodule
 cd apps-ng/
 git submodule update --init
+cd ..
 ```
 
 ## Build the core blockchain
