@@ -111,17 +111,28 @@ cd ..
 
 ## Build the core blockchain
 
-Now we already have the both repos `phala-blockchain` and `apps-ng` in the working directory. Let's start to build the the core blockchain first.
+Now we already have the both repos `phala-blockchain` and `apps-ng` in the working directory. Let's start to build the the core blockchain first. The blockchain on the **`helloworld` branch** is based on an old version of Substrate, therefore we'll use an old version of Rust to build it.
 
 ```bash
 # Build the core blockchain
+rustup install nightly-2020-10-01-x86_64-unknown-linux-gnu
+rustup target add wasm32-unknown-unknown --toolchain nightly-2020-10-01
 cd phala-blockchain/
-cargo build --release
+cargo +nightly-2020-10-01 build --release
 
 # Build pRuntime (TEE Enclave)
 cd ./pruntime/
 SGX_MODE=SW make
 ```
+
+> **Notes on Build the core blockchain**
+>
+> You would usually use the latest version of Substrate and the Rust compiler to build the core blockchain. The build would therefore be simplified to:
+> ```bash
+> # Build the core blockchain
+> cd phala-blockchain/
+> cargo build --release
+> ```
 
 The compilation takes from 20 mins to 60 mins depending on your internet connection and CPU performance. After building, you will get the three binary files:
 
