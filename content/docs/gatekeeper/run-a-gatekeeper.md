@@ -27,7 +27,7 @@ The specs posted above are by no means the minimum specs that you could use when
 
 ## Synchronize Chain Data
 
-1.  Download the [GK setup package](https://drive.google.com/file/d/1hbvLm4KpyRIp9C3g_arYhbC7xaT2r3bg/view?usp=sharing).
+1.  Download the [GK setup package](https://drive.google.com/file/d/1meYBcEwZViezeY0ksC34K0qAe6AiFlsv/view?usp=sharing).
 2.  Open your Terminal and run the commands below:
 
 	```bash
