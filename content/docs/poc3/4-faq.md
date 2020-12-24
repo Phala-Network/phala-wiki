@@ -146,7 +146,18 @@ Phala Network adopts a probabilistic mining reward algorithm. So you may need to
 
 Please make sure the controller is registerd on the blockchain by `phalaModule.setStash(controller)`.
 
-## VI. Other
+## VI. Restart your pHost
+
+### Q: It reads `Err(BlockHeaderMismatch)` after I restarted the pHost.
+
+It could happen to some type of hardwares. You may have to kill your pRuntime first then to restart your pHost. 
+
+### Q: Can I run the `restart` command directly instead of using `kill` and `run` ?
+
+You can give it a try if you are have been familiar with docker codes.  
+
+
+## VII. Other
 
 ### Q: I can't claim test tokens after clicking `Click to burn` or `Click to claim`
 
@@ -162,3 +173,4 @@ It might be caused by 2 reasons:
 
 1. The docker has not been completely downloaded. Please pull it again following the given steps.
 2. The SGX driver is not enabled. Please try to re-install your SGX driver following the given steps.
+
