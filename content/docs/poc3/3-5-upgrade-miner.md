@@ -11,32 +11,26 @@ title: "3.5 Upgrade Miner"
 3. Run the following commands to kill the original containers:
 
     ```bash
-    docker kill phala-phost
-    docker kill phala-pruntime
-    docker kill phala-node
+    sudo phala stop
     ```
 
-## Purge the docker containers and local files
+## Update the Phala miner and clean the local files
 
-Run the commands below to remove cached data. By default, the Phala node data is stored under `$HOME/phala-node-data` and the pruntime cache is stored at `$HOME/phala-pruntime-data`. If the path was changed in registration, please replace it with your path.
-
-```bash
-sudo rm -r $HOME/phala-node-data
-sudo rm -r $HOME/phala-pruntime-data
-sudo docker image prune -a
-```
-
-## Pull the new docker image
+Run the commands below to remove cached data.
 
 ```bash
-sudo docker pull phalanetwork/phala-poc3-node
-sudo docker pull phalanetwork/phala-poc3-pruntime
-sudo docker pull phalanetwork/phala-poc3-phost
+sudo phala update clean
 ```
 
-## Bring up the full stack
+## Update the Phala miner without clean the local files
 
-Please re-do [2-1 Deploy the Full Stack]({{< relref "docs/poc3/2-1-deploy-the-full-stack" >}})
+```bash
+sudo phala update
+```
+
+## Restart the phala miner
+
+Please re-do [2-1 Start the Phala miner]({{< relref "docs/poc3/2-1-start-the-phala-miner" >}})
 
 ### Miner Community
 [![](https://img.shields.io/discord/697726436211163147?label=Phala%20Discord)](https://discord.gg/zjdJ7d844d) [![](https://img.shields.io/badge/Join-Telegram-blue)](https://t.me/phalaminer)
