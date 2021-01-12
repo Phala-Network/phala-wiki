@@ -28,7 +28,7 @@ sudo phala update clean
 sudo phala update
 ```
 
-## Restart the phala miner
+## Restart the Phala miner
 
 Please re-do [2-1 Start the Phala miner]({{< relref "docs/poc3/2-1-start-the-phala-miner" >}})
 

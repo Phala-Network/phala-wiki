@@ -38,10 +38,10 @@ sudo phala install init
 
 After the installation of your driver, please use the following utility to double check if everything goes well. Docker is required for this step, and you can peek at how to install it in the [next secton]({{< relref "docs/poc3/1-2-software-configuration" >}}).
 
-- You can run the SGX test by the phala scripts
+- You can run the SGX test by the Phala scripts
 
   ```bash
-  sudo phala sgx_test
+  sudo phala sgx-test
   ```
 
 Please pay attention to the following checks:
