@@ -11,22 +11,26 @@ title: "3.5 Upgrade Miner"
 3. Run the following commands to kill the original containers:
 
     ```bash
-    docker kill phala-phost
-    docker kill phala-pruntime
-    docker kill phala-node
+    sudo phala stop
     ```
 
-## Pull the new docker image
+## Update the Phala miner and clean the local files
+
+Run the commands below to remove cached data.
 
 ```bash
-sudo docker pull phalanetwork/phala-poc3-node:latest
-sudo docker pull phalanetwork/phala-poc3-pruntime:latest
-sudo docker pull phalanetwork/phala-poc3-phost:latest
+sudo phala update clean
 ```
 
-## Bring up the full stack
+## Update the Phala miner without clean the local files
 
-Please re-do [2-1 Deploy the Full Stack]({{< relref "docs/poc3/2-1-deploy-the-full-stack" >}})
+```bash
+sudo phala update
+```
+
+## Restart the Phala miner
+
+Please re-do [2-1 Start the Phala miner]({{< relref "docs/poc3/2-1-start-the-phala-miner" >}})
 
 ## Reset database (for troubleshooting only)
 

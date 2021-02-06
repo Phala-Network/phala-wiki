@@ -8,7 +8,7 @@ draft: false
 
 Vendetta is the third Phala Network Testnet featuring decentralized TEE mining. We provide an overview to setup the mining environment, followed by a detailed explanation of each step.
 
-![](/images/docs/poc3/walkthrough.png)
+
 
 ### I. Getting Started
 
@@ -18,7 +18,7 @@ Vendetta is the third Phala Network Testnet featuring decentralized TEE mining. 
 
 ### II. Deploying Phala Network
 
-- [2.1 Deploy the Full Stack]({{< relref "docs/poc3/2-1-deploy-the-full-stack" >}})
+- [2.1 Start the phala miner]({{< relref "docs/poc3/2-1-start-the-phala-miner" >}})
 - [2.2 Set Commission]({{< relref "docs/poc3/2-2-set-commission" >}})
 - [2.3 Verify the Miner States]({{< relref "docs/poc3/2-3-verify-the-miner-state" >}})
 

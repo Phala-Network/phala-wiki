@@ -148,13 +148,17 @@ Please make sure the controller is registerd on the blockchain by `phalaModule.s
 
 ## VI. Restart your pHost
 
-### Q: It reads `Err(BlockHeaderMismatch)` after I restarted the pHost.
+### Q: Got `Err(BlockHeaderMismatch)` after restarting phost
+It's a rare case. You will need to restart pruntime as well. (Kill pruntime and phost, and then start pruntime, finally start phost). It takes minutes to hours to resync pruntime, but it will be fine.
 
-It could happen to some type of hardwares. You may have to kill your pRuntime first then to restart your pHost. 
+### Q: Is it ok to use `docker restart` instead?
+Yes, if you understand what you are doing.
 
-### Q: Can I run the `restart` command directly instead of using `kill` and `run` ?
+### Q: How can I make sure the restart is done?
+First, you can use `docker logs` to check if phost is syncing (and not dead). After running for a while, if the miner can get its payout , then everything is ok. Otherwise, you may want to search your controller account at [phala.subscan.io](https://phala.subscan.io/), and check if there's any claiming transaction and if any of it failed.
 
-You can give it a try if you are have been familiar with docker codes.  
+### Q: What will happen if I didn't restart phost?
+You will fail to claim the future mining payout. But once you restart it, the future payout will not be affected.
 
 
 ## VII. Other
