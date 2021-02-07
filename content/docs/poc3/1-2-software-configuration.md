@@ -18,7 +18,7 @@ sudo apt install wget
 Download the Phala-solo-Scripts form Github
 
 ```bash
-wget https://codeload.github.com/Phala-Network/solo-mining-scripts/zip/main.zip
+wget https://codeload.github.com/Phala-Network/solo-mining-scripts/zip/main
 ```
 
 Unzip and run the install.sh to install the scripts
