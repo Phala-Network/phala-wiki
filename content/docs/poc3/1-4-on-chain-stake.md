@@ -9,7 +9,7 @@ title: "1.4 On-Chain Staking"
 ![](/images/docs/poc3/1.4-1.png)
 
 1. Stake
-Transfer to your stath acount, nominator your or other gatekeeper, the token will be locked in this round and become effective in next round.
+Transfer to your stash account, nominator your or other miner, the token will be locked in this round and become effective in next round.
 2. Withdraw Stake
 The token will be pre-unlocked, and be unlocked in next round.
 
@@ -47,7 +47,7 @@ Open the following two pages and select the corresponding transaction or query
 
 - 3.1. Translation
    - stake(to, value)
-   - to: AccountId：You can stake for yourself or other
+   - to: AccountId：You can stake for your or other's stash account.
    - value: BalanceOf：Input he balance of stake 
    - Sign and Submit
    - After a few seconds in the upper right corner, it shows "in block", which means success
