@@ -135,7 +135,7 @@ Interact with the contract: how to send command and queries.
 
 After a general understanding of the model of confidential contracts, let's make something practical and implement a contract which can store the secret note of each visitor. In this contract, we allow any user to store one note, and only the user himself is allowed to read his note.
 
-> The SecretNote contract commit is available at <https://github.com/Phala-Network/phala-blockchain/commit/d91f94c9ed21290b7353991899f7a6da18cfab61> **(CHANGE THIS)**. We thank [Laurent](https://github.com/laurent) for his implementation of this contract.
+> The SecretNote contract commit is available at <https://github.com/Phala-Network/phala-blockchain/commit/d91f94c9ed21290b7353991899f7a6da18cfab61> **(CHANGE THIS)**. We thank [Laurent](https://github.com/LaurentTrk) for his implementation of this contract.
 
 ### Contract
 
