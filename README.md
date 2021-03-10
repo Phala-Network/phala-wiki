@@ -8,10 +8,16 @@ Init the repo:
 git submodule update --init
 ```
 
-Install [Hugo](https://gohugo.io/getting-started/installing/) (macOS):
+(On macOS) Install [Hugo](https://gohugo.io/getting-started/installing/):
 
 ```bash
 brew install hugo
+```
+
+(On Linux) Install:
+
+```bash
+sudo snap install hugo --channel=extended
 ```
 
 ## Live preview
