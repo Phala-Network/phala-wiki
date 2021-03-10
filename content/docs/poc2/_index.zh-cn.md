@@ -1,9 +1,8 @@
-+++
-title = "历史文档 (PoC-2)"
-date = 2020-07-06T22:29:51+08:00
-weight = 200
-chapter = true
-+++
+---
+title: "历史文档 (PoC-2)"
+weight: 100
+draft: false
+---
 
 ### 历史文档 PoC-2
 

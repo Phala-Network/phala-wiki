@@ -10,7 +10,7 @@ draft: false
 
 Phala Network guarantees the reliable execution of smart contracts while keeping the data secretly. Confidential contracts run in TEE worker nodes with Trusted Computing capable hardwares, which guarantees the secrecy of the contract data.
 
-{{< button "docs/" "Docs" >}} {{< button "https://phala.network" "Homepage" >}} {{< button "https://gitcoin.co/hackathon/polkadot/onboard" "Polkadot Hackathon" >}}
+{{< button "docs/" "Docs" >}} {{< button "https://phala.network" "Homepage" >}}
 
 {{< /column >}}
 {{< column >}}

@@ -1,6 +1,6 @@
 ---
 title: "PoC-3 Vendetta Mining Guide"
-weight: 100
+weight: 2
 draft: false
 ---
 

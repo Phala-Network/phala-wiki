@@ -1,9 +1,8 @@
-+++
-title = "Legacy Docs PoC-2"
-date = 2020-07-06T22:29:51+08:00
-weight = 200
-chapter = true
-+++
+---
+title: "Legacy Docs (PoC-2)"
+weight: 100
+draft: false
+---
 
 ### Chương 1 (PoC-2)
 
