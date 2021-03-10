@@ -38,7 +38,7 @@ defaultContentLanguageInSubdir= true
     hl_Lines = ""
     lineNoStart = 1
     lineNos = true
-    lineNumbersInTable = true
+    lineNumbersInTable = false
     noClasses = false
     style = "monokai"
     tabWidth = 2
@@ -48,10 +48,14 @@ defaultContentLanguageInSubdir= true
     startLevel = 2
 
 [params]
-  author = "Phala Network"
-  # searchPlaceholder = "Search the docs ..."
+  name = "Phala Network Wiki"
   repo = "https://github.com/Phala-Network/phala-wiki"
   editUrl = "https://github.com/Phala-Network/phala-wiki/edit/master/content/"
+  [author]
+    name = "Phala Network"
+    url = "https://phala.network"
+
+  # searchPlaceholder = "Search the docs ..."
 
   google_fonts = [
     ["Recursive", "300, 400, 500, 600"],
@@ -59,8 +63,8 @@ defaultContentLanguageInSubdir= true
   ]
 
   [params.logo]
-    lightMode = "logo-phala-48.png"
-    darkMode = "logo-phala-48.png"
+    lightMode = "images/logo-phala-48.png"
+    darkMode = "images/logo-phala-48.png"
 
   [params.source]
     name = "GitHub"
