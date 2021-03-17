@@ -4,8 +4,6 @@ weight: 4
 draft: false
 ---
 
-## Overview
-
 pDiem is a privacy-preserving layer for [Diem](https://en.wikipedia.org/wiki/Diem_(digital_currency)) on Polkadot ecosystem. Powered by Phala Network confidential contract, it can protect the privacy of Diem users. More specifically, pDiem is:
 
 - A corss chain bridge connecting Polkadot and Diem
@@ -95,3 +93,6 @@ pDiem received [a General Grant](https://github.com/w3f/General-Grants-Program/b
     </tbody>
 </table>
 
+<a href="https://github.com/w3f/General-Grants-Program/blob/8a23ef68c7512fa0d437554640601ef28cea3fca/grants/speculative/pLIBRA.md">
+    <img src="/images/docs/web3%20foundation_grants_badge_black.svg" alt="w3f grant receiver" style="height: 100px;">\
+</a>
