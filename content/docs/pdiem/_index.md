@@ -18,7 +18,11 @@ pDiem is a privacy-preserving layer for [Diem](https://en.wikipedia.org/wiki/Die
 
 pDiem is at [Milestone 3](#web3-foundation-grants). This milestone focuses on the core of the bridge: the validation of the deposit transactions. In this demo, you can connect pDiem to the Diem testnet, validate and accept incoming deposit transactions.
 
-Please check [Run pDiem M2 Demo]({{< relref "docs/pdiem/run-pdiem-m2-demo" >}}).
+
+{{< button "deploy-local-testnet" "Deploy Local Testnet" >}}
+
+{{< button "play-with-pdiem" "Play With pDiem" >}}
+
 
 ## The System
 
