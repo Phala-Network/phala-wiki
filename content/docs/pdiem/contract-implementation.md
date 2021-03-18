@@ -45,6 +45,9 @@ The genesis ledger state is initialized by `Command::SetTrustedState` only at on
 
 There's no specific command to update the ledger state. Instead, a `LedgerInfoWithSignature` and a `EpochChangeProof` are extracted from the `TransactionWithProof` from a `Command::VerifyTransaction` call, when a relayer syncs a new transaction to pdiem. Therefore as the new transactions get synced to the pdiem contract, it always maintains the latest ledger state.
 
+{{< tip >}}
+The Diem specific serialization, the cryptographics, and the verification logics are extracted from the original Diem codebase, and ported to SGX build target by the pdiem team, located at [/diem](https://github.com/Phala-Network/phala-blockchain/tree/master/diem) directory.
+{{< /tip >}}
 ## Receive deposit transactions
 
 Before a user can deposit Diem assets to pdiem, a deposit address must be generated, similar to a token exchange in the real world. This is done by the pdiem contract. Any user can ask the contract to generate a deposit address. The contract will generate a new private key, save it in the contract storage, and reveal the address to the user.
