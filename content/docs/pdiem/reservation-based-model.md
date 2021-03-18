@@ -14,10 +14,10 @@ When a user transfer some Diem assets to Polkadot side, he first sends the asset
 
 ## Transfer
 
-The pDiem ledger exposes a token *pDIEM* on the parachain side, which can be transferred between Polkadot accounts as any typical token. The pDiem contract also follows the Polkadot XCM token standard. So it can be transferred between any parachain that accepts standard XCM assets.
+The pDiem ledger exposes a series of p-tokens on the parachain side  (*pXUS* to *XUS* on Diem), which can be transferred between Polkadot accounts as any typical token. The pDiem contract also follows the Polkadot XCM token standard. So it can be transferred between any parachain that accepts standard XCM assets.
 
-> Currently Diem only has one builtin native token, but its design supports multiple tokens. When multiple tokens exist, pDiem can accept any number of different tokens, and the ledger in the pDiem Contract will reflect all the assets in the reservation correspondingly.
+> Currently Diem has a builtin native token `XUS`, but its design supports multiple tokens. When multiple tokens exist, pDiem can accept any number of different tokens, and the ledger in the pDiem Contract will reflect all the assets in the reservation correspondingly.
 
 ## Withdraw
 
-When a user wants to withdraw pDIEM back to the Diem blockchain, he sends a request to the pDiem Contract. The contract will burn the token, and sign a Diem transaction to unlock the token from the sovereign account to the withdraw account. The transaction will be broadcasted by the relayers, and take effect once confirmed by the Diem blockchain.
+When a user wants to withdraw *pXUS* back to the Diem blockchain, he sends a request to the pDiem Contract. The contract will burn the token, and sign a Diem transaction to unlock the token from the sovereign account to the withdraw account. The transaction will be broadcasted by the relayers, and take effect once confirmed by the Diem blockchain.
