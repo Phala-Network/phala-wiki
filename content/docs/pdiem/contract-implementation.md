@@ -4,12 +4,6 @@ weight: 5
 draft: false
 ---
 
-- diem contract in the big picture
-- functions
-- impl
-  - storage
-  - functions
-
 The pdiem contract implements a Diem light client and wallet. On the one hand, the pdiem relayers talks to the contract to sync the transactiosn between Diem side and pdiem side. On the other hand, it provides the interface for users to manage their cross-chain assets.
 
 The pdiem contract acts as a regular Diem wallet. It holds the private keys inside its Phala Network confidential contract. So the contract can control some wallets to receive or send funds on the Diem blockchain.
