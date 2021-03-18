@@ -62,6 +62,10 @@ When a deposit address, a user can transfer some Diem assets to pdiem:
 
 Once a deposit is validated, we will add the received amount to the user's available balance. The accepted transactions and the balance can be queried by `Request::FreeBalance` and `Request::VerifiedTransactions`.
 
+{{< tip "warning" >}}
+The transactions are ordered by sequence or event id. The ids of the accounts are recorded in the contract to avoid missing transactions.
+{{< /tip >}}
+
 ## Sign withdraw transactions
 
 WIP: The [Pull Request](https://github.com/Phala-Network/phala-blockchain/pull/171) is getting merged.
@@ -69,3 +73,16 @@ WIP: The [Pull Request](https://github.com/Phala-Network/phala-blockchain/pull/1
 ## Assets transfer
 
 In pdiem-m3 we didn't implement token transferring. We will leave it to the next milestone, and it will be handled by the [`Assets` confidential contracts](https://github.com/Phala-Network/phala-blockchain/blob/master/standalone/pruntime/enclave/src/contracts/assets.rs), which also implements the standard interoperable assets standard defined in XCM. In this way, the assets bridged by pdiem can be used in any parachains in the Polkadot ecosystem.
+
+## Reference
+
+Commands:
+
+- `AccountData`: Sets the whitelisted accounts, in bcs encoded base64
+- `SetTrustedState`: Sets the trusted state. The owner can only initialize the bridge with the genesis state once.
+- `VerifyTransaction`: Verifies a deposit transactions
+
+Queries:
+
+- `FreeBalance`: Gets the total available balance controlled by the contract.
+- `VerifiedTransactions`: Gets all the verified transactions, in hex hash string.
