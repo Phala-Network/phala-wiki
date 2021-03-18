@@ -35,9 +35,3 @@ The information of the ledger state at each version is stored in a `LedgerInfo` 
 - storage (some data stored in the Account Resources)
 
 See also: [Diem blockchain storage hierarchy](https://github.com/diem/diem/tree/master/storage)
-
-## A Diem Light Client
-
-Code: <https://github.com/Phala-Network/phala-blockchain/blob/master/standalone/pruntime/enclave/src/contracts/diem.rs>
-
-> WIP

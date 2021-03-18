@@ -58,7 +58,7 @@ diem% transfer 1 0 10 XUS
 
 And that's all!
 
-Behind the scene, `pdiem-relayer` picked up the deposit transaction, send a regular Substrate extrinsic to the `pdiem` confidential contract on Phala to sync the transaction. After the validation of the incoming transaction and the proof, the `pdiem` contract will accept it.
+Behind the scene, `pdiem-relayer` picked up the deposit transaction, send a regular Substrate extrinsic to the `pdiem` confidential contract on Phala to sync the transaction. After the validation of the incoming transaction and the proof, the `pdiem` contract will accept it. Usually it takes 30 seconds for the relayer to pick up the transaction, and relay to `pdiem` side.
 
 ### Balances in pdiem
 
