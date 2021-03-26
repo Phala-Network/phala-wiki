@@ -4,6 +4,14 @@ title: "1.3 Troubleshooting"
 
 ## `phala-blockchain`
 
+### Problem: "the `wasm32-unknown-unknown` target may not be installed"
+
+You need to add the `wasm-unknown-unknown` target to your rust toolchain. Do it by this (under the code repo):
+
+```bash
+rustup target add wasm32-unknown-unknown
+```
+
 ### Probelm: "consider giving `accuracy` a type" when building substrate
 
 ```log
