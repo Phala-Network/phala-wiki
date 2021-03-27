@@ -1,5 +1,5 @@
 ---
-title: "2.3 Veirfy the Miner State"
+title: "2.3 Verify the Miner State"
 ---
 
 Go to `Developer` -> `Chain state` :
