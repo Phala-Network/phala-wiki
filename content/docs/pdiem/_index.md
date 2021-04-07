@@ -4,11 +4,11 @@ weight: 4
 draft: false
 ---
 
-pDiem is a privacy-preserving layer for [Diem](https://en.wikipedia.org/wiki/Diem_(digital_currency)) on Polkadot ecosystem. Powered by Phala Network confidential contract, it can protect the privacy of Diem users. More specifically, pDiem is:
+pDiem is a compliant privacy-preserving layer for [Diem](https://en.wikipedia.org/wiki/Diem_(digital_currency)) on Polkadot ecosystem. Powered by Phala Network confidential contract, it can protect the privacy of Diem users. More specifically, pDiem is:
 
-- A corss chain bridge connecting Polkadot and Diem
-- A privacy-preserving token on Polkadot for Diem users
-- A privacy-preserving DApp ecosystem more open and free than Novi (formerly known as Calibra)
+- A cross-chain bridge connecting Polkadot ecosystem with Diem’s m(b)illions of users, offering a host of Polkadot-based services and applications to Diem holders and an on-ramp to massive user base for Polkadot.
+- A privacy-preserving stablecoin on Polkadot that is both compliant (a single transaction is limited in value up to the no-KYC requirements by FATF) and allows for scalable value transfers in stable asset (think remittances, everyday spending, micro-payments for services). Imagine using your current account without any bank or credit provider tracking your purchases/spendings.
+- A privacy-preserving DApp ecosystem that is more open and free than Facebook-operated Novi (formerly known as Calibra).
 
 > The project was initially named pLIBRA ("Privacy-preserving Libra"). "In December 2020, Libra was rebranded as Diem." Since then we have followed Diem's rebranding, and renamed the project to pDiem.
 
@@ -26,16 +26,16 @@ pDiem is at [Milestone 3](#web3-foundation-grants). This milestone focuses on th
 
 ![](/images/docs/pdiem/pdiem-system-design.png)
 
-- **pDiem Contract**: The core of pDiem, a confidential contract that validates and accepts Diem deposit and process withdraw request;
-- **pDiem Relayers**: The nodes that relay Diem deposit transactions to the pDiem Contract, and broadcast the withdraw transactions to Diem;
-- **Phala Network**: It runs the pDiem Contract, and relayes XCM between pDiem and other parachains;
+- **pDiem Contract**: The core of pDiem, a confidential contract that validates and accepts Diem deposits and processes withdraw requests;
+- **pDiem Relayers**: The nodes that relay Diem deposit transactions to the pDiem Contract, and broadcast the withdrawal transactions to Diem;
+- **Phala Network**: It runs the pDiem Contract, and relayes XCM transactions between pDiem and other Polkadot parachains
 - **Polkadot**: The relay chain that connects parachains including Phala Network;
-- **Parachains**: The other blockchains we aim to serve;
+- **Parachains**: Other blockchains in the Polkadot ecosystem we aim to serve;
 - **XCMP**: [Cross-chain Messaging Protocol](https://wiki.polkadot.network/docs/en/learn-crosschain).
 
-Among the component listed in the diagram, the **pDiem Contract** and the **pDiem Realyers** are the core of the pDiem bridge protocol. The contract is deployed on Phala Network. It handles users' Diem deposit transactions and withdraw requests. The relayers are the contributors who run pDiem Relayer program, which relay the transactions between the Diem blockchain and the pDiem contract.
+Among the components listed in the diagram, the **pDiem Contract** and the **pDiem Realyers** are the core of the pDiem bridge protocol. The contract is deployed on Phala Network. It handles users' Diem deposit transactions and withdrawal requests. The relayers are the contributors who run pDiem Relayer program, which relay the transactions between the Diem blockchain and the pDiem contract.
 
-pDiem receives assets from the Diem blockchain, generates a *pDIEM* token on the Polkadot side, and can also transfer it back to redeem the original assets. This is achieved by a combination of different components. In the docs, we will introduce:
+pDiem receives assets from the Diem blockchain, generates **pdiem bridged tokens** on the Polkadot side, and can also transfer them back to redeem the original assets. This is achieved by a combination of different components. In the docs, we will introduce:
 
 - [The Reservation-based Model]({{< relref "docs/pdiem/reservation-based-model" >}}),
 - [The Light Validation Client]({{< relref "docs/pdiem/light-validation-client.md" >}}),
