@@ -12,6 +12,14 @@ You need to add the `wasm-unknown-unknown` target to your rust toolchain. Do it 
 rustup target add wasm32-unknown-unknown
 ```
 
+### Problem: "(signal: 9, SIGKILL: kill)" when building substrate
+
+The compiler may run out-of-memory. Usually each thread takes up to 2GB RAM. If you don't have enough memory, you can limit the concurrency specifying a smaller `N` than your available cores:
+
+```bash
+cargo build --release --j N
+```
+
 ### Probelm: "consider giving `accuracy` a type" when building substrate
 
 ```log
