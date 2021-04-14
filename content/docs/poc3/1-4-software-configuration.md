@@ -1,5 +1,5 @@
 ---
-title: "1.2 Software Configuration"
+title: "1.4 Software Configuration"
 ---
 
 ### System Requirement
@@ -34,9 +34,9 @@ sudo phala install init
 ```
 > The scripts will install the docker,sgx driver and pull all the Phala docker images
 
-> ## Double check the SGX capability
+## Double check the SGX capability
 
-After the installation of your driver, please use the following utility to double check if everything goes well. Docker is required for this step, and you can peek at how to install it in the [next secton]({{< relref "docs/poc3/1-2-software-configuration" >}}).
+After the installation of your driver, please use the following utility to double check if everything goes well.
 
 - You can run the SGX test by the Phala scripts
 

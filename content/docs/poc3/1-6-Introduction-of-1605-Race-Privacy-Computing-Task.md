@@ -1,5 +1,5 @@
 ---
-title: 1.5 Introduction of 1605 Race Privacy Computing Task
+title: 1.6 Introduction of 1605 Race Privacy Computing Task
 ---
 ## Introduction of 1605 Race Privacy Computing Task
 Who are familiar with Phala Tokenomics know that Phala's mining rewards are divided into online rewards and computing task rewards. In this 1605 Race V2, on the basis of online rewards, the emphasis is on the introduction of computing task rewards. This article is an introduction to the computing tasks of the Vendetta testnet.
@@ -13,7 +13,7 @@ Who are familiar with Phala Tokenomics know that Phala's mining rewards are divi
 Code reading：[Github](https://github.com/Phala-Network/phala-blockchain/blob/master/pruntime/enclave/src/system/comp_election.rs)
 ### Privacy computing task dispatch algorithm
 #### Core logic
-![](/images/docs/poc3/1.5-1.png)
+![](/images/docs/poc3-old/1.5-1.png)
 - As with any dispatch algorithm, we need to assign the **appropriate** TEE worker to complete the computing based on the characteristics of the privacy computing task；
 - Therefore, the Phala Network system will score according to the core requirements of computing characteristics and the characteristics of each TEE device to obtain the task score of each TEE worker；
 - According to the task score of all online TEE workers, the assignment result is calculated by weighted random sampling formula;
@@ -26,7 +26,7 @@ Code reading：[Github](https://github.com/Phala-Network/phala-blockchain/blob/m
 3. According to the core indicators of TEE calculation and dispatch, we calculated the task score of each TEE assigned to the computing task
 The formula for calculating task score is as follows：
 
-![](/images/docs/poc3/1.5-2.png
+![](/images/docs/poc3-old/1.5-2.png
 
 - **Score** = TEE Calculation performance score
 - **Stake** = Stake amount of TEE-Base Stake (1620*core)
@@ -41,11 +41,11 @@ An example of weighted random sampling without replacement:
 >Among them, A's task score is 3, B's task score is 2, C's task score is 1
 >Now draw one from 3 machines, the probability that A will be drawn is
 
-![](/images/docs/poc3/1.5-3.png)
+![](/images/docs/poc3-old/1.5-3.png)
 
 >If two sets are drawn, the probability of A being drawn is
 
-![](/images/docs/poc3/1.5-4.png)
+![](/images/docs/poc3-old/1.5-4.png)
 
 In the real environment, there may be 5 out of thousands or tens of thousands of TEEs, but the logic is consistent with the above example
 
@@ -57,7 +57,7 @@ In order to allow TEE miners to predict their own probability of winning and to 
 The algorithm is clear, but based on the algorithm alone, it is impossible to calculate the probability of a single mining machine being drawn, because the probability of drawing is related to the number of mining machines currently online and their task score. We simulated the increase in the probability of winning by the additional stake amount.
 
 Assume that Rorschach has a 300 score TEE (red line in the figure). Assume that the other TEEs are 5000 420-score machines and have an additional 1000 tPHA stake. If 5 mining machines are selected from 5001 (including Rorschach's) to perform computing tasks, then as Rorschach adds additional stake, the probability of being drawn increases as follows
-![](/images/docs/poc3/1.5-5.png)
+![](/images/docs/poc3-old/1.5-5.png)
     It can be seen from the figure:
     - The probability that 5 of more than 1,000 machines will be selected is very low, about 0.05%;
     - As the amount of stake increases, the probability increases rapidly at first, and then slowly;
@@ -70,6 +70,6 @@ In the above figure, the light blue, red, yellow, and green machine points are 4
 #### How to allocate additional mortgage for multiple miners
 
 Assuming that Rorschach has two identical mining machines, when the total stake amount is the same, how to allocate the stake has little effect on the overall income. Even the split will be a bit more than just one of them.
-![](/images/docs/poc3/1.5-6.png)
+![](/images/docs/poc3-old/1.5-6.png)
 
 The above is all about the privacy computing tasks in 1605 Miner race V2, welcome to [forum](https://forum.phala.network/) to have more discussions with us~

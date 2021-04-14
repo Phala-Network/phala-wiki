@@ -10,4 +10,4 @@ title: "2.2 Set Commission"
 >
 > A lower commission rate will share more of your profits, which means more lenders are likely to support you, thus lowering your staking amount requirement.
 
-![](/images/docs/poc3/2.2.png)
+![](/images/docs/poc3-old/2.2.png)

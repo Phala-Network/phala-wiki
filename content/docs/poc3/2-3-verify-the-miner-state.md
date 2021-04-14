@@ -11,7 +11,7 @@ Go to `Developer` -> `Chain state` :
 - Confirm the binding between stash and controller addresses: `phalaModule.stash(controller)`
 - An example of all the details of mining state is shown below:
 
-![](/images/docs/poc3/2.3.png)
+![](/images/docs/poc3-old/2.3.png)
 
 ## Mining State References
 

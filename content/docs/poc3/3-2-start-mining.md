@@ -5,7 +5,7 @@ title: "3.2 Start Mining"
 1. Go to `Develoepr` -> `Extrinsics`
 2. Choose your controller account，click `phalaModule` -> `startMiningIntention()` ，and `Submit Transaction`.
 
-![](/images/docs/poc3/3.2-1.png)
+![](/images/docs/poc3-old/3.2-1.png)
 
 Then you will wait for the next mining period (every 1 hour) to get started.
 
@@ -15,7 +15,7 @@ Then you will wait for the next mining period (every 1 hour) to get started.
 2. Choose `phalaModule` → `workerState`, and choose your stash account
 3. If there's a `Mining` with block height after `state`, congratulations, your miner is working. If there's a `Miningpending`, it means your miner will start mining from the next round (600 blocks later).
 
-![](/images/docs/poc3/3.2-2.png)
+![](/images/docs/poc3-old/3.2-2.png)
 
 ## Mining Status References
 

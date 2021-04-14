@@ -7,7 +7,7 @@ title: "3.3 Stop Mining"
 
 Then you will wait for the next mining period (every 1 hour) to get stopped.
 
-![](/images/docs/poc3/3.3.png)
+![](/images/docs/poc3-old/3.3.png)
 
 
 ## Miner State Verification onchain
