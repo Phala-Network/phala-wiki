@@ -77,7 +77,14 @@ pdiem-m3 uses Diem's subaccount feature to create deposit accounts. Any user can
 ./phala-console.sh pdiem-new-account 0 '//Bob'
 ```
 
-The above command will send `Command::NewAccount` to the `pdiem` contract from Substrate account "Bob". You can create as many accounts as you want. It takes 2-3 blocks to process the command. Then you can get a full list of the Diem accounts by a query:
+The above command will send `Command::NewAccount` to the `pdiem` contract from Substrate account "Bob". You can create as many accounts as you want. It takes 2-3 blocks to process the command.
+
+{{< tip >}}
+The first argument of `pdiem-new-account` is the sequence id of the new account transaction on Diem. Similar to the other blockchains, Diem also requires every transaction has incremented sequence id. So when creating another new subaccount, run `./phala-console.sh pdiem-new-account 1 '//Charlie'`.
+{{< /tip >}}
+
+
+Then you can get a full list of the Diem accounts by a query:
 
 ```bash
 ./phala-console.sh pdiem-balances
