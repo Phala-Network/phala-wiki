@@ -16,16 +16,10 @@ With the pdiem full stack running, we are going to send some Diem transactions t
 
 ## Create Diem accounts
 
-First, start the diem-cli from the same directory:
+Start the diem-cli from the same directory by:
 
 ```bash
-docker-compose run --rm --entrypoint /bin/bash -- diem-cli
-```
-
-It spawns a shell at `/root`. Then enter the Diem console inside the shell by:
-
-```bash
-./diem-cli.sh
+docker-compose run --rm --entrypoint /bin/bash -- diem-cli ./diem-cli.sh
 ```
 
 ![](/images/docs/pdiem/diem-cli.png)
@@ -80,24 +74,30 @@ All the transactiosn received by `pdiem` contract are validated against the late
 pdiem-m3 uses Diem's subaccount feature to create deposit accounts. Any user can create its Diem deposit subaccount by sending a `NewAccount` command:
 
 ```bash
-./phala-console.sh pdiem-new-account '//Alice'
+./phala-console.sh pdiem-new-account 0 '//Bob'
 ```
 
-The above command will send `Command::NewAccount` to the `pdiem` contract from Substrate "Alice". You can create as many accounts as you want. It takes 2-3 blocks to process the command. Then you can get a full list of the Diem accounts by a query:
+The above command will send `Command::NewAccount` to the `pdiem` contract from Substrate account "Bob". You can create as many accounts as you want. It takes 2-3 blocks to process the command. Then you can get a full list of the Diem accounts by a query:
 
 ```bash
-./phala-console.sh pdiem-accounts
+./phala-console.sh pdiem-balances
 ```
 
-> A screenshot...
+![](/images/docs/pdiem/pdiem-balances.png)
+
+As shown in the screenshot, Bob just created its deposit Diem address `4DB6A10FCEB765C55ADC3751474AE8D1`.
 
 ## Deposit (diem → pdiem)
 
 Get your deposit address from the last step. And now you can deposit some `XUS` on the Diem side in diem-cli:
 
 ```bash
-diem% transfer 1 0xDEADBEEFDEADBEEFDEADBEEFDEADBEEF 10 XUS
+diem% transfer 0x57c76da2e144c0357336ace2f3f8ac9b 0x4DB6A10FCEB765C55ADC3751474AE8D1 10 XUS
 ```
+
+{{< tip >}}
+The transfer command in `diem-cli` takes the source account and the destination account as the first two arguments. It accepts either two account references (e.g. 0 for `account 0` in the local wallet), or two hex-encoded addresses. In the example above, `0x57c76da2e144c0357336ace2f3f8ac9b` is `account 1` and `0x4DB6A10FCEB765C55ADC3751474AE8D1` is Bob's the deposit subaccount.
+{{< /tip >}}
 
 The corss-chain transfer takes around 4-6 blocks to complete. Check the balance by:
 
@@ -105,19 +105,21 @@ The corss-chain transfer takes around 4-6 blocks to complete. Check the balance 
 ./phala-console.sh pdiem-balances
 ```
 
+> In this example, Bob's Diem account will get `10 XUS`, which is `10000000` under the `free` field in the `pdiem-balances` outputs (6 decimals).
+
 ## Withdraw (pdiem → diem)
 
 You can withdraw assets from `pdiem` back to diem by `pdiem-withdraw`:
 
 ```bash
-./phala-console.sh pdiem-withdraw 0xDEADBEEFdeadbeefDEADBEEFdeadbeef '10 XUS' '//Alice'
+./phala-console.sh pdiem-withdraw 4DB6A10FCEB765C55ADC3751474AE8D1 '10 XUS' '//Bob'
 ```
 
 In the command above the arguments are:
 
-- `0xDEADBEEFdeadbeefDEADBEEFdeadbeef`: The Diem address to withdraw
+- `4DB6A10FCEB765C55ADC3751474AE8D1`: The Diem address to withdraw
 - `'10 XUS'`: The amount of the assets
-- `'//Alice'`: The key of the Substrate account to withdraw
+- `'//Bob'`: The SURI of the Substrate account private key to withdraw
 
 {{< tip >}}
 The `pdiem-withdraw` command sends a `Command::TransferXUS` transaction to the `pdiem` contract via the Phala blockchain. The contract then creates a Diem transaction from the subaccount to the withdrawal target, sign it, and push it to a queue. Once the `pdiem-relayer` noticed new transactions in the queue, it relays them to the Diem blockchain.
@@ -131,4 +133,6 @@ You can check your `pdiem` balance at any point:
 ./phala-console.sh pdiem-balances
 ```
 
-You can still see the withdrawal amount under the "locked" balances until transaction is confimed on Diem.
+![](/images/docs/pdiem/withdraw-lock-confirmed.png)
+
+You can still see the withdrawal amount under the "locked" balances until transaction is confimed on Diem. The above screenshot has two sides. The left side shows the withdrawal funds was locked and pending confirmation, while the right side shows the locked funds were removed because the outgoing tx is confirmed. Finally the sequence under the deposit account was incremented to 1.
