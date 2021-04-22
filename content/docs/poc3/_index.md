@@ -1,5 +1,5 @@
 ---
-title: "PoC-3 Vendetta Mining Guide"
+title: "PoC-3/4 Vendetta Mining Guide"
 weight: 2
 draft: false
 ---
