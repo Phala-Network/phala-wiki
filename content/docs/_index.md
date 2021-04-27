@@ -19,3 +19,5 @@ Phala Network tackles this challenging problem. It seeks to provide strong guara
 {{< button "poc3" "Mine on Phala" >}}
 
 {{< button "pdiem" "Learn pDiem" >}}
+
+{{< button "spec" "Tech Spec" >}}

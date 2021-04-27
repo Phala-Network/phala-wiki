@@ -15,3 +15,5 @@ Phala Network 是一个用于数据保护和区块链智能合约的隐私保护
 {{< button "poc3" "挖矿" >}}
 
 {{< button "pdiem" "pDiem 工作原理" >}}
+
+{{< button "pdiem" "技术规范" >}}
