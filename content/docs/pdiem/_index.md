@@ -43,6 +43,9 @@ pDiem receives assets from the Diem blockchain, generates **pdiem bridged tokens
 - [The Relayer]({{< relref "docs/pdiem/the-relayer.md" >}}),
 - and finally, the [Future Works](< relref "docs/pdiem/future-works.md" >).
 
+Appendix:
+
+- [Advanced: Hardware Mode]({{< relref "docs/pdiem/hardware-mode" >}})
 
 ## Web3 Foundation Grants
 

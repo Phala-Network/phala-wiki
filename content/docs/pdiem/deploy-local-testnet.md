@@ -68,5 +68,5 @@ docker-compose ps
 Tips:
 - The state of `diem-cli` should be "Exit 0" because we will start it manually on demand.
 - Don't keep it running for a long time. Diem writes ~1MB/s to the disk.
+- `pdiem-m3` also supports [SGX Hardware mode]({{< relref "docs/pdiem/hardware-mode" >}})
 {{< /tip >}}
-
