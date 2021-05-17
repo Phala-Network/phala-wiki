@@ -81,6 +81,12 @@ Most likely the code has some syntax errors and cannot build. Sometimes these er
 
 If fixing the other errors doesn't help, you should check if you accidentally introduce the "std" dependency to the runtime code. The hardware enclave sdk Phala is using doesn't allow direct or indirect "std" dependencies. You may consider to switch to a package that supports "no_std" and disable its std feature in `Cargo.toml`, or manually port the dependency package to use `teaclave-sgx-sdk`'s `tstd` instead. `tstd` is a subset of `std` but it's enough in the most cases.
 
+### ICE: "found unstable fingerprints for predicates_of..."
+
+Please disable incremental build. This is due to a bug introduced in rustc:
+
+<https://doc.rust-lang.org/cargo/reference/config.html#buildincremental>
+
 ## `apps-ng` related
 
 ### Probelm: '@polkadot/dev/config/tsconfig' not found
