@@ -85,7 +85,7 @@ If fixing the other errors doesn't help, you should check if you accidentally in
 
 Please disable incremental build. This is due to a bug introduced in rustc:
 
-<https://doc.rust-lang.org/cargo/reference/config.html#buildincremental>
+<https://blog.rust-lang.org/2021/05/10/Rust-1.52.1.html>
 
 ## `apps-ng` related
 
