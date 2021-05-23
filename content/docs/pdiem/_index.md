@@ -78,8 +78,8 @@ pDiem received [a General Grant](https://github.com/w3f/General-Grants-Program/b
             </td>
         </tr>
         <tr>
-            <td>⏫</td>
-            <td>2021Q1</td>
+            <td>✅</td>
+            <td>2021Q2</td>
             <td>M3</td>
             <td>
                 The bridge with a light validation client in confidential contract. (<a href="https://github.com/Phala-Network/phala-blockchain/blob/master/standalone/pruntime/enclave/src/contracts/diem.rs">Contract</a>, <a href="https://github.com/Phala-Network/phala-blockchain/tree/master/diem">Light Client</a>, <a href="https://github.com/Phala-Network/pdiem-relayer">Relayer</a>)
