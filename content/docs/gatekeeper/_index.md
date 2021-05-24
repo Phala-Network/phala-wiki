@@ -8,7 +8,7 @@ draft: false
 
 Running a Gatekeeper (GK) in Phala Network means a lot of responsibility. You will be accountable for not only your own stake but also the stakes of your nominators. Numbers of Gatekeepers can vary in different phases; and when Phala launches its mainnet, there is expected to be 100 Gatekeepers and they will share the inflation return of Phala economic system.
 
-Once you've raised enough stakes (nominations) in current [Era](https://wiki.polkadot.network/docs/en/glossary#era), you will automatically be enrolled as a Gatekeeper when the next Era starts. Otherwise, you will stay in the [waiting list](https://poc3.phala.network/#/staking/waiting). You may try to stake more PHA or call for more nominator stakings.
+Once you've raised enough stakes (nominations) in current [Era](https://wiki.polkadot.network/docs/en/glossary#era), you will automatically be enrolled as a Gatekeeper when the next Era starts. Otherwise, you will stay in the [waiting list](https://poc4.phala.network/#/staking/waiting). You may try to stake more PHA or call for more nominator stakings.
 
 > In testnet Vendetta, you would need stakings from Phala team to be elected as a Gatekeeper. You may consult @ylyantonia on Telegram or Antoniaiaiaiaiaia#2727 on Discord for more detail.
 
@@ -34,7 +34,7 @@ The table below may clarify the rewards mechanism. For more details, please refe
 |     John      |          150           |            0.375            |  37.5   |
 |   **Kitty**   |           50           |            0.125            |  12.5   |
 
-Please do be aware that if you are not a productive Gatekeeper (e.g., constantly being offline), you might get slashed and lose a certain amount of your staked PHA as well as your nominators'. It would leave [a permanent record](https://poc3.phala.network/#/staking/query) on the blockchain which might affect your reputation as a Gatekeeper.
+Please do be aware that if you are not a productive Gatekeeper (e.g., constantly being offline), you might get slashed and lose a certain amount of your staked PHA as well as your nominators'. It would leave [a permanent record](https://poc4.phala.network/#/staking/query) on the blockchain which might affect your reputation as a Gatekeeper.
 
 <br>
 

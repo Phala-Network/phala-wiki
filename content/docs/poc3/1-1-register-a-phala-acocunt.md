@@ -2,7 +2,7 @@
 title: "1.1 Register a Phala account"
 ---
 
-1. Go to the account management page of the Phala Testnet: <https://poc3.phala.network/polkadotjs/#/accounts>
+1. Go to the account management page of the Phala Testnet: <https://poc4.phala.network/polkadotjs/#/accounts>
 2. Click **Add Account**
     ![](/images/docs/poc3/1-1.1.jpg)
 

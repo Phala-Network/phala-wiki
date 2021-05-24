@@ -183,7 +183,7 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
 
 ## **启动守门人身份**
 
-1. 去到`质押`—`账户操作`板块，传送门：[https://poc3.phala.network/?rpc=wss%3A%2F%2Fpoc3.phala.network%2Fws#/staking/actions](https://poc3.phala.network/?rpc=wss%3A%2F%2Fpoc3.phala.network%2Fws#/staking/actions)
+1. 去到`质押`—`账户操作`板块，传送门：[https://poc4.phala.network/?rpc=wss%3A%2F%2Fpoc4a.phala.network%2Fws#/staking/actions](https://poc4.phala.network/?rpc=wss%3A%2F%2Fpoc4a.phala.network%2Fws#/staking/actions)
 2. 点击你绑定好的账号旁边的 `Validate`。之后按照引导提交 validate 请求。
 3. 等进入下一个 Epoch 的时候，就可以看到你的守门人在 Waiting 列表里了。
 

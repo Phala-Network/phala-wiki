@@ -227,7 +227,7 @@ You can restart your node at this point, omitting the `--unsafe-rpc-expose` flag
 1.  Go to `Network` → `Staking` → `Account Actions`
 2.  Click the `Validate` button right next to your bonded accounts.
 3.  Set the commission rate and sign.
-4.  Your controller node will be on the [waiting list](https://poc3.phala.network/#/staking/waiting) in the next [Epoch](https://wiki.polkadot.network/docs/en/glossary#epoch).
+4.  Your controller node will be on the [waiting list](https://poc4.phala.network/#/staking/waiting) in the next [Epoch](https://wiki.polkadot.network/docs/en/glossary#epoch).
 
 ![](/images/docs/gatekeeper/11.png)
 ![](/images/docs/gatekeeper/12.png)

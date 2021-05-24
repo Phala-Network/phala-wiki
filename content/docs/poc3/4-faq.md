@@ -20,7 +20,7 @@ Please don't hesitate to ask us if you have any questions. You can find us at:
 - **Runtime**. The state transition function of a blockchain. It defines a valid algorithm for determining the state of the next block given the previous state.
 - **Miner**. An SGX-ready device that has successfully installed on Phala Network to gain PHA rewards by renting its computing resources to the network.
 - **Worker**. A mainboard/PC/laptop/device where there runs a miner.
-- **Round**. Also called "mining round". With the current PoC-3 setup, 1 round = 600 blocks. You may check the round changes via [chain state](https://poc3.phala.network/#/chainstate) -> phalaModule ->  round(): RoundInfo
+- **Round**. Also called "mining round". With the current PoC-4 setup, 1 round = 600 blocks. You may check the round changes via [chain state](https://poc4.phala.network/#/chainstate) -> phalaModule ->  round(): RoundInfo
 
 ## II. Setting up Multiple Miners
 
