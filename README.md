@@ -28,6 +28,8 @@ hugo server
 
 ## Build & release
 
+You have to own the write permission to the Github Page repo in order to release a new version.
+
 ```bash
 ./scripts/publish.sh
 ```
