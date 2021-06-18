@@ -14,4 +14,4 @@ Phala Network s'attaque à ce problème difficile. Il cherche à fournir de soli
 
 
 {{< button "poc4" "Miner sur Phala" >}}
-
+{{< button "spec" "Sécifications Techniques" >}}
