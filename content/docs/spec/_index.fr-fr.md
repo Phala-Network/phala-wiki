@@ -26,12 +26,12 @@ draft: false
 
 
 
-Ce document décrit les spécifications techniques du réseau Phala, y compris le protocole global, la structure et l'algorithme détaillés des données. Ce travail est encore en cours.
+Ce document décrit les spécifications techniques du Phala-Network, y compris le protocole global, la structure et l'algorithme détaillés des données. Ce travail est encore en cours.
 
 
 ## Les entités Blockchain
 
-Dans Phala Network, il existe trois types d'entités :
+Dans Phala-Network, il existe trois types d'entités :
 
 - *Client*, qui fonctionne sur des appareils normaux sans aucune exigence matérielle particulière ;
 - *Worker*, qui fonctionne sur TEE (*Trusted Execution Environment* / Environnement d'exécution de confiance) et sert de nœuds de calcul pour les contrats intelligents confidentiels ;
@@ -58,7 +58,7 @@ Dans Phala, la communication entre toutes les entités doit être cryptée, de s
 Pour les clients, les paires de clés sont générées par le portefeuille de l'utilisateur. Alors que pour les workers et les gateKeepers, les paires de clés sont entièrement gérées par `pRuntime` et leur utilisation est strictement limitée.
 
 
-### L'Initialisation `pRuntime`
+### L'Initialisation de `pRuntime`
 
 Lors de l'initialisation, `pRuntime` génère automatiquement les paires de clés d'entité ci-dessus avec un générateur de nombres pseudo-aléatoires. Les paires de clés générées sont gérées dans `pRuntime` dans TEE, ce qui signifie que les workers et les contrôleurs d'accès ne peuvent l'utiliser qu'avec les API limitées exportées par  `pRuntime`, et ne peuvent jamais obtenir les paires de clés en clair pour lire les données chiffrées hors de TEE.
 
