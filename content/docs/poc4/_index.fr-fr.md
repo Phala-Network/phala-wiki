@@ -6,7 +6,7 @@ draft: false
 
 ![](/images/docs/poc4-fr/getty_493471862_2000133320009280350_332727.jpg)
 
-Ce wiki est propulsé par l'équipe française de Phala | 
+Ce wiki est propulsé par l'équipe française de Phala-Network | 
 ---------------------------------------------------- | 
 
 &#128165;&#128165; &#128679; &#128165;&#128165; Dans l'état actuel du développement de Phala, nous considérons qu'il est inutile d'investir dans une machine pour miner le testnet. 
