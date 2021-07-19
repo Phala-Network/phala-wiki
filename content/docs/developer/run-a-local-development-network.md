@@ -6,7 +6,7 @@ title: "1.1 Run a Local Development Network"
 
 ## Overview
 
-In this tutorial, we are going to set up a "Hello World" development environment. We are going to deploy a full stack of the core blockchain and connect the Web UI to the blockchain. By the end of the tutorial, you will be able to:
+In this tutorial,  we're going to set up a "Hello World" development environment. We are going to deploy a full stack of the core blockchain and connect the Web UI to the blockchain. By the end of the tutorial, you will be able to:
 
 - Send confidential transactions
 - Get a ready-to-hack version of Phala Network for building your own confidential Dapps
@@ -21,9 +21,9 @@ The Web UI is at [Phala-Network/apps-ng](https://github.com/Phala-Network/apps-n
 
 ## Environment
 
-The development environment of Phala Network requires Linux, because it relies on [Linux Intel SGX SDK](https://01.org/intel-software-guard-extensions/downloads). Virtual machines should generally work. Phala Network doesn't work on Windows or macOS natively (sorry, Mac lovers), but we haven't tested WLS yet. Please let us know if you are the first to run it on WLS successfully!
+The development environment of Phala Network requires Linux, because it relies on [Linux Intel SGX SDK](https://01.org/intel-software-guard-extensions/downloads). Virtual machines should generally work. Phala Network doesn't work on Windows or macOS natively (sorry, Mac lovers), however we haven't tested WLS yet. Please let us know if you are the first to run it on WLS successfully!
 
-In this tutorial we assume the operating system is *Ubuntu 18.04*. Though not tested yet, it should work with Ubuntu 20.04 out-of-box. Other Linux distributions should also work, but the instructions may vary.
+In this tutorial we assume the operating system is *Ubuntu 18.04*. Though not tested yet, it should work with Ubuntu 20.04 out-of-box. Other Linux distributions should also work, but the instructions or command may vary.
 
 It's required to have at least 4 cores and 8GB ram to build the project including the core blockchain and the Web UI. Less than 4GB ram may fail to build the Web UI.
 
@@ -164,7 +164,7 @@ cd pruntime/bin
 
 Once they are launched successfully, they should output logs as shown in the GIF above. Notice that we pass the `--dev` flag to `phala-node` and `phost` to indicate we are in the development network.
 
-The three core blockchain components are connected via TCP (WebSocket and HTTP). Please make sure your system have the TCP ports not occupied with other programs. By default they use the following ports:
+The three core blockchain components are connected via TCP (WebSocket and HTTP). Please ensure your system have the TCP ports not occupied with other programs. By default they use the following ports:
 
 - `phala-node`
     - 9944: Substrate WebSocket RPC port

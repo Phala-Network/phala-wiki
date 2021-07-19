@@ -53,7 +53,7 @@ In fact, besides the contract states, the inputs and outputs of the contract are
 
 ## The Root of Trust: TEE
 
-Phala provides confidentiality guarantee based on trusted hardwares, or *Trusted Execution Environment*, which means your code and data are safe even if your operating system is compromised. A contract executing in the TEE is just like the priest in the confessional room: You know who he is, you can tell he what you want and he will reply, but only God knows what's going on there. The most important thing is: All your secrets are safe.
+Phala provides confidentiality guarantee based on trusted hardwares, or *Trusted Execution Environment*, which means your code and data are safe even if your operating system is compromised. A contract executing in the TEE is just like the priest in the confessional room: You know who he is, you can tell him what you want and he will reply, but only God knows what's going on there. The most important thing is: All your secrets are safe.
 
 Phala adopts one of the most popular implementations of TEE, i.e., Intel SGX. Intel SGX introduces a small set of instructions to encrypt the data in memory, and attackers cannot decrypt it without cracking the CPU and extracting the secret key in it. Unlike existing blockchains in which all contract states are public on chain, the states of confidential contracts are encrypted and sealed in SGX.
 
