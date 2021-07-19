@@ -261,11 +261,6 @@ Congratulations! Finally, you have followed the tutorial to:
 
 Now you are familiar with building and running a development network. Hold tight! In the next chapter, we are going to build the first confidential contract together!
 
-### Submit your work
+Join our [Discord server](https://discord.gg/zzhfUjU) and feel free to ask for help!
 
-This tutorial is a part of [Polkadot "Hello World" virtual hackathon challenge](https://gitcoin.co/hackathon/polkadot/onboard) at gitcoin.co. In order to win the task, please do the followings:
 
-1. Take screenshots of the terminal window with the running core blockchain (`phala-node`, `pruntime`, and `phost`)
-2. Take a screenshot of your user-issued secret token
-3. Send the screenshot and share your feeling on Twitter
-4. Join our [Discord server](https://discord.gg/zzhfUjU) and submit the the link to your tweet
