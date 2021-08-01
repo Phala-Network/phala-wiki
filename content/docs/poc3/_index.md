@@ -6,9 +6,23 @@ draft: false
 
 [![](https://img.shields.io/discord/697726436211163147?label=Phala%20Discord)](https://discord.gg/zzhfUjU) [![](https://img.shields.io/badge/Join-Telegram-blue)](https://t.me/phalaminer)
 
+{{< tip "warning" >}}
+
+**⚠️⚠️ Out-of-date Warning ⚠️⚠️**
+
+The Phala team has published the new [Tokenomics v0.9](https://medium.com/phala-network/reading-phala-network-economic-paper-preview-5f33b7019861) in July 2021. We are working on massive refactor and upgrade of the core blockchain and the mining protocol to adopt the latest Tokenomic v0.9 and the Polkadot parachain architecture. When the development is ready, we are going to launch a new testnet (Para1).
+
+The running testnet (poc4-dev) and runtime-bridge are still based on the old mining protocol. The difference between the new one and the old one is significant. Some frequentely asked questions are already no-issue on the new testnet. Therefore we storngly suggest you to wait for the new testnet launch. The runtime-bridge will be available shortly after that.
+
+You can find the latest development progress from the links below:
+
+1. [Phala/Khala Core Protocol Progress](https://github.com/orgs/Phala-Network/projects/9)
+2. [Mining Protocol Progress](https://github.com/orgs/Phala-Network/projects/8)
+3. [runtime-bridge Github repo](https://github.com/Phala-Network/runtime-bridge)
+
+{{< /tip >}}
+
 Vendetta is the third Phala Network Testnet featuring decentralized TEE mining. We provide an overview to setup the mining environment, followed by a detailed explanation of each step.
-
-
 
 ### I. Getting Started
 
