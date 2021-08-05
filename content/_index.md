@@ -8,7 +8,7 @@ draft: false
 
 # Phala Network
 
-Phala Network guarantees the reliable execution of smart contracts while keeping the data secretly. Confidential contracts run in TEE worker nodes with Trusted Computing capable hardwares, which guarantees the secrecy of the contract data.
+Phala Network is a Web3.0 compute cloud that supports data privacy while remaining trustless. Unlike centralized cloud service, Phala doesn’t own any server or data center. Anyone can provide permissionless servers into Phala Network, and because of a clever combination of blockchain and trusted execution environments (TEE), we can make sure the servers can’t be evil even when they are in an edge network situation. Together, this creates the infrastructure for a powerful, secure, and scalable trustless computing cloud.
 
 {{< button "docs/" "Docs" >}} {{< button "https://phala.network" "Homepage" >}}
 
