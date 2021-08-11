@@ -10,14 +10,20 @@ A Blockchain is a kind of distributed ledger which indelibly records transaction
 
 Phala Network tackles this challenging problem. It seeks to provide strong guarantees of *confidentiality* without sacrificing *cross-contract interoperability*, which means the confidential contracts in Phala Network can interact with other confidential contracts freely. Further, as a Polkadot parachain, Phala Network enables *cross-chain interoperability* of smart contracts to confidentially operate assets on another blockchain.
 
+On May 14th, 2021, Khala Network, Phala's canary network, has won the slot auction with 132,281 raised KSM and successfully registered the 4th Kusama [parachain](https://parachains.info/details/khala) with Para ID 2004 🎉🎉🎉.
+
+<div style="text-align: center">
+    <img src="/images/docs/parachain-auction.png">
+</div>
+
 ## Please choose a topic
 
-{{< button "developer" "Build on Phala" >}}
+<!-- {{< button "developer" "Build on Phala" >}} -->
+
+{{< button "spec" "Tech Spec" >}}
+
+{{< button "khala" "Mine on Khala" >}}
 
 {{< button "gatekeeper" "Run a Gatekeeper" >}}
 
-{{< button "pre-mainnet" "Mine on Phala" >}}
-
 {{< button "pdiem" "Learn pDiem" >}}
-
-{{< button "spec" "Tech Spec" >}}

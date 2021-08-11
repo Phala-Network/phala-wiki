@@ -1,5 +1,5 @@
 ---
-title: "Archived: PoC-2"
+title: "Archived: PoC-2 Guide"
 weight: 101
 draft: false
 ---
