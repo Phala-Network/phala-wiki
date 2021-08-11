@@ -1,7 +1,7 @@
 ---
 title: "运行 Gatekeeper"
 date: 2020-07-10T01:16:05+08:00
-draft: false
+draft: true
 ---
 
 ## 配置要求

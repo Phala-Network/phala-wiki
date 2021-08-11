@@ -1,10 +1,12 @@
 ---
-title: "守门人教程"
+title: "Khala守门人申请教程"
 weight: 3
 draft: false
 ---
 
-## 什么是守门人
+## 敬请期待
+
+<!-- ## 什么是守门人
 
 守门人（Gatekeeper）是对 Phala 网络至关重要的角色。守门人负责区块的打包和密钥管理，是意外情况下保证网络可用性的重要途径。守门人需要使用性能较好的设备、在网络情况良好的环境登录，且必须时刻保持在线。因此，**守门人可以获得可观的收益**，但同时需要对自己和提名人的PHA抵押额负责。如果因为频繁掉线或其他不良行为导致被惩罚，则无论是名誉还是PHA损失都会是巨大的。
 
@@ -27,4 +29,4 @@ draft: false
 <br>
 
 ### 技术支持
- [![](https://img.shields.io/badge/Join-%E5%BE%AE%E4%BF%A1%E7%BE%A4-brightgreen)](https://mp.weixin.qq.com/s/j0ggxgvwqCeNO6v0mgHkzw)
+ [![](https://img.shields.io/badge/Join-%E5%BE%AE%E4%BF%A1%E7%BE%A4-brightgreen)](https://mp.weixin.qq.com/s/j0ggxgvwqCeNO6v0mgHkzw) -->

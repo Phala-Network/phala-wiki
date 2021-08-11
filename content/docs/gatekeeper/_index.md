@@ -1,10 +1,12 @@
 ---
-title: "GateKeeper Guide"
+title: "Khala Gatekeeper Application Guide"
 weight: 3
 draft: false
 ---
 
-## Before Starting
+## Coming Soon
+
+<!-- ## Before Starting
 
 Running a Gatekeeper (GK) in Phala Network means a lot of responsibility. You will be accountable for not only your own stake but also the stakes of your nominators. Numbers of Gatekeepers can vary in different phases; and when Phala launches its mainnet, there is expected to be 100 Gatekeepers and they will share the inflation return of Phala economic system.
 
@@ -53,4 +55,4 @@ transaction fees. The rest can come from nominators.
 <br>
 
 ### Miner Community
-[![](https://img.shields.io/discord/697726436211163147?label=Phala%20Discord)](https://discord.gg/FUtZzYH) [![](https://img.shields.io/badge/Join-Telegram-blue)](https://t.me/joinchat/PDXFHFI9RXcOKMaumhTTvw)
+[![](https://img.shields.io/discord/697726436211163147?label=Phala%20Discord)](https://discord.gg/FUtZzYH) [![](https://img.shields.io/badge/Join-Telegram-blue)](https://t.me/joinchat/PDXFHFI9RXcOKMaumhTTvw) -->
