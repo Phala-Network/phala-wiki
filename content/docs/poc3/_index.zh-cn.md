@@ -1,6 +1,6 @@
 ---
 title: "历史文档: PoC-3/4 Vendetta 挖矿教程"
-weight: 101
+weight: 102
 draft: false
 ---
 

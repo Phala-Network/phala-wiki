@@ -1,6 +1,6 @@
 ---
 title: "Développement du contrat"
-weight: 1
+weight: 100
 draft: false
 ---
 
@@ -23,7 +23,7 @@ fn handle_command(&mut self, origin: &chain::AccountId, txref: &TxRef, cmd: Comm
 
 > **Note**: Certains codes passe-partout ont été supprimés pour plus de simplicité.
 
-Un contrat confidentiel n'est rien de plus qu'un contrat intelligent ordinaire, mais avec une confidentialité. Cet exemple montre un contrat simple dans lequel est stocké un compteur. N'importe qui peut l'incrémenter mais seul l'utilisateur autorisé peut le lire. Le snippet ci-dessus définit le stockage du contrat et la commande `Increment`. 
+Un contrat confidentiel n'est rien de plus qu'un contrat intelligent ordinaire, mais avec une confidentialité. Cet exemple montre un contrat simple dans lequel est stocké un compteur. N'importe qui peut l'incrémenter mais seul l'utilisateur autorisé peut le lire. Le snippet ci-dessus définit le stockage du contrat et la commande `Increment`.
 
 Les contrats Phala sont écrits en Rust, un langage de programmation qui peut tout faire sur la blockchain. Vous pouvez utiliser pleinement votre gestionnaire de paquets préféré Cargo et les bibliothèques sur [crates.io](https://crates.io).
 

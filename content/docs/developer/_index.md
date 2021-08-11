@@ -1,6 +1,6 @@
 ---
-title: "Contract Development"
-weight: 1
+title: "Archived: Contract Development"
+weight: 100
 draft: false
 ---
 
@@ -23,7 +23,7 @@ fn handle_command(&mut self, origin: &chain::AccountId, txref: &TxRef, cmd: Comm
 
 > **Note**: Some boilerplate code was removed for simplicity
 
-A confidential contract is nothing more than an ordinary smart contract, but with confidentiality. This example shows a simple contract where it stores a counter and anyone can increment it, but only the authorized user can read it. The above snippet defines the contract storage and the `Increment` command. 
+A confidential contract is nothing more than an ordinary smart contract, but with confidentiality. This example shows a simple contract where it stores a counter and anyone can increment it, but only the authorized user can read it. The above snippet defines the contract storage and the `Increment` command.
 
 The Phala contracts are written in Rust, a programming language that can do anything on the blockchain. You can make full use of your favorite package manager Cargo and libraries at [crates.io](https://crates.io).
 

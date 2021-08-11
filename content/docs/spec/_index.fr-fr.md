@@ -1,6 +1,6 @@
 ---
 title: "Spécifications techniques"
-weight: 5
+weight: 1
 draft: false
 ---
 
@@ -118,7 +118,7 @@ Un client communique avec un worker uniquement pour l'invocation d'un contrat. U
 > **[Amélioration]**
 >
 > ### Sérialisation
-> 
+>
 > Actuellement, les charges utiles sont sérialisées dans un Un JSON adapté aux navigateurs, mais c'est très peu efficace en termes d'espace. Utilisez plutôt un format binaire compact (par exemple Protobuf, parity-scale-codec).
 >
 > ### `EcdhKey` Rotation

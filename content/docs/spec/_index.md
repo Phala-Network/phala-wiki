@@ -1,6 +1,6 @@
 ---
 title: "Technical Specification"
-weight: 5
+weight: 1
 draft: false
 ---
 
@@ -118,7 +118,7 @@ A client communicates with a worker only for contract invocation. An invocation 
 > **[Improvement]**
 >
 > ### Serialization
-> 
+>
 > Currently the paylaods are serialized in browser-friendly JSON, but it's very space inefficient. Use some compact binary format instead (e.g. Protobuf, parity-scale-codec).
 >
 > ### `EcdhKey` Rotation
