@@ -4,7 +4,7 @@ title: "1.1 Check your hardware, BIOS and system"
 
 ## General Khala Hardware Requirements
 
-A system can potentially mine Khala if it meets these general requirements:
+A system can potentially mine Phala if it meets these general requirements:
 
 <!-- TODO.zhe: replace this figure, the storage requirement is changed -->
 ![](/images/docs/poc3/1-3.1.png)
