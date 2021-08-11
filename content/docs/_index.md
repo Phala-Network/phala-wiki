@@ -16,7 +16,7 @@ Phala Network tackles this challenging problem. It seeks to provide strong guara
 
 {{< button "gatekeeper" "Run a Gatekeeper" >}}
 
-{{< button "poc3" "Mine on Phala" >}}
+{{< button "pre-mainnet" "Mine on Phala" >}}
 
 {{< button "pdiem" "Learn pDiem" >}}
 
