@@ -1,6 +1,6 @@
 ---
-title: "PoC-3/4 Vendetta Mining Guide"
-weight: 2
+title: "Archived: PoC-3/4 Vendetta Mining Guide"
+weight: 100
 draft: false
 ---
 
