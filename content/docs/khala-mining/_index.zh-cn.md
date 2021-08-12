@@ -11,17 +11,17 @@ Khala Network是Phala在Kusama上的平行链，具有去中心化的TEE挖矿�
 ### I. Getting Started
 
 - [1.1 检查你的硬件、BIOS和系统"]({{< relref "docs/khala-mining/1-1-hardware-requirements" >}})
-- [1.2 Install Phala Tools]({{< relref "docs/khala-mining/1-2-download-setup-scripts" >}})
-- [1.3 Check the SGX Capability and Confidence Level]({{< relref "1-3-confidential-level-evaluation" >}})
-- [1.4 Benchmarking]({{< relref "docs/khala-mining/1-4-benchmarking" >}})
+- [1.2 安装Phala脚本]({{< relref "docs/khala-mining/1-2-download-setup-scripts" >}})
+- [1.3 SGX测试和信任分级]({{< relref "1-3-confidential-level-evaluation" >}})
+- [1.4 测试Worker性能分]({{< relref "docs/khala-mining/1-4-benchmarking" >}})
 
 ### II. Deploying Khala Network
 
-- [2.1 Configuration]({{< relref "docs/khala-mining/2-1-configuration" >}})
-- [2.2 Deploy Worker Node]({{< relref "docs/khala-mining/2-2-deploy-worker-node" >}})
-- [2.3 Verify Worker Status]({{< relref "docs/khala-mining/2-3-verify-worker-status" >}})
-- [2.4 Upgrade Worker Node]({{< relref "docs/khala-mining/2-4-upgrade-worker-node" >}})
-
+- [2.1 环境配置]({{< relref "docs/khala-mining/2-1-configuration" >}})
+- [2.2 部署Worker节点]({{< relref "docs/khala-mining/2-2-deploy-worker-node" >}})
+- [2.3 检查Worker部署情况]({{< relref "docs/khala-mining/2-3-verify-worker-status" >}})
+- [2.4 Worker升级]({{< relref "docs/khala-mining/2-4-upgrade-worker-node" >}})
+- [2.5 使用控制台]({{< relref "docs/khala-mining/2-5-minerboard" >}})
 <!-- ### III. Mining Operations
 
 - [3.1 Set Miner Stakes]({{< relref "docs/poc3/3-1-set-miner-stakes" >}})
@@ -32,4 +32,4 @@ Khala Network是Phala在Kusama上的平行链，具有去中心化的TEE挖矿�
 
 ### III. FAQ
 
-- [Frequently Asked Questions]({{< relref "docs/khala-mining/4-faq" >}})
+- [FAQ]({{< relref "docs/khala-mining/4-faq" >}})

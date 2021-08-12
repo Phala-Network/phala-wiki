@@ -1,30 +1,28 @@
 ---
-title: "1.3 Check the SGX Capability and Confidence Level"
+title: "1.3 SGX测试和信任分级"
 ---
 
-## Double Check the SGX Capability
+### 首先需要先按照简易安装模式安装Phala脚本
+```shell
+sudo phala install
+```
+​
 
-After the installation of your driver, please use the following utility to double check if everything goes well.
+重要提示：请大家首先关注安全等级（在报告的最后一行），安全等级目前是网络评判的唯一标准！请大家务必先查看安全等级后再询问。<br />
+<br />如果你看到`SGX_ERROR_UPDATE_NEEDED`这样的提示，则说明 BIOS 上缺少 Intel 要求 SGX 环境必须包含的工具，所以评估系统不满足 SGX 的安全标准。解决方法是更新你的 BIOS 版本，怎么更新请百度自己厂商的教程。如果这已经该厂商最新版 BIOS，**则无法挖矿。**<br />
+<br />**在报告的最后一行会显示你的安全等级（1～5），如果您这里显示的是**`Can't give a `confidenceLevel` due to don't meet minimum requirement`**则代表您的机器是无法参与挖矿的。**<br />
+<br />​
 
-- You can run the SGX test by the Phala scripts
+SGX测试完毕后，输入`ls /dev | grep sgx`，如果运行有返回`sgx`或者`isgx`，则说明驱动正常运行。<br />如果没有返回，请到《检查你的硬件、BIOS与系统》一章按照教程调试主板，设置好后回到本章继续进行SGX测试。<br />
 
-  ```bash
-  sudo phala sgx-test
-  ```
+### 自检指令
+```shell
+sudo phala sgx-test
+```
 
-Please pay attention to the following checks:
 
-1. SGX system software → Able to launch enclaves → `Production Mode`
-2. Flexible launch control → `Able to launch production mode enclave`
-3. `isvEnclaveQuoteStatus` and `advisoryIDs` (explained in the next section)
-
-Among them, **the first one is a must to run Phala Network pRuntime**. If it's not supported (tagged as ✘ in the report example below), we are afraid you can't mine PHA with this setup. You may want to replace the motherboard and/or the CPU.
-
-The latter two are not a must, though it is suggested to be checked as it would be essential to install the DCAP driver.
-
-The report below would be a positive result:
-
-```txt
+### 正常的结果
+```shell
 Detecting SGX, this may take a minute...
 ✔  SGX instruction set
   ✔  CPU support
@@ -51,96 +49,89 @@ You are all set to start running SGX programs!
 Generated machine id:
 [162, 154, 220, 15, 163, 137, 184, 233, 251, 203, 145, 36, 214, 55, 32, 54]
 
-Testing RA...
+Testing RA...  // RA就是 Remote Atestation ，远程认证。只有经过了远程认证的SGX才是可信的SGX。
 aesm_service[15]: [ADMIN]EPID Provisioning initiated
 aesm_service[15]: The Request ID is 09a2bed647d24f909d4a3990f8e28b4a
 aesm_service[15]: The Request ID is 8d1aa4104b304e12b7312fce06881260
 aesm_service[15]: [ADMIN]EPID Provisioning successful
-isvEnclaveQuoteStatus = GROUP_OUT_OF_DATE
+isvEnclaveQuoteStatus = GROUP_OUT_OF_DATE //❗️❗️这一行报告尤为重要，这一行就决定了信用评级❗️❗️
 platform_info_blob { sgx_epid_group_flags: 4, sgx_tcb_evaluation_flags: 2304, pse_evaluation_flags: 0, latest_equivalent_tcb_psvn: [15, 15, 2, 4, 1, 128, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0], latest_pse_isvsvn: [0, 11], latest_psda_svn: [0, 0, 0, 2], xeid: 0, gid: 2919956480, signature: sgx_ec256_signature_t { gx: [99, 239, 225, 171, 96, 219, 216, 210, 246, 211, 20, 101, 254, 193, 246, 66, 170, 40, 255, 197, 80, 203, 17, 34, 164, 2, 127, 95, 41, 79, 233, 58], gy: [141, 126, 227, 92, 128, 3, 10, 32, 239, 92, 240, 58, 94, 167, 203, 150, 166, 168, 180, 191, 126, 196, 107, 132, 19, 84, 217, 14, 124, 14, 245, 179] } }
 advisoryURL = https://security-center.intel.com
 advisoryIDs = "INTEL-SA-00219", "INTEL-SA-00289", "INTEL-SA-00320", "INTEL-SA-00329"
-confidenceLevel = 5
+confidenceLevel = 5 //这里是你的信任评级
 ```
+## 信任分级介绍##
+日前，Phala 开发团队在成都的矿工见面会上首次发布了“**信任分级机制**”：我们很开心地宣布，**Phala 是整个区块链行业中首次提出类似制度的项目**。<br />在发布后，无论是现场的矿工还是社区内的朋友都关于信任分级提出了一些疑问。我们挑选了几个有代表性的问题进行回答。
+##### 一. 什么是“信任分级机制”？为什么要做信任分级？
+准确来说“**信任分级机制**”应该叫做“**可信计算设备的信任分级机制**”。<br />支持可信计算的设备因为自身的硬件及固件支持原因，导致其安全程度不同，因此，每个设备可以适用的计算任务也不一样。所以**为了网络及网络上运行不同应用的安全性**，我们建立了信任分级机制。<br />Phala Network 网络上的计算机进行分级后，每种等级的可信计算节点都会被分配满足相应等级的隐私计算任务。目前 Phala Network**只对 Intel SGX 设备进行了安全分级**，后续也将逐步引入**AMD、ARM、RISCV** 等其他设备的信任分级机制。
+##### 二. 具体都有哪些等级，每个等级都可以做什么样的事情，每个等级又有什么样的风险？
+Phala Network 网络中的信任分级分为**可用等级**及**非可用等级**。其中可用等级有5个，即1级～5级。<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/1742275/1619494715956-701ea70b-6dd6-41bb-a816-e0f3a807ba19.png#clientId=u45083c10-0593-4&from=paste&height=286&id=u1e3625a9&margin=%5Bobject%20Object%5D&name=image.png&originHeight=293&originWidth=732&originalType=binary&ratio=1&size=54400&status=done&style=none&taskId=u729ed20d-6091-4127-b220-7e99a8839c0&width=715)<br />具体判定及应用场景如下。
 
-If your got a report like below, please screenshot it, and send it to [Phala Discord Server](https://discord.gg/zjdJ7d844d) or [Telegram Miner Group](https://t.me/phalaminer) for help.
+---
 
-```txt
-Detecting SGX, this may take a minute...
-✔  SGX instruction set
-  ✔  CPU support // if tagged with ❌: it does not suppoort SGX function, you would need to use other types of CPU.
-  ✔  CPU configuration // if tagged with ❌: you would need to check BIOS updates.
-  ✔  Enclave attributes // if tagged with ❌: probably caused by [CPU support issue] and [CPU configuration]
-  ✔  Enclave Page Cache // if tagged with ❌: probably caused by [CPU support issue] and [CPU configuration]
-  SGX features
-    ✘  SGX2  ✘  EXINFO  ✘  ENCLV  ✘  OVERSUB  ✘  KSS // It's OK if SGX2 was tagged with ❌. Phala has not integrated with SGX2 technology in the current stage.
-    Total EPC size: 94.0MiB
-✘  Flexible launch control
-  ✔  CPU support
-  ✘  CPU configuration // if tagged with ❌: you can give it a try but your miner might be affected when the SGX driver upgrades in the future.
-✔  SGX system software
-  ✔  SGX kernel device (/dev/isgx)
-  ✔  libsgx_enclave_common
-  ✔  AESM service
-  ✔  Able to launch enclaves
-    ✔  Debug mode
-    ✘  Production mode // if tagged with ❌: you would need to check BIOS updates.
-    ✔  Production mode (Intel whitelisted)
+##### Ⅰ. Phala 信任1级（最高级）
+###### 🔍 如何判定？
 
-🕮  Flexible launch control > CPU configuration
-Your hardware supports Flexible Launch Control, but it's not enabled in the BIOS. Reboot your machine and try to enable FLC in your BIOS. Alternatively, try updating your BIOS to the latest version or contact your BIOS vendor.
+- 如果您的 SGX 设备在做 Intel IAS 认证时，获得了英特尔 RA 报告中返回的 isvEnclaveQuoteStatus 信息为“**OK**”，则您的信任分级会被归为1级。
+- 1级是**最高**等级，这证明您的可信计算设备既没有任何已知的安全漏洞，又没有任何和安全相关的固件配置错误。
+###### 🔧 适用场景
 
-debug: MSR 3Ah IA32_FEATURE_CONTROL.SGX_LC = 0
+- 在这样的可信执行环境中执行隐私计算任务，是最安全的。所以，在1级设备中可以运行**最高安全性的隐私计算任务**。
+- 例如:
 
-More information: https://edp.fortanix.com/docs/installation/help/#flc-cpu-configuration
+DeFi 中的转账、DEX、借贷中的仓位隐私、钱包私钥管理、资产管理以及运行 Phala Network 的 Gatekeeper 等等。
+###### Ⅱ. Phala 信任2级
+###### 🔍 如何判定？
 
-🕮  SGX system software > Able to launch enclaves > Production mode
-The enclave could not be launched. This might indicate a problem with FLC.
+- 如果您的 SGX 设备在做 Intel IAS 认证时，获得了英特尔 RA 报告中返回的 isvEnclaveQuoteStatus 信息为“**SW_HARDENING_NEEDED**”，则您的信任分级会被归为2级。
+- 2级是仅次于1级的信任等级，具有与等级1相当的安全性。
+###### 🔧 适用场景
 
-debug: failed to load report enclave
-debug: cause: failed to load report enclave
-debug: cause: The EINITTOKEN provider didn't provide a token
-debug: cause: aesm error code GetLicensetokenError_6
-```
+- 如果您获得了2级的分级，证明硬件本身可能受到一些已知漏洞的影响，但可以在固件和软件的层面彻底地修补和加固，从而避免来自任何攻击的威胁。
+- 例如，在获得2级评级的设备上必须使用 Intel提供的最新版本的 SGX SDK 及 PSW 等。
+- **Phala Network**一直以来都紧跟 Intel 的安全升级和安全更新，**节点及挖矿程序已经采取了 Intel 推荐下最完整的加固措施**，从而避免一切已知安全漏洞。
+- 所以在 Phala Network 的网络中，如果您获得了2级的信任评级，是**可以视为没有漏洞的**。也就是说在 Phala Network 网络中，**2级可以和1级一样运行全部隐私计算任务**。
+##### Ⅲ.Phala 信任3级
+###### 🔍 如何判定？
 
-If you can't run Phala pRuntime with both of them tagged as ✔, you may have to check whether your BIOS is the latest version with latest security patches. If you still can't run Phala pRuntime docker with the latest BIOS of your motherboard manufacturer, we are afraid you can't mine PHA for now with this motherboard.
+- 如果您的 SGX 设备在做 Intel IAS 认证时，获得了英特尔 RA 报告中返回的 isvEnclaveQuoteStatus 信息带有“**CONFIGURATION_NEEDED**”，且您的系统存在的潜在威胁 Intel-SA ID 都在可以被 Phala Network 放行的白名单列表中，则您的信任分级会被归为3级。
+- 目前白名单内有：
 
-## Confidence Level of a Miner
+INTEL-SA-00219、 INTEL-SA-00334、INTEL-SA-00381、INTEL-SA-00389。
+###### 🔧 适用场景
 
-| Level | isvEnclaveQuoteStatus | advisoryIDs |
-|---|---|---|
-| Tier 1 | OK | None |
-| Tier 2 | SW_HARDENING_NEEDED | None |
-| Tier 3 | CONFIGURATION_NEEDED, CONFIGURATION_AND_SW_HARDENING_NEEDED | Whitelisted* |
-| Tier 4 | CONFIGURATION_NEEDED, CONFIGURATION_AND_SW_HARDENING_NEEDED | Some beyond the whitelist |
-| Tier 5 | GROUP_OUT_OF_DATE | Any value |
+- 这些可信计算设备虽然受到一些潜在威胁的影响，但是这些威胁经过业界的审查，都不会影响到 Phala Network 网络上隐私应用的安全性。
+- 所以，如果您获得了3级的信任评级，也是可以和1级、2级一样运行**全部**隐私计算任务的。
+##### Ⅳ. Phala 信任4级
+###### 🔍 如何判定？
 
-The confidence level measures how secure the SGX Enclave execution environment is. It's determined by the Remote Attestation report from Intel. Among them, `isvEnclaveQuoteStatus` indicates if the platform is vulnerable to some known problems, and `advisoryIDs` indicates the actual affected problems.
+- 如果您的 SGX 设备在做 Intel IAS 认证时，获得了英特尔 RA 报告中返回的 isvEnclaveQuoteStatus 信息带有“**CONFIGURATION_NEEDED**”，但存在潜在威胁 Intel-SA ID白名单之外的条目，则您的隐私分级会被归为4级。
+###### 🔧 适用场景
 
-{{< tip >}}
-Not all the `advisoryIDs` are problematic. Some advisories doesn't affect Phala's security assumption, and therefore are whitelisted:
+- 经过 Phala 的评估，获得4级评级的设备中，存在一些影响隐私计算安全性的潜在威胁，且 Intel IAS 认证认为这些威胁**暂时**没有被修复。
+- 在这些评级为4的隐私计算设备上，由于一些潜在威胁的存在，他们**不适用于最高安全等级的隐私计算任务，但它并不代表设备不可用**。这类设备可能在极端情况下对机密数据提供长久的保护，但在大量的其他场景下依然有很高的价值。
 
-- INTEL-SA-00219
-- INTEL-SA-00334
-- INTEL-SA-00381
-- INTEL-SA-00389
-{{< /tip >}}
+例如大数据计算、个人隐私管理、Web3 Analytics、PvP 游戏、VPN 等没有持久的机密数据需求的应用。或是低敏感数据的计算任务，例如传统 Web2.0 应用、Oracle、普通 DApp 等等。
+##### Ⅴ. Phala信任5级（最低级）
+###### 🔍 如何判定？
+如果您的 SGX 设备在做 Intel IAS认证时，获得了英特尔 RA 报告中返回的 isvEnclaveQuoteStatus 信息为“**GROUP_OUT_OF_DATE**”，则您的信任评级会被归为5级。
+###### 🔧 适用场景
 
-Tier 1, 2, 3 are considered with the best security level because they are either not affected by any known vulnerability, or the adversory is known trivial. It's good to run highest valuable apps on these workers, for instance:
+- 这个等级的可信计算设备**相对安全等级较低**，您获得了5级的信任评级就说明**此系统在理论上有受到数据泄漏威胁的可能性**。通常当一个平台的安全性受到潜在威胁，Intel 就会通过微码更新来修补漏洞，并触发一次密钥轮换，保证新的密钥是不受任何潜在攻击威胁的。而**这个等级表示该 CPU 的密钥不是最新版本，需要接受微码升级**。
+- 与4级类似，在5级评级的可信计算设备上无法进行类似最高安全等级的任务，但依旧**可以运行等级4中描述的任务**。
+##### Ⅵ.非可用等级：低于5级
+其余的 Intel RA 报告或者无法获得 Intel RA 报告的计算设备都是不满足基本需求的计算设备，都**无法加入 Phala Network**。例如您的 RA 报告中出现“**SGX_ERROR_UPDATE_NEEDED**”等。这部分计算设备**不被允许注册**在 Phala Network 网络中。
 
-- Financial apps: privacy-preserving DEX, DeFi ,etc
-- Secret key management: wallet, node KMS, password manager
-- Phala Gatekeeper
+---
 
-Tier 4, 5 are considered with reduced security, because these machiens requires some configuration fix in the BIOS or BIOS firmware (CONFIGURATION_NEEDED, CONFIGURATION_AND_SW_HARDENING_NEEDED), or their microcode or the corresponding BIOS firmware are out-of-date (GROUP_OUT_OF_DATE). Therefore we cannot assume the platform is suitable for highest security scenarios. However it's still good to run batch processing jobs, apps dealing with ephemeral privacy data, and traditional blockchain apps:
-
-- Data analysis jobs (e.g. Web3 Analytics)
-- On-chain PvP games
-- VPN
-- Web2.0 apps
-- Blockchain Oracle
-- DApps
-
-Once Phala is open for developers to deploy their apps, there will be an option for them to choose which tiers they will accept. Since Tier 1, 2, 3 have better security, they can potentially get higher chance to win the confidential contract assignment. However, Tier 4, 5 are useful in other use cases, and therefore can be a more economic choice for the developers.
-
-If your miner is in tier 4 or 5, please check the FAQ page for potential fixes.
+##### 三. 其他 Q&A
+##### 1.如何改变自己的信任等级，怎样可以提升信任等级？
+你的隐私等级为4级说明你的 BIOS 设置存在一定的风险，你可以尝试关闭 BIOS 中的超频、降频、电压控制、超线程等开关来消除潜在威胁（Intel-SA ID），从而提高信任评级。特别是 BIOS 中 OC Mailbox Interface 开关可能是影响此部分等级的主要因素。当你的隐私等级为5级时，你可以尝试通过更新到最新的 BIOS 固件来升级微码，升级到更高等级。一些主板厂商会回应用户的邮件请求，专门为用户提供BIOS固件更新。
+##### 2.我找不到 BIOS 更新或者在 BIOS 设置中找不到第1个问题中提到的开关怎么办？
+请联系您的主板厂，要求主板厂依照 Intel 的要求进行安全更新。时刻保持安全更新是主板厂作为生产厂家应该尽到的义务。
+##### 3.不做信任分级会怎么样？
+Phala Network 率先在行业内提出信任分级制度。这样做的目的是让 Phala 提供完全安全的隐私计算服务成为可能，并实现不同级别的隐私计算服务可被分发到不同级别的可信计算设备中。经过信任分级，我们相信 Phala Network 网络将会进一步的提高自身的安全门槛。
+##### 4.SGX 是否安全？
+经过细致、完整的信任分级，Phala Network 上的可信计算设备可以保证非常高的安全性。不同等级的设备将会服务于不同的应用场景，更多的在线设备也会为开发者所需的安全性提供合理的价格。
+##### 5.增加信任分级是中心化的吗？今后对信任分级的升级方法是什么？
+这一版本的信任分级是根据 Intel 给出的报告解释和大量的调研而产生的。<br />分级系统包含于Phala区块链的运行时中，可以通过链上运行时升级在未来进行调整。Substrate 的链上升级由技术委员会、议会、以及民主投票决定。例如：今后若对信任分级的评价标准做出任何修改、或者加入 AMD CPU 的支持等等，都需要经过链上升级民主决策，通过后才会生效。

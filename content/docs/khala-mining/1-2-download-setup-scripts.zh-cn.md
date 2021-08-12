@@ -1,32 +1,38 @@
 ---
-title: "1.2 Install Phala Tools"
+title: "1.2 下载并安装Phala脚本"
 ---
 
-## Prerequisites
-
-Before you go further, please ensure that your have correct setup your hardware, BIOS and operating system according to the [previous section]({{< relref "docs/khala-mining/1-1-hardware-requirements">}}).
-
-## Download Phala Scripts
-
-The Phala tools are availbale at https://github.com/Phala-Network/solo-mining-scripts/archive/poc5.zip, it can be downloaded with `wget` by executing the following commands in the terminal:
-
-```bash
-sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
-sudo apt install wget unzip
+**请注意，在你进行以下操作之前请确保你已经阅读了本章节以前的全部内容。已经检查过你的硬件、BIOS设置（若找不到SGX选项可以先往后做进行测试）。并且已经安装好Ubuntu18.04或Ubuntu20.04。**<br />
+<br />
+<br />下载Phala工具包地址：[https://github.com/Phala-Network/solo-mining-scripts/archive/poc5.zip](https://github.com/Phala-Network/solo-mining-scripts/archive/poc5.zip)，或者可以用wget下载，命令如下：
+```shell
 cd ~
+sudo apt-get install wget
+sudo apt-get install unzip
 wget https://github.com/Phala-Network/solo-mining-scripts/archive/poc5.zip
 unzip poc5.zip
+cd solo-mining-scripts-poc5
 ```
 
-## Install Phala Tools
 
-Execute the following commands in your terminal:
+## 使用sgx_enable激活SGX功能
 
-```bash
+
+#### 在phala脚本目录打开终端，输入以下指令后电脑会重启：
+```shell
 cd ~/solo-mining-scripts-poc5
-chmod +x install.sh
-sudo ./install.sh en
+sudo chmod +x sgx_enable
+sudo ./sgx_enable
+sudo reboot
 ```
-> This script will install the docker, sgx driver and pull all the Phala docker images.
 
-Congratulation! You have successfully installed needed Phala tools.
+
+## 安装Phala工具
+#### 在phala脚本目录打开终端，输入以下指令：
+```shell
+cd ~/solo-mining-scripts-poc5
+sudo chmod +x install.sh
+sudo ./install.sh cn
+```
+
+

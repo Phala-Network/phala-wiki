@@ -1,35 +1,27 @@
 ---
-title: "1.4 Benchmarking"
+title: "1.4 测试Worker性能分"
 ---
 
-## Benchmark Your Worker
-
-First, install the needed images with Phala tools:
-
-```bash
+### 如果你没有运行过SGX测试首先需要先按照简易安装模式安装Phala脚本
+```shell
 sudo phala install
 ```
+​
 
-If you have installed the images before, you can update them with:
-
-```bash
+**重要提示：如果你曾经已经安装了Phala脚本只需要升级脚本即可。升级方法如下：**<br />​<br />
+```shell
 sudo phala update script
 ```
-
-Get the performance score with:
-
-```bash
-sudo phala score_test [number_of_cores]
-# e.g., sudo phala score_test 4
+### 
+### 性能分数测试方法：
+```shell
+sudo phala score_test [要使用的核心数量，核心数量根据CPU情况而定]
+例如：sudo phala score-test X
 ```
-> Tip: We recommend to use all the cores of your CPU.
-
-The performance test has to be stopped manually with:
-
-```bash
-sudo phala stop pruntime-bench
+### 一定要记得替换核心数，使用你的CPU最大核心数跑分测试，不要无脑复制，否则跑分将不准确！
+### <br />跑分用的Docker不会自动结束关闭，结束跑分的方法：
+```shell
+sudo phala stop bench
 ```
 
-After that, you will be asked whether to upload the performance test results.
-> Noted that your performance test results can vary due to different factors.
-> The results are only for reference, and a re-evaluation can be necessary for the pre-mainnet.
+<br />在跑分结束后，程序会自动上传您的配置和跑分，如果你不希望上传，请手动输入N以结束上传。<br />另外，受各种环境因素影响，性能评分有可能产生一定程度的波动！此评分为预览版本，预备主网上线有变化的可能！
