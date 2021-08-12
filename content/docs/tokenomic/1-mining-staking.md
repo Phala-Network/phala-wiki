@@ -178,7 +178,7 @@ Stakers can request withdrawal of their funds at any time, and if there are idle
 
 As shown in Figure 4.2, Staker **③** initially staked 20k in Pool **3**. When they submit a withdrawal for 10k of their stake, Pool **3** immediately sent the 0.5k balance of the Free PHA to Staker **③**. The remaining 9.5k of staked PHA will wait for the following:
 - A 3-day buffer period begins at the initial withdrawal. During this period, if new PHA are added to the StakePool as Free or if some Worker Mining is stopped (which will free the funds staking that miner), then PHA will be unlocked immediately to the Staker who initiated the withdrawal. There may be multiple deposits or Worker stoppages until enough PHA is Free to meet the withdrawal;
-- If the withdrawal request is still not met after 3 days, all Workers in this Pool will be automatically stopped and enter a 7-day Freeze period which cannot be interrupted by anyone. After 7 days, the withdrawal transaction will be completed;
+- If the withdrawal request is still not met after 3 days, all Workers in this Pool will be automatically stopped and enter a 7-day freeze period which cannot be interrupted by anyone. After 7 days, the withdrawal transaction will be completed;
 - In other words, when a Staker initiates a withdrawal, they will receive their funds in no more than 10 days, but may receive some or all of their funds in 3 days or less, depending on Free funds.
 
 Assume that more funds are contributed to the StakePool:

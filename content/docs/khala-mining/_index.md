@@ -21,6 +21,7 @@ We highly recommend miners to first read about Phala's [tokenomic]({{< relref "d
 - [2.2 Deploy Worker Node]({{< relref "docs/khala-mining/2-2-deploy-worker-node" >}})
 - [2.3 Verify Worker Status]({{< relref "docs/khala-mining/2-3-verify-worker-status" >}})
 - [2.4 Upgrade Worker Node]({{< relref "docs/khala-mining/2-4-upgrade-worker-node" >}})
+- [2.5 Use Minerboard to Manage Your Mining]({{< relref "docs/khala-mining/2-5-minerboard" >}})
 
 <!-- ### III. Mining Operations
 
