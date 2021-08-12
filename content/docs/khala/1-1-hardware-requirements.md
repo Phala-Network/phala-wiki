@@ -1,5 +1,5 @@
 ---
-title: "1.1 Check your hardware, BIOS and system"
+title: "1.1 Check Your Hardware, BIOS and System"
 ---
 
 ## General Khala Hardware Requirements

@@ -105,7 +105,7 @@ debug: cause: aesm error code GetLicensetokenError_6
 
 If you can't run Phala pRuntime with both of them tagged as ✔, you may have to check whether your BIOS is the latest version with latest security patches. If you still can't run Phala pRuntime docker with the latest BIOS of your motherboard manufacturer, we are afraid you can't mine PHA for now with this motherboard.
 
-<!-- ## Confidence Level of a Miner
+## Confidence Level of a Miner
 
 | Level | isvEnclaveQuoteStatus | advisoryIDs |
 |---|---|---|
@@ -143,4 +143,4 @@ Tier 4, 5 are considered with reduced security, because these machiens requires 
 
 Once Phala is open for developers to deploy their apps, there will be an option for them to choose which tiers they will accept. Since Tier 1, 2, 3 have better security, they can potentially get higher chance to win the confidential contract assignment. However, Tier 4, 5 are useful in other use cases, and therefore can be a more economic choice for the developers.
 
-If your miner is in tier 4 or 5, please check the FAQ page for potential fixes. -->
+If your miner is in tier 4 or 5, please check the FAQ page for potential fixes.

@@ -1,6 +1,6 @@
 ---
-title: "Khala Gatekeeper Application Guide"
-weight: 3
+title: "Apply for Khala Gatekeeper"
+weight: 4
 draft: false
 ---
 
