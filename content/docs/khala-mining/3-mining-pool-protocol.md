@@ -1,5 +1,6 @@
 ---
 title: "3 Phala Runtime Bridge"
+draft: true
 ---
 
 <script>
