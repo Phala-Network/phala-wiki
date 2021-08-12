@@ -4,7 +4,7 @@ title: "1.2 Install Phala Tools"
 
 ## Prerequisites
 
-Before you go further, please ensure that your have correct setup your hardware, BIOS and operating system according to the [previous section]({{< relref "docs/khala/1-1-hardware-requirements">}}).
+Before you go further, please ensure that your have correct setup your hardware, BIOS and operating system according to the [previous section]({{< relref "docs/khala-mining/1-1-hardware-requirements">}}).
 
 ## Download Phala Scripts
 
