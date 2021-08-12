@@ -10,7 +10,7 @@ Khala Network是Phala在Kusama上的平行链，具有去中心化的TEE挖矿�
 
 ### I. Getting Started
 
-- [1.1 Check Your Hardware, BIOS and System"]({{< relref "docs/khala-mining/1-1-hardware-requirements" >}})
+- [1.1 检查你的硬件、BIOS和系统"]({{< relref "docs/khala-mining/1-1-hardware-requirements" >}})
 - [1.2 Install Phala Tools]({{< relref "docs/khala-mining/1-2-download-setup-scripts" >}})
 - [1.3 Check the SGX Capability and Confidence Level]({{< relref "1-3-confidential-level-evaluation" >}})
 - [1.4 Benchmarking]({{< relref "docs/khala-mining/1-4-benchmarking" >}})

@@ -1,8 +1,6 @@
 ---
-title: "2.1 Configuration"
+title: "1.4 Benchmarking"
 ---
-
-
 
 ## Benchmark Your Worker
 
