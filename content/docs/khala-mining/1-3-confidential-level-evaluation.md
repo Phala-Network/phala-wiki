@@ -1,5 +1,5 @@
 ---
-title: "1.3 Check the SGX Capability"
+title: "1.3 Check the SGX Capability and Confidence Level"
 ---
 
 ## Double Check the SGX Capability
