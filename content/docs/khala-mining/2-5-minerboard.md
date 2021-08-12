@@ -4,6 +4,8 @@ title: "2.5 Use Minerboard to Manage Your Mining"
 
 > We highly recommend to read [staking mechanism]({{< relref "docs/tokenomic/1-mining-staking" >}}) before using the Minerboard.
 
+Minerboard: http://app-test.phala.network/console
+
 Miners and pool owners can use Minerboard to manage Workers and StakePools. Also it provides an overview of the status of all the managed Workers and StakePools.
 
 ## Minerboard Manual
