@@ -10,7 +10,7 @@ Read the worker status with:
 sudo phala status
 ```
 
-An expected worker status is shown as follow, which contains the node name, number of cores, gas account and balance, stakepool account and worker public key.
+An expected worker status is shown as follow, which contains the node name, number of cores, gas account and balance, StakePool account and Worker public key.
 > Warning will be sent if your gas account balance is under 2 PHA so you can recharge in time.
 
 <!-- TODO.zhe: get the english-version figure here -->

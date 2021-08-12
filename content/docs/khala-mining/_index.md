@@ -6,6 +6,8 @@ draft: false
 
 Khala Network is Phala's canary network on Kusama Parachain featuring decentralized TEE mining. We provide an overview to setup the mining environment, followed by a detailed explanation of each step.
 
+We highly recommend miners to first read about Phala's [tokenomic]({{< relref "docs/tokenomic" >}}) and [staking mechanism]({{< relref "docs/tokenomic/1-mining-staking" >}}) to understand the calculation of incomings and how the mining proceeds.
+
 ### I. Getting Started
 
 <!-- - [1.1 Register a Phala account]({{< relref "docs/poc3/1-1-register-a-phala-acocunt" >}})

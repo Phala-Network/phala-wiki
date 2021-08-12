@@ -1,5 +1,5 @@
 ---
-title: "3 Phala Management Development Component"
+title: "3 Phala Runtime Bridge"
 ---
 
 <script>
