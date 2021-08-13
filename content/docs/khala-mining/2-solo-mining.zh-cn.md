@@ -5,18 +5,28 @@ title: "2 单节点挖矿（Para1版本）"
 Para1是Khala的测试网，它将运行在平行链环境。运行它的目的是给Khala网络做测试。
 
 # 领取测试币
+
 **您可以通过 Phala 水龙头免费自助获取测试币。**由于以太坊矿工费高昂，不推荐您使用此前的燃烧方式。
 领取测试币后需要保证stash账号和cntroller账号都有一些测试币，后续才能顺利测试
+
 #### *测试币无任何价值，不可兑换，仅供测试用
+
 # Telegram(需科学)
+
 **第一步**：点击水龙头群链接 [https://t.me/phalafaucet](https://t.me/phalafaucet) ，按照提示下载软件。点击“View in Telegram”加入水龙头群组。
+
 ![](/images/docs/khala-mining/faucet-1.png)
+
 **第二步**：**进群后先回复机器人提出的数学题**
 如机器人发送（7+1），请回复8。否则机器人将不会给您发测试币。
+
 ![](/images/docs/khala-mining/faucet-2.png)
+
 **第三步**：设置username可见。
 方法**Setting——右上角edit——设置username**。否则机器人将无法识别您的申领信息。
+
 ![](/images/docs/khala-mining/faucet-3.png)
+
 **第四步**：进入群组后发送  **/drip [你的测试网地址]** ，如下图。
 ![](/images/docs/khala-mining/faucet-4.png)
 # Bananatok聊天软件（无需科学）
