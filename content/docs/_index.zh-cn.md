@@ -16,7 +16,7 @@ Telegram: https://t.me/phalaCN
 
 Discord: https://discord.gg/YUxXV5xrj7
 
-论坛: https://forum.phala.network/c/cn-simplified/9
+论坛: https://forum.phala.network/
 
 Medium: https://medium.com/phala-network
 

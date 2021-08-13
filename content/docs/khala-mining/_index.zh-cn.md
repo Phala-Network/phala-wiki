@@ -11,7 +11,7 @@ Khala Network是Phala在Kusama上的平行链，具有去中心化的TEE挖矿�
 如果您对我们的教程有任何的问题和建议，欢迎通过下列途径进行反馈：
 - Telegram: https://t.me/phalaCN
 - Discord: https://discord.gg/YUxXV5xrj7
-- 论坛: https://forum.phala.network/c/cn-simplified/9
+- 论坛: https://forum.phala.network/
 
 ### I. Getting Started
 
