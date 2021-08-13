@@ -1,14 +1,14 @@
 ---
-title: "2.5 Use Minerboard to Manage Your Mining"
+title: "2.5 Use Console to Manage Your Mining"
 ---
 
-> We highly recommend to read [staking mechanism]({{< relref "docs/tokenomic/1-mining-staking" >}}) before using the Minerboard.
+> We highly recommend to read [staking mechanism]({{< relref "docs/tokenomic/1-mining-staking" >}}) before using the Console.
 
-Minerboard: http://app-test.phala.network/console
+Console: http://app-test.phala.network/console
 
-Miners and pool owners can use Minerboard to manage Workers and StakePools. Also it provides an overview of the status of all the managed Workers and StakePools.
+Miners and pool owners can use Console to manage Workers and StakePools. Also it provides an overview of the status of all the managed Workers and StakePools.
 
-## Minerboard Manual
+## Console Manual
 
 ### Prerequisites
 
@@ -16,7 +16,7 @@ Miners and pool owners can use Minerboard to manage Workers and StakePools. Also
 2. Get the WorkerPublicKey from Worker and has bound the Worker to the Khala account above.
 
 
-### Minerboard Operations
+### Console Operations
 
 <!-- TODO.zhe: the link in yuque is outdated -->
 1. Connect your Khala account;
@@ -70,7 +70,7 @@ Miners and pool owners can use Minerboard to manage Workers and StakePools. Also
     - Click "Withdraw" in the pop-up window;
     - Type in the amount to withdraw;
     - Submit the transaction;
-    - You may wait for at most 10 days to get all your staking (check [staking mechanism]({{< relref "docs/tokenomic/1-mining-staking" >}})). You can check the frozen amount in the "Withdraw Queue" of "Stake" pop-up;
+    - You may wait for at most 14 days to get all your staking (check [staking mechanism]({{< relref "docs/tokenomic/1-mining-staking" >}})). You can check the frozen amount in the "Withdraw Queue" of "Stake" pop-up;
 2. Stop Mining
     - Click "Stop" of the Worker in "Mining" or "Unresponsive" state;
     - Submit the transaction;
