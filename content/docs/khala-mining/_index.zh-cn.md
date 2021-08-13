@@ -21,14 +21,8 @@ Khala Network是Phala在Kusama上的平行链，具有去中心化的TEE挖矿�
 - [2.2 部署Worker节点]({{< relref "docs/khala-mining/2-2-deploy-worker-node" >}})
 - [2.3 检查Worker部署情况]({{< relref "docs/khala-mining/2-3-verify-worker-status" >}})
 - [2.4 Worker升级]({{< relref "docs/khala-mining/2-4-upgrade-worker-node" >}})
-- [2.5 使用控制台]({{< relref "docs/khala-mining/2-5-minerboard" >}})
-<!-- ### III. Mining Operations
+- [2.5 使用控制台]({{< relref "docs/khala-mining/2-5-console" >}})
 
-- [3.1 Set Miner Stakes]({{< relref "docs/poc3/3-1-set-miner-stakes" >}})
-- [3.2 Starting Mining]({{< relref "docs/poc3/3-2-start-mining" >}})
-- [3.3 Stop Mining]({{< relref "docs/poc3/3-3-stop-mining" >}})
-- [3.4 Check Miner Profits]({{< relref "docs/poc3/3-4-check-mining-profits" >}})
-- [3.5 Miner Upgrade]({{< relref "docs/poc3/3-5-upgrade-miner" >}}) -->
 
 ### III. FAQ
 

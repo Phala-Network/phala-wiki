@@ -1,6 +1,5 @@
 ---
 title: "2.5 使用控制台"
-draft: true
 ---
 
 控制台链接：[app-test.phala.network/console](%E7%A1%AE%E8%AE%A4%E4%B8%8B%EF%BC%8C%E5%92%B1%E4%BB%ACconsole%E7%9A%84%E9%93%BE%E6%8E%A5%E5%B0%B1%E6%98%AFapp-test.phala.network/console%E4%BA%86%EF%BC%9F)
@@ -101,7 +100,7 @@ draft: true
    - 在弹窗中再点击 Withdraw
    - 输入您想提取的抵押额
    - 提交交易
-   - 在提交交易之后，最快您的抵押可立即全部解锁，最慢您需要等待 10 天，详细说明请见 Stakepool Wiki；您的抵押未立即解锁的部分，您可在 Stake 弹窗中的 Withdraw Queue 中查看
+   - 在提交交易之后，最快您的抵押可立即全部解锁，最慢您需要等待 14 天，详细说明请见 Stakepool Wiki；您的抵押未立即解锁的部分，您可在 Stake 弹窗中的 Withdraw Queue 中查看
 
  
 
