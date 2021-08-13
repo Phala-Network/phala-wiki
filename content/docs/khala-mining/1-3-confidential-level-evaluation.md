@@ -126,13 +126,13 @@ Not all the `advisoryIDs` are problematic. Some advisories doesn't affect Phala'
 - INTEL-SA-00389
 {{< /tip >}}
 
-Tier 1, 2, 3 are considered with the best security level because they are either not affected by any known vulnerability, or the adversory is known trivial. It's good to run highest valuable apps on these workers, for instance:
+Tier 1, 2, 3 are considered with the best security level because they are either not affected by any known vulnerability, or the adversary is known trivial. It's good to run highest valuable apps on these workers, for instance:
 
 - Financial apps: privacy-preserving DEX, DeFi ,etc
 - Secret key management: wallet, node KMS, password manager
 - Phala Gatekeeper
 
-Tier 4, 5 are considered with reduced security, because these machiens requires some configuration fix in the BIOS or BIOS firmware (CONFIGURATION_NEEDED, CONFIGURATION_AND_SW_HARDENING_NEEDED), or their microcode or the corresponding BIOS firmware are out-of-date (GROUP_OUT_OF_DATE). Therefore we cannot assume the platform is suitable for highest security scenarios. However it's still good to run batch processing jobs, apps dealing with ephemeral privacy data, and traditional blockchain apps:
+Tier 4, 5 are considered with reduced security, because these machines requires some configuration fix in the BIOS or BIOS firmware (CONFIGURATION_NEEDED, CONFIGURATION_AND_SW_HARDENING_NEEDED), or their microcode or the corresponding BIOS firmware are out-of-date (GROUP_OUT_OF_DATE). Therefore we cannot assume the platform is suitable for highest security scenarios. However it's still good to run batch processing jobs, apps dealing with ephemeral privacy data, and traditional blockchain apps:
 
 - Data analysis jobs (e.g. Web3 Analytics)
 - On-chain PvP games

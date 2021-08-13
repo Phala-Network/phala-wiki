@@ -2,36 +2,44 @@
 title: "2.1 Configuration"
 ---
 
+{{< tip >}}
+If you have successfully installed the SGX driver and finished the benchmarking, you can skip the following tutorials.
+{{< /tip >}}
+
+## Install SGX Driver
+
+You can reinstall the DCAP driver with
+
+```bash
+sudo phala install dcap
+```
+
+or reinstall the isgx driver with
+
+```shell
+sudo phala install isgx
+```
 
 
-## Benchmark Your Worker
+## Install
 
-First, install the needed images with Phala tools:
+You can use the following commands to install Phala tools. It will automatically set the number of CPU cores to use, node name, gas fee account mnemonic and pool owner account.
 
 ```bash
 sudo phala install
 ```
 
-If you have installed the images before, you can update them with:
+If you want to manually config the tools, use the following commands and set the parameters.
 
 ```bash
-sudo phala update script
+sudo phala config set
 ```
 
-Get the performance score with:
+> The script will ask for re-enter if the received parameter is invalid.
+> To ensure the proceeding of mining, the balance of gas fee account should be greater than 0.1 PHA.
+
+You can get the current parameters in use with
 
 ```bash
-sudo phala score_test [number_of_cores]
-# e.g., sudo phala score_test 4
+sudo phala config show
 ```
-> Tip: We recommend to use all the cores of your CPU.
-
-The performance test has to be stopped manually with:
-
-```bash
-sudo phala stop pruntime-bench
-```
-
-After that, you will be asked whether to upload the performance test results.
-> Noted that your performance test results can vary due to different factors.
-> The results are only for reference, and a re-evaluation can be necessary for the pre-mainnet.
