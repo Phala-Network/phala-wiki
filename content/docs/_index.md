@@ -16,6 +16,24 @@ On May 14th, 2021, Khala Network, Phala's canary network, has won the slot aucti
     <img src="/images/docs/parachain-auction.png">
 </div>
 
+
+## Phala Web Directory
+
+Official Website: https://phala.network/
+
+Twitter: https://twitter.com/PhalaNetwork
+
+Telegram: https://t.me/phalanetwork
+
+Discord: https://discord.gg/DWdHXFm8
+
+Forum: https://forum.phala.network/
+
+Medium: https://medium.com/phala-network
+
+Github: https://github.com/Phala-Network
+
+
 ## Please choose a topic
 
 <!-- {{< button "developer" "Build on Phala" >}} -->
