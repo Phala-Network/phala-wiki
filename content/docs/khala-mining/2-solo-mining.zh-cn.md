@@ -6,10 +6,10 @@ Para1是Khala的测试网，它将运行在平行链环境。运行它的目的�
 
 # 领取测试币
 
-**您可以通过 Phala 水龙头免费自助获取测试币。**由于以太坊矿工费高昂，不推荐您使用此前的燃烧方式。
+**您可以通过 Phala 水龙头免费自助获取测试币。** 由于以太坊矿工费高昂，不推荐您使用此前的燃烧方式。
 领取测试币后需要保证stash账号和cntroller账号都有一些测试币，后续才能顺利测试
 
-#### *测试币无任何价值，不可兑换，仅供测试用
+> **测试币无任何价值，不可兑换，仅供测试用**
 
 # Telegram(需科学)
 
@@ -28,7 +28,9 @@ Para1是Khala的测试网，它将运行在平行链环境。运行它的目的�
 ![](/images/docs/khala-mining/faucet-3.png)
 
 **第四步**：进入群组后发送  **/drip [你的测试网地址]** ，如下图。
+
 ![](/images/docs/khala-mining/faucet-4.png)
+
 # Bananatok聊天软件（无需科学）
 **如果无法科学上网，可以下载Bananatok聊天软件**[**0.plus/phalafaucet**](https://0.plus/phalafaucet)**，无需科学也可登入TG社群。**
 ​
