@@ -18,6 +18,17 @@ wget https://github.com/Phala-Network/solo-mining-scripts/archive/poc5.zip
 unzip poc5.zip
 ```
 
+## 使用sgx_enable激活SGX功能
+
+
+#### 在phala脚本目录打开终端，输入以下指令后电脑会重启：
+```shell
+cd ~/solo-mining-scripts-poc5
+sudo chmod +x sgx_enable
+sudo ./sgx_enable
+sudo reboot
+```
+
 ## Install Phala Tools
 
 Execute the following commands in your terminal:

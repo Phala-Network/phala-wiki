@@ -33,7 +33,8 @@ title: "2.5 使用控制台"
 
 1. 连接账户（[创建、导入账户教程](https://www.yuque.com/phala/ttdygr/xpuakr)）
 1. 创建抵押池 
-   - 点击 Create Pool![image.png](https://cdn.nlark.com/yuque/0/2021/png/696808/1628690530797-95789e75-b6b8-4880-9de8-fa5572e7df78.png#clientId=uffb0ed8a-7783-4&from=paste&height=487&id=u38c55baa&margin=%5Bobject%20Object%5D&name=image.png&originHeight=974&originWidth=2326&originalType=binary&ratio=1&size=224426&status=done&style=none&taskId=u012ec484-210d-4cc8-8f67-f99dfcf5b5b&width=1163)
+   - 点击 Create Pool!    
+   ![](/images/docs/khala-mining/2-5-1.png)
    - 在弹窗中点击 Confirm
    - 在插件中点击签名此交易，之后等待二十几秒
    - 创建成功的抵押池会出现在 Stakepool 列表中
@@ -58,7 +59,8 @@ title: "2.5 使用控制台"
  
 
 4. 绑定 Worker 
-   - 点击相应抵押池的 Add Worker![image.png](https://cdn.nlark.com/yuque/0/2021/png/696808/1628693516382-1932e836-8fb5-44bd-819f-c2bbc67e79c0.png#clientId=uf00374a7-9136-4&from=paste&height=299&id=u7b37386f&margin=%5Bobject%20Object%5D&name=image.png&originHeight=598&originWidth=2060&originalType=binary&ratio=1&size=121472&status=done&style=none&taskId=ue2e5d933-e7c9-4b46-ac8b-2f5e09a0a71&width=1030)
+   - 点击相应抵押池的 Add Worker!
+      ![](/images/docs/khala-mining/2-5-2.png)
    - 在弹窗中输入您想添加到该池中的 WorkerPublicKey
    - 提交交易
    - 绑定成功的 Worker 会出现在 Worker 列表中

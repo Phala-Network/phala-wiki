@@ -1,5 +1,5 @@
 ---
-title: "使用博卡插件"
+title: "使用波卡插件"
 weight: 3
 draft: false
 ---
