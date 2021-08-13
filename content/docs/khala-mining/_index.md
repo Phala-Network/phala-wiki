@@ -10,7 +10,7 @@ We highly recommend miners to first read about Phala's [tokenomic]({{< relref "d
 
 ### I. Getting Started
 
-- [1.1 Check Your Hardware, BIOS and System"]({{< relref "docs/khala-mining/1-1-hardware-requirements" >}})
+- [1.1 Check Your Hardware, BIOS and System]({{< relref "docs/khala-mining/1-1-hardware-requirements" >}})
 - [1.2 Install Phala Tools]({{< relref "docs/khala-mining/1-2-download-setup-scripts" >}})
 - [1.3 Check the SGX Capability and Confidence Level]({{< relref "1-3-confidential-level-evaluation" >}})
 - [1.4 Benchmarking]({{< relref "docs/khala-mining/1-4-benchmarking" >}})
