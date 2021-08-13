@@ -21,15 +21,7 @@ We highly recommend miners to first read about Phala's [tokenomic]({{< relref "d
 - [2.2 Deploy Worker Node]({{< relref "docs/khala-mining/2-2-deploy-worker-node" >}})
 - [2.3 Verify Worker Status]({{< relref "docs/khala-mining/2-3-verify-worker-status" >}})
 - [2.4 Upgrade Worker Node]({{< relref "docs/khala-mining/2-4-upgrade-worker-node" >}})
-- [2.5 Use Minerboard to Manage Your Mining]({{< relref "docs/khala-mining/2-5-minerboard" >}})
-
-<!-- ### III. Mining Operations
-
-- [3.1 Set Miner Stakes]({{< relref "docs/poc3/3-1-set-miner-stakes" >}})
-- [3.2 Starting Mining]({{< relref "docs/poc3/3-2-start-mining" >}})
-- [3.3 Stop Mining]({{< relref "docs/poc3/3-3-stop-mining" >}})
-- [3.4 Check Miner Profits]({{< relref "docs/poc3/3-4-check-mining-profits" >}})
-- [3.5 Miner Upgrade]({{< relref "docs/poc3/3-5-upgrade-miner" >}}) -->
+- [2.5 Use Console to Manage Your Mining]({{< relref "docs/khala-mining/2-5-console" >}})
 
 ### III. FAQ
 

@@ -6,7 +6,7 @@ title: "1.1 Check Your Hardware, BIOS and System"
 
 A system can potentially mine Phala if it meets these general requirements:
 
-<!-- TODO.zhe: replace this figure, the storage requirement is changed -->
+
 ![](/images/docs/poc3/1-3.1.png)
 
 It will also need a motherboard and BIOS which support using Intel SGX to run a Trusted Execution Environment (TEE).

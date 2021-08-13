@@ -2,7 +2,7 @@
 title: "2.1 Configuration"
 ---
 
-<!-- TODO.zhe: this is the same as 1.4, check yuque -->
+
 
 ## Benchmark Your Worker
 
