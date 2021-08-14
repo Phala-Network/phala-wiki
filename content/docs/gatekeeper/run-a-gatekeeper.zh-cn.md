@@ -61,9 +61,9 @@ sudo vim validator.sh
 > cargo install --force --git https://github.com/paritytech/substrate > subkey
 > ```
 
-默认情况下，Gatekeeper节点处于归档模式(Archive)。 如果您以非归档模式同步了链上数据，需要先使用 `phala-node purge-chain` 删除数据库，然后启用 `--pruning=archive` 命令行选项。
+默认情况下，Gatekeeper节点处于归档模式(Archive)。 如果你以非归档模式同步了链上数据，需要先使用 `phala-node purge-chain` 删除数据库，然后启用 `--pruning=archive` 命令行选项。
 >
-> 您可以使用以下指令在非归档模式下运行 Gatekeeper 节点：`-unsafe-pruning --pruning <块数>`。但是请注意，归档节点和非归档节点的数据库彼此不兼容。要进行切换，需要清除链上数据。
+> 你可以使用以下指令在非归档模式下运行 Gatekeeper 节点：`-unsafe-pruning --pruning <块数>`。但是请注意，归档节点和非归档节点的数据库彼此不兼容。要进行切换，需要清除链上数据。
 
 如果你不想立即以守门人模式启动节点，可以运行以下指令同步节点：
 

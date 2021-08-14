@@ -8,7 +8,7 @@ Khala Network是Phala在Kusama上的平行链，具有去中心化的TEE挖矿�
 
 我们非常希望你你此之前可以阅读Phala的 [经济模型]({{< relref "docs/tokenomic" >}}) 和 [抵押设计]({{< relref "docs/tokenomic/1-mining-staking" >}}) 来了解Khala的挖矿方式.
 
-如果您对我们的教程有任何的问题和建议，欢迎通过下列途径进行反馈：
+如果你对我们的教程有任何的问题和建议，欢迎通过下列途径进行反馈：
 - Telegram: https://t.me/phalaCN
 - Discord: https://discord.gg/YUxXV5xrj7
 - 论坛: https://forum.phala.network/
