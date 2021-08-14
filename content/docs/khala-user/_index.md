@@ -1,5 +1,5 @@
 ---
-title: "Khala User Guide"
+title: "Polkadot{.js} Extension Guide"
 weight: 3
 draft: false
 ---

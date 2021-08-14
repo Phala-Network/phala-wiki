@@ -10,14 +10,21 @@ Phala Network是一个Web3.0共享云平台，旨在解决计算云中的信任�
 
 官网: https://phala.network/
 
-Twitter: https://twitter.com/PhalaNetwork
+- Twitter: <https://twitter.com/PhalaNetwork>
+- Telegram: <https://t.me/phalaCN>
+- Discord: <https://discord.gg/YUxXV5xrj7>
+- 论坛: <https://forum.phala.network/>
+- Medium: <https://medium.com/phala-network>
+- Github: <https://github.com/Phala-Network>
 
-Telegram: https://t.me/phalaCN
+## Please choose a topic
 
-Discord: https://discord.gg/YUxXV5xrj7
+<!-- {{< button "developer" "Build on Phala" >}} -->
 
-论坛: https://forum.phala.network/
+{{< button "spec" "技术规范" >}}
 
-Medium: https://medium.com/phala-network
+{{< button "khala-mining" "Khala 挖矿" >}}
 
-Github: https://github.com/Phala-Network
+{{< button "gatekeeper" "运行 Gatekeeper" >}}
+
+{{< button "pdiem" "学习 pDiem" >}}
