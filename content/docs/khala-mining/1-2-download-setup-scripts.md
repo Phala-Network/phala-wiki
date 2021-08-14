@@ -12,21 +12,21 @@ Before you go further, please ensure that your have correct setup your hardware,
 
 ## Download Phala Scripts
 
-The Phala tools are availbale at https://github.com/Phala-Network/solo-mining-scripts/archive/poc5.zip, it can be downloaded with `wget` by executing the following commands in the terminal:
+The Phala tools are availbale at https://github.com/Phala-Network/solo-mining-scripts/archive/refs/heads/para.zip, it can be downloaded with `wget` by executing the following commands in the terminal:
 
 ```bash
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 sudo apt install wget unzip
 cd ~
-wget https://github.com/Phala-Network/solo-mining-scripts/archive/poc5.zip
-unzip poc5.zip
+wget https://github.com/Phala-Network/solo-mining-scripts/archive/refs/heads/para.zip
+unzip para.zip
 ```
 
 ## Activate SGX Software with sgx_enable
 Execute the following commands in the terminal, the computer should reboot after execution.
 
 ```shell
-cd ~/solo-mining-scripts-poc5
+cd ~/solo-mining-scripts-para
 sudo chmod +x sgx_enable
 sudo ./sgx_enable
 sudo reboot
@@ -37,7 +37,7 @@ sudo reboot
 Execute the following commands in your terminal:
 
 ```bash
-cd ~/solo-mining-scripts-poc5
+cd ~/solo-mining-scripts-para
 chmod +x install.sh
 sudo ./install.sh en
 ```
