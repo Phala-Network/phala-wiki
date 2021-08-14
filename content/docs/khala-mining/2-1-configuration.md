@@ -2,6 +2,10 @@
 title: "2.1 Configuration"
 ---
 
+{{< tip "warning" >}}
+Para-1 is the Parachain testnet of Phala Network (and Khala Network). The purpose of running a testnet is to capture the chaos and collect feedback before the launch of the functionalites on Khala Network. So the system is subject to change. In this tutorial, we always refer to the testnet unless explicitly mentioned.
+{{< /tip >}}
+
 {{< tip >}}
 If you have successfully installed the SGX driver and finished the benchmarking, you can skip the following tutorials.
 {{< /tip >}}

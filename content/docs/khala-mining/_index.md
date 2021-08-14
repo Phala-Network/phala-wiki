@@ -1,8 +1,12 @@
 ---
-title: "Khala Mining Guide"
+title: "Para-1 Testnet Mining Guide"
 weight: 4
 draft: false
 ---
+
+{{< tip "warning" >}}
+Para-1 is the Parachain testnet of Phala Network (and Khala Network). The purpose of running a testnet is to capture the chaos and collect feedback before the launch of the functionalites on Khala Network. So the system is subject to change. In this tutorial, we always refer to the testnet unless explicitly mentioned.
+{{< /tip >}}
 
 Khala Network is Phala's canary network on Kusama Parachain featuring decentralized TEE mining. We provide an overview to setup the mining environment, followed by a detailed explanation of each step.
 

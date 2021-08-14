@@ -2,6 +2,10 @@
 title: "1.2 Install Phala Tools"
 ---
 
+{{< tip "warning" >}}
+Para-1 is the Parachain testnet of Phala Network (and Khala Network). The purpose of running a testnet is to capture the chaos and collect feedback before the launch of the functionalites on Khala Network. So the system is subject to change. In this tutorial, we always refer to the testnet unless explicitly mentioned.
+{{< /tip >}}
+
 ## Prerequisites
 
 Before you go further, please ensure that your have correct setup your hardware, BIOS and operating system according to the [previous section]({{< relref "docs/khala-mining/1-1-hardware-requirements">}}).
