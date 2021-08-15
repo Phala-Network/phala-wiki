@@ -32,9 +32,9 @@ NODE_ENV=development
 PHALA_DB_HOST=io # hostname/ip to io service
 PHALA_DB_PORT_BASE=9000
 PHALA_LOGGER_LEVEL=debug
-PHALA_PARENT_CHAIN_ENDPOINT # parent chain substrate websocket endpoint
-PHALA_CHAIN_ENDPOINT # parachain substrate websocket endpoint
-PHALA_REDIS_ENDPOINT # redis endpoint for mq and rpc
+PHALA_PARENT_CHAIN_ENDPOINT=ws://127.0.0.0:9945 # parent chain substrate websocket endpoint
+PHALA_CHAIN_ENDPOINT=ws://127.0.0.0:9945 # parachain substrate websocket endpoint
+PHALA_REDIS_ENDPOINT=redis://127.0.0.1:6379 # redis endpoint for mq and rpc
 
 # for `io`
 PHALA_DB_PREFIX=/var/data # path to data directory
