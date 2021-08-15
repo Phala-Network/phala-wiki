@@ -62,7 +62,7 @@ $$V^e = f(R^e, \text{ConfidenceScore}) \times (S + C)$$
 - $R^e > 1$ is a ***Stake Multiplier*** set by the network (Khala or Phala).
 - $S$ is the miner stake; a ***Minimum Stake*** is required to start mining. Stake can't be increased or decreased while mining, but can be set higher than the Minimum.
 - $C$ is the estimated cost of the miner rigs, inferred from the ***Performance Test***.
-- $\text{ConfidenceScore}$ is based on the miner's SGX capabilities 
+- $\text{ConfidenceScore}$ is based on the miner's SGX capabilities
 - $f(R^e, \text{ConfidenceScore}) = 1 + (\text{ConfidenceScore} \cdot (R^e - 1))$
 
 Params used in simulation:
@@ -78,7 +78,7 @@ Params used in simulation:
 
 A performance test measures how much computation can be done in a unit time:
 
-$$P = \frac{\text{Itertions}}{\Delta t}$$
+$$P = \frac{\text{Iterations}}{\Delta t}$$
 
 For reference,
 
@@ -107,7 +107,7 @@ Proposed parameter:
 - $k_{\text{Khala}} = 50$
 - $k_{\text{Phala}} = 100$
 
-> Locked state $PHA token can also be used for mining staking, e.g., Khala Crowdloan reward 
+> Locked state $PHA token can also be used for mining staking, e.g., Khala Crowdloan reward
 
 ### Cost
 
@@ -117,7 +117,7 @@ $$C = \frac{0.3 P}{\phi}$$
 - $\phi$ is the current PHA/USD quote, dynamically updated on-chain via Oracles
 - $P$ is the initial ***Performance Test*** score.
 - In the early stages we are compensating the equipment cost $C$ with a higher Value Promise.
-- In the future we plan to compensate for higher amortization costs (adding equipment amortization cost to the running costs $c^i$ and $c^a$), thus increasing the speed of growth of the Miner's $V$. 
+- In the future we plan to compensate for higher amortization costs (adding equipment amortization cost to the running costs $c^i$ and $c^a$), thus increasing the speed of growth of the Miner's $V$.
 
 ### General mining process
 
@@ -216,7 +216,7 @@ Potential parameters:
 The slash rules for miners are defined below. Note that currently only the Level 1 slash is currently implemented.
 
 | Severity | Fault | Punishment |
-| -----|-------|------| 
+| -----|-------|------|
 | Level1	| Worker offline	| 0.1% V per hour (deducted block by block) |
 | Level2	| Good faith with bad result	| 1% from V |
 | Level3	| Malicious intent or mass error	| 10% from V |

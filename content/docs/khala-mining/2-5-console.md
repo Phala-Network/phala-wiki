@@ -3,7 +3,7 @@ title: "2.5 Use Console to Manage Your Mining"
 ---
 
 {{< tip "warning" >}}
-Para-1 is the Parachain testnet of Phala Network (and Khala Network). The purpose of running a testnet is to capture the chaos and collect feedback before the launch of the functionalites on Khala Network. So the system is subject to change. In this tutorial, we always refer to the testnet unless explicitly mentioned.
+Para-1 is the Parachain testnet of Phala Network (and Khala Network). The purpose of running a testnet is to capture the chaos and collect feedback before the launch of the functionalities on Khala Network. So the system is subject to change. In this tutorial, we always refer to the testnet unless explicitly mentioned.
 {{< /tip >}}
 
 > We highly recommend to read [staking mechanism]({{< relref "docs/tokenomic/1-mining-staking" >}}) before using the Console.

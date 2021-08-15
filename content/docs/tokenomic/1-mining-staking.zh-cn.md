@@ -37,7 +37,7 @@ Phala Network为了实现计算节点的安全性，除了给计算节点设置�
 
 * 当计算节点worker（如 a,b,c）被创建后，worker需要先授权给某个operator地址 (如A) 去管理计算节点
 * Owner （如Owner-A）创建了 StakePool （如pool-1）
-* 因为A既是**pool-1**的owner，又是worker {a,b,c} 的operator，因此worker {a,b} 与pool-1产生了绑定关系，因此worker {c} 与pool-2产生了绑定关系。pool-1中的已抵押PHA可以分配给worke{a,b}进行抵押操作，pool-2中的已抵押PHA可以分配给worke{c}进行抵押操作
+* 因为A既是**pool-1**的owner，又是worker {a,b,c} 的operator，因此worker {a,b} 与pool-1产生了绑定关系，因此worker {c} 与pool-2产生了绑定关系。pool-1中的已抵押PHA可以分配给worker{a,b}进行抵押操作，pool-2中的已抵押PHA可以分配给worker{c}进行抵押操作
 * 同理，B是pool-3的所有者，因此B管理的worker {d,e} 可以绑定在pool-3上
 
 
@@ -175,9 +175,9 @@ Staker收入：
 如图4.2，Staker-③在之前抵押了20k在pool-3，当他申请取消抵押10k PHA时，pool-3立刻将free状态的0.5k余额打给了Staker-③。剩余的9.5k抵押需要等待：
 
 
-* 如果有未成功提款资金，则Staker需要先等待一个 3 天的缓冲期，在此期间StakePool中如果加入了新的闲置资金或有worker停止挖矿，那此部份闲置资金立即解锁给Staker发起的退出交易，以此类推直到完成全部提款；
-* 如果 3 天过后仍未完成该退出申请，则该抵押池所有worker都会进入 7 天的冷却期，此过程不能被任何人中止，7 天过后该提款交易就可全部完成
-* 也就说任意Staker发起退出交易后，最多 10 天就可以成功退出抵押
+* 如果有未成功提款资金，则Staker需要先等待一个7天的缓冲期，在此期间StakePool中如果加入了新的闲置资金或有worker停止挖矿，那此部份闲置资金立即解锁给Staker发起的退出交易，以此类推直到完成全部提款；
+* 如果7天过后仍未完成该退出申请，则该抵押池所有worker都会进入7天的冷却期，此过程不能被任何人中止，7天过后该提款交易就可全部完成
+* 也就说任意Staker发起退出交易后，最多 14 天就可以成功退出抵押
 
 
 ![](/images/docs/tokenomic/withdraw-3.png)

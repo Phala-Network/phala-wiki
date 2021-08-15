@@ -177,9 +177,9 @@ Stakers can request withdrawal of their funds at any time, and if there are idle
 <center>Figure 4.2 Withdraw when there is not enough Free PHA</center>
 
 As shown in Figure 4.2, Staker **③** initially staked 20k in Pool **3**. When they submit a withdrawal for 10k of their stake, Pool **3** immediately sent the 0.5k balance of the Free PHA to Staker **③**. The remaining 9.5k of staked PHA will wait for the following:
-- A 3-day buffer period begins at the initial withdrawal. During this period, if new PHA are added to the StakePool as Free or if some Worker Mining is stopped (which will free the funds staking that miner), then PHA will be unlocked immediately to the Staker who initiated the withdrawal. There may be multiple deposits or Worker stoppages until enough PHA is Free to meet the withdrawal;
-- If the withdrawal request is still not met after 7days, all Workers in this Pool will be automatically stopped and enter a 7-day freeze period which cannot be interrupted by anyone. After 7 days, the withdrawal transaction will be completed;
-- In other words, when a Staker initiates a withdrawal, they will receive their funds in no more than 10 days, but may receive some or all of their funds in 7days or less, depending on Free funds.
+- A 7-day buffer period begins at the initial withdrawal. During this period, if new PHA are added to the StakePool as Free or if some Worker Mining is stopped (which will free the funds staking that miner), then PHA will be unlocked immediately to the Staker who initiated the withdrawal. There may be multiple deposits or Worker stoppages until enough PHA is Free to meet the withdrawal;
+- If the withdrawal request is still not met after 7 days, all Workers in this Pool will be automatically stopped and enter a 7-day freeze period which cannot be interrupted by anyone. After 7 days, the withdrawal transaction will be completed;
+- In other words, when a Staker initiates a withdrawal, they will receive their funds in no more than 14 days, but may receive some or all of their funds in 7 days or less, depending on Free funds.
 
 Assume that more funds are contributed to the StakePool:
 
@@ -187,10 +187,10 @@ Assume that more funds are contributed to the StakePool:
 <center>Figure 4.3 Withdraw after more staking</center>
 
 - As shown in Figure 4.3, after Staker **②** stakes an additional 5k PHA to Pool **3**, the Pool’s Free funds increased by 5k, and Staker **③** immediately receives an additional 5k towards their withdrawal;
-- If, after waiting 7days, the necessary 4.5k of funds are still not Free, the system is forced to terminate all the mining activities of Pool **3**, and will automatically send the remaining 4.5k to Staker **③** after the 7-day unfreeze period.
+- If, after waiting 7 days, the necessary 4.5k of funds are still not Free, the system is forced to terminate all the mining activities of Pool **3**, and will automatically send the remaining 4.5k to Staker **③** after the 7-day unfreeze period.
 
 Summarizing:
 - When the actual StakePool Owner initiates the suspension of all mining or cancels all Staking to dissolve the pool, withdrawal of all Stakes will be triggered. There will be a 7-day unfreeze period after which all PHA in the StakePool will be refunded to the Stakers;
 - When a Staker initiates a withdrawal of their own Stake, the system will determine whether the Pool has Free funds, and if so, it automatically return them to the Staker;
-- If there is insufficient Free funds, the Owner of the Pool has 7days to arrange for the PHA that Staker wants returned (from an existing or new Staker), or else to free funds by idling Worker(s) to Free their allotted stake. If the replenishment of funds can meet the withdrawal request, the remaining Workers will not be interrupted;
+- If there is insufficient Free funds, the Owner of the Pool has 7 days to arrange for the PHA that Staker wants returned (from an existing or new Staker), or else to free funds by idling Worker(s) to Free their allotted stake. If the replenishment of funds can meet the withdrawal request, the remaining Workers will not be interrupted;
 - If Free funds are not sufficient to meet the withdrawal, the system will be forced to suspend all mining activities in this Pool in order to complete the withdrawal for the Staker (7 days after all Workers are stopped).
