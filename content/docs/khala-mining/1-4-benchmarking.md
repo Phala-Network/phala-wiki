@@ -23,8 +23,8 @@ sudo phala update script
 Get the performance score with:
 
 ```bash
-sudo phala score_test [number_of_cores]
-# e.g., sudo phala score_test 4
+sudo phala score-test [number_of_cores]
+# e.g., sudo phala score-test 4
 ```
 > Tip: We recommend to use all the cores of your CPU.
 
