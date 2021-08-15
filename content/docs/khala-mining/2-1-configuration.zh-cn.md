@@ -17,18 +17,6 @@ sudo phala install
 Solo挖矿模式需要让一个GAS费地址对应一台Worker。GAS费地址不能复用。
 {{< /tip >}}
 
-当你希望重新安装DCAP驱动，你可以这样做：
-
-```shell
-sudo phala install dcap
-```
-
-当你希望重新安装isgx驱动，你可以这样做：
-
-```shell
-sudo phala install isgx
-```
-
 当你希望更改使用核心数、节点名称、Gas费账户助记词、抵押池owner账户地址：
 
 ```shell
