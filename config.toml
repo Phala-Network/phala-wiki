@@ -17,12 +17,12 @@ defaultContentLanguageInSubdir= true
     url = "en-us/docs/"
 
 [[menu.main]]
-    name = "中文站"
+    name = "中文"
     weight = 3
     url = "zh-cn/"
 
 [[menu.main]]
-    name = "French"
+    name = "français"
     weight = 4
     url = "fr-fr/"
 
@@ -36,7 +36,7 @@ defaultContentLanguageInSubdir= true
     [markup.goldmark.renderer]
       unsafe = true
     [markup.goldmark.extensions]
-      typographer = false
+      typographer = true
   [markup.highlight]
     codeFences = true
     guessSyntax = false
@@ -90,4 +90,5 @@ defaultContentLanguageInSubdir= true
   [Languages.fr-fr]
     title = "Phala Network Wiki"
     weight = 3
-    languageName = "french"
+    languageName = "français"
+
