@@ -13,6 +13,9 @@ Para-1 是 Phala Network (以及 Khala Network) 的第一版平行链测试网�
 ```shell
 sudo phala install
 ```
+{{< tip "warning" >}}
+Solo挖矿模式需要让一个GAS费地址对应一台Worker。GAS费地址不能复用。
+{{< /tip >}}
 
 当你希望重新安装DCAP驱动，你可以这样做：
 

@@ -20,6 +20,11 @@ sudo phala install
 
 Configuration will be automatic, If you want to manually config the tools, use the following commands and set the parameters.
 
+{{< tip "warning" >}}
+{{< /tip >}}
+DO NOT share the gas fee account between different solo miner setup 
+{{< /tip >}}
+
 ```bash
 sudo phala config set
 ```
