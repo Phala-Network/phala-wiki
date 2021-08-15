@@ -184,9 +184,9 @@ Staker收入：
 <center>Figure 4.3 Withdraw after more staking</center>
 
 * 如图4.3，在Staker-②给pool-3又抵押了5k PHA之后，因为pool-3的free状态资金增加了5k，因此Staker-③立即获得了另外5k退款
-* 在等待3天但4.5k资金仍然没有成功补充进pool-3后，系统被迫终止了pool-3的所有挖矿行为，并且在7天解冻期后自动退款4.5k至Staker-③
+* 在等待7天但4.5k资金仍然没有成功补充进pool-3后，系统被迫终止了pool-3的所有挖矿行为，并且在7天解冻期后自动退款4.5k至Staker-③
 
 
 综上，实际worker的控制者——StakePool Owner发起中止挖矿或取消全部抵押时，将触发全部抵押取消并有7天的解冻期。解冻期后该StakePool全部抵押金额将会被退回；
 
-当Staker发起取消抵押时，系统将判断该pool是否有free状态资金，如果有，则自动退回给Staker；如果没有闲置资金则该Pool的Owner有3天时间去补充Staker需要退回的资金，如果补充资金成功则该Pool不必强行另worker下线；如果没有成功补充资金，则系统将被迫中止该pool的全部挖矿行为以便给Staker退款（7天后成功）。
+当Staker发起取消抵押时，系统将判断该pool是否有free状态资金，如果有，则自动退回给Staker；如果没有闲置资金则该Pool的Owner有7天时间去补充Staker需要退回的资金，如果补充资金成功则该Pool不必强行另worker下线；如果没有成功补充资金，则系统将被迫中止该pool的全部挖矿行为以便给Staker退款（7天后成功）。
