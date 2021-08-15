@@ -1,3 +1,4 @@
 ---
-title: "Deployment with Containers:\n An Example with Docker Compose"
+title: "Deployment with Containers: An Example with Docker Compose"
+weight: 2
 ---
