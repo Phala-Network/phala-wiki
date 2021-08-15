@@ -27,9 +27,14 @@ wget https://github.com/Phala-Network/sgx-tools/releases/download/0.1/sgx_enable
 sudo chmod +x sgx_enable
 sudo ./sgx_enable
 ```
-Tip
+{{< tip >}}
 
-**如何打开 Ubuntu 终端：在桌面点击右键 →终端（Open in Terminal）**
+**如何打开 Ubuntu 终端**
+
+在桌面点击右键 →终端（Open in Terminal）**
+
+{{< /tip >}}
+
 ## Ubuntu 18.04 / 20.04
 
 - 目前暂不支持这两个版本以外的版本
