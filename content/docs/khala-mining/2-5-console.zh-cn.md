@@ -26,7 +26,7 @@ Para-1 是 Phala Network (以及 Khala Network) 的第一版平行链测试网�
 
 ### 主流程
 
-1. 连接账户（[创建、导入账户教程](https://www.yuque.com/phala/ttdygr/xpuakr)）
+1. 连接账户（[创建、导入账户教程]({{< relref "docs/khala-user" >}})
 1. 创建抵押池 
    - 点击 Create Pool!    
       ![](/images/docs/khala-mining/2-5-1.png)

@@ -23,7 +23,7 @@ Miners and pool owners can use Console to manage Workers and StakePools. Also it
 ### Console Operations
 
 <!-- TODO.zhe: the link in yuque is outdated -->
-1. Connect your Khala account;
+1. Connect your Khala account;[(You can follow this page to create your account)]({{< relref "docs/khala-user" >}})
 2. Create StakePool
     - Click "Create Stakepool";
     ![](/images/docs/khala-mining/create-pool.png)
