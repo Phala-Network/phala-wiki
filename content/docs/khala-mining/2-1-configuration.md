@@ -3,7 +3,7 @@ title: "2.1 Configuration"
 ---
 
 {{< tip "warning" >}}
-Para-1 is the Parachain testnet of Phala Network (and Khala Network). The purpose of running a testnet is to capture the chaos and collect feedback before the launch of the functionalites on Khala Network. So the system is subject to change. In this tutorial, we always refer to the testnet unless explicitly mentioned.
+Para-1 is the Parachain testnet of Phala Network (and Khala Network). The purpose of running a testnet is to capture the chaos and collect feedback before the launch of the functionalities on Khala Network. So the system is subject to change. In this tutorial, we always refer to the testnet unless explicitly mentioned.
 {{< /tip >}}
 
 {{< tip >}}
@@ -18,11 +18,10 @@ You can use the following commands to install Phala tools. It will automatically
 sudo phala install
 ```
 
-Configuration will be automatic, If you want to manually config the tools, use the following commands and set the parameters.
+By default, all the configurations are set automatically. If you want to manually config the tools, use the following commands and set the parameters.
 
 {{< tip "warning" >}}
-{{< /tip >}}
-DO NOT share the gas fee account between different solo miner setup 
+DO NOT share the same gas fee account across multiple solo mining setup.
 {{< /tip >}}
 
 ```bash
