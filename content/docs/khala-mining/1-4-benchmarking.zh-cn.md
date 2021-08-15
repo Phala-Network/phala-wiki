@@ -10,7 +10,7 @@ Para-1 是 Phala Network (以及 Khala Network) 的第一版平行链测试网�
 ```shell
 sudo phala install
 ```
-​
+
 **重要提示：如果你曾经已经安装了Phala脚本只需要升级脚本即可。升级方法如下：**
 
 ```shell

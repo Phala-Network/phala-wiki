@@ -10,21 +10,6 @@ Para-1 is the Parachain testnet of Phala Network (and Khala Network). The purpos
 If you have successfully installed the SGX driver and finished the benchmarking, you can skip the following tutorials.
 {{< /tip >}}
 
-## Install SGX Driver
-
-You can reinstall the DCAP driver with
-
-```bash
-sudo phala install dcap
-```
-
-or reinstall the isgx driver with
-
-```shell
-sudo phala install isgx
-```
-
-
 ## Install
 
 You can use the following commands to install Phala tools. It will automatically set the number of CPU cores to use, node name, gas fee account mnemonic and pool owner account.
@@ -33,7 +18,7 @@ You can use the following commands to install Phala tools. It will automatically
 sudo phala install
 ```
 
-If you want to manually config the tools, use the following commands and set the parameters.
+Configuration will be automatic, If you want to manually config the tools, use the following commands and set the parameters.
 
 ```bash
 sudo phala config set
