@@ -8,7 +8,7 @@ Para-1 是 Phala Network (以及 Khala Network) 的第一版平行链测试网�
 
 **请注意，在你进行以下操作之前请确保你已经阅读了本章节以前的全部内容。已经检查过你的硬件、BIOS设置（若找不到SGX选项可以先往后做进行测试）。并且已经安装好Ubuntu18.04或Ubuntu20.04。**
 
-下载Phala工具包地址：[https://github.com/Phala-Network/solo-mining-scripts/archive/poc5.zip](https://github.com/Phala-Network/solo-mining-scripts/archive/refs/heads/para.zip)，或者可以用wget下载，命令如下：
+下载Phala工具包地址：[https://github.com/Phala-Network/solo-mining-scripts/archive/refs/heads/para.zip](https://github.com/Phala-Network/solo-mining-scripts/archive/refs/heads/para.zip)，或者可以用wget下载，命令如下：
 
 ```shell
 cd ~
@@ -39,5 +39,3 @@ cd ~/solo-mining-scripts-para
 sudo chmod +x install.sh
 sudo ./install.sh cn
 ```
-
-

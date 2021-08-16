@@ -17,12 +17,10 @@ sudo phala install
 sudo phala update script
 ```
 
-### 
-
 ### 性能分数测试方法：
 
 ```shell
-sudo phala score_test [要使用的核心数量，核心数量根据CPU情况而定]
+sudo phala score-test [要使用的核心数量，核心数量根据CPU情况而定]
 例如：sudo phala score-test X
 ```
 
