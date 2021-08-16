@@ -24,7 +24,7 @@ pnpm proto:build_prpc # use `pnpm proto:darwin:build_prpc` in macOS
 
 ## Start Services
 
-To start any of the services, run `pnpm start_module`, all parameters are read from the envrionment variables of current shell.
+To start any of the services, run `pnpm start_module`, all parameters are read from the environment variables of current shell.
 
 ```bash
 PHALA_MODULE=fetch # module to start

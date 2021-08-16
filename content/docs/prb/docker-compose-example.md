@@ -19,11 +19,11 @@ The `prb` is designed to be simple, basic and easily integrated with RPC without
 
 > The version of docker in Ubuntu's default APT source is too old，follow https://docs.docker.com/engine/install/ and https://docs.docker.com/compose/install/ to get latest Docker and Docker Compose.
 
-> In production, use a prebuilt image instead of building from the master branch to prevent unexcected changes.
+> In production, use a prebuilt image instead of building from the master branch to prevent unexpected changes.
 
 ## Prepare the environment
 
-1. Create a folder for the deployment envrionment, then create docker-compose.yml which is edited from [here](https://github.com/Phala-Network/runtime-bridge/blob/master/docker/testing/bridge/docker-compose.example.yml).
+1. Create a folder for the deployment environment, then create docker-compose.yml which is edited from [here](https://github.com/Phala-Network/runtime-bridge/blob/master/docker/testing/bridge/docker-compose.example.yml).
 2. Run `docker-compose pull` to pull the latest images.
 3. Deploy `pruntime` on worker machines.
 4. Create mining pool on the blockchain.
@@ -32,9 +32,9 @@ The `prb` is designed to be simple, basic and easily integrated with RPC without
 
 Run `docker-compose up -d redis io` to start the base services.
 
-In this example, data in Redis is not persisted, unexcepted exit will break the whole envrionment, please do build a HA setup for Redis in production. Expose the Redis port to make the RPC work.
+In this example, data in Redis is not persisted, unexpected exit will break the whole environment, please do build a HA setup for Redis in production. Expose the Redis port to make the RPC work.
 
-RocksDB/LevelDB will save data in `PHALA_DB_PREFIX` specified in envrionment variables. The `0` directory is used for the data of block data. The `1` directory is used for the data of saved pools and workers including credentials, do backup it!
+RocksDB/LevelDB will save data in `PHALA_DB_PREFIX` specified in environment variables. The `0` directory is used for the data of block data. The `1` directory is used for the data of saved pools and workers including credentials, do backup it!
 
 ## The `fetch` Service
 
@@ -44,9 +44,9 @@ It requires 3 CPU cores to:
 1. Fetch headers with justification from the parent chain.
 2. Fetch headers and storage changes from the parachain.
 3. Encode them in formats that `pruntime` consumes by block.
-4. Origanize and merge data mentioned above for fast synchronization.
+4. Organize and merge data mentioned above for fast synchronization.
 
-All these work are done asychronously, you can see the processes can take a heavy load of CPU time. The `fetch` service can be stopped and started as many times as you want.
+All these work are done asynchronously, you can see the processes can take a heavy load of CPU time. The `fetch` service can be stopped and started as many times as you want.
 
 ## The `trade` Service
 
