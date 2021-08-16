@@ -154,7 +154,7 @@ $$\Delta V_t = k_p \cdot \big(\rho^m V_t + c(s_t) + \gamma(V_t)h(V_t)\big)$$
 - $\rho^m$ is the unconditional $V$ increment factor for miner
 - $c(s_t)$ is the operational cost to run the miner
 - $\gamma(V_t)h(V_t)$ represents a factor to compesate for accidental/unintentional slashing (ignored in simulated charts)
-- $k_p = \min(\frac{P_t}{P}, 120\%)$, where $P_t$ is the instant performance score, and $P$ is the initial score
+- $k_p = \min(\frac{P_t}{P}, 120\\%)$, where $P_t$ is the instant performance score, and $P$ is the initial score
 
 
 Proposed parameters:
@@ -164,11 +164,17 @@ Proposed parameters:
 
 ### Payout event
 
-In order to stay within the subsidy budget, at every block the budget is distributed proportionally based on the current ***Miner Shares***:
+In order to stay within the subsidy budget, at every block the budget is distributed proportionally based on the current ***Miner Shares***. However, the payout is also capped to ensure the payout doesn't cause $V$ to drop lower than it in the last payout event:
 
-$$w(V_t) = B \frac{\text{share}}{\Sigma \text{share}},$$
+$$w(V_t) = \min(B \frac{\text{share}}{\Sigma \text{share}}, V_t - V_\text{last}),$$
 
-where $B$ is the current network subsidy budget for the given payout period. Whenever $w(V_t)$ is paid to a miner, his $V$ will be updated accordingly:
+where $B$ is the current network subsidy budget for the given payout period, and $V_\text{last}$ is the value promised at the last payout event, or $V^e$ if this is the first payout.
+
+{{< tip >}}
+Capping the payout is necessary to make sure miners are well incentives to always accumulate credits in the network. Otherwise if V decreases over the time, miners are incentivezed to constantly reset their mining session.
+{{< /tip >}}
+
+Whenever $w(V_t)$ is paid to a miner, his $V$ will be updated accordingly:
 
 $$\Delta V = -w(V_t).$$
 
