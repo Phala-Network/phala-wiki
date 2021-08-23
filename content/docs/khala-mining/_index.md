@@ -17,6 +17,10 @@ If you have any questions, you can always reach out for help:
 - Discord: https://discord.gg/DWdHXFm8
 - Forum: https://forum.phala.network/
 
+Here are some note that Para-1 needs.
+- Para-1 endpoint : wss://para1-api.phala.network/ws
+- Para-1 blockchain explorer：https://phala-testnet.subscan.io/
+
 ### I. Getting Started
 
 - [1.1 Check Your Hardware, BIOS and System]({{< relref "docs/khala-mining/1-1-hardware-requirements" >}})

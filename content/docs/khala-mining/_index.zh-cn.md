@@ -13,6 +13,10 @@ Khala Network是Phala在Kusama上的平行链，具有去中心化的TEE挖矿�
 - Discord: https://discord.gg/YUxXV5xrj7
 - 论坛: https://forum.phala.network/
 
+一些Para-1相关的信息
+- Para-1 endpoint : wss://para1-api.phala.network/ws
+- Para-1 区块链浏览器：https://phala-testnet.subscan.io/
+  
 ### I. Getting Started
 
 - [1.1 检查你的硬件、BIOS和系统"]({{< relref "docs/khala-mining/1-1-hardware-requirements" >}})
