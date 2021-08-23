@@ -1,18 +1,17 @@
 ---
-title: "Running Directly in Linux"
+title: "在Linux中直接部署"
 weight: 3
 ---
 
-Running `prb` directly in a Linux shell is not recommended since using Docker is more convenient in both development and production.
-
-## Requirements
+我们不建议直接在Linux中直接部署 `prb` ，因为在Docker中部署更方便。
+## 系统要求
 
 - git
 - Redis 5 or newer
 - Node.js 14 (Latest LTS)
 - pnpm
 
-## Set up dependencies and generate Protobuf interfaces
+## 配置依赖环境并生成Protobuf接口
 
 ```bash
 git submodule init
@@ -22,9 +21,9 @@ pnpm proto:build # use `pnpm proto:darwin:build` in macOS
 pnpm proto:build_prpc # use `pnpm proto:darwin:build_prpc` in macOS
 ```
 
-## Start Services
+## 启动服务
 
-To start any of the services, run `pnpm start_module`, all parameters are read from the environment variables of current shell.
+启动任何服务前请运行 `pnpm start_module`, 所有参数和环境变量将从当前的Shell中的环境变量读取。
 
 ```bash
 PHALA_MODULE=fetch # module to start
