@@ -18,8 +18,10 @@ If you have any questions, you can always reach out for help:
 - Forum: https://forum.phala.network/
 
 Here are some note that Para-1 needs.
-- Para-1 endpoint : wss://para1-api.phala.network/ws
-- Para-1 blockchain explorer：https://phala-testnet.subscan.io/
+
+- Para-1 Polkadot.js UI: [Link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpara1-api.phala.network%2Fws#/explorer)
+- Para-1 RPC Endpoint: `wss://para1-api.phala.network/ws`
+- Para-1 blockchain explorer: <https://phala-testnet.subscan.io/>
 
 ### I. Getting Started
 
