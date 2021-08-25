@@ -20,9 +20,9 @@ While `prb` sends extrinsics to synchronize between the TEE workers and the bloc
 ## Services
 
 The `prb` provides the following services:
-- `io`: a simple server to provide internal RocksDB/LevelDB I/O ability. while RocksDB/LevelDB is thread-safe，it can only keep one instance running at the same time.
+- `io`: a simple server to provide internal RocksDB/LevelDB I/O ability. while RocksDB/LevelDB is thread-safe, it can only keep one instance running at the same time.
 - `fetch`: it fetches block data the blockchains then processes them for synchronization.
-- `trade`: it makes transactions(extrinsics) to the blockchain, it's design to work as a cluster, but not tested yet in this scenario.
+- `trade`: it makes transactions(extrinsics) to the blockchain.
 - `lifecycle`: it handles the lifecycle and status of the workers, synchronize message queues and block data between the TEE and the blockchain.
 
 ## Redis, RPC and the monitor

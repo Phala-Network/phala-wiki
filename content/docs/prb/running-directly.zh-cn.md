@@ -3,7 +3,8 @@ title: "在Linux中直接部署"
 weight: 3
 ---
 
-我们不建议直接在Linux中直接部署 `prb` ，因为在Docker中部署更方便。
+由于无论是在开发环境还是生产环境中使用Docker部署都会更加方便，因此我们不建议直接在Linux中直接部署`prb`。
+
 ## 系统要求
 
 - git
@@ -11,7 +12,7 @@ weight: 3
 - Node.js 14 (Latest LTS)
 - pnpm
 
-## 配置依赖环境并生成Protobuf接口
+## 安装依赖并生成Protobuf接口代码
 
 ```bash
 git submodule init
@@ -23,7 +24,7 @@ pnpm proto:build_prpc # use `pnpm proto:darwin:build_prpc` in macOS
 
 ## 启动服务
 
-启动任何服务前请运行 `pnpm start_module`, 所有参数和环境变量将从当前的Shell中的环境变量读取。
+使用`pnpm start_module`来启动prb进程, 所有参数都将从当前Shell中的环境变量读取。
 
 ```bash
 PHALA_MODULE=fetch # module to start
