@@ -1,6 +1,6 @@
 ---
 title: "Apply for Khala Gatekeeper"
-weight: 5
+weight: 7
 draft: false
 ---
 

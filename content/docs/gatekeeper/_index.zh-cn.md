@@ -1,6 +1,6 @@
 ---
 title: "Khala守门人申请教程"
-weight: 5
+weight: 7
 draft: false
 ---
 

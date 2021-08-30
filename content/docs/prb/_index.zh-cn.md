@@ -1,6 +1,6 @@
 ---
 title: "Runtime Bridge"
-weight: 4
+weight: 6
 ---
 在单机挖矿挖矿场景中，[pherry](https://github.com/Phala-Network/phala-blockchain/tree/master/standalone/pherry)负责从区块链全节点获取区块数据并发送到TEE运行时，然而，其在矿池等场景中有诸多不便且存在性能问题。因此，我们开发了Phala [Runtime Bridge](https://github.com/Phala-Network/runtime-bridge)（简称`prb`），其利用了新经济模型v0.9（提案）中引入的StakePool机制以降低使用pherry所产生的复杂性。
 

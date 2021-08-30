@@ -1,6 +1,6 @@
 ---
 title: "Para-1挖矿教程"
-weight: 4
+weight: 5
 draft: false
 ---
 

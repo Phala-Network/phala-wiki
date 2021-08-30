@@ -1,6 +1,6 @@
 ---
 title: "Para-1 Testnet Mining Guide"
-weight: 4
+weight: 5
 draft: false
 ---
 
