@@ -1,7 +1,7 @@
 ---
 title: "Khala守门人申请教程"
 weight: 7
-draft: false
+draft: true
 ---
 
 ## 敬请期待
