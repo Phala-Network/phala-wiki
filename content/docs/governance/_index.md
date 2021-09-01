@@ -205,7 +205,7 @@ All three tallying mechanisms - majority carries, super-majority approve, and su
 
 ## Council
 
-To represent passive stakeholders, Phala introduces the idea of a "council". The council is an on-chain entity comprising several actors, each represented as an on-chain account. On Phala, the council currently consists of 4 members. This is expected to increase over the next few months to 11 seats. In general, the council will end up having a fixed number of seats.
+To represent passive stakeholders, Phala introduces the idea of a "council". The council is an on-chain entity comprising several actors, each represented as an on-chain account. On Phala, the council currently consists of 5 members. This is expected to increase over the next few months to 11 seats. In general, the council will end up having a fixed number of seats.
 
 Along with controlling the treasury, the council is called upon primarily for three tasks of governance: proposing sensible referenda, cancelling uncontroversially dangerous or
 malicious referenda, and electing the technical committee.
