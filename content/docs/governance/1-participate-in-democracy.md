@@ -97,7 +97,7 @@ When you are comfortable with the decision you have made, click the orange "Vote
 ### Unlocking Locked Tokens
 Like [vesting]({{< relref "docs/governance/2-join-the-council">}}), the tokens that are locked in democracy are unlocked lazily. This means that you, the user, must explicitly call an unlock extrinsic to make your funds available again after the lock expires. Unbonding is another term you hear a lot in Phala, it means withdrawing your PHA that was used in staking. To know more about it, please see [here]({{< relref "docs/governance/2-join-the-council">}}).
 
-You can do this from the "Accounts" page in [Khala](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpara1-api.phala.network%2Fws%2F#/accounts), unless you use Ledger. First check that your account has a "democracy" lock by opening the details on your balance. In the example below the account has 9 PHA locked in democracy.
+You can do this from the "Accounts" page in [Khala](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpara2-api.phala.network%2Fws%2F#/accounts), unless you use Ledger. First check that your account has a "democracy" lock by opening the details on your balance. In the example below the account has 9 PHA locked in democracy.
 
 ![](https://i.imgur.com/Sb8LtlW.png)
 

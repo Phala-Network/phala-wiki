@@ -1,11 +1,11 @@
 ---
-title: "Para-1 Testnet Mining Guide"
+title: "Para-2 Testnet Mining Guide"
 weight: 5
 draft: false
 ---
 
 {{< tip "warning" >}}
-Para-1 is the Parachain testnet of Phala Network (and Khala Network). The purpose of running a testnet is to capture the chaos and collect feedback before the launch of the functionalities on Khala Network. So the system is subject to change. In this tutorial, we always refer to the testnet unless explicitly mentioned.
+Para-2 is the Parachain testnet of Phala Network (and Khala Network). The purpose of running a testnet is to capture the chaos and collect feedback before the launch of the functionalities on Khala Network. So the system is subject to change. In this tutorial, we always refer to the testnet unless explicitly mentioned.
 {{< /tip >}}
 
 Khala Network is Phala's canary network on Kusama Parachain featuring decentralized TEE mining. We provide an overview to setup the mining environment, followed by a detailed explanation of each step.
@@ -17,11 +17,11 @@ If you have any questions, you can always reach out for help:
 - Discord: https://discord.gg/DWdHXFm8
 - Forum: https://forum.phala.network/
 
-Here are some note that Para-1 needs.
+Here are some note that Para-2 needs.
 
-- Para-1 Polkadot.js UI: [Link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpara1-api.phala.network%2Fws#/explorer)
-- Para-1 RPC Endpoint: `wss://para1-api.phala.network/ws`
-- Para-1 blockchain explorer: <https://phala-testnet.subscan.io/>
+- Para-2 Polkadot.js UI: [Link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpara2-api.phala.network%2Fws#/explorer)
+- Para-2 RPC Endpoint: `wss://para2-api.phala.network/ws`
+- Para-2 blockchain explorer: <https://phala-testnet.subscan.io/>
 
 ### I. Getting Started
 

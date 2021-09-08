@@ -1,5 +1,5 @@
 ---
-title: "Para-1挖矿教程"
+title: "Para-2挖矿教程"
 weight: 5
 draft: false
 ---
@@ -13,10 +13,10 @@ Khala Network是Phala在Kusama上的平行链，具有去中心化的TEE挖矿�
 - Discord: https://discord.gg/YUxXV5xrj7
 - 论坛: https://forum.phala.network/
 
-一些Para-1相关的信息
-- Para-1 Polkadot.js 页面: [链接](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpara1-api.phala.network%2Fws#/explorer)
-- Para-1 RPC端点: `wss://para1-api.phala.network/ws`
-- Para-1 区块链浏览器：<https://phala-testnet.subscan.io/>
+一些Para-2相关的信息
+- Para-2 Polkadot.js 页面: [链接](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpara2-api.phala.network%2Fws#/explorer)
+- Para-2 RPC端点: `wss://para2-api.phala.network/ws`
+- Para-2 区块链浏览器：<https://phala-testnet.subscan.io/>
   
 ### I. Getting Started
 

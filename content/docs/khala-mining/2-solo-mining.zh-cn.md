@@ -1,9 +1,9 @@
 ---
-title: "2 单节点挖矿（Para1版本）"
+title: "2 单节点挖矿（para2版本）"
 ---
 
 {{< tip "warning" >}}
-Para-1 是 Phala Network (以及 Khala Network) 的第一版平行链测试网。测试网的目的是在 Khala Network 上线挖矿子系统前及早发现并解决问题，同时收集来自社区的反馈。因此在测试网络中，频繁的修改与升级是正常的。除非特殊提及，本教程中所有的区块链都指 Para-1 测试网。
+Para-2 是 Phala Network (以及 Khala Network) 的第一版平行链测试网。测试网的目的是在 Khala Network 上线挖矿子系统前及早发现并解决问题，同时收集来自社区的反馈。因此在测试网络中，频繁的修改与升级是正常的。除非特殊提及，本教程中所有的区块链都指 Para-2 测试网。
 {{< /tip >}}
 
 # 领取测试币
@@ -51,4 +51,4 @@ Para-1 是 Phala Network (以及 Khala Network) 的第一版平行链测试网�
 
 如你不会使用Telegram软件，请前往矿工微信群询问其他矿工的帮助
 
-<!-- The difference between Para-1 Testnet and Khala is the underlying relaychain, which should be opaque to the miners. -->
+<!-- The difference between Para-2 Testnet and Khala is the underlying relaychain, which should be opaque to the miners. -->
