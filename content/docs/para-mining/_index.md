@@ -1,5 +1,5 @@
 ---
-title: "Khala Pre-mainnet Mining Guide"
+title: "Para-2 Testnet Mining Guide"
 weight: 5
 draft: false
 ---

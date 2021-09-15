@@ -1,5 +1,5 @@
 ---
-title: "Khala预备主网挖矿教程"
+title: "Para-2挖矿教程"
 weight: 5
 draft: false
 ---
