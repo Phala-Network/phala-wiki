@@ -14,6 +14,7 @@ Khala Network是Phala在Kusama上的平行链，具有去中心化的TEE挖矿�
 - 论坛: https://forum.phala.network/
 
 一些Khala相关的信息
+
 - Khala Polkadot.js 页面: [链接](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkhala.api.onfinality.io%2Fpublic-ws#/explorer))
 - Khala RPC端点: `wss://khala.api.onfinality.io/public-ws`
 - Khala 区块链浏览器：<https://phala-testnet.subscan.io/>
@@ -39,3 +40,6 @@ Khala Network是Phala在Kusama上的平行链，具有去中心化的TEE挖矿�
 ### III. FAQ
 
 - [FAQ]({{< relref "docs/khala-mining/4-faq" >}})
+- [如何改善节点的网络状况]({{< relref "docs/khala-mining/4-1-How-to-get-better-peers-connectivity" >}})
+- [如果你还没有开始同步节点，如何快速跟上]({{< relref "docs/khala-mining/4-2-How-to-fast-sync-node-use-snapshot" >}})
+
