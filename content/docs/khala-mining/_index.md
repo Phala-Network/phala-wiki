@@ -20,6 +20,7 @@ Here are some note that Khala needs.
 - Khala blockchain explorer: <https://khala.subscan.io/>
 - Khala App：<https://app.phala.network/>
 - Khala Console: <https://app.phala.network/console>
+
 ### I. Getting Started
 
 - [1.1 Check Your Hardware, BIOS and System]({{< relref "docs/khala-mining/1-1-hardware-requirements" >}})
@@ -38,3 +39,5 @@ Here are some note that Khala needs.
 ### III. FAQ
 
 - [Frequently Asked Questions]({{< relref "docs/khala-mining/4-faq" >}})
+- [How to get better peers connectivity]({{< relref "docs/khala-mining/4-1-How-to-get-better-peers-connectivity" >}})
+- [How to fast sync your node to you haven't fully synced yet]({{< relref "docs/khala-mining/4-2-How-to-fast-sync-node-use-snapshot" >}})
