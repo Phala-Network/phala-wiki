@@ -38,7 +38,7 @@ It means the BIOS firmware (specifically, the CPU microcode it carries) is out-o
 Linux provides the option to override the microcode. However it doesn't help the SGX setup, because SGX measures the microcode carried by the BIOS only.
 {{< /tip >}}
 
-### How to update worker from para2 to Khala
+### How to update worker from Para2 to Khala
 
 You need to clean all node & pruntime data , follow this command:
 sudo phala update clean
@@ -52,5 +52,6 @@ sudo rm -R ~/solo-mining-scripts-main
 sudo rm ~/main.zip
 sudo rm ~/para1.zip
 ```
-You can follow this page to redownload and reinstall new phala mining scripts :
+
+You can follow this page to redownload and reinstall new phala mining scripts:
 https://wiki.phala.network/zh-cn/docs/khala-mining/
