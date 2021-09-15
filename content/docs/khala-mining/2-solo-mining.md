@@ -1,30 +1,35 @@
 ---
-title: "2 Solo Mining in Para-2 Testnet"
+title: "2 Solo mining configuration"
 ---
 
-{{< tip "warning" >}}
-Para-2 is the Parachain testnet of Phala Network (and Khala Network). The purpose of running a testnet is to capture the chaos and collect feedback before the launch of the functionalities on Khala Network. So the system is subject to change. In this tutorial, we always refer to the testnet unless explicitly mentioned.
+
+{{< tip >}}
+If you have successfully installed the SGX driver and finished the benchmarking, you can skip the following tutorials.
 {{< /tip >}}
 
-The following tutorials apply to Para-2 Testnet, which shares the same tokenomics parameters as the future Khala.
-<!-- The difference between Para-2 Testnet and Khala is the underlying relaychain, which should be opaque to the miners. -->
+## Install
 
-Before you start mining in Para-2 Testnet, you need to first [get a Khala account]({{< relref "docs/khala-user" >}}) and acquire test token from faucet (real PHA is needed in future Khala mining).
+You can use the following commands to install Phala tools. It will automatically set the number of CPU cores to use, node name, gas fee account mnemonic and pool owner account.
 
-## Claim Test Token from Telegram Bot
+```bash
+sudo phala install
+```
 
-1. Get to Phala Faucet https://t.me/phalafaucet. You may need to download and install Telegram as prompted. Click "VIEW IN TELEGRAM" to join the group.
+By default, all the configurations are set automatically. If you want to manually config the tools, use the following commands and set the parameters.
 
-![](/images/docs/khala-mining/faucet-1.png)
+{{< tip "warning" >}}
+DO NOT share the same gas fee account across multiple solo mining setup.
+{{< /tip >}}
 
-2. Answer the arithmetic CAPTCHA from the bot after you join the group. For example, you should reply 16 in the following case.
+```bash
+sudo phala config set
+```
 
-![](/images/docs/khala-mining/faucet-2.png)
+> The script will ask for re-enter if the received parameter is invalid.
+> To ensure the proceeding of mining, the balance of gas fee account should be greater than 0.1 PHA.
 
-3. Choose a username. Click "Settings - Edit - Username" to set your username, or bot cannot recognize your applications.
+You can get the current parameters in use with
 
-![](/images/docs/khala-mining/faucet-3.png)
-
-4. Send **/drip [your_account]** to get test token.
-
-![](/images/docs/khala-mining/faucet-4.png)
+```bash
+sudo phala config show
+```

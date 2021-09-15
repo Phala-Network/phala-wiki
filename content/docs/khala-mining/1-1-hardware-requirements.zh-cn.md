@@ -2,9 +2,6 @@
 title: "1.1 检查你的硬件、BIOS和系统"
 ---
 
-{{< tip "warning" >}}
-Para-2 是 Phala Network (以及 Khala Network) 的第一版平行链测试网。测试网的目的是在 Khala Network 上线挖矿子系统前及早发现并解决问题，同时收集来自社区的反馈。因此在测试网络中，频繁的修改与升级是正常的。除非特殊提及，本教程中所有的区块链都指 Para-2 测试网。
-{{< /tip >}}
 ## Phala 硬件需求门槛
 ![](/images/docs/poc3/1-3.1.png)
 如何检查自己的设备支持 BIOS：
@@ -22,7 +19,7 @@ Para-2 是 Phala Network (以及 Khala Network) 的第一版平行链测试网�
    - 找到 Security（安全选项） ，找到 Secure Boot（安全启动） ，选择 Disabled（关闭）
    - 找到 Boot（启动选项） ，在 Boot Mode (启动模式) 里 启动 UEFI
    - 找到 SGX 选项，优先选 Enabled，如果没有则选 Software Controlled。选择 Software Controlled 的，进入系统以后输入下面的指令启动驱动：
-```shell
+```bash
 wget https://github.com/Phala-Network/sgx-tools/releases/download/0.1/sgx_enable 
 sudo chmod +x sgx_enable
 sudo ./sgx_enable

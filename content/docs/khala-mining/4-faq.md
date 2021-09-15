@@ -1,10 +1,6 @@
 ---
-title: "3 Frequently Asked Questions"
+title: "4 Frequently Asked Questions"
 ---
-
-{{< tip "warning" >}}
-Para-2 is the Parachain testnet of Phala Network (and Khala Network). The purpose of running a testnet is to capture the chaos and collect feedback before the launch of the functionalities on Khala Network. So the system is subject to change. In this tutorial, we always refer to the testnet unless explicitly mentioned.
-{{< /tip >}}
 
 > To be updated.
 
@@ -41,3 +37,21 @@ It means the BIOS firmware (specifically, the CPU microcode it carries) is out-o
 {{< tip >}}
 Linux provides the option to override the microcode. However it doesn't help the SGX setup, because SGX measures the microcode carried by the BIOS only.
 {{< /tip >}}
+
+### How to update worker from Para2 to Khala
+
+You need to clean all node & pruntime data , follow this command:
+sudo phala update clean
+
+Follow this command to uninstall your phala mining scripts:
+
+```bash
+sudo phala uninstall
+sudo rm -R ~/solo-mining-scripts-para1
+sudo rm -R ~/solo-mining-scripts-main
+sudo rm ~/main.zip
+sudo rm ~/para1.zip
+```
+
+You can follow this page to redownload and reinstall new phala mining scripts:
+https://wiki.phala.network/zh-cn/docs/khala-mining/

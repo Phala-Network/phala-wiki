@@ -2,24 +2,21 @@
 title: "1.4 测试Worker性能分"
 ---
 
-{{< tip "warning" >}}
-Para-2 是 Phala Network (以及 Khala Network) 的第一版平行链测试网。测试网的目的是在 Khala Network 上线挖矿子系统前及早发现并解决问题，同时收集来自社区的反馈。因此在测试网络中，频繁的修改与升级是正常的。除非特殊提及，本教程中所有的区块链都指 Para-2 测试网。
-{{< /tip >}}
 
 ### 如果你没有运行过SGX测试首先需要先按照简易安装模式安装Phala脚本
-```shell
+```bash
 sudo phala install
 ```
 
 **重要提示：如果你曾经已经安装了Phala脚本只需要升级脚本即可。升级方法如下：**
 
-```shell
+```bash
 sudo phala update script
 ```
 
 ### 性能分数测试方法：
 
-```shell
+```bash
 sudo phala score-test [要使用的核心数量，核心数量根据CPU情况而定]
 例如：sudo phala score-test X
 ```
@@ -28,7 +25,7 @@ sudo phala score-test [要使用的核心数量，核心数量根据CPU情况而
 
 跑分用的Docker不会自动结束关闭，结束跑分的方法：
 
-```shell
+```bash
 sudo phala stop bench
 ```
 

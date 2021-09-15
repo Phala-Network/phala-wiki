@@ -1,10 +1,6 @@
 ---
-title: "3 FAQ"
+title: "4 FAQ"
 ---
-
-{{< tip "warning" >}}
-Para-2 是 Phala Network (以及 Khala Network) 的第一版平行链测试网。测试网的目的是在 Khala Network 上线挖矿子系统前及早发现并解决问题，同时收集来自社区的反馈。因此在测试网络中，频繁的修改与升级是正常的。除非特殊提及，本教程中所有的区块链都指 Para-2 测试网。
-{{< /tip >}}
 
 > 陆续更新中。
 
@@ -41,3 +37,21 @@ Linux 系统也提供了升级微码的能力，但对提高信任等级没有�
 {{< tip >}}
 Linux 系统也提供了升级微码的能力，但对提高信任等级没有帮助，因为 SGX 只会评估 BIOS 中载入的微码。
 {{< /tip >}}
+
+### 如何从Para2切换到Khala
+
+1 首先请清理您的节点数据，使用命令：
+sudo phala update clean
+检查您的/var文件夹，应该不会出现 phala-node-data phala-pruntime-data 两个文件夹
+
+2 根据您的自身情况，删除脚本，使用命令：
+
+```bash
+sudo phala uninstall
+sudo rm -R ~/solo-mining-scripts-para
+sudo rm -R ~/solo-mining-scripts-main
+sudo rm ~/main.zip
+sudo rm ~/para.zip
+```
+
+3 重新根据https://wiki.phala.network/zh-cn/docs/khala-mining/ 的指引下载并安装脚本

@@ -2,10 +2,6 @@
 title: "1.3 Check the SGX Capability and Confidence Level"
 ---
 
-{{< tip "warning" >}}
-Para-2 is the Parachain testnet of Phala Network (and Khala Network). The purpose of running a testnet is to capture the chaos and collect feedback before the launch of the functionalities on Khala Network. So the system is subject to change. In this tutorial, we always refer to the testnet unless explicitly mentioned.
-{{< /tip >}}
-
 ## Double Check the SGX Capability
 
 After the installation of your driver, please use the following utility to double check if everything goes well.
