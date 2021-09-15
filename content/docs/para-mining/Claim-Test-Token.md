@@ -1,10 +1,6 @@
 ---
-title: "2 Solo Mining in Para-2 Testnet"
+title: "Claim Test Token from Telegram Bot"
 ---
-
-{{< tip "warning" >}}
-Para-2 is the Parachain testnet of Phala Network (and Khala Network). The purpose of running a testnet is to capture the chaos and collect feedback before the launch of the functionalities on Khala Network. So the system is subject to change. In this tutorial, we always refer to the testnet unless explicitly mentioned.
-{{< /tip >}}
 
 The following tutorials apply to Para-2 Testnet, which shares the same tokenomics parameters as the future Khala.
 <!-- The difference between Para-2 Testnet and Khala is the underlying relaychain, which should be opaque to the miners. -->
