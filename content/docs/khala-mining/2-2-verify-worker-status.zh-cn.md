@@ -4,7 +4,7 @@ title: "2.2 查看Worker状态"
 
 #### 在phala脚本目录打开终端，输入以下指令:
 
-```shell
+```bash
 sudo phala status
 ```
 

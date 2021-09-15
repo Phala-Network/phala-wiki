@@ -4,7 +4,7 @@ title: "1.3 SGX测试和信任分级"
 
 ### 首先需要先按照简易安装模式安装Phala脚本
 
-```shell
+```bash
 sudo phala install
 ```
 ​

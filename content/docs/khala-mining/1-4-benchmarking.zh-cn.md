@@ -4,19 +4,19 @@ title: "1.4 测试Worker性能分"
 
 
 ### 如果你没有运行过SGX测试首先需要先按照简易安装模式安装Phala脚本
-```shell
+```bash
 sudo phala install
 ```
 
 **重要提示：如果你曾经已经安装了Phala脚本只需要升级脚本即可。升级方法如下：**
 
-```shell
+```bash
 sudo phala update script
 ```
 
 ### 性能分数测试方法：
 
-```shell
+```bash
 sudo phala score-test [要使用的核心数量，核心数量根据CPU情况而定]
 例如：sudo phala score-test X
 ```
@@ -25,7 +25,7 @@ sudo phala score-test [要使用的核心数量，核心数量根据CPU情况而
 
 跑分用的Docker不会自动结束关闭，结束跑分的方法：
 
-```shell
+```bash
 sudo phala stop bench
 ```
 

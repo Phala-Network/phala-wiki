@@ -6,7 +6,7 @@ title: "1.2 下载并安装Phala脚本"
 
 下载Phala工具包地址：[https://github.com/Phala-Network/solo-mining-scripts/archive/refs/heads/main.zip](https://github.com/Phala-Network/solo-mining-scripts/archive/refs/heads/main.zip)，或者可以用wget下载，命令如下：
 
-```shell
+```bash
 cd ~
 sudo apt-get install wget
 sudo apt-get install unzip
@@ -19,7 +19,7 @@ cd solo-mining-scripts-main
 
 在phala脚本目录打开终端，输入以下指令后电脑会重启：
 
-```shell
+```bash
 cd ~/solo-mining-scripts-main
 sudo chmod +x sgx_enable
 sudo ./sgx_enable
@@ -30,7 +30,7 @@ sudo reboot
 
 在phala脚本目录打开终端，输入以下指令：
 
-```shell
+```bash
 cd ~/solo-mining-scripts-main
 sudo chmod +x install.sh
 sudo ./install.sh cn

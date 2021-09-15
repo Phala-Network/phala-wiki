@@ -18,7 +18,8 @@ Here are some note that Khala needs.
 - Khala Polkadot.js UI: [Link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkhala.api.onfinality.io%2Fpublic-ws#/explorer)
 - Khala RPC Endpoint: `wss://khala.api.onfinality.io/public-ws`
 - Khala blockchain explorer: <https://khala.subscan.io/>
-
+- Khala App：<https://app.phala.network/>
+- Khala Console: <https://app.phala.network/console>
 ### I. Getting Started
 
 - [1.1 Check Your Hardware, BIOS and System]({{< relref "docs/khala-mining/1-1-hardware-requirements" >}})

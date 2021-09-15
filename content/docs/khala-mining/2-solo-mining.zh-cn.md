@@ -7,7 +7,7 @@ title: "2 Solo挖矿环境配置"
 
 只需要运行（会自动请求设置使用核心数、节点名称、Gas费账户助记词、抵押池owner账户地址）：
 
-```shell
+```bash
 sudo phala install
 ```
 {{< tip "warning" >}}
@@ -16,13 +16,13 @@ Solo挖矿模式需要让一个GAS费地址对应一台Worker。GAS费地址不�
 
 当你希望更改使用核心数、节点名称、Gas费账户助记词、抵押池owner账户地址：
 
-```shell
+```bash
 sudo phala config set
 ```
 
 当你希望查看配置（使用核心数、节点名称、Gas费账户助记词、抵押池owner账户地址），你可以这样做：
 
-```shell
+```bash
 sudo phala config show
 ```
 

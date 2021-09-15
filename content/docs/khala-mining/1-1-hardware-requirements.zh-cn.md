@@ -19,7 +19,7 @@ title: "1.1 检查你的硬件、BIOS和系统"
    - 找到 Security（安全选项） ，找到 Secure Boot（安全启动） ，选择 Disabled（关闭）
    - 找到 Boot（启动选项） ，在 Boot Mode (启动模式) 里 启动 UEFI
    - 找到 SGX 选项，优先选 Enabled，如果没有则选 Software Controlled。选择 Software Controlled 的，进入系统以后输入下面的指令启动驱动：
-```shell
+```bash
 wget https://github.com/Phala-Network/sgx-tools/releases/download/0.1/sgx_enable 
 sudo chmod +x sgx_enable
 sudo ./sgx_enable
