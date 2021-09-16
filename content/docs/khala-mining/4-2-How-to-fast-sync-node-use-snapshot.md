@@ -4,7 +4,7 @@ title: "4.2 How to fast sync your node to you haven't fully synced yet"
 
 ## Problem
 
-If your node havn't up to date, a typical node log looks like
+If your node is not up-to-date, a typical node log looks like
 
 ```
 2021-09-15 13:33:27 [Relaychain] ⚙️  Syncing 10.4 bps, target=#9236775 (20 peers), best: #9227955 (0xa897…4f36), finalized #9227895 (0x1d6d…1527), ⬇ 1.7MiB/s ⬆ 657.8kiB/s
@@ -13,14 +13,15 @@ If your node havn't up to date, a typical node log looks like
 
 and `best` is too far from `target`.
 
-This article shares a cheat way to fast syncing your node.
+This article shares a cheat way to accelerate your node syncing.
 
-IMPORTANT: If your node is near newest block height (about several hours to catch up) or already catched up,
+IMPORTANT: If your node is near newest block height (about several hours to catch up) or has already catched up,
 you don't need to do anything, just seat and wait.
 
 ## Download latest snapshot (updated at 9/15/2021)
 
-Download snapshot data from: <https://storage.googleapis.com/khala-snapshots/khala-snapshot-210915.tar.gz>
+Download snapshot data from: <https://storage.googleapis.com/khala-snapshots/khala-snapshot-210915.tar.gz>,
+or if you prefer BT download, we provide a torrent <a href="/files/khala.torrent">here</a>.
 
 ```
 $ sha256sum khala-snapshot-210915.tar.gz
