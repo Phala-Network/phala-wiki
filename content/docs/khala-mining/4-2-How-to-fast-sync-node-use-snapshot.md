@@ -36,7 +36,7 @@ d1ad677bb2421d17e12f7bed2af95beaf7343a2f9c79b4b07b85a0faa521467c  khala-snapshot
 
 Extract when downloaded, you shall get `khala-node` folder.
 
-IMPORTANT: snapshot archive is ~220GiB, extract require ~350G, which means you require at least 550G free disk space, if you don't have enough space, consider extract to external storage.
+IMPORTANT: snapshot archive is ~220GiB, extract require ~350G, which means you require at least 600G free disk space, if you don't have enough space, consider extract to external storage.
 
 ## Preparation
 
@@ -53,6 +53,13 @@ to stop Phala services.
 ### If you're solo miner
 
 Delete all files and folders inside `/var/khala-dev-node`，move all files and folders from `khala-node` into `/var/khala-dev-node`
+
+If you do things right, inside `/var/khala-dev-node` it looks like
+
+```
+$ ls /var/khala-dev-node
+chains  polkadot
+```
 
 ### Advanced miner
 
