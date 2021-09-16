@@ -12,7 +12,7 @@ Currently Tier 1, 2, 3 are treated in the same way. No operation is needed if yo
 
 > The EPID signature of the ISV enclave QUOTE has been verified correctly, but additional configuration of SGX platform may be needed (for further details see Advisory IDs). The platform has not been identified as compromised and thus it is not revoked. It is up to the Service Provider to decide whether or not to trust the content of the QUOTE, and whether or not to trust the platform performing the attestation to protect specific sensitive information.
 >
-> -- from [Intel IAS API Sepc](https://api.trustedservices.intel.com/documents/IAS-API-Spec-rev-4.0.pdf)
+> -- from [Intel IAS API Spec](https://api.trustedservices.intel.com/documents/IAS-API-Spec-rev-4.0.pdf)
 
 It means either the BIOS is misconfigured or the BIOS firmware is misbuilt. You can try:
 
