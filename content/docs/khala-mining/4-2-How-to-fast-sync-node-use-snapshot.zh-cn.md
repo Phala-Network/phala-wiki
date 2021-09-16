@@ -28,8 +28,6 @@ $ sha256sum khala.torrent
 7f517ac05bc8a2840055a4f8d59f147c2bdd92c10281f4d45ab963908c141f05  khala.torrent
 ```
 
-> 你也可以选择直接下载： <https://storage.googleapis.com/khala-snapshots/khala-snapshot-210915.tar.gz>
-
 在下载完成后，可以通过校验sha256校验和来确保数据完整性
 
 ```
