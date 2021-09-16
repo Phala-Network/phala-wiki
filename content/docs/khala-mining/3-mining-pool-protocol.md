@@ -28,16 +28,16 @@ Github: https://github.com/Phala-Network/runtime-bridge
 
 ## What is Phala Management Development Component?
 
-Phala Management Development Component is an open-source development component which meant to serve Phala miners. It provides a Cloud Native RPC interface to manage Phala Workers' lifecycle through Redis. It can be utilized by:
-- Public Mining Pool, a third-party service which enables its members to share their processing power and split the reward according to the amount of work they contributed;
+Phala Management Development Component is an open-source development component meant to serve Phala miners. It provides a Cloud Native RPC interface to manage Phala Workers' lifecycle through Redis. It can be utilized by:
+- Public Mining Pool, a third-party service that enables its members to share their processing power and split the reward according to the amount of work they contributed;
 - Mining Cluster, a private network consisted of multiple TEE Workers.
 
-Noted that Phala Management Development Component is a development component which can be customized by developers, and it should not be directly used by end users.
+Noted that Phala Management Development Component is a development component that can be customized by developers, and it should not be directly used by end-users.
 
 
 ## Hardware Requirements
 
-Unlike normal Worker which runs in SGX, Phala Management Development Component itself ****requires no TEE (i.e., SGX) capabilities***. We list the recommended hardwares as follow.
+Unlike normal Worker which runs in SGX, Phala Management Development Component itself ****requires no TEE (i.e., SGX) capabilities***. We list the recommended hardware as follows.
 
 | Hardware | Requirement |
 | :---: | :---: |
@@ -50,7 +50,7 @@ Unlike normal Worker which runs in SGX, Phala Management Development Component i
 
 ## Functionalities
 
-Phala Management Development Component provides functionalities include:
+Phala Management Development Component provides functionalities that include:
 <!-- TODO.zhe: I think the Worker and Controller accounts have been abandoned -->
 
 <!-- TODO.zhe: we'd better give this a license -->

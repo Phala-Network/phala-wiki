@@ -4,7 +4,7 @@ title: "4.1 How to get better peers connectivity"
 
 ## The problem
 
-Some of our friends that running our nodes may found their nodes are struggling to connect to any peer which causes nodes being dropped from the whole wonderful network. In this KB you may find why and what to do.
+Some of our friends that running our nodes may found their nodes are struggling to connect to any peer which causes nodes to be dropped from the whole wonderful network. In this KB you may find why and what to do.
 
 ## Stateful firewall
 
@@ -38,6 +38,6 @@ If you have to set up source NAT for yourself, you can still do something to get
 
 #### Destination NAT, DMZ, or UPnP
 
-You can configure destination NAT to expose the ports that your nodes listening. Some of the network devices designed for home use may let you config a DMZ host which will receive all incoming datagrams that not being known to any connection.
+You can configure destination NAT to expose the ports that your nodes listening to. Some of the network devices designed for home use may let you config a DMZ host which will receive all incoming datagrams that not being known to any connection.
 
 Some of the network devices designed for home use may also be able to listen to UPnP which can help the configuration of destination nat. But the use of UPnP is often problematic and not safe. So the UPnP should be only considered as the last resort.

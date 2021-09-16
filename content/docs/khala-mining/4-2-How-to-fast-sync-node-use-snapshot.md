@@ -15,8 +15,8 @@ and `best` is too far from `target`.
 
 This article shares a cheat way to accelerate your node syncing.
 
-IMPORTANT: If your node is near newest block height (about several hours to catch up) or has already catched up,
-you don't need to do anything, just seat and wait.
+IMPORTANT: If your node is near the newest block height (about several hours to catch up) or has already caught up,
+you don't need to do anything, just sit and wait.
 
 ## Download latest snapshot (Updated at 9/15/2021)
 
@@ -36,11 +36,11 @@ d1ad677bb2421d17e12f7bed2af95beaf7343a2f9c79b4b07b85a0faa521467c  khala-snapshot
 
 Extract when downloaded, you shall get `khala-node` folder.
 
-IMPORTANT: snapshot archive is ~220GiB, extract require ~350G, which means you require at least 600G free disk space, if you don't have enough space, consider extract to external storage.
+IMPORTANT: snapshot archive is ~220GB, extract requires ~350GB, which means you require at least 600GB free disk space, if you don't have enough space, consider extract to external storage.
 
 ## Preparation
 
-Please ensure Phala services is stopped, especially the node, if you're using solo mining, use
+Please ensure Phala services are stopped, especially the node, if you're using solo mining, use
 
 ```bash
 sudo phala stop
@@ -50,7 +50,7 @@ to stop Phala services.
 
 ## Replace local data with extracted snapshot
 
-### If you're solo miner
+### If you're a solo miner
 
 Delete all files and folders inside `/var/khala-dev-node`，move all files and folders from `khala-node` into `/var/khala-dev-node`
 
@@ -67,10 +67,10 @@ Find the node working directory, Delete all files and folders inside the directo
 
 ## Restart Phala services
 
-If you're solo miner, do
+If you're a solo miner, do
 
 ```bash
 sudo phala start
 ```
 
-to restart services, then you shall find out your node has fast forward to a very close to latest status, then waiting few minutes or hours,  then the node will catching up, and you can start mining now.
+to restart services, then you shall find out your node has fast forward to a very close to latest status, then waiting few minutes or hours,  then the node will catch up, and you can start mining now.
