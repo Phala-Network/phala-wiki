@@ -20,7 +20,12 @@ you don't need to do anything, just seat and wait.
 
 ## Download latest snapshot (Updated at 9/15/2021)
 
-We recommend to use the BT download with <a href="/files/khala.torrent">torrent</a>.
+We recommend to use the BT download with <a href="/files/khala.torrent">torrent</a>. You can check the SHA256 checksum of the torrent
+
+```
+$ sha256sum khala.torrent
+7f517ac05bc8a2840055a4f8d59f147c2bdd92c10281f4d45ab963908c141f05  khala.torrent
+```
 
 > Also you can choose to directly download snapshot data from: <https://storage.googleapis.com/khala-snapshots/khala-snapshot-210915.tar.gz>
 
