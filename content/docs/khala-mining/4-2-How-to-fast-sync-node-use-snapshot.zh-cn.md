@@ -21,7 +21,11 @@ title: "4.2 如果还没有同步好挖矿节点，快速追上的办法"
 
 ## 下载全量数据快照并解压缩（最新更新日期：2021年9月15日）
 
-下载地址 <https://storage.googleapis.com/khala-snapshots/khala-snapshot-210915.tar.gz>，同时我们也提供BT下载（<a href="/files/khala.torrent">种子文件</a>）。
+我们推荐使用BT下载（<a href="/files/khala.torrent">种子文件</a>），请在下载完成后保持做种。
+
+> 你也可以选择直接下载： <https://storage.googleapis.com/khala-snapshots/khala-snapshot-210915.tar.gz>
+
+在下载完成后，可以通过校验sha256校验和来确保数据完整性
 
 ```
 $ sha256sum khala-snapshot-210915.tar.gz

@@ -1,5 +1,5 @@
 ---
-title: "4.2 How to fast sync your node to you haven't fully synced yet"
+title: "4.2 How to accelerate your node syncing if you haven't fully synced yet"
 ---
 
 ## Problem
@@ -18,10 +18,13 @@ This article shares a cheat way to accelerate your node syncing.
 IMPORTANT: If your node is near newest block height (about several hours to catch up) or has already catched up,
 you don't need to do anything, just seat and wait.
 
-## Download latest snapshot (updated at 9/15/2021)
+## Download latest snapshot (Updated at 9/15/2021)
 
-Download snapshot data from: <https://storage.googleapis.com/khala-snapshots/khala-snapshot-210915.tar.gz>,
-or if you prefer BT download, we provide a torrent <a href="/files/khala.torrent">here</a>.
+We recommend to use the BT download with <a href="/files/khala.torrent">torrent</a>.
+
+> Also you can choose to directly download snapshot data from: <https://storage.googleapis.com/khala-snapshots/khala-snapshot-210915.tar.gz>
+
+You can check the integrity of your download by comparing the checksum
 
 ```
 $ sha256sum khala-snapshot-210915.tar.gz
