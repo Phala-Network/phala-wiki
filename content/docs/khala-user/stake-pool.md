@@ -25,7 +25,7 @@ draft: false
 
 ## Delegator
 
-Token holders (ie, delegators) can obtain mining rewards by delegating PHA to the StakePool, which can be understood as “depositing to earn interest”. This guide will introduce how to earn rewards through delegation in Phala Network.
+Token holders (i.e. delegators) can obtain mining rewards by delegating PHA to the StakePool, which can be understood as "depositing to earn interest". This guide will introduce how to earn rewards through delegation in Phala Network.
 
 ## How to Delegate
 
@@ -47,7 +47,7 @@ The first page of delegation is a list of StakePools, which allows users to sele
     APR = \frac{\text{Mining workers reward in 1 day} \times 365 \times (1-\text{Treasury fee}) \times (1-\text{StakePool commission})}{\text{Stakepool delegated}}
     $$
 
-    - Please refer to the Phala Network’s [new token economics](https://medium.com/phala-network/reading-phala-network-economic-paper-preview-5f33b7019861) for worker reward rules, treasury’s processing fees rate is 20%, which is fixed. StakPool commission rate is set by SakePool’s Owner, which means the mining rewards of Workers will be distributed to Owners according to a certain proportion. 
+    - Please refer to the Phala Network’s [new token economics](https://medium.com/phala-network/reading-phala-network-economic-paper-preview-5f33b7019861) for worker reward rules, treasury’s processing fees rate is 20%, which is fixed. StakePool commission rate is set by SakePool’s Owner, which means the mining rewards of Workers will be distributed to Owners according to a certain proportion.
     - **Cap Gap**: The maximum number of tokens that a StakePool can accept to delegate currently.
 
 2. If you have higher requirements for token flexibility, Please pay attention to the ** Free Delegation ** of the StakePool to determine the required withdrawal time for the delegation.
@@ -66,9 +66,9 @@ Click on the “Delegate” button and type in the amount you wish to delegate. 
 2. You can delegate again by clicking “Delegate”.
 3. You can withdraw your delegation from the StakePool by clicking the “Withdraw” button. The withdrawal time depends on the amount of **Free Delegation**. If there is sufficient Free Delegation then you will be able to unlock and withdraw immediately. If not, it may take up to 14 days for the delegation to be fully unlocked under extreme circumstances.
 
-## Potential Risks 
+## Potential Risks
 
 There are two potential risks for the delegators:
 
-1. There might be a delay of token withdrawal from the StakePool. The length of the delay depends on the amount of Free Delegation in the StakePool. It can take up to 14 days for tokens to unlock.
-2. Under extreme conditions, if workers receive too many punishments, **the number of tokens in StakePool will shrink**, which will affect the initial delegation in the StakePool. However, **the probability of such situation is low**.
+1. There might be a delay in token withdrawal from the StakePool. The length of the delay depends on the amount of Free Delegation in the StakePool. It can take up to 14 days for tokens to unlock.
+2. Under extreme conditions, if workers receive too many punishments, **the number of tokens in StakePool will shrink**, which will affect the initial delegation in the StakePool. However, **the probability of such a situation is low**.
