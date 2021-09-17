@@ -15,12 +15,12 @@ Khala Network是Phala在Kusama上的平行链，具有去中心化的TEE挖矿�
 
 一些Para-2相关的信息（**请注意这是不同于Khala预备主网的部分**）
 - Para-2 Solo挖矿脚本下载链接：<https://github.com/Phala-Network/solo-mining-scripts/archive/refs/heads/para.zip>
-- Para-2 Polkadot.js 页面: [链接](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpara2-api.phala.network%2Fws#/explorer)
+- Para-2 Polkadot.js 页面: [链接](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpara2-api.phala.network%2Fws#/explorer)
 - Para-2 RPC端点: `wss://para2-api.phala.network/ws`
 - Para-2 区块链浏览器：<https://phala-testnet.subscan.io/>
-- Para-2 控制台：<https://https://app-test.phala.network/console/>
-- Para-2 App：<https://https://app-test.phala.network>
-  
+- Para-2 控制台：<https://app-test.phala.network/console/>
+- Para-2 App：<https://app-test.phala.network>
+
 ### I. 部署前的检查（**请记得按照上述部分更改您的脚本下载链接**）
 
 - [1.1 检查你的硬件、BIOS和系统"]({{< relref "docs/khala-mining/1-1-hardware-requirements" >}})

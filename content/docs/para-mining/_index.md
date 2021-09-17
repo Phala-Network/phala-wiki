@@ -20,11 +20,11 @@ If you have any questions, you can always reach out for help:
 Here are some note that Para-2 needs.
 
 - Para-2 Solo mining scripts:<https://github.com/Phala-Network/solo-mining-scripts/archive/refs/heads/para.zip>
-- Para-2 Polkadot.js UI: [Link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpara2-api.phala.network%2Fws#/explorer)
+- Para-2 Polkadot.js UI: [Link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpara2-api.phala.network%2Fws#/explorer)
 - Para-2 RPC Endpoint: `wss://para2-api.phala.network/ws`
 - Para-2 blockchain explorer: <https://phala-testnet.subscan.io/>
-- Para-2 Console app：<https://https://app-test.phala.network/console/>
-- Para-2 App：<https://https://app-test.phala.network>
+- Para-2 Console app：<https://app-test.phala.network/console/>
+- Para-2 App：<https://app-test.phala.network>
 
 ### I. Getting Started
 
