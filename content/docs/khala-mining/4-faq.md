@@ -58,3 +58,7 @@ sudo rm ~/para1.zip
 
 You can follow this page to redownload and reinstall new phala mining scripts:
 https://wiki.phala.network/zh-cn/docs/khala-mining/
+
+### Got "Unable to retrieve header and parent from supplied hash" during node syncing
+
+It you were using the our snapshot in 9/15/2021, check the [updated section]({{< relref "docs/khala-mining/4-2-How-to-fast-sync-node-use-snapshot" >}}) about the solution.

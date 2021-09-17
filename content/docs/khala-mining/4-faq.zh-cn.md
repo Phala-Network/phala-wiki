@@ -55,3 +55,7 @@ sudo rm ~/para.zip
 ```
 
 3 重新根据https://wiki.phala.network/zh-cn/docs/khala-mining/ 的指引下载并安装脚本
+
+### 基于snapshot数据同步时遇到“Unable to retrieve header and parent from supplied hash”错误
+
+请参照最新的[章节]({{< relref "docs/khala-mining/4-2-How-to-fast-sync-node-use-snapshot" >}})解决这一问题。
