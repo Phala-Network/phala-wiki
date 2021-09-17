@@ -1,5 +1,5 @@
 ---
-title: "1 TEE Mining Staking"
+title: "1 Secure Worker Mining and Staking"
 ---
 
 <script>
