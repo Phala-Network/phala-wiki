@@ -27,12 +27,17 @@ Miners and pool owners can use Console to manage Workers and StakePools. Also it
     - Sign the transaction in the Polkadot{.js} Extension and wait for about 20 seconds;
     - Created pool will be listed in Stakepool;
 3. (Optional) Configure StakePool
-    - Set Payout
-        - Click "Set Payout Pref" of the target pool;
-        - Type in the payout in the pop-up window; the default payout is 0, and it can be set between 0-100%;
+    - Set payout preference
+        - The payout preference allows you to set the commission of a pool. The comission rate determines how much the pool owner can earn before the mined rewards are distributed to the stakers. Examples:
+            - If set to 0%, all the mined rewards go to the stakers pro rata;
+            - If set to 100%, all the mined rewards go to the pool owner;
+            - If set to 50%, half of the rewards go to the pool owner, and another half go to the stakers pro rata.
+        - Click "Set Payout Pref" of the target pool to set the commission rate;
+        - Type in the payout in the pop-up window; the default payout is 0% (all give to stakers), and it can be set between 0-100%;
         - Click "Confirm" to send the transaction;
-        - The payout value will be updated in Stakepool list;
+        - The comission rate will be updated in StakePool list;
     - Set Staking Capacity
+        - Capacity means how much the pool accepts from the stakers in total. This is useful if you don't want a random staker to jump into the pool, adding the stake you are not going to use but also take a propotion of your mined reward.
         - Click "Set Cap" of the target pool;
         - Type in the Staking capacity in the pop-up window; the default capacity is unlimited, and it can be set between "Total Stake Now" to unlimited number;
         - Submit the transaction;
