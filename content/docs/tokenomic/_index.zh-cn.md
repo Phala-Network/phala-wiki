@@ -1,5 +1,5 @@
 ---
-title: "了解TEE挖矿经济模型（提案）"
+title: "了解TEE挖矿经济模型"
 weight: 2
 draft: false
 ---
