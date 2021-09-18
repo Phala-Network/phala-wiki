@@ -2,7 +2,7 @@
 title: "2.4 使用控制台"
 ---
 
-[控制台链接入口](https://app-test.phala.network/console)
+[控制台链接入口](https://app.phala.network/mining/)
 
 ## 简介
 
