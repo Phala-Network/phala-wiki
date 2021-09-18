@@ -19,7 +19,7 @@ Khala Network是Phala在Kusama上的平行链，具有去中心化的TEE挖矿�
 - Khala RPC端点: `wss://khala.api.onfinality.io/public-ws`
 - Khala 区块链浏览器: <https://phala-testnet.subscan.io/>
 - Khala App: <https://app.phala.network/>
-- Khala 控制台: <https://app.phala.network/console>
+- Khala 控制台: <https://app.phala.network/mining/>
 
 ### I. 前期准备
 
