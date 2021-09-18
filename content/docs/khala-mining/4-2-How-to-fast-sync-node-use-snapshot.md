@@ -18,31 +18,20 @@ This article shares a cheat way to accelerate your node syncing.
 ATTENTION: If your node is near the newest block height (about several hours to catch up) or has already caught up,
 you don't need to do anything, just sit and wait.
 
-## Download latest snapshot (Updated in 9/17/2021)
+## Download latest snapshot (Updated in 9/18/2021)
 
-We recommend to use the BT download with <a href="/files/khala.torrent">torrent</a>. You can check the SHA256 checksum of the torrent
-
-```
-$ sha256sum khala.torrent
-7f517ac05bc8a2840055a4f8d59f147c2bdd92c10281f4d45ab963908c141f05  khala.torrent
-```
-
-You can check the integrity of your download by comparing the checksum
+We recommend to use the BT download with <a href="/files/khala-snapshot-2021-09-17.torrent">torrent</a>. You can check the SHA256 checksum of the torrent
 
 ```
-$ sha256sum khala-snapshot-210915.tar.gz
-d1ad677bb2421d17e12f7bed2af95beaf7343a2f9c79b4b07b85a0faa521467c  khala-snapshot-210915.tar.gz
+$ sha256sum khala-snapshot-2021-09-17.torrent
+595e448bfce90c6725de75d1f38462570d7142c41199375bc86d35f6809b733f  khala-snapshot-2021-09-17.torrent
 ```
 
 Extract when downloaded, you shall get `khala-node` folder.
 
 ATTENTION: snapshot archive is ~220GB, extract requires ~350GB, which means you require at least 600GB free disk space, if you don't have enough space, consider extract to external storage.
 
-**Updated in 9/17/2021**: We found there is malformed Khala block in `khala-snapshot-210915.tar.gz` which can block your node syncing. Remove the Khala data (for now, the dispatched Kusama data is fine) before you apply the snapshot.
-
-```
-rm -rf khala-node/chains/khala
-```
+**Updated in 9/18/2021**: We have updated the snapshot which does not contain broken data anymore.
 
 ## Preparation
 
