@@ -4,7 +4,7 @@ title: "2.4 Use Console to Manage Your Mining"
 
 > We highly recommend to read [staking mechanism]({{< relref "docs/tokenomic/1-mining-staking" >}}) before using the Console.
 
-[The Console](http://app-test.phala.network/console)
+[The Console](https://app.phala.network/mining/)
 
 Miners and pool owners can use Console to manage Workers and StakePools. Also it provides an overview of the status of all the managed Workers and StakePools.
 
