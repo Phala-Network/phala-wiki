@@ -19,7 +19,7 @@ Here are some note that Khala needs.
 - Khala RPC Endpoint: `wss://khala.api.onfinality.io/public-ws`
 - Khala blockchain explorer: <https://khala.subscan.io/>
 - Khala App：<https://app.phala.network/>
-- Khala Console: <https://app.phala.network/console>
+- Khala Console: <https://app.phala.network/mining/>
 
 ### I. Getting Started
 
