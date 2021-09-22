@@ -4,7 +4,7 @@ title: Khala 链上身份
 
 Phala Network 提供了一个身份系统，允许参与者将个人信息添加到他们的链上账户，然后要求[身份裁判](#身份裁判)验证这些信息。在你的身份被添加后，可以应用到Phala或Khala的很多应用场景中，比如在Secure Worker 挖矿的场景中，这对吸引委托人给你投票将起到一定的信任作用。
 
-![](/images/docs/khala-user/identity-0.png]
+![](/images/docs/khala-user/identity-0.png)
 
 ## 设置链上身份
 
@@ -23,22 +23,22 @@ Phala Network 提供了一个身份系统，允许参与者将个人信息添加
 
 添加身份信息的最简单方法是单击帐户旁边的齿轮图标，然后选择`设置链上身份`。
 
-![](/images/docs/khala-user/identity-1.png]
+![](/images/docs/khala-user/identity-1.png)
 
 出现的弹窗会提供一些默认身份信息的选项。
 
-![](/images/docs/khala-user/identity-2.png]
+![](/images/docs/khala-user/identity-2.png)
 
 
 要添加默认字段之外的自定义字段，请使用 Extrinsics UI 功能。首先单击`添加项目`并添加你喜欢的任何字段名称来提交原始交易信息。下面的示例添加了一个字段 `steam`，它是用户的 [Steam](https://store.steampowered.com) 昵称。第一个值是以字节为单位的字段名称（“steam”），第二个是以字节为单位的帐户名称（“theswader”）。你还必须提供显示名称，否则，如果我们在仍然选择`无`选项的情况下提交它，身份模块会认为它已被删除。也就是说，每次对字段进行更改时，都需要重新提交整个字段集：写入操作始终是`覆盖`，而不是`追加`。
 
-![](/images/docs/khala-user/identity-3.png]
+![](/images/docs/khala-user/identity-3.png)
 
 请注意任何自定义的身份字段在UI上都不是默认显示的。
 
 此类自定义身份信息的呈现最终取决于 UI/dapp 开发者。在 PolkadotJS 上，团队倾向于只显示官方字段。如果要检查自定义值是否仍然存储，请使用 [Chain State UI](https://polkadot.js.org/apps/#/chainstate) 查询活跃帐户的身份信息：
 
-![](/images/docs/khala-user/identity-4.png]
+![](/images/docs/khala-user/identity-4.png)
 
 然后由你自己的 UI 或 dapp 来随心所欲地处理这些数据。数据仍可通过 Polkadot API 进行查询，因此您不必依赖 PolkadotJS UI。
 
@@ -71,11 +71,11 @@ Phala Network 提供了一个身份系统，允许参与者将个人信息添加
 
 无论你是在 Khala 还是 Phala 网络上，请求验证都遵循相同的过程。从你在上面进行的查询中选择身份裁判之一。
 
-![](/images/docs/khala-user/identity-5.png]
+![](/images/docs/khala-user/identity-5.png)
 
 以上操作将使你的身份从未经验证变为`“等待验证”`： 此时，需要与身份裁判直接联系 - 联系信息应该已经在他们的身份中，如上所示。每个身份裁判都有自己的一套程序来验证您的身份和价值，只有在你满足他们的要求后，该过程才会继续。 身份裁判确认身份后，您的帐户名称旁边应该会出现一个绿色对勾，并展示对应的身份置信度：
 
-![](/images/docs/khala-user/identity-6.png]
+![](/images/docs/khala-user/identity-6.png)
 
 _请注意，即使在验证后更改单个字段的值也会取消你的帐户验证信息，你将需要重新开始验证过程。但是，你仍然可以在验证过程中更改字段 - 由身份裁判负责来关注是否被更改了。_
 
@@ -121,7 +121,7 @@ Khala上将会存在多个身份裁判，但是当前只有一个身份裁判：
 
 一个账户最多可以有 100 个子账户。 要在现有帐户上注册子帐户，你当前需要使用 [Extrinsics UI](https://polkadot.js.org/apps/#/extrinsics)。在那里，选择身份模块，然后选择`setSubs`作为要使用的交易函数。对于要添加到父发件人帐户的每个子帐户，单击` Add Item`。放入每个父级的身份数据字段的值是子帐户的可选名称。如果忽略，子账户将继承父名并显示为`parent/parent` 而不是`parent/child`。
 
-![](/images/docs/khala-user/identity-7.png]
+![](/images/docs/khala-user/identity-7.png)
 
 请注意，每个子帐户都需要存入 `identity_sub_reserve_funds`。 您可以再次使用 [polkadot.js/apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/chainstate/constants) 通过查询来验证`identity.subAccountDeposit` 的金额数值。
 
