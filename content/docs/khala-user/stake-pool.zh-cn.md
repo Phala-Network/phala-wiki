@@ -35,7 +35,7 @@ Phala Network 协议允许持币者将 PHA 委托给抵押池，由抵押池的�
 
 ### 选择抵押池
 
-进入 [Phala Network 委托页面]( https://app.phala.network/delegate/ )
+进入 [Phala Network 委托页面](https://app.phala.network/delegate/)
 
 ![stakepool delegate](/images/docs/khala-user/stakepool-delegate.jpg)
 
