@@ -16,6 +16,7 @@ If you have any questions, you can always reach out for help:
 Here are some note that Khala needs.
 
 - Khala Polkadot.js UI: [Link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkhala.api.onfinality.io%2Fpublic-ws#/explorer)
+- Khala Accounts: [Link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkhala.api.onfinality.io%2Fpublic-ws#/accounts)
 - Khala RPC Endpoint: `wss://khala.api.onfinality.io/public-ws`
 - Khala blockchain explorer: <https://khala.subscan.io/>
 - Khala App：<https://app.phala.network/>
