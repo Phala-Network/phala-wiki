@@ -2,34 +2,6 @@
 title: "1.4 Benchmarking"
 ---
 
-## Benchmark Your Worker
+The local benchmark feature is not supported any more. Please run the full mining client, and follow the regular deployment guide. After the worker is registered on the blockchain, you can read the performance score from the blockchain (at [Phala App](https://app.phala.network)).
 
-First, install the needed images with Phala tools:
-
-```bash
-sudo phala install
-```
-
-If you have installed the images before, you can update them with:
-
-```bash
-sudo phala update script
-```
-
-Get the performance score with:
-
-```bash
-sudo phala score-test [number_of_cores]
-# e.g., sudo phala score-test 4
-```
-> Tip: We recommend to use all the cores of your CPU.
-
-The performance test has to be stopped manually with:
-
-```bash
-sudo phala stop pruntime-bench
-```
-
-After that, you will be asked whether to upload the performance test results.
-> Noted that your performance test results can vary due to different factors.
-> The results are only for reference, and a re-evaluation can be necessary for the pre-mainnet.
+Note that benchmarking on the mainnet (Khala) requires to set up real accounts to pay the transaction fee. To test without real coins, you can refer to our [Testnet Mining Guide]({{< relref "docs/para-mining" >}}).
