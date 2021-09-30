@@ -33,6 +33,10 @@ ATTENTION: snapshot archive is ~220GB, extract requires ~350GB, which means you 
 
 **Updated in 9/18/2021**: We have updated the snapshot which does not contain broken data anymore.
 
+> There are community maintained snapshots updated more frequently. (Thanks to zozyo on our forum.) You may consider using at your own risk:
+>
+> - <https://forum.phala.network/t/topic/2852>
+
 ## Preparation
 
 Please ensure Phala services are stopped, especially the node, if you're using solo mining, use
