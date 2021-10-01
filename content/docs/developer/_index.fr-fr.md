@@ -1,7 +1,7 @@
 ---
 title: "Développement du contrat"
 weight: 100
-draft: false
+draft: true
 ---
 
 ## Qu'est-ce qu'un contrat confidentiel ?

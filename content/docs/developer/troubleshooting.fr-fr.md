@@ -1,5 +1,6 @@
 ---
 title: "1.3 Dépannage"
+draft: true
 ---
 
 ## `Blockchain Phala`

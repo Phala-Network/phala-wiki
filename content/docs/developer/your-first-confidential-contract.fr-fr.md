@@ -1,5 +1,6 @@
 ---
 title: "1.2 Hello World : votre premier contrat confidentiel"
+draft: true
 ---
 
 > Une connaissance de base de la programmation en langage Rust et du développement de contrats intelligents est nécessaire pour suivre ce tutoriel.
@@ -362,4 +363,3 @@ Ce tutoriel fait partie du [Polkadot "Hello World" virtual hackathon challenge](
 4. Poussez votre travail vers vos dépôts bifurqués. Ils doivent être open source
 5. Faites un tweet avec le lien vers vos dépôts, les captures d'écran, et décrivez ce que vous construisez sur Twitter.
 6. Rejoignez notre [serveur Discord](https://discord.gg/zQKNGv4) et soumettez le lien vers votre tweet.
-

@@ -1,5 +1,6 @@
 ---
 title: "1.1 Lançer un réseau de développement local"
+draft: true
 ---
 
 > Une compréhension de base du shell Linux et de la compilation est nécessaire pour suivre ce tutoriel.
@@ -272,4 +273,3 @@ Ce tutoriel fait partie du [Polkadot "Hello World" virtual hackathon challenge](
 2. Prenez une capture d'écran de votre jeton secret émis par l'utilisateur.
 3. Envoyez la capture d'écran et partagez votre sentiment sur Twitter.
 4. Rejoignez notre [serveur Discord](https://discord.gg/zzhfUjU) et envoyez le lien vers votre tweet.
-
