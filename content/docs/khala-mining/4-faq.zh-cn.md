@@ -1,5 +1,5 @@
 ---
-title: "4 FAQ"
+title: "3 FAQ"
 ---
 
 > 陆续更新中。

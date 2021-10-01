@@ -1,5 +1,5 @@
 ---
-title: "4.1 How to get better peers connectivity"
+title: "3.1 How to get better peers connectivity"
 ---
 
 ## The problem

@@ -1,5 +1,5 @@
 ---
-title: "4.2 How to accelerate your node syncing if you haven't fully synced yet"
+title: "3.2 How to accelerate your node syncing if you haven't fully synced yet"
 ---
 
 ## Problem
