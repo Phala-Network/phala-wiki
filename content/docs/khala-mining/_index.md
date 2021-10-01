@@ -1,6 +1,6 @@
 ---
 title: "Khala Pre-mainnet Mining Guide"
-weight: 5
+weight: 6
 draft: false
 ---
 

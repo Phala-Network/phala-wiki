@@ -1,6 +1,6 @@
 ---
-title: "Archived: Contract Development"
-weight: 100
+title: "Developer Guide"
+weight: 2
 draft: false
 ---
 

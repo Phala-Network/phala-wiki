@@ -1,6 +1,6 @@
 ---
 title: "Développement du contrat"
-weight: 100
+weight: 2
 draft: true
 ---
 

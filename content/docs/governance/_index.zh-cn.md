@@ -1,6 +1,6 @@
 ---
 title: "治理"
-weight: 3
+weight: 4
 draft: false
 ---
 
@@ -276,4 +276,4 @@ Phala 延用波卡的概念，`自适应群体偏差`，它作为一种调节的
 
 在某些时候，您可能需要一个地方进行更长时间的讨论。为此，推荐在[Khala的Polkassembly](https://khala.polkassembly.network/onchain)上 [发帖](https://khala.polkassembly.network/onchain)。当您在 Polkassembly 上发帖时，请确保您提供符合您情况的所有证据，并明确说明您建议议员制定什么样的改变。请记住 - 议员不需要进行更改，您有责任为应该进行更改的原因提出强有力的理由。
 
-##  
+##

@@ -1,6 +1,6 @@
 ---
 title: "Para-2测试网教程"
-weight: 5
+weight: 7
 draft: false
 ---
 

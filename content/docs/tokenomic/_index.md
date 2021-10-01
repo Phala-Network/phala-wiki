@@ -1,6 +1,6 @@
 ---
 title: "Understand Phala Tokenomics"
-weight: 2
+weight: 3
 draft: false
 ---
 

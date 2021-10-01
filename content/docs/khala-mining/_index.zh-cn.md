@@ -1,6 +1,6 @@
 ---
 title: "Khala预备主网挖矿教程"
-weight: 5
+weight: 6
 draft: false
 ---
 
