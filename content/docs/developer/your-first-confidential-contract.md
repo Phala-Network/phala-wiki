@@ -1,5 +1,5 @@
 ---
-title: "1.3 Guess Number: A Confidential Contract Example"
+title: "1.3 Confidential Contract Examples"
 ---
 
 > Basic understanding of Rust language programming and smart contract development knowledge is necessary to follow this tutorial.
@@ -18,7 +18,7 @@ For a high-level overview of Phala Network, please check the previous chapters.
 
 Please set up a development environment by following the previous chapter [Run a Local Development Network]({{< relref "docs/developer/run-a-local-development-network.md" >}}). Make sure you are at the `encode-hackathon-2021` branch of the `phala-blockchain` and the `master` branch of the `js-sdk` repo.
 
-## Walk-through
+## Walk-through of the Basic Confidential Contract
 
 ### Contract
 
@@ -148,7 +148,7 @@ Check our [SDK tutorial](https://github.com/Phala-Network/js-sdk/tree/main/packa
 The core of the frontend development is the definition of the type mapping between frontend and backend. We recommend reading the [Polkadot.js tutorials on type](https://polkadot.js.org/docs/api/start/types.extend).
 
 
-## Access HTTP Service in Confidential Contract
+## Advanced Feature: Access HTTP Service in Confidential Contracts
 
 In the traditional smart contract model, all the input data to the contract need to be sent from on-chain transactions. If a contract depends on some off-chain information, like the current price of BTC, it needs to get such information from a special kind of infrastructure called [blockchain oracle](https://en.wikipedia.org/wiki/Blockchain_oracle). What's more, a smart contract can't initiate a request to the off-chain service.
 
