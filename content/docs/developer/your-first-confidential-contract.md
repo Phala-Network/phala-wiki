@@ -325,13 +325,13 @@ Command::ReportBtcPrice => {
 
 In this tutorial, we have covered a walk-through for the basic `GuessNumber` contract template and the `BtcPriceBot` contract that leverages the advanced network access feature of Phala contracts. Now it's your turn to build something new!
 
-### Submit your work
+### Submit Your Work
 
-This tutorial is a part of [Polkadot "Hello World" virtual hackathon challenge](https://gitcoin.co/hackathon/polkadot/onboard) at gitcoin.co. In order to win the task, please do the followings:
+This tutorial is a part of [Phala x Polkadot Encode Club Hackathon](https://www.encode.club/polkadot-club-hackathon). To win the task, please do the following:
 
-1. Fork [the core blockchain](https://github.com/Phala-Network/phala-blockchain/tree/helloworld) and [the Web UI](https://github.com/Phala-Network/apps-ng/tree/helloworld) repo (helloworld branch) into your own GitHub account
-2. Develop your own contract on the templates at “helloworld” branch (must be a different one from existing submissions)
+1. Fork [the core blockchain](https://github.com/Phala-Network/phala-blockchain/tree/encode-hackathon-2021) and [the Web UI](https://github.com/Phala-Network/js-sdk) repo into your own GitHub account
+2. Develop your own contract on the templates at "encode-hackathon-2021" branch (must be a different one from existing submissions)
 3. Launch your full development stack and take screenshots of your DApp
-4. Push your work to your forked repos. They must be open source
+4. Push your work to your forked repos. They must be open-sourced
 5. Make a tweet with the link to your repos, the screenshots, and describe what you are building on Twitter
-6. Join our [Discord server](https://discord.gg/zQKNGv4) and submit the the link to your tweet
+6. Join our [Discord server](https://discord.gg/zQKNGv4) and submit the link to your tweet
