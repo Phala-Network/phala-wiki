@@ -1,5 +1,5 @@
 ---
-title: "1.2 Hello World: your first confidential contract"
+title: "1.3 Hello World: your first confidential contract"
 ---
 
 > Basic understanding of Rust language programming and smart contract development knowledge is necessary to follow this tutorial.
@@ -355,7 +355,7 @@ This tutorial is a part of [Polkadot "Hello World" virtual hackathon challenge](
 
 1. Fork [the core blockchain](https://github.com/Phala-Network/phala-blockchain/tree/helloworld) and [the Web UI](https://github.com/Phala-Network/apps-ng/tree/helloworld) repo (helloworld branch) into your own GitHub account
 2. Develop your own contract on the templates at “helloworld” branch (must be a different one from existing submissions)
-3. Launch your full development stack and take screenshots of your dapps
+3. Launch your full development stack and take screenshots of your DApp
 4. Push your work to your forked repos. They must be open source
 5. Make a tweet with the link to your repos, the screenshots, and describe what you are building on Twitter
 6. Join our [Discord server](https://discord.gg/zQKNGv4) and submit the the link to your tweet

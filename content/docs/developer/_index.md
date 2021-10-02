@@ -8,7 +8,7 @@ draft: false
 
 If you have any questions, the following Phala developer communities are good places to ask.
 
-- Phala Discord #dev group: <https://discord.gg/Bpckh7R5Rf>
+- Phala Discord #dev and #hackathon group: <https://discord.gg/Bpckh7R5Rf>
 - Phala Developers in Telegram: <https://t.me/phaladeveloper>
 - Phala-blockchain Github Issues: <https://github.com/Phala-Network/phala-blockchain/issues>
 
@@ -102,7 +102,7 @@ In this example, any users can try to guess the number and immediately get the r
 
 Contracts in Phala support more unique features other than confidentiality, give it a try!
 
-- Ability to access network. This may be the world's first smart contract model which supports direct network access. The contracts in Phala can send arbitrary HTTP requests. The response will be posted on the blockchain, witnessed, and distributed to the contract. The `surf` crate with asynchronous primer in Rust makes the job simple. See how we achieve this in our [Side Task Example](...).
+- Ability to access network. This may be the world's first smart contract model which supports direct network access. The contracts in Phala can send arbitrary HTTP requests. The response will be posted on the blockchain, witnessed, and distributed to the contract. The `surf` crate with asynchronous primer in Rust makes the job simple. See how we achieve this in our [Telegram Bot example](https://github.com/Phala-Network/phala-blockchain/blob/encode-hackathon-2021/crates/phactory/src/contracts/btc_price_bot.rs).
 - High performance. Since our contracts are executed off-chain, it can make full use of the hardware. Phala can support computation-intensive applications. In general, the programs in Intel SGX suffer a performance loss of ~20% compared with native execution, which is far less than the existing smart contract platform. We think such performance losses are a real bargain for the security and confidentiality promise.
 
 

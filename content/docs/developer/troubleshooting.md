@@ -1,5 +1,6 @@
 ---
-title: "1.3 Troubleshooting"
+title: "1.4 Troubleshooting"
+draft: true
 ---
 
 ## `phala-blockchain`
