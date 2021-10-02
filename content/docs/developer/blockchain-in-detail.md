@@ -4,7 +4,7 @@ title: "1.1 Phala Blockchain in Detail"
 
 ## Overview
 
-In this section, we try to give a brief introduction to the structure of Phala blockchain. In general, Phala Network consists of the Phala blockchain and the off-chain TEE runtime. Also, we introduce a bridge relayer to connect them. So a full stack of a Phala node contains the following three components.
+In this chapter, we try to give a brief introduction to the structure of Phala blockchain. In general, Phala Network consists of the Phala blockchain and the off-chain TEE runtime. Also, we introduce a bridge relayer to connect them. So a full stack of a Phala node contains the following three components.
 
 - `phala-node`: The Substrate-based blockchain node
 - `pRuntime`: The TEE runtime. Contracts run in `pRuntime`

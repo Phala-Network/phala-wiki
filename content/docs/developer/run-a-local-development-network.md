@@ -14,10 +14,10 @@ In this tutorial, we're going to set up a development environment. We are going 
 A full Phala Network stack has three components, with an optional Javascript SDK. The core components are available at [Phala-Network/phala-blockchain](https://github.com/Phala-Network/phala-blockchain):
 
 - `phala-node`: The Substrate blockchain node
-- `pRuntime`: The TEE runtime. Contracts run in pRuntime
-- `pherry`: The Substrate-TEE bridge relayer. Connects the blockchain and pRuntime
+- `pRuntime`: The TEE runtime. Contracts run in `pRuntime`
+- `pherry`: The Substrate-TEE bridge relayer. Connects the blockchain and `pRuntime`
 
-The Javascript SDK is at [Phala-Network/js-sdk](https://github.com/Phala-Network/js-sdk). The Web UI based on our SDK needs to connect to both the blockchain and the pRuntime to send Commands and Queries.
+The Javascript SDK is at [Phala-Network/js-sdk](https://github.com/Phala-Network/js-sdk). The Web UI based on our SDK needs to connect to both the blockchain and the `pRuntime` to send Commands and Queries.
 
 ## Environment
 
@@ -159,14 +159,14 @@ The three core blockchain components are connected via TCP (WebSocket and HTTP).
 - `pruntime`
     - 8000: HTTP Restful RPC port
 
-`pherry` doesn't listen to any ports but connects to `phala-node`'s WebSocket port and `pruntime`'s HTTP RPC port. You can change the default ports of `phala-node` and `pherry` with command line arguments (check the latest argument list with `--help`). And for `pRuntime`, just edit the `Rocket.toml` config file under `pruntime/bin` and restart it.
+`pherry` doesn't listen to any ports but connects to `phala-node`'s WebSocket port and `pruntime`'s HTTP RPC port. You can change the default ports of `phala-node` and `pherry` with command line arguments (check the latest argument list with `--help`). And for `pruntime`, just edit the `Rocket.toml` config file under `pruntime/bin` and restart it.
 
 You can safely shut down the three programs by <kbd>Ctrl</kbd> + <kbd>C</kbd>. Since `--tmp` is specified for `phala-node`, no database will be left after you shut it down. So a fresh start every time you run it!
 
 
 ## Build the Web UI
 
-The Web UI frontend is developed with `node.js` and managed by `yarn`. It provides the frontend you need to interact with our `Guess Number` and `BTC Price Bot` demo contracts. Just give it a try!
+The Web UI frontend is developed with `node.js` and managed by `yarn`. It provides the frontend you need to interact with our `GuessNumber` and `BtcPriceBot` demo contracts. Just give it a try!
 
 ```bash
 cd js-sdk/packages/example
@@ -231,11 +231,11 @@ and paste the secret seed regardless of the mnemonic hint
 Now you are good to go.
 
 
-## Play the Guess Number
+## Play the `GuessNumber`
 
 ### Authorization
 
-Now let's play with a contract. Recall the knowledge about Commands and Queries in [previous section]({{< relref "docs/developer/_index.md" >}}). The first thing our contract propose is to sign a certificate. Such a temporary certificate is used to encrypt all the Queries. While every time you try to send a Command, the Polkadot.js extension will ask for your signature (since Commands can change the state, it is more critical than Queries).
+Now let's play with a contract. Recall the knowledge about Commands and Queries in [previous chapter]({{< relref "docs/developer/_index.md" >}}). The first thing our contract propose is to sign a certificate. Such a temporary certificate is used to encrypt all the Queries. While every time you try to send a Command, the Polkadot.js extension will ask for your signature (since Commands can change the state, it is more critical than Queries).
 
 ![](/images/docs/developer/js-sdk-4.png)
 
@@ -249,7 +249,7 @@ Don't miss the prompt since there are not always pop-ups.
 
 By default, the random number is 0. Click `Reset Number`, sign the Command, and start the game. If you log in as the root account or contract owner, there is a cheat button for you to peek at the secret. So no more spoiling, just play with it.
 
-If you are curious about how this contract is implemented, the following section will walk you through it.
+If you are curious about how this contract is implemented, the following chapter will walk you through it.
 
 
 ## Conclusion
