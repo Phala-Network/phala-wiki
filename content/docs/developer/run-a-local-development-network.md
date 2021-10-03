@@ -172,7 +172,7 @@ The three core blockchain components work together to bring the full functionali
 ./target/release/phala-node --dev --tmp
 
 # In terminal window 2: pruntime
-cd pruntime/bin
+cd standalone/pruntime/bin
 ./app -c 0
 cd ../..
 
