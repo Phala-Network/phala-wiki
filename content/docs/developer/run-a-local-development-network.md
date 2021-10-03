@@ -144,7 +144,6 @@ cargo build --release
 
 	```bash
 	# Build the core blockchain
-	cd phala-blockchain/
 	cargo build --release
 	```
 
