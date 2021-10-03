@@ -159,7 +159,7 @@ The compilation takes from 20 mins to 60 mins depending on your internet connect
 
 - `./target/release/phala-node`: The Substrate node
 - `./target/release/pherry`: The Substrate-to-TEE bridge relayer
-- `./pruntime/bin/app`: The TEE worker
+- `./standalone/pruntime/bin/app`: The TEE worker
 
 > **Notes on `SGX_MODE`**
 >
@@ -172,7 +172,7 @@ The three core blockchain components work together to bring the full functionali
 ./target/release/phala-node --dev --tmp
 
 # In terminal window 2: pruntime
-cd pruntime/bin
+cd standalone/pruntime/bin
 ./app -c 0
 cd ../..
 
