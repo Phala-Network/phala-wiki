@@ -31,7 +31,16 @@ Il est nécessaire d'avoir au moins 4 cœurs et 8 Go de RAM pour construire le p
 
 Suivez les commandes ci-dessous pour préparer l'environnement. Certaines peuvent être ignorées si elles sont déjà installées.
 
+les instructions relatives (mais non limitées à) un environnement Windows11/WSL2 (Ubuntu 20.04 LTS, and git correctement installé) sont précédées de la mention "Pour WSL2".
+
 * Installer les dépendances au niveau du système
+
+		Pour WSL2:
+	
+		```bash
+		curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+		sudo apt install ca-certificates
+		```
 
     ```bash
     sudo apt update
@@ -120,10 +129,32 @@ Maintenant nous avons déjà les deux dépôts `phala-blockchain` et `apps-ng` d
 rustup install nightly-2020-10-01-x86_64-unknown-linux-gnu
 rustup target add wasm32-unknown-unknown --toolchain nightly-2020-10-01
 cd phala-blockchain/
-cargo +nightly-2020-10-01 build --release
+cargo build --release
+```
 
+	Pour WSL2:
+	Il peut arriver que la construction du noyau de la blockchain echoue a cause de la librairie libss-dev.
+	Si cela arrive, faire ce qui suit:
+
+	```bash
+	dpkg -L libssl-dev | grep lib
+	dpkg -L libssl-dev | grep include
+	export OPENSSL_LIB_DIR=/usr/lib/x86_64-linux-gnu/
+	export OPENSSL_INCLUDE_DIR=/usr/include/openssl/
+	```
+	
+	re-essayons de construire le noyau de la blockchain:
+
+	```bash
+	# Build the core blockchain
+	cargo build --release
+	```
+
+Nous pouvons maintenant continuer avec la construction de pruntime:
+
+```bash
 # Build pRuntime (TEE Enclave)
-cd ./pruntime/
+cd ./standalone/pruntime/
 SGX_MODE=SW make
 ```
 
@@ -140,7 +171,7 @@ La compilation prend entre 20 et 60 minutes, selon votre connexion Internet et l
 
 - `./target/release/phala-node`: The Substrate node
 - `./target/release/phost`: The Substrate-to-TEE bridge relayer
-- `./pruntime/bin/app`: The TEE worker
+- `./standalone/pruntime/bin/app`: The TEE worker
 
 > **Notes sur `SGX_MODE`**
 >
@@ -153,7 +184,7 @@ Les trois composants centraux de la blockchain fonctionnent ensemble pour apport
 ./target/release/phala-node --dev
 
 # In terminal window 2: pruntime
-cd pruntime/bin
+cd standalone/pruntime/bin
 ./app
 
 # In terminal window 3: phost
