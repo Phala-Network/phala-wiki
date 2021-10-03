@@ -29,8 +29,17 @@ It's required to have at least 4 cores (or the compilation can take forever) and
 
 Follow the commands below to prepare the environment. Some can be skipped if already installed.
 
+Instructions for (but not limited to) a relatively clean Windows11/WSL2 environment (Ubuntu 20.04LTS, and git correctly installed) are preceded by the mention "For WSL2"
+
 * Install the system level dependencies
 
+		For WSL2:
+	
+		```bash
+		curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+		sudo apt install ca-certificates
+		```
+	
     ```bash
     sudo apt update
     sudo apt install -y build-essential pkg-config ca-certificates git autoconf libtool libssl-dev libclang-10-dev clang-10
@@ -118,7 +127,30 @@ Now we have both repos `phala-blockchain` and `js-sdk` in the working directory.
 # Build the core blockchain
 cd phala-blockchain/
 cargo build --release
+```
 
+	For WSL2:
+	You might experience troubles with libss-dev when trying to build the core blockchain.
+	if this happens:
+
+	```bash
+	dpkg -L libssl-dev | grep lib
+	dpkg -L libssl-dev | grep include
+	export OPENSSL_LIB_DIR=/usr/lib/x86_64-linux-gnu/
+	export OPENSSL_INCLUDE_DIR=/usr/include/openssl/
+	```
+	
+	and try to build again:
+
+	```bash
+	# Build the core blockchain
+	cd phala-blockchain/
+	cargo build --release
+	```
+
+Finally you can proceed with pruntime:
+ 
+```bash
 # Build pRuntime (TEE Enclave)
 cd ./standalone/pruntime/
 SGX_MODE=SW make
