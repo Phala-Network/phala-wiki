@@ -59,3 +59,18 @@ sudo rm ~/para.zip
 ### 基于snapshot数据同步时遇到“Unable to retrieve header and parent from supplied hash”错误
 
 请参照最新的[章节]({{< relref "docs/khala-mining/4-2-How-to-fast-sync-node-use-snapshot" >}})解决这一问题。
+
+
+### 如何检查当前运行中节点的版本
+
+如果默认的HTTP RPC端口9933已经打开，可以通过如下命令查询版本号：
+
+```bash
+curl -d '{"jsonrpc": "2.0", "method": "system_version", "params": [], "id": 83}' -H "Content-Type: application/json" -X POST http://localhost:9933
+```
+
+输出示例：
+
+```json
+{"jsonrpc":"2.0","result":"0.1.5-250ab0b-x86_64-linux-gnu","id":83}
+```

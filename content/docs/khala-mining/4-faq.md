@@ -62,3 +62,17 @@ https://wiki.phala.network/zh-cn/docs/khala-mining/
 ### Got "Unable to retrieve header and parent from supplied hash" during node syncing
 
 It you were using the our snapshot in 9/15/2021, check the [updated section]({{< relref "docs/khala-mining/4-2-How-to-fast-sync-node-use-snapshot" >}}) about the solution.
+
+### How to check the version of the running node
+
+Assuming the node is running with the 9933 HTTP rpc port open. You can run the CURL command as below:
+
+```bash
+curl -d '{"jsonrpc": "2.0", "method": "system_version", "params": [], "id": 83}' -H "Content-Type: application/json" -X POST http://localhost:9933
+```
+
+Sample result:
+
+```json
+{"jsonrpc":"2.0","result":"0.1.5-250ab0b-x86_64-linux-gnu","id":83}
+```
