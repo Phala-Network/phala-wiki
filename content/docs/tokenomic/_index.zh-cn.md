@@ -159,7 +159,7 @@ $$ V_{t+1} = \min(V_t + \Delta V_t, V_{max}) $$
 
 - $\rho^m_{\text{Khala}} = 1.00020$ (每小时)
 - $\rho^m_{\text{Phala}} = 1.00020$ (每小时)
-- $V_{max} = 300000$
+- $V_{max} = 30000$
 
 ### 支付事件
 

@@ -164,7 +164,7 @@ Proposed parameters:
 
 - $\rho^m_{\text{Khala}} = 1.00020$ (hourly)
 - $\rho^m_{\text{Phala}} = 1.00020$ (hourly)
-- $V_{max} = 300000$
+- $V_{max} = 30000$
 
 ### Payout event
 
