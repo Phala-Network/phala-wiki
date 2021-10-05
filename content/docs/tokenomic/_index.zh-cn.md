@@ -151,10 +151,15 @@ $$\Delta V_t = k_p \cdot \big(\rho^m V_t + c(s_t) + \gamma(V_t)h(V_t)\big)$$
 - $\gamma(V_t)h(V_t)$ 代表对诚实矿工意外惩罚的补偿因子（在模拟中被忽略）
 - $k_p = \min(\frac{P_t}{P}, 120\\%)$，其中 $P_t$ 为性能测试的瞬时值， $P$ 为初始性能分数
 
+$V$ 的更新会受到最大值 $V_{max}$ 的限制:
+
+$$ V_{t+1} = \min(V_t + \Delta V_t, V_{max}) $$
+
 模拟实验结果建议:
 
 - $\rho^m_{\text{Khala}} = 1.00020$ (每小时)
 - $\rho^m_{\text{Phala}} = 1.00020$ (每小时)
+- $V_{max} = 300000$
 
 ### 支付事件
 

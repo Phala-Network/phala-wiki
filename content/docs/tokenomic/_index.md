@@ -127,7 +127,7 @@ $$C = \frac{0.3 P}{\phi}$$
 
 Each individual's $V$ is updated at every block:
 
-- Increased by $\Delta V_t$ if the worker keeps mining
+- Increased by $\Delta V_t$ if the worker keeps mining until it meets $V_{max}$
 - Decreased by $w(V_t)$ if the miner got a payout
 - Decreased according to the ***Slash Rules*** if the miner misbehaves
 
@@ -156,11 +156,15 @@ $$\Delta V_t = k_p \cdot \big(\rho^m V_t + c(s_t) + \gamma(V_t)h(V_t)\big)$$
 - $\gamma(V_t)h(V_t)$ represents a factor to compesate for accidental/unintentional slashing (ignored in simulated charts)
 - $k_p = \min(\frac{P_t}{P}, 120\\%)$, where $P_t$ is the instant performance score, and $P$ is the initial score
 
+The updated $V$ is capped by the maximum value $V_{max}$:
+
+$$ V_{t+1} = \min(V_t + \Delta V_t, V_{max}) $$
 
 Proposed parameters:
 
 - $\rho^m_{\text{Khala}} = 1.00020$ (hourly)
 - $\rho^m_{\text{Phala}} = 1.00020$ (hourly)
+- $V_{max} = 300000$
 
 ### Payout event
 
