@@ -7,12 +7,6 @@ title: "2.3 Worker升级"
 ```bash
 sudo phala stop
 ```
-# 清空节点数据并升级
-
-```bash
-sudo phala update clean
-sudo phala start
-```
 
 可以通过如下命令更新 Docker 镜像，并重启挖矿程序。这条命令不会清空区块历史，也不会删除 pruntime 的密钥：
 
