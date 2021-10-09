@@ -31,7 +31,7 @@ Follow the commands below to prepare the environment. Some can be skipped if alr
 
 Instructions for (but not limited to) a relatively clean Windows11/WSL2 environment (Ubuntu 20.04LTS, and git correctly installed) are preceded by the mention "For WSL2"
 
-*Install WSL2 (Windows 10 version 2004 and higher (Build 19041 and higher) or Windows 11)
+* Install WSL2 (Windows 10 version 2004 and higher (Build 19041 and higher) or Windows 11)
 
     More infos at: https://docs.microsoft.com/en-us/windows/wsl/install
 	
