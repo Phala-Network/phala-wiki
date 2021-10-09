@@ -123,7 +123,7 @@ cd phala-blockchain/
 cargo +nightly-2020-10-01 build --release
 
 # Build pRuntime (TEE Enclave)
-cd ./pruntime/
+cd ./standalone/pruntime/
 SGX_MODE=SW make
 ```
 
@@ -140,7 +140,7 @@ La compilation prend entre 20 et 60 minutes, selon votre connexion Internet et l
 
 - `./target/release/phala-node`: The Substrate node
 - `./target/release/phost`: The Substrate-to-TEE bridge relayer
-- `./pruntime/bin/app`: The TEE worker
+- `./standalone/pruntime/bin/app`: The TEE worker
 
 > **Notes sur `SGX_MODE`**
 >

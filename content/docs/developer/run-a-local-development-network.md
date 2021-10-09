@@ -33,7 +33,7 @@ Follow the commands below to prepare the environment. Some can be skipped if alr
 
     ```bash
     sudo apt update
-    sudo apt install -y build-essential git autoconf libtool libssl-dev libclang-10-dev clang-10
+    sudo apt install -y build-essential pkg-config git autoconf libtool libssl-dev libclang-10-dev clang-10
     ```
 
     Ensure `clang` exists in your $PATH by executing
@@ -120,7 +120,7 @@ cd phala-blockchain/
 cargo build --release
 
 # Build pRuntime (TEE Enclave)
-cd ./pruntime/
+cd ./standalone/pruntime/
 SGX_MODE=SW make
 ```
 
@@ -128,7 +128,7 @@ The compilation takes from 20 mins to 60 mins depending on your internet connect
 
 - `./target/release/phala-node`: The Substrate node
 - `./target/release/pherry`: The Substrate-to-TEE bridge relayer
-- `./pruntime/bin/app`: The TEE worker
+- `./standalone/pruntime/bin/app`: The TEE worker
 
 > **Notes on `SGX_MODE`**
 >
