@@ -35,7 +35,7 @@ les instructions relatives (mais non limitées à) un environnement Windows11/WS
 
 * Installer (Windows 10 versions 2004 et ultérieures (build 19041 et versions ultérieures) ou Windows 11)
 
-Plus d'informations disponibles sur: https://docs.microsoft.com/fr-fr/windows/wsl/install
+    Plus d'informations disponibles sur: https://docs.microsoft.com/fr-fr/windows/wsl/install
 
     Dans PowerShell ou l’invite de commandes Windows entrez la commande 
     
@@ -43,21 +43,21 @@ Plus d'informations disponibles sur: https://docs.microsoft.com/fr-fr/windows/ws
     wsl --install
     ```
     
-    Ubuntu est le système d'exploitation installe par défaut. Redemarrez votre machine et de nouveau dans PowerShell, definissez WSL2 comme valeur par défaut avec la commande suivante
+    Ubuntu est le système d'exploitation installe par défaut. Redemarrez votre machine et de nouveau dans PowerShell, 
+    definissez WSL2 comme valeur par défaut avec la commande    suivante
     
     ```bash
     wsl --set-default-version 2
     ```
     
-
 * Installer les dépendances au niveau du système
 
-		Pour WSL2:
+    Pour WSL2:
 	
-		```bash
-		curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
-		sudo apt install ca-certificates
-		```
+    ```bash
+    curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+    sudo apt install ca-certificates
+    ```
 
     ```bash
     sudo apt update
