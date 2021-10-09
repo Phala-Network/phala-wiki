@@ -145,23 +145,23 @@ cd phala-blockchain/
 cargo build --release
 ```
 
-	For WSL2:
-	You might experience troubles with libssl-dev when trying to build the core blockchain.
-	if this happens:
+For WSL2:
+You might experience troubles with libssl-dev when trying to build the core blockchain.
+if this happens:
 
-	```bash
-	dpkg -L libssl-dev | grep lib
-	dpkg -L libssl-dev | grep include
-	export OPENSSL_LIB_DIR=/usr/lib/x86_64-linux-gnu/
-	export OPENSSL_INCLUDE_DIR=/usr/include/openssl/
-	```
+```bash
+dpkg -L libssl-dev | grep lib
+dpkg -L libssl-dev | grep include
+export OPENSSL_LIB_DIR=/usr/lib/x86_64-linux-gnu/
+export OPENSSL_INCLUDE_DIR=/usr/include/openssl/
+```
 	
-	and try to build again:
+and try to build again:
 
-	```bash
-	# Build the core blockchain
-	cargo build --release
-	```
+```bash
+# Build the core blockchain
+cargo build --release
+```
 
 Finally you can proceed with pruntime:
  
