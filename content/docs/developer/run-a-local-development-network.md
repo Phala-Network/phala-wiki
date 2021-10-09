@@ -37,24 +37,24 @@ Instructions for (but not limited to) a relatively clean Windows11/WSL2 environm
 	
     in PowerShell or Windows Command Prompt
 	
-	```bash
-	wsl --install
-	```
+    ```bash
+    wsl --install
+    ```
 	
     Ubuntu is the OS installed by default. Restart your machine, and in Powershell set WSL 2 as your default by doing the following
 	
-	```bash
-	wsl --set-default-version 2
-	```
+    ```bash
+    wsl --set-default-version 2
+    ```
 	
 * Install the system level dependencies
 
     For WSL2:
 	
-		```bash
-		curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
-		sudo apt install ca-certificates
-		```
+    ```bash
+    curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+    sudo apt install ca-certificates
+    ```
 	
     ```bash
     sudo apt update
