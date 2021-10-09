@@ -33,6 +33,23 @@ Suivez les commandes ci-dessous pour préparer l'environnement. Certaines peuven
 
 les instructions relatives (mais non limitées à) un environnement Windows11/WSL2 (Ubuntu 20.04 LTS, and git correctement installé) sont précédées de la mention "Pour WSL2".
 
+* Installer (Windows 10 versions 2004 et ultérieures (build 19041 et versions ultérieures) ou Windows 11)
+
+Plus d'informations disponibles sur: https://docs.microsoft.com/fr-fr/windows/wsl/install
+
+    Dans PowerShell ou l’invite de commandes Windows entrez la commande 
+    
+    ```bash
+    wsl --install
+    ```
+    
+    Ubuntu est le système d'exploitation installe par défaut. Redemarrez votre machine et de nouveau dans PowerShell, definissez WSL2 comme valeur par défaut avec la commande suivante
+    
+    ```bash
+    wsl --set-default-version 2
+    ```
+    
+
 * Installer les dépendances au niveau du système
 
 		Pour WSL2:
