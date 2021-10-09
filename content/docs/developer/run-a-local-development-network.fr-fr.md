@@ -35,7 +35,7 @@ Suivez les commandes ci-dessous pour préparer l'environnement. Certaines peuven
 
     ```bash
     sudo apt update
-    sudo apt install -y build-essential ocaml ocamlbuild automake autoconf libtool wget python libssl-dev git cmake perl pkg-config curl llvm-10 clang-10 libclang-10-dev
+    sudo apt install -y build-essential ca-certificates ocaml ocamlbuild automake autoconf libtool wget python libssl-dev git cmake perl pkg-config curl llvm-10 clang-10 libclang-10-dev
     ```
 
     > Notes sur LLVM : Nous avons besoin d'au moins LLVM-9, mais les versions supérieures sont également prises en charge. Les versions plus anciennes comme LLVM 6.0 ne permettent pas la compilation de la blockchain.

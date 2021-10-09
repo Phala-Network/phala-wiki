@@ -33,7 +33,7 @@ Follow the commands below to prepare the environment. Some can be skipped if alr
 
     ```bash
     sudo apt update
-    sudo apt install -y build-essential pkg-config git autoconf libtool libssl-dev libclang-10-dev clang-10
+    sudo apt install -y build-essential pkg-config ca-certificates git autoconf libtool libssl-dev libclang-10-dev clang-10
     ```
 
     Ensure `clang` exists in your $PATH by executing
