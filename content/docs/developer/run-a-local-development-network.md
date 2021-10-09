@@ -130,7 +130,7 @@ cargo build --release
 ```
 
 	For WSL2:
-	You might experience troubles with libss-dev when trying to build the core blockchain.
+	You might experience troubles with libssl-dev when trying to build the core blockchain.
 	if this happens:
 
 	```bash
