@@ -33,15 +33,15 @@ Instructions for (but not limited to) a relatively clean Windows11/WSL2 environm
 
 *Install WSL2 (Windows 10 version 2004 and higher (Build 19041 and higher) or Windows 11)
 
-	More infos at: https://docs.microsoft.com/en-us/windows/wsl/install
+    More infos at: https://docs.microsoft.com/en-us/windows/wsl/install
 	
-	in PowerShell or Windows Command Prompt
+    in PowerShell or Windows Command Prompt
 	
 	```bash
 	wsl --install
 	```
 	
-	Ubuntu is the OS installed by default. Restart your machine, and in Powershell set WSL 2 as your default by doing the following
+    Ubuntu is the OS installed by default. Restart your machine, and in Powershell set WSL 2 as your default by doing the following
 	
 	```bash
 	wsl --set-default-version 2
@@ -49,7 +49,7 @@ Instructions for (but not limited to) a relatively clean Windows11/WSL2 environm
 	
 * Install the system level dependencies
 
-		For WSL2:
+    For WSL2:
 	
 		```bash
 		curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
