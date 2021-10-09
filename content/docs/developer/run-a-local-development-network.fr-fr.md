@@ -133,7 +133,7 @@ cargo build --release
 ```
 
 	Pour WSL2:
-	Il peut arriver que la construction du noyau de la blockchain echoue a cause de la librairie libss-dev.
+	Il peut arriver que la construction du noyau de la blockchain echoue a cause de la librairie libssl-dev.
 	Si cela arrive, faire ce qui suit:
 
 	```bash
