@@ -37,23 +37,23 @@ les instructions relatives (mais non limitées à) un environnement Windows11/WS
 
     Plus d'informations disponibles sur: https://docs.microsoft.com/fr-fr/windows/wsl/install
 
-    Dans PowerShell ou l’invite de commandes Windows entrez la commande 
-    
+    Dans PowerShell ou l’invite de commandes Windows entrez la commande
+
     ```bash
     wsl --install
     ```
-    
-    Ubuntu est le système d'exploitation installe par défaut. Redemarrez votre machine et de nouveau dans PowerShell, 
+
+    Ubuntu est le système d'exploitation installe par défaut. Redemarrez votre machine et de nouveau dans PowerShell,
     definissez WSL2 comme valeur par défaut avec la commande    suivante
-    
+
     ```bash
     wsl --set-default-version 2
     ```
-    
+
 * Installer les dépendances au niveau du système
 
     Pour WSL2:
-	
+
     ```bash
     curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
     sudo apt install ca-certificates
@@ -159,7 +159,7 @@ cargo build --release
 	export OPENSSL_LIB_DIR=/usr/lib/x86_64-linux-gnu/
 	export OPENSSL_INCLUDE_DIR=/usr/include/openssl/
 	```
-	
+
 	re-essayons de construire le noyau de la blockchain:
 
 	```bash

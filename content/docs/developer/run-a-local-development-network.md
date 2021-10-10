@@ -34,28 +34,28 @@ Instructions for (but not limited to) a relatively clean Windows11/WSL2 environm
 * Install WSL2 (Windows 10 version 2004 and higher (Build 19041 and higher) or Windows 11)
 
     More infos at: https://docs.microsoft.com/en-us/windows/wsl/install
-	
+
     in PowerShell or Windows Command Prompt
-	
+
     ```bash
     wsl --install
     ```
-	
+
     Ubuntu is the OS installed by default. Restart your machine, and in Powershell set WSL 2 as your default by doing the following
-	
+
     ```bash
     wsl --set-default-version 2
     ```
-	
+
 * Install the system level dependencies
 
     For WSL2:
-	
+
     ```bash
     curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
     sudo apt install ca-certificates
     ```
-	
+
     ```bash
     sudo apt update
     sudo apt install -y build-essential pkg-config ca-certificates git autoconf libtool libssl-dev libclang-10-dev clang-10
@@ -155,7 +155,7 @@ dpkg -L libssl-dev | grep include
 export OPENSSL_LIB_DIR=/usr/lib/x86_64-linux-gnu/
 export OPENSSL_INCLUDE_DIR=/usr/include/openssl/
 ```
-	
+
 and try to build again:
 
 ```bash
@@ -164,7 +164,7 @@ cargo build --release
 ```
 
 Finally you can proceed with pruntime:
- 
+
 ```bash
 # Build pRuntime (TEE Enclave)
 cd ./standalone/pruntime/
