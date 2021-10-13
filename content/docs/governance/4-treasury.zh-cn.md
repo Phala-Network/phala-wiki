@@ -2,13 +2,13 @@
 title: "4 Khala国库"
 ---
 
-# 国库支出分类
+## 国库支出分类
 
-### 国库支出提案:
+### 国库支出提案
 
 国库资金可以用于资助社区成员提交的支出提案。这些提案需要得到理事会的批准，其目标是开发出能够推动网络、维持基础设施部署、安全运营和营销活动等的想法。
 
-### 小费:
+### 小费
 
 任何持有PHA的用户都可以提出小费提议，并得到理事会成员的认可。小费没有固定的金额价值：最终的金额价值是根据理事会发布的所有小费的中位数来决定的。
 
@@ -16,9 +16,9 @@ title: "4 Khala国库"
 
 通过将支出提案的策展活动委托给一位称为管理人的专家来实现。
 
-# 国库
+## 国库
 
-国库是通过交易手续费、惩罚、Secure Worker 挖矿 (20%) 等方式积累的一部分资金。用户可以通过提出“支出提案”来获取国库资金，如果该提案获得[理事会](https://wiki.phala.network/zh-cn/docs/governance/2-join-the-council/)的批准，分发前会进入等待期，此等待期称为预算期，其持续时间由[治理](https://wiki.polkadot.network/docs/learn-governance)机制约束，当前默认设置为 1 天。国库试图在不耗尽资金的情况下在队列中花费尽可能多的提案。
+国库是通过交易手续费、惩罚、Secure Worker 挖矿 (20%) 等方式积累的一部分资金。用户可以通过提出“支出提案”来获取国库资金，如果该提案获得[理事会](https://wiki.phala.network/zh-cn/docs/governance/2-join-the-council/)的批准，分发前会进入等待期，此等待期称为预算期，其持续时间由[治理](https://wiki.phala.network/zh-cn/docs/governance/)机制约束，当前默认设置为 1 天。国库试图在不耗尽资金的情况下在队列中花费尽可能多的提案。
 
 如果国库结束一个预算期而没有花光所有的资金，它就会损失一部分资金——从而造成通缩压力。该百分比目前在 Phala 上为 0%。
 
@@ -41,7 +41,7 @@ title: "4 Khala国库"
 2. 交易手续费：每个区块的交易手续费有一部分上缴国库，其余部分上缴区块生产者。
 3. Secure Worker Mining reward: 70%的PHA token将被用于Secure Worker Mining，且跟随Khala和Phala的网络进度，每个区块产生的挖矿奖励的20%将被用于资助国库。
 
-# 创建国库支出提案
+## 创建国库支出提案
 
 提案人必须存入提案金额的 5% 或 1 PHA（以较高价者为准）作为防止垃圾提案措施。 如果提案被拒绝，则此金额将被销毁，否则将予以退还。 这个质押数值受到[治理](https://wiki.phala.network/zh-cn/docs/governance/) 的约束，因此将来可能会发生变化。
 
@@ -78,7 +78,7 @@ title: "4 Khala国库"
 
 ![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b2c92e99-901b-4d77-8b8a-60316105b95e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20211012%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211012T151334Z&X-Amz-Expires=86400&X-Amz-Signature=632e4b71de957cfb823820681e131bc78d42890e24ae12cd872598559034dc6a&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
-# 小费
+## 小费
 
 除了支出提案，国库有支出小费的独立系统。小费请求可以由任何人提出，并由理事会支持。小费没有固定金额；小费的最终金额是根据小费发出者希望打赏的小费的中位数决定。
 
@@ -112,7 +112,7 @@ Charlie的小费估价为10 PHA，Dave的小费估价为30 PHA，Eve的小费估
 
 为了让Bob获得他的小费，一些帐户必须在小费的关闭期结束时调用外部的 `close_tip`请求。任何人都可以调用这个外部请求。
 
-# 赏金支出
+## 赏金支出
 
 对于国库提案，理事会成员的管理能力存在实际限制：理事会成员可能不具备对所有提案中描述的活动进行适当评估的专业知识。即使个别议员具有这种专业知识，大多数成员也极不可能有能力处理如此多样化的主题。
 
@@ -146,7 +146,7 @@ Charlie的小费估价为10 PHA，Dave的小费估价为30 PHA，Eve的小费估
 
 可以通过选择国库选项卡，然后选择`Award_bounty`来关闭赏金，确保关闭正确的赏金并最终签署交易。 需要注意的是，在赏金完成后获得奖励的人，必须在赏金经理关闭分配后通过调用`Claim_bounty`从支付地址领取特定金额的支付。
 
-# FAQ
+## FAQ
 
 ### 是什么阻止了国库被理事会的大多数成员控制？
 
