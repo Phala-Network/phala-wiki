@@ -47,7 +47,7 @@ The first page of delegation is a list of StakePools, which allows users to sele
     APR = \frac{\text{Mining workers reward in 1 day} \times 365 \times (1-\text{Treasury fee}) \times (1-\text{StakePool commission})}{\text{Stakepool delegated}}
     $$
 
-    - Please refer to the Phala Network’s [new token economics](https://medium.com/phala-network/reading-phala-network-economic-paper-preview-5f33b7019861) for worker reward rules, treasury’s processing fees rate is 20%, which is fixed. StakePool commission rate is set by SakePool’s Owner, which means the mining rewards of Workers will be distributed to Owners according to a certain proportion.
+    - Please refer to the Phala Network’s [new token economics](https://medium.com/phala-network/reading-phala-network-economic-paper-preview-5f33b7019861) for worker reward rules, treasury’s processing fees rate is 20%, which is fixed. StakePool commission rate is set by StakePool’s Owner, which means the mining rewards of Workers will be distributed to Owners according to a certain proportion.
     - **Cap Gap**: The maximum number of tokens that a StakePool can accept to delegate currently.
 
 2. If you have higher requirements for token flexibility, Please pay attention to the ** Free Delegation ** of the StakePool to determine the required withdrawal time for the delegation.
