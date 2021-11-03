@@ -3,26 +3,6 @@ title: 抵押池委托指南
 draft: false
 ---
 
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$','$$'], ['\\[', '\\]']],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-    }
-  };
-  window.addEventListener('load', (event) => {
-      document.querySelectorAll("mjx-container").forEach(function(x){
-        x.parentElement.classList += 'has-jax'})
-    });
-</script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
 ## 委托人
 
 持币者（即委托人, Delegator）可通过将 PHA 委托给抵押池分得挖矿收益（类似于存币生息）。本指南将介绍如何在 Phala Network 上通过委托代币赚取收益。
@@ -72,3 +52,23 @@ Phala Network 协议允许持币者将 PHA 委托给抵押池，由抵押池的�
 
 1. 放入抵押池的资金提取出来有时间延迟，延迟时间长短与抵押池中的闲置资金量相关，最长需等待**14**天；
 2. 极端情况下，如若 Worker 被惩罚过多，抵押池**资金会整体缩水**，继而影响到抵押池内的本金，不过这是**较低概率事件**。
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

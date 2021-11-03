@@ -3,26 +3,6 @@ title: Guidance of Delegation StakePool
 draft: false
 ---
 
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$','$$'], ['\\[', '\\]']],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-    }
-  };
-  window.addEventListener('load', (event) => {
-      document.querySelectorAll("mjx-container").forEach(function(x){
-        x.parentElement.classList += 'has-jax'})
-    });
-</script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
 ## Delegator
 
 Token holders (i.e. delegators) can obtain mining rewards by delegating PHA to the StakePool, which can be understood as "depositing to earn interest". This guide will introduce how to earn rewards through delegation in Phala Network.
@@ -72,3 +52,23 @@ There are two potential risks for the delegators:
 
 1. There might be a delay in token withdrawal from the StakePool. The length of the delay depends on the amount of Free Delegation in the StakePool. It can take up to 14 days for tokens to unlock.
 2. Under extreme conditions, if workers receive too many punishments, **the number of tokens in StakePool will shrink**, which will affect the initial delegation in the StakePool. However, **the probability of such a situation is low**.
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

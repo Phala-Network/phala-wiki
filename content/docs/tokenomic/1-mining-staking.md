@@ -2,27 +2,6 @@
 title: "1 Secure Worker Mining and Staking"
 ---
 
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$','$$'], ['\\[', '\\]']],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-    }
-  };
-  window.addEventListener('load', (event) => {
-      document.querySelectorAll("mjx-container").forEach(function(x){
-        x.parentElement.classList += 'has-jax'})
-    });
-</script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-
 ## Introduction
 
 To secure the cloud of Workers and the jobs they are assigned, the network will set [Confidence Level]({{< relref "docs/khala-mining/1-3-confidential-level-evaluation#confidence-level-of-a-miner" >}}) for each worker’s CPU and will require ***Staking*** to enable mining. Each worker can only earn value $V$ if it first stakes several PHA tokens based on its CPU score, after which it can enter the mining system and start TEE Mining.
@@ -197,3 +176,23 @@ As shown in Figure 11, within 7 days, if some extra PHA is delegated to the pool
 In summary:
 - A Delegator can exit staking in at most 14 days;
 - The Owner of the StakePool should take care of the Free Delegation, and introduce extra delegation or reduce mining Workers as needed. Or all the Workers in the pool can be forced to stop mining;
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

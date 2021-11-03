@@ -4,28 +4,6 @@ weight: 1
 draft: false
 ---
 
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$','$$'], ['\\[', '\\]']],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-    }
-  };
-  window.addEventListener('load', (event) => {
-      document.querySelectorAll("mjx-container").forEach(function(x){
-        x.parentElement.classList += 'has-jax'})
-    });
-</script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-
-
 This document describes the the technical specification of Phala Network including the overall protocol and the detailed data structure and algorithm. It's still a work-in-progress.
 
 
@@ -334,3 +312,23 @@ Since the contract state is stored with timestamp, the worker only needs to repl
 >
 > The rotation of `ContractKey` requires the regular re-encryption of contract states. To minimize the performance impact of state re-encryption, we try to amortize the cost into epochs. That is, the key-values pairs of contracts are encrypted with the `ContractKey` of current epoch. Workers can get the historical `ContractKey`s from the key list of gatekeepers. After certain number of epochs (e.g., 1000 epochs), only the untouched key-value pairs encrypted with outdated `ContractKey`s need to be re-encrypted.
 >
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
