@@ -60,8 +60,8 @@ First, run the full node and wait it to sync. If you already have a full node, t
 
 ```bash
 docker run -dti --rm \
-    --name khala-dev-node \
-    -e NODE_NAME=khala-dev-node \
+    --name khala-node \
+    -e NODE_NAME=khala-node \
     -e NODE_ROLE=MINER \
     -p 9933:9933 -p 9944:9944 -p 9615:9615 -p 30333:30333 \
     -p 9934:9934 -p 9945:9945 -p 9616:9616 -p 30334:30334 \
