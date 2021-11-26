@@ -80,11 +80,24 @@ docker run -dti --rm \
     -p 8000:8000 \
     -v $HOME/data/phala-pruntime:/root/data \
     -e EXTRA_OPTS="-c 0" \
-    --device /dev/sgx/enclave --device /dev/sgx/provision \
+    --device /dev/sgx \
+    --device /dev/sgx_enclave \
+    --device /dev/sgx_provision \
+    --device /dev/sgx_vepc \
     phalanetwork/phala-pruntime
 ```
 
 The command brings up a pRuntime instance with its RPC port 8000 exported. Please note that if you run with the iSGX driver (legacy driver), there's only one SGX device file `/etc/isgx`. Note that pruntime will store its credentials under `/root/data`, which is mapped to the locla disk. The credentials are encrypted with the CPU keys. It's important to backup the key in order to keep the identity of the worker (pRuntime instance). However, it's impossible to recover the credentials in another CPU (vCPU).
+
+{{< tip >}}
+In the above command line we assumed you are running with the kernel SGX driver. If you have to run with the manually installed driver on an older kernel, you may consider to switch to differnt device arguments:
+
+- Standalone DCAP driver
+    - `--device /dev/sgx/enclave`
+    - `--device /dev/sgx/provision`
+- Standalone iSGX driver
+    - `--device /dev/isgx`
+{{< /tip >}}
 
 Finally, run pherry, the relayer to connect the node and pRuntime (specify your own mnenomic).
 
